@@ -23,3 +23,4 @@ Route::controllers([
 
 //Home page reservation forms
 Route::get('checkAvailableRoomsForm2','ReservationController@checkAvailableRoomsForm2');
+

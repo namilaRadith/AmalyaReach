@@ -3,22 +3,18 @@
 @section('css_ref')
 
 @parent
+
+
+
         <!-- SPECIFIC CSS -->
-<link href="{{asset('/client/css/date_time_picker.css')}}" rel="stylesheet">
+        <link href="{{asset('/client/css/date_time_picker.css')}}" rel="stylesheet">
+
 @stop
 
 @section('content')
 
 
 
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script>
-        $(function() {
-            $( "#accordion" ).accordion();
-        });
-    </script>
 
 
 
@@ -45,186 +41,165 @@
 
 
 
+
+
+
+
     <div class="container margin_60">
         <div class="row">
 
             <div class="col-lg-9 col-md-8">
 
-                <div class="strip_all_rooms_list wow fadeIn" data-wow-delay="0.1s">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-4">
-                            <div class="img_list">
-                                <a href="room_details.html"><img src="{{ asset('client/sampleImages/room3.jpg') }}" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="clearfix visible-xs-block">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="rooms_list_desc">
-                                <h3><strong>Single</strong> room</h3>
-                                <p>
-                                    Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit....
-                                </p>
-                                <ul class="add_info">
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Plasma TV with cable channels"><i class="icon_set_2_icon-116"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Breakfast included"><i class="icon_set_1_icon-59"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="King size bed"><i class="icon_set_2_icon-104"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Shower"><i class="icon_set_2_icon-118"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="No smoking"><i class="icon_set_1_icon-47"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2">
-                            <div class="price_list">
-                                <div>
-                                    <sup>$</sup>89*<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
-                                    <p>
-                                        <a href="room_details.html" class="btn_1">Select</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="strip_all_rooms_list wow fadeIn" data-wow-delay="0.2s">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-4">
-                            <div class="img_list">
-                                <a href="room_details.html"><img src="{{ asset('client/sampleImages/room2.jpg') }}" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="clearfix visible-xs-block">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="rooms_list_desc">
-                                <h3><strong>Double</strong> room</h3>
-                                <p>
-                                    Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit....
-                                </p>
-                                <ul class="add_info">
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Plasma TV with cable channels"><i class="icon_set_2_icon-116"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Breakfast included"><i class="icon_set_1_icon-59"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="King size bed"><i class="icon_set_2_icon-104"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Shower"><i class="icon_set_2_icon-118"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="No smoking"><i class="icon_set_1_icon-47"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2">
-                            <div class="price_list">
-                                <div>
-                                    <sup>$</sup>89*<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
-                                    <p>
-                                        <a href="room_details.html" class="btn_1">Select</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="strip_all_rooms_list wow fadeIn" data-wow-delay="0.3s">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-4">
-                            <div class="img_list">
-                                <a href="room_details.html"><img src="{{ asset('client/sampleImages/room1.jpg') }}" alt=""></a>
+
+                </div>
+
+
+
+
+                <div id="roomList">
+                    <h3>Section 1</h3>
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="img_list">
+                                    <a href="room_details.html"><img src="{{ asset('client/sampleImages/room3.jpg') }}" alt=""></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="clearfix visible-xs-block">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="rooms_list_desc">
-                                <h3><strong>King double</strong> room</h3>
-                                <p>
-                                    Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit....
-                                </p>
-                                <ul class="add_info">
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Plasma TV with cable channels"><i class="icon_set_2_icon-116"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Breakfast included"><i class="icon_set_1_icon-59"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="King size bed"><i class="icon_set_2_icon-104"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Shower"><i class="icon_set_2_icon-118"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="No smoking"><i class="icon_set_1_icon-47"></i></a>
-                                    </li>
-                                </ul>
+                            <div class="clearfix visible-xs-block">
                             </div>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2">
-                            <div class="price_list">
-                                <div>
-                                    <sup>$</sup>89*<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="rooms_list_desc">
+                                    <h3><strong>Single</strong> room</h3>
                                     <p>
-                                        <a href="room_details.html" class="btn_1">Select</a>
+                                        Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit....
                                     </p>
+                                    <ul class="add_info">
+                                        <li>
+                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Plasma TV with cable channels"><i class="icon_set_2_icon-116"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Breakfast included"><i class="icon_set_1_icon-59"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="King size bed"><i class="icon_set_2_icon-104"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Shower"><i class="icon_set_2_icon-118"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="No smoking"><i class="icon_set_1_icon-47"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <div class="price_list">
+                                    <div>
+                                        <sup>$</sup>89*<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
+                                        <p>
+                                            <a href="room_details.html" class="btn_1">Select</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                -->
-
-
-                <div id="accordion">
-                    <h3>Section 1</h3>
-                    <div>
-                        <p>
-                            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-                            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-                            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-                            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                        </p>
                     </div>
                     <h3>Section 2</h3>
                     <div>
-                        <p>
-                            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-                            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-                            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-                            suscipit faucibus urna.
-                        </p>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <div class="img_list">
+                                        <a href="room_details.html"><img src="{{ asset('client/sampleImages/room2.jpg') }}" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="clearfix visible-xs-block">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="rooms_list_desc">
+                                        <h3><strong>Double</strong> room</h3>
+                                        <p>
+                                            Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit....
+                                        </p>
+                                        <ul class="add_info">
+                                            <li>
+                                                <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Plasma TV with cable channels"><i class="icon_set_2_icon-116"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Breakfast included"><i class="icon_set_1_icon-59"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="King size bed"><i class="icon_set_2_icon-104"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Shower"><i class="icon_set_2_icon-118"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="No smoking"><i class="icon_set_1_icon-47"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                    <div class="price_list">
+                                        <div>
+                                            <sup>$</sup>89*<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
+                                            <p>
+                                                <a href="room_details.html" class="btn_1">Select</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                     <h3>Section 3</h3>
                     <div>
-                        <p>
-                            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-                            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-                            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                        </p>
-                        <ul>
-                            <li>List item one</li>
-                            <li>List item two</li>
-                            <li>List item three</li>
-                        </ul>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="img_list">
+                                    <a href="room_details.html"><img src="{{ asset('client/sampleImages/room1.jpg') }}" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="clearfix visible-xs-block">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="rooms_list_desc">
+                                    <h3><strong>King double</strong> room</h3>
+                                    <p>
+                                        Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit....
+                                    </p>
+                                    <ul class="add_info">
+                                        <li>
+                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Plasma TV with cable channels"><i class="icon_set_2_icon-116"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Breakfast included"><i class="icon_set_1_icon-59"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="King size bed"><i class="icon_set_2_icon-104"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Shower"><i class="icon_set_2_icon-118"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="No smoking"><i class="icon_set_1_icon-47"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <div class="price_list">
+                                    <div>
+                                        <sup>$</sup>89*<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
+                                        <p>
+                                            <a href="room_details.html" class="btn_1">Select</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <h3>Section 4</h3>
                     <div>
@@ -241,6 +216,7 @@
                         </p>
                     </div>
                 </div>
+
 
 
 
@@ -285,6 +261,86 @@
 
     @section('js_ref')
     @parent
+
+
+
+    <!-- This Jquery Part is used for JQuery Accordion -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script>
+        $(function() {
+            $( "#roomList" ).accordion({
+                event: "click hoverintent"
+            });
+        });
+
+        $.event.special.hoverintent = {
+            setup: function() {
+                $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
+            },
+            teardown: function() {
+                $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
+            },
+            handler: function( event ) {
+                var currentX, currentY, timeout,
+                        args = arguments,
+                        target = $( event.target ),
+                        previousX = event.pageX,
+                        previousY = event.pageY;
+
+                function track( event ) {
+                    currentX = event.pageX;
+                    currentY = event.pageY;
+                };
+
+                function clear() {
+                    target
+                            .unbind( "mousemove", track )
+                            .unbind( "mouseout", clear );
+                    clearTimeout( timeout );
+                }
+
+                function handler() {
+                    var prop,
+                            orig = event;
+
+                    if ( ( Math.abs( previousX - currentX ) +
+                            Math.abs( previousY - currentY ) ) < 7 ) {
+                        clear();
+
+                        event = $.Event( "hoverintent" );
+                        for ( prop in orig ) {
+                            if ( !( prop in event ) ) {
+                                event[ prop ] = orig[ prop ];
+                            }
+                        }
+                        // Prevent accessing the original event since the new event
+                        // is fired asynchronously and the old event is no longer
+                        // usable (#6028)
+                        delete event.originalEvent;
+
+                        target.trigger( event );
+                    } else {
+                        previousX = currentX;
+                        previousY = currentY;
+                        timeout = setTimeout( handler, 100 );
+                    }
+                }
+
+                timeout = setTimeout( handler, 100 );
+                target.bind({
+                    mousemove: track,
+                    mouseout: clear
+                });
+            }
+        };
+    </script>
+
+
+
+
             <!-- Specific scripts -->
     <script src="{{asset('/client/js/quantity-bt.js')}}"></script>
     <script src="{{asset('/client/js/bootstrap-datepicker.js')}}"></script>
