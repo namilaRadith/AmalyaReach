@@ -19,3 +19,7 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+
+//Home page reservation forms
+Route::get('checkAvailableRoomsForm2','ReservationController@checkAvailableRoomsForm2');
