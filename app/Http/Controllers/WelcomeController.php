@@ -17,7 +17,8 @@ class WelcomeController extends Controller {
 	 * Create a new controller instance.
 	 *
 	 * @return void
-	 */
+	*/
+
 	public function __construct()
 	{
 		$this->middleware('guest');
@@ -28,9 +29,9 @@ class WelcomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
-		return view('pages/client/client_index');
+
+	public function index(){
+		return view('pages.client.client_index');
 	}
 
 }
