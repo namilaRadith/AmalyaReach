@@ -26,3 +26,17 @@ Route::controllers([
 //Home page reservation forms
 Route::get('checkAvailableRoomsForm2','ReservationController@checkAvailableRoomsForm2');
 
+
+Route::get('contact', 'AboutController@getContact');
+Route::post('contact', 'AboutController@getContactUsForm');
+
+//cutomer feedbacks
+Route::get('feedback', 'feedbackController@index');
+Route::get('feedback/create', 'feedbackController@create');
+Route::get('feedback/{recordId}', 'feedbackController@show');
+Route::post('feedback', 'feedbackController@store');
+
+
+//
+Route::get('specials','');
+
