@@ -88,17 +88,10 @@
 						</div>
 						<a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
 						<ul>
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Home <i class="icon-down-open-mini"></i></a>
-
-							</li>
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Rooms <i class="icon-down-open-mini"></i></a>
-
-							</li>
+							<li><a href="#">Home</a></li>
 							<li><a href="about.html">About</a></li>
 							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Activities <i class="icon-down-open-mini"></i></a>
+								<a href="javascript:void(0);" class="show-submenu">Dinning <i class="icon-down-open-mini"></i></a>
 								<ul>
 									<li><a href="all_activities.html">All activities</a></li>
 									<li><a href="horses.html">Horses</a></li>
@@ -107,39 +100,40 @@
 									<li><a href="farm.html">Farm activities</a></li>
 								</ul>
 							</li>
-							<li><a href="contacts.html">Contact us</a></li>
-							<li class="megamenu submenu">
-								<a href="javascript:void(0);" class="show-submenu-mega">Pages &amp; elements<i class="icon-down-open-mini"></i></a>
-								<div class="menu-wrapper">
-									<div class="col-md-4">
-										<h3>Pages</h3>
-										<ul>
-											<li><a href="gallery_3_columns.html">Gallery 3 columns</a></li>
-											<li><a href="gallery_4_columns.html">Gallery 4 columns</a></li>
-											<li><a href="fullscreen_gallery.html">Gallery fullscreen</a></li>
-											<li><a href="404.html">404 Error page</a></li>
-										</ul>
-									</div>
-									<div class="col-md-4">
-										<h3>Pages</h3>
-										<ul>
-											<li><a href="blog.html">Blog</a></li>
-											<li><a href="blog_post.html">Blog post</a></li>
-											<li><a href="site_launch/index.html">Site launch / Coming soon</a></li>
-											<li><a href="shortcodes.html"><i class="icon-tools"></i> Shortcodes</a></li>
-										</ul>
-									</div>
-									<div class="col-md-4">
-										<h3>Elements</h3>
-										<ul>
-											<li><a href="../boxed/index.html"><i class="icon-columns"></i> Boxed version</a></li>
-											<li><a href="icon_pack_1.html"><i class="icon-inbox-alt"></i> Icon pack 1 (1900)</a></li>
-											<li><a href="icon_pack_2.html"><i class="icon-inbox-alt"></i> Icon pack 2 (100)</a></li>
-											<li><a href="icon_pack_3.html"><i class="icon-inbox-alt"></i> Icon pack 3(17)</a></li>
-										</ul>
-									</div>
-								</div><!-- End menu-wrapper -->
+							<li class="submenu">
+								<a href="javascript:void(0);" class="show-submenu">Accomadation <i class="icon-down-open-mini"></i></a>
+								<ul>
+									<li><a href="all_activities.html">All activities</a></li>
+									<li><a href="horses.html">Horses</a></li>
+									<li><a href="local_food.html">Discover local food</a></li>
+									<li><a href="cooking.html">Cooking local food</a></li>
+									<li><a href="farm.html">Farm activities</a></li>
+								</ul>
 							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);" class="show-submenu">Facilities <i class="icon-down-open-mini"></i></a>
+								<ul>
+									<li><a href="all_activities.html">All activities</a></li>
+									<li><a href="horses.html">Horses</a></li>
+									<li><a href="local_food.html">Discover local food</a></li>
+									<li><a href="cooking.html">Cooking local food</a></li>
+									<li><a href="farm.html">Farm activities</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);" class="show-submenu">Functions<i class="icon-down-open-mini"></i></a>
+								<ul>
+									<li><a href="all_activities.html">All activities</a></li>
+									<li><a href="horses.html">Horses</a></li>
+									<li><a href="local_food.html">Discover local food</a></li>
+									<li><a href="cooking.html">Cooking local food</a></li>
+									<li><a href="farm.html">Farm activities</a></li>
+								</ul>
+							</li>
+
+							<li><a href="contacts.html">Contact us </a></li>
+
+
 						</ul>
 					</div><!-- End main-menu -->
 
@@ -206,7 +200,7 @@
 						<li><a href="#"><i class="icon-vimeo"></i></a></li>
 						<li><a href="#"><i class="icon-youtube-play"></i></a></li>
 					</ul>
-					<p>© CountryHolidays 2015</p>
+					<p>ï¿½ CountryHolidays 2015</p>
 				</div>
 			</div>
 		</div><!-- End row -->
