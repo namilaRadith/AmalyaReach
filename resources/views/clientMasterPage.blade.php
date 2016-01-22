@@ -77,7 +77,7 @@
 			<div class="row">
 				<div class="col-md-4 col-sm-4 col-xs-4">
 					<div id="logo">
-						<a href="index.html"><img src="{{asset('/client/img/logo.png')}}" width="240" height="40" alt="CountryHolidays" data-retina="true"></a>
+						<a href="{{action('WelcomeController@index')}}"><img src="{{asset('/client/img/logo.png')}}" width="240" height="40" alt="CountryHolidays" data-retina="true"></a>
 					</div>
 				</div>
 				<nav class="col-md-8 col-sm-8 col-xs-8">
@@ -89,49 +89,50 @@
 						<a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
 						<ul>
 							<li><a href="#">Home</a></li>
-							<li><a href="about.html">About</a></li>
+							<li><a href="{{action('clientNavigationController@showAbout')}}">About</a></li>
 							<li class="submenu">
 								<a href="javascript:void(0);" class="show-submenu">Dinning <i class="icon-down-open-mini"></i></a>
 								<ul>
-									<li><a href="all_activities.html">All activities</a></li>
-									<li><a href="horses.html">Horses</a></li>
-									<li><a href="local_food.html">Discover local food</a></li>
-									<li><a href="cooking.html">Cooking local food</a></li>
-									<li><a href="farm.html">Farm activities</a></li>
+									<li><a href="{{action('clientNavigationController@showDinningList')}}">All Recipes List</a></li>
+									<li><a href="#">Horses</a></li>
+									<li><a href="#">Discover local food</a></li>
+									<li><a href="#">Cooking local food</a></li>
+									<li><a href="#">Farm activities</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
 								<a href="javascript:void(0);" class="show-submenu">Accomadation <i class="icon-down-open-mini"></i></a>
 								<ul>
-									<li><a href="all_activities.html">All activities</a></li>
-									<li><a href="horses.html">Horses</a></li>
-									<li><a href="local_food.html">Discover local food</a></li>
-									<li><a href="cooking.html">Cooking local food</a></li>
-									<li><a href="farm.html">Farm activities</a></li>
+									<li><a href="{{action('clientNavigationController@showRoomList')}}">Accommodation List</a></li>
+									<li><a href="#">Horses</a></li>
+									<li><a href="#">Discover local food</a></li>
+									<li><a href="#">Cooking local food</a></li>
+									<li><a href="#">Farm activities</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
 								<a href="javascript:void(0);" class="show-submenu">Facilities <i class="icon-down-open-mini"></i></a>
 								<ul>
-									<li><a href="all_activities.html">All activities</a></li>
-									<li><a href="horses.html">Horses</a></li>
-									<li><a href="local_food.html">Discover local food</a></li>
-									<li><a href="cooking.html">Cooking local food</a></li>
-									<li><a href="farm.html">Farm activities</a></li>
+									<li><a href="{{action('clientNavigationController@showFacilitiesList')}}">All Facilities</a></li>
+									<li><a href="#">Horses</a></li>
+									<li><a href="#">Discover local food</a></li>
+									<li><a href="#">Cooking local food</a></li>
+									<li><a href="#">Farm activities</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
 								<a href="javascript:void(0);" class="show-submenu">Functions<i class="icon-down-open-mini"></i></a>
 								<ul>
-									<li><a href="all_activities.html">All activities</a></li>
-									<li><a href="horses.html">Horses</a></li>
-									<li><a href="local_food.html">Discover local food</a></li>
-									<li><a href="cooking.html">Cooking local food</a></li>
-									<li><a href="farm.html">Farm activities</a></li>
+									<li><a href="{{action('clientNavigationController@showFunctionList')}}">All Functions</a></li>
+									<li><a href="#">Horses</a></li>
+									<li><a href="#">Discover local food</a></li>
+									<li><a href="#">Cooking local food</a></li>
+									<li><a href="#">Farm activities</a></li>
 								</ul>
 							</li>
 
-							<li><a href="contacts.html">Contact us </a></li>
+							{{--contact page navigation link	--}}
+							<li><a href="{{action('feedbackController@create')}}">Contact us </a></li>
 
 
 						</ul>
@@ -165,7 +166,7 @@
 					<li><a href="#">Rooms</a></li>
 					<li><a href="#">Activities</a></li>
 					<li><a href="#">Contact us</a></li>
-					<li><a href="#">Gallery</a></li>
+					<li><a href="{{action('clientNavigationController@showGallery')}}">Gallery</a></li>
 				</ul>
 			</div>
 			<div class="col-md-3 col-sm-3">
