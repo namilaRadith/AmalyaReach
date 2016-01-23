@@ -130,10 +130,8 @@
 									<li><a href="farm.html">Farm activities</a></li>
 								</ul>
 							</li>
-
+							<li><a  style ="color:#6600FF" href="about.html">Loyalty</a></li>
 							<li><a href="contacts.html">Contact us </a></li>
-
-
 						</ul>
 					</div><!-- End main-menu -->
 

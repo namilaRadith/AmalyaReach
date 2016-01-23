@@ -269,14 +269,19 @@ desired effect
                         <li><a href="#">Contact-Us Page</a></li>
                     </ul>
                 </li>
-                <!-- / .vouchers area  -->
-                <!-- invoices area  -->
+
+
+                <!-- Promotions area  -->
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Invoices</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Promotions</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
+                        <li><a href="">Add Promotion</a></li>
+                    </ul>
+                </li>
 
-
-
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Loyalty</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
                     </ul>
                 </li>
 

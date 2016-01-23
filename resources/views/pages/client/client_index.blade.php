@@ -143,6 +143,49 @@
 					</form>
 				</div>
 			</div>
+
+
+
+			<!-- Promotions Message-->
+			<div class="col-md-4 pull-left">
+				<div id="book">
+					<div id="message-booking"></div>
+					<form role="form" method="post" action="assets/check_avail.php" id="check_avail" autocomplete="off">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="form-group">
+									<label style="color: #3DA0DB"><i style="color: #7a43b6" class="fa fa-bookmark fa-3x"></i>
+										Up to 30% off with Amayla Insider Deals!
+										<a>Sign in to unlock</a></label>
+								</div>
+							</div>
+							<a href="room_details.html"><img height="250px" width="100%" src="{{ asset('client/sampleImages/room2.jpg') }}" alt=""></a>
+
+
+						</div><!-- End row -->
+
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<div class="form-group">
+									<input type="submit" value="View Promotion" class="btn_full" id="submit-booking">
+								</div>
+							</div>
+
+
+							<div class="col-md-12 col-sm-12">
+								<div align="center" class="form-group">
+									<label ><i class="fa fa-angle-double-up fa-3x"></i></label>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- END Promotions Message-->
+
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
 		</div>
 
 	</div>

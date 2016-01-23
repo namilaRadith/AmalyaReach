@@ -40,3 +40,7 @@ Route::post('feedback', 'feedbackController@store');
 //
 Route::get('specials','');
 
+
+//Promotions Routing
+Route::get('admin_add_promotion', 'AdminPromotions@index');
+
