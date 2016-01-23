@@ -156,25 +156,48 @@
 								<div class="form-group">
 									<label style="color: #3DA0DB"><i style="color: #7a43b6" class="fa fa-bookmark fa-3x"></i>
 										Up to 30% off with Amayla Insider Deals!
-										<a>Sign in to unlock</a></label>
+										<a>Sign in to unlock</a></label><label style="margin-left: 46%;color: #932ab6" class="down"><i class="fa fa-angle-double-down fa-3x"></i></label>
 								</div>
 							</div>
-							<a href="room_details.html"><img height="250px" width="100%" src="{{ asset('client/sampleImages/room2.jpg') }}" alt=""></a>
-
-
 						</div><!-- End row -->
+						<div class="row" id="PromoShow">
+							<div class="col-md-12 col-sm-12">
+								<div class="form-group">
 
-						<div class="row">
+
+									<div class="my-slider" style="width: 100%;height: 250px">
+										<ul>
+											<li><img src="{{ asset('client/sampleImages/room2.jpg') }}"></li>
+											<li><img src="{{ asset('client/sampleImages/room2.jpg') }}"></li>
+											<li><img src="{{ asset('client/sampleImages/room2.jpg') }}"></li>
+											<li><img src="{{ asset('client/sampleImages/room2.jpg') }}"></li>
+											<li><img src="{{ asset('client/sampleImages/room2.jpg') }}"></li>
+										</ul>
+									</div>
+
+									<!-- There'll be a load of other stuff here -->
+									<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+									<script src="{{asset('/client/js/unslider.js')}}"></script> <!-- but with the right path! -->
+									<link rel="stylesheet" href="{{asset('/client/css/unslider.css')}}">
+									<script>
+										jQuery(document).ready(function($) {
+											$('.my-slider').unslider({autoplay: true});
+
+										});
+									</script>
+									<div style="height: 15px">
+
+									</div>
+								</div>
+							</div>
 							<div class="col-md-12 col-sm-12">
 								<div class="form-group">
 									<input type="submit" value="View Promotion" class="btn_full" id="submit-booking">
 								</div>
 							</div>
-
-
 							<div class="col-md-12 col-sm-12">
 								<div align="center" class="form-group">
-									<label ><i class="fa fa-angle-double-up fa-3x"></i></label>
+									<label class="up" style="color: #932ab6"><i class="fa fa-angle-double-up fa-3x"></i></label>
 								</div>
 							</div>
 						</div>
@@ -184,10 +207,26 @@
 			<!-- END Promotions Message-->
 
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
+			<script type="text/javascript">
 
+				$( document ).ready(function(){
+					$("#PromoShow").hide();
+				});
+
+					$(".up").click(function () {
+						$(".down").slideDown();
+						$("#PromoShow").slideUp();
+					});
+
+					$(".down").click(function () {
+						$(".down").slideUp();
+						$("#PromoShow").slideDown();
+					});
+			</script>
 		</div>
-
+		<!--<a href="room_details.html" ><img height="250px" width="100%" src="{{ asset('client/sampleImages/room2.jpg') }}" alt=""></a>-->
 	</div>
 
 	<div id="general_decor_2">
@@ -329,9 +368,16 @@
 				<i class="icon-light-up"></i> View Weahter forecast </a>
 			<!-- End  weather-->
 
+
+
+
 			<div id="banner">
-				<h3><span>-30% OFF</span>This week only for all rooms!</h3>
+				<h3><span>-20% OFF</span>This week only for all rooms!</h3>
 			</div><!-- End banner -->
+
+
+
+
 
 		</div>
 	</div><!-- End row -->
