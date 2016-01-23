@@ -38,24 +38,11 @@
         </div>
         <hr>
         <div class="row magnific-gallery add_bottom_60 ">
-            <div class="col-md-4 col-sm-4">
-                <a href="{{asset('client/img/pic_1.jpg')}}" title="Photo title"><img src="{{asset('client/img/pic_1.jpg')}}" alt="" class="img-responsive styled"></a>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <a href="{{asset('client/img/pic_2.jpg')}}" title="Photo title"><img src="{{asset('client/img/pic_2.jpg')}}" alt="" class="img-responsive styled"></a>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <a href="{{asset('client/img/pic_3.jpg')}}" title="Photo title"><img src="{{asset('client/img/pic_3.jpg')}}" alt="" class="img-responsive styled"></a>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <a href="{{asset('client/img/pic_4.jpg')}}" title="Photo title"><img src="{{asset('client/img/pic_4.jpg')}}" alt="" class="img-responsive styled"></a>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <a href="{{asset('client/img/pic_5.jpg')}}" title="Photo title"><img src="{{asset('client/img/pic_5.jpg')}}" alt="" class="img-responsive styled"></a>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <a href="{{asset('client/img/pic_6.jpg')}}" title="Photo title"><img src="{{asset('client/img/pic_6.jpg')}}" alt="" class="img-responsive styled"></a>
-            </div>
+            @foreach( $imageList as $data )
+                <div class="col-md-3 col-sm-3">
+                    <a href="{{asset('client/img/img-gallery')}}{{'/'.$data->contentName.'.'.$data->contentFileExtension}}" title="{{$data->contentDescription}}"><img src="{{asset('client/img/img-gallery')}}{{'/'.$data->contentName.'.'.$data->contentFileExtension}}" alt="" class="img-responsive styled"></a>
+                </div>
+            @endforeach
         </div><!-- End row -->
 
         <div class="main_title">

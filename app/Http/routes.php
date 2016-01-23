@@ -57,7 +57,14 @@ Route::get('cl-gallery', 'clientNavigationController@showGallery');
 //registed route for home page of the Admin
 Route::get('ad-home', 'AdminDashboardController@index');
 
+//registed route for Image Gallery page of the Admin
+Route::get('dashboard/gallery/img-gallery', 'AdminDashboardController@showImageGallery');
 
+//registed route for Video Gallery page of the Admin
+Route::get('dashboard/gallery/vd-gallery', 'AdminDashboardController@showVideoGallery');
+
+//registed route for image Gallery image upload
+Route::post('dashboard/gallery/img-gallery/upload', 'AdminDashboardController@uploadImageToGallery');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

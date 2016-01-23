@@ -88,7 +88,7 @@
 						</div>
 						<a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
 						<ul>
-							<li><a href="#">Home</a></li>
+							<li><a href="{{action('WelcomeController@index')}}">Home</a></li>
 							<li><a href="{{action('clientNavigationController@showAbout')}}">About</a></li>
 							<li class="submenu">
 								<a href="javascript:void(0);" class="show-submenu">Dinning <i class="icon-down-open-mini"></i></a>

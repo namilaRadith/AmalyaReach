@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\GalleryContent;
 
 use Illuminate\Http\Request;
 
@@ -18,27 +19,33 @@ class clientNavigationController extends Controller {
 	 * @return Response
 	 */
 
-	//navigate client to the Gallery page
+	//this function navigate client to the Gallery page
 	public function showGallery() {
-		return view('pages.client.clientGallery');
-	}
+		$galleryContent =  GalleryContent::where('contentType','=','img')->get();
+		return view('pages.client.clientGallery',array('imageList' => $galleryContent));
 
+	}
+	//this function navigate client to the About Us page
 	public function showAbout()	{
 		return view('pages.client.clientAboutUs');
 	}
 
+	//this function navigate client to the Show Room List page
 	public function showRoomList() {
 		return view('pages.client.clientRoomList');
 	}
 
+	//this function navigate client to the Show Dinning List page
 	public function showDinningList() {
 		return view('pages.client.clientDinningList');
 	}
 
+	//this function navigate client to the Show Facilities List page
 	public function showFacilitiesList() {
 		return view('pages.client.clientFacilitiesList');
 	}
 
+	//this function navigate client to the Show Function List page
 	public function showFunctionList() {
 		return view('pages.client.clientFunctionList');
 	}
