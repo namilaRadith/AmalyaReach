@@ -11,11 +11,60 @@
 |
 */
 
+/*
+ *
+ * "cl" is the prefix for client routs
+ * "ad" is the prefix for admin routs
+ *  eg : ad-<route name> | cl-<route name>
+ *
+ */
+
 Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+/*
+ ***********************************************************************************************************************
+  											CLIENT NAVIGATION  ROUTES
+ ***********************************************************************************************************************
+ */
 
-Route::get('home-admin', 'AdminDashboardController@index');
+//registed route for home page of the Client
+Route::get('cl-home', 'HomeController@index');
+
+//registed route for About Us page of the Client
+Route::get('cl-about', 'clientNavigationController@showAbout');
+
+//registed route for Dinning List page of the Client
+Route::get('cl-dinning-list', 'clientNavigationController@showDinningList');
+
+//registed route for Room List page of the Client
+Route::get('cl-rooms-list', 'clientNavigationController@showRoomList');
+
+//registed route for Facilities List page of the Client
+Route::get('cl-facilities-list', 'clientNavigationController@showFacilitiesList');
+
+//registed route for Function List page of the Client
+Route::get('cl-function-list', 'clientNavigationController@showFunctionList');
+
+//registed route for Gallery page of the Client
+Route::get('cl-gallery', 'clientNavigationController@showGallery');
+
+/*
+ ***********************************************************************************************************************
+											ADMIN NAVIGATION  ROUTES
+ ***********************************************************************************************************************
+ */
+
+//registed route for home page of the Admin
+Route::get('ad-home', 'AdminDashboardController@index');
+
+//registed route for Image Gallery page of the Admin
+Route::get('dashboard/gallery/img-gallery', 'AdminDashboardController@showImageGallery');
+
+//registed route for Video Gallery page of the Admin
+Route::get('dashboard/gallery/vd-gallery', 'AdminDashboardController@showVideoGallery');
+
+//registed route for image Gallery image upload
+Route::post('dashboard/gallery/img-gallery/upload', 'AdminDashboardController@uploadImageToGallery');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

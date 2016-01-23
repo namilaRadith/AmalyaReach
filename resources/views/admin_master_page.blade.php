@@ -25,6 +25,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     -->
     <link rel="stylesheet" href="{{ asset('/admin/dist/css/skins/skin-blue.min.css')}}">
 
+    <!-- Custom style -->
+    <link rel="stylesheet" href="{{ asset('/admin/dist/css/custom.css')}}">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -258,7 +261,7 @@ desired effect
             <ul class="sidebar-menu">
                 <li class="header">Amalya Reach Admin Panel</li>
                 <!-- Tree View Dashboard -->
-                <li class="treeview">
+                <li class=" {{Request::segment(1) === 'dashboard' ? 'active' : '' }} treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="#">Home Page</a></li>
@@ -267,6 +270,12 @@ desired effect
                         <li><a href="#">Facilities Page</a></li>
                         <li><a href="#">Functions Page</a></li>
                         <li><a href="#">Contact-Us Page</a></li>
+                        <li class="{{Request::segment(2) === 'gallery' ? 'active' : '' }}"><a href="#">Gallery Page<i class="fa fa-angle-left pull-right"></i></a>
+                            <ul class="treeview-menu">
+                                <li class="{{Request::segment(3) ==='img-gallery' ? 'active' : '' }}"><a  href="{{action('AdminDashboardController@showImageGallery')}}" ><i class="fa fa-circle-o"></i> Photo Gallery </a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Video Gallery</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
 
