@@ -1,4 +1,4 @@
-@extends('client_master_page')
+@extends('clientMasterPage')
 @section('css_ref')
 	@parent
 	@stop

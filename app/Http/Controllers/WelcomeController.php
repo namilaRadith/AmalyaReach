@@ -31,7 +31,7 @@ class WelcomeController extends Controller {
 	 */
 
 	public function index(){
-		return view('pages.client.client_index');
+		return view('pages.client.clientIndex');
 	}
 
 }
