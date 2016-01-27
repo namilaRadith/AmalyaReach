@@ -70,20 +70,20 @@
 			<div class="col-md-4 pull-right">
 				<div id="book">
 					<div id="message-booking"></div>
-					<form role="form" method="post" action="assets/check_avail.php" id="check_avail" autocomplete="off">
-
+					<form role="form" method="post" action="mainReservationFormSubmit" id="mainReservationForm" name="mainReservationForm" autocomplete="off">
+						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<div class="row">
 							<div class="col-md-6 col-sm-6 col-xs-6">
 								<div class="form-group">
 									<label>Check in</label>
-									<input class="date-pick form-control" data-date-format="M d, D" type="text" id="check_in" name="check_in" placeholder="Check in">
+									<input class="date-pick form-control" data-date-format="M d, D" type="text" id="checkIn" name="checkIn" placeholder="Check in">
 									<span class="input-icon"><i class=" icon-calendar"></i></span>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 col-xs-6">
 								<div class="form-group">
 									<label>Check out</label>
-									<input class="date-pick form-control" data-date-format="M d, D" type="text" id="check_out" name="check_out" placeholder="Check out">
+									<input class="date-pick form-control" data-date-format="M d, D" type="text" id="checkOut" name="checkOut" placeholder="Check out">
 									<span class="input-icon"><i class=" icon-calendar"></i></span>
 								</div>
 							</div>
@@ -114,32 +114,29 @@
 							<div class="col-md-12">
 								<div class="form-group">
 									<label>Room type</label>
-									<select class="form-control" name="room_type" id="room_type">
+									<select class="form-control" name="roomType" id="roomType">
 										<option value="">Select room type</option>
-										<option value="Single Room">Single Room</option>
-										<option value="Double Room">Double Room</option>
-										<option value="Luxury Double Room">Luxury Double Room</option>
+										<option value="1">Single Room</option>
+										<option value="2">Double Room</option>
+										<option value="3">Luxury Single Room</option>
+										<option value="4">Luxury Double Room</option>
 									</select>
 								</div>
 							</div>
-							<div class="col-md-12 col-sm-6">
+							<div class="col-md-12">
 								<div class="form-group">
-									<label>Name</label>
-									<input type="text" class="form-control" name="name_booking" id="name_booking" placeholder="Name and Last name">
+									<label>Have a Code?</label>
+									<input type="text" class="form-control" name="coding" id="coding" placeholder="Enter Code here">
 								</div>
 							</div>
-							<div class="col-md-12 col-sm-6">
-								<div class="form-group">
-									<label>Email</label>
-									<input type="text" class="form-control" name="email_booking" id="email_booking" placeholder="Your email">
-								</div>
-							</div>
+
 							<div class="col-md-12 col-sm-12">
 								<div class="form-group">
-									<input type="submit" value="Book now" class="btn_full" id="submit-booking">
+									<input type="submit" value="Check Availability" class="btn_full" id="checkAvailability">
 								</div>
 							</div>
 						</div>
+
 					</form>
 				</div>
 			</div>

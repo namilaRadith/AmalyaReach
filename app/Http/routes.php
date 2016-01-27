@@ -23,4 +23,8 @@ Route::controllers([
 
 //Home page reservation forms
 Route::get('checkAvailableRoomsForm2','ReservationController@checkAvailableRoomsForm2');
+Route::get('reservationDetailsForm3','ReservationController@reservationDetailsForm3');
+Route::post('mainReservationFormSubmit','ReservationController@mainReservationFormSubmit');
+Route::post('selectRoomFormReservation','ReservationController@selectRoomFormReservation');
+Route::post('reservationForm3Submit','ReservationController@reservationForm3Submit');
 
