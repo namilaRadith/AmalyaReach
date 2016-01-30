@@ -49,6 +49,10 @@ class clientNavigationController extends Controller {
 	public function showFunctionList() {
 		return view('pages.client.clientFunctionList');
 	}
+	//this function navigate client to Special offer
+	public function showSpecialOffers() {
+		return view('pages.client.clientSpecialOffers');
+	}
 
 
 

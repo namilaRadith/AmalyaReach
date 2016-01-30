@@ -159,16 +159,13 @@
 						</div><!-- End row -->
 						<div class="row" id="PromoShow">
 							<div class="col-md-12 col-sm-12">
-								<div class="form-group">
-
-
-									<div class="my-slider" style="width: 100%;height: 250px">
-										<ul>
-											<li><img src="{{ asset('client/sampleImages/room2.jpg') }}"></li>
-											<li><img src="{{ asset('client/sampleImages/room2.jpg') }}"></li>
-											<li><img src="{{ asset('client/sampleImages/room2.jpg') }}"></li>
-											<li><img src="{{ asset('client/sampleImages/room2.jpg') }}"></li>
-											<li><img src="{{ asset('client/sampleImages/room2.jpg') }}"></li>
+								<div class="form-group"><div class="my-slider" style="width:315px;height: 200px;">
+										<ul style="margin-left: 25px;">
+											<li><img src="{{ asset('client/img/images.jpg') }}"></li>
+											<li><img src="{{ asset('client/img/images1.jpg') }}"></li>
+											<li><img src="{{ asset('client/img/images2.jpg') }}"></li>
+											<li><img src="{{ asset('client/img/images1.jpg') }}"></li>
+											<li><img src="{{ asset('client/img/images.jpg') }}"></li>
 										</ul>
 									</div>
 
@@ -279,12 +276,54 @@
 	</div><!-- End row -->
 </div><!-- End container -->
 
+
+
+
+<!--Special Offers Area -->
 <div class="bg_gray add_bottom_60">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 col-sm-4">
+	<div class="col-md-12 col-sm-12"  style=" text-align: center;" >
+	<h2>Special Offers</h2>
+	<hr class="UpperLine">
+	</div>
+	<style>
+
+		h2 { color: #990099; font-family: 'Sans-serif'; font-size: 36px; font-weight: normal; line-height: 48px; margin: 0 0 18px; text-shadow: 1px 0 0 #fff; }
+
+		hr.UpperLine {
+			height: 10px;
+			border: 0;
+			box-shadow: 0 10px 10px -10px #8c8b8b inset;
+		}
+
+
+
+		hr.LowerLine {
+			height: 30px;
+			border-style: solid;
+			border-color: #8c8b8b;
+			border-width: 1px 0 0 0;
+			border-radius: 20px;
+		}
+		hr.LowerLine:before {
+			display: block;
+			content: "";
+			height: 30px;
+			margin-top: -31px;
+			border-style: solid;
+			border-color: #8c8b8b;
+			border-width: 0 0 1px 0;
+			border-radius: 20px;
+		}
+
+
+
+
+	</style>
+	<div class="container" >
+		<div class="row" >
+			<div class="col-md-4 col-sm-4" >
 				<div class="img_zoom">
-					<a href="room_details.html"><img src="{{asset('client/img/room_1.jpg')}}" alt="" class="img-responsive"></a>
+					<a href="room_details.html"><img src="{{asset('client/img/images.jpg')}}" alt="" class="img-responsive"></a>
 				</div>
 				<h3> Our Reception Halls <span class="price_home">$90<em>Per night</em></span></h3>
 				<p>
@@ -296,7 +335,7 @@
 			</div>
 			<div class="col-md-4 col-sm-4">
 				<div class="img_zoom">
-					<a href="room_details.html"><img src="{{asset('client/img/room_2.jpg')}}" alt="" class="img-responsive"></a>
+					<a href="room_details.html"><img src="{{asset('client/img/images1.jpg')}}" alt="" class="img-responsive"></a>
 				</div>
 				<h3>Scrumptious Menus <span class="price_home">$120<em>Per night</em></span></h3>
 				<p>
@@ -308,7 +347,7 @@
 			</div>
 			<div class="col-md-4 col-sm-4">
 				<div class="img_zoom">
-					<a href="room_details.html"><img src="{{asset('client/img/room_3.jpg')}}" alt="" class="img-responsive"></a>
+					<a href="room_details.html"><img src="{{asset('client/img/images2.jpg')}}" alt="" class="img-responsive"></a>
 				</div>
 				<h3>Luxury Comfortable Rooms <span class="price_home">$140<em>Per night</em></span></h3>
 				<p>
@@ -321,6 +360,7 @@
 		</div><!-- End row -->
 	</div><!-- End container -->
 </div>
+<hr class="LowerLine">
 
 <div class="container add_bottom_60">
 	<div class="main_title add_bottom_45">
