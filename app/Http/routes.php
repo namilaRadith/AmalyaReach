@@ -75,12 +75,46 @@ Route::controllers([
 ]);
 
 
+
+
+
+/*
+########################################################################################################################
+						<============== Sameera ===============>
+########################################################################################################################
+*/
+
 //Home page reservation forms
 Route::get('checkAvailableRoomsForm2','ReservationController@checkAvailableRoomsForm2');
 Route::get('reservationDetailsForm3','ReservationController@reservationDetailsForm3');
 Route::post('mainReservationFormSubmit','ReservationController@mainReservationFormSubmit');
-Route::post('selectRoomFormReservation','ReservationController@selectRoomFormReservation');
-Route::post('reservationForm3Submit','ReservationController@reservationForm3Submit');
+Route::get('selectRoomFormReservation','ReservationController@selectRoomFormReservation');
+//Route::post('reservationForm3Submit','ReservationController@reservationForm3Submit');
+//Route::post('reservationForm3Submit','PaypalPaymentController@makePayPalPayment');
+
+//PalPal Payment
+Route::get('successPayment', 'PaypalPaymentController@successPayment');
+Route::get('testPaypal', 'PaypalPaymentController@testPaypal');
+
+//sameera test routes
+Route::post('xxxx','PaypalPaymentController@showPayment');
+Route::post('reservationForm3Submiting','ReservationController@finalformsubmittest');
+
+
+/*
+########################################################################################################################
+						<============== Sameera ===============>
+########################################################################################################################
+*/
+
+
+
+
+
+
+
+
+
 
 
 Route::get('contact', 'AboutController@getContact');
