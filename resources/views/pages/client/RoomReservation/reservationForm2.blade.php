@@ -90,7 +90,7 @@
                                 <div class="col-lg-2 col-md-2 col-sm-2">
                                     <div class="price_list">
                                         <div>
-                                            <sup>$</sup>{{$room->price}}*<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
+                                            <sup>$</sup>{{$room->price}}<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
                                             <small>
                                                 <input type="submit" value="Select" class="btn_1" id="submit-contact">
                                             </small>

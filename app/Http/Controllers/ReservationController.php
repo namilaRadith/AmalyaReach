@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CheckForAvailableRoomsRequest;
@@ -10,6 +11,75 @@ use Request;
 
 
 class ReservationController extends Controller {
+
+
+    public function mainReservationFormSubmit(CheckForAvailableRoomsRequest $request){
+
+        session()->put('checkIn', Request::get('checkIn'));
+        session()->put('checkOut', Request::get('checkOut'));
+        session()->put('adults', Request::get('adults'));
+        session()->put('children', Request::get('children'));
+        session()->put('roomType', Request::get('roomType'));
+        session()->put('roomTypeValue', Room::getRoomTypeValue( Request::get('roomType') ) );
+
+        $rooms = Room::getRoomsByType( Request::get('roomType') );
+
+        return view('pages.client.RoomReservation.reservationForm2')
+            ->with('rooms',$rooms);
+
+    }
+
+    public function selectRoomFormReservationSubmit(){
+
+        session()->put('selected_room_id', \Input::get('selected_room_id'));
+        $room = Room::getRoomDetails( \Input::get('selected_room_id') );
+        session()->put('selected_room_price',$room->price);
+        session()->put('room_qty',1);
+
+        return redirect('showReservationForm3');
+
+    }
+
+
+    public function showReservationForm3(){
+
+        $selected_room_id = session()->get('selected_room_id');
+        $room = Room::getRoomDetails($selected_room_id);
+
+        return view('pages.client.RoomReservation.reservationForm3')->with('room',$room);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function checkAvailableRoomsForm2(){
 
@@ -24,35 +94,9 @@ class ReservationController extends Controller {
         return view('pages.client.reservationForm3');
     }
 
-    public function mainReservationFormSubmit(CheckForAvailableRoomsRequest $request){
-
-        session()->put('checkIn', Request::get('checkIn'));
-        session()->put('checkOut', Request::get('checkOut'));
-        session()->put('adults', Request::get('adults'));
-        session()->put('children', Request::get('children'));
-        session()->put('roomType', Request::get('roomType'));
-        session()->put('roomTypeValue', Room::getRoomTypeValue( Request::get('roomType') ) );
-
-        $rooms = Room::getRoomsByType( Request::get('roomType') );
 
 
-        return view('pages.client.reservationForm2')
-            ->with('rooms',$rooms);
 
-
-    }
-
-    public function selectRoomFormReservation(){
-
-        session()->put('selected_room_id', Request::get('selected_room_id'));
-
-        //$value = session()->get('selected_room_id');
-        $room = Room::getRoomDetails( Request::get('selected_room_id') );
-
-
-        return view('pages.client.reservationForm3')
-                    ->with('room',$room);
-    }
 
     public function reservationForm3Submit(){
 
@@ -101,6 +145,12 @@ class ReservationController extends Controller {
 
     }
 
+
+
+    //for testing
+    public function finalformsubmittest(Requests\PaymentFormRequest $request){
+        return "sameera";
+    }
 
 }
 
