@@ -54,15 +54,11 @@
         </div>
         <hr>
         <div class="row magnific">
+            @foreach( $videoList as $data )
             <div class="col-md-4 col-sm-4">
-                <a href="https://vimeo.com/45830194" class="video" title="Video Vimeo"><img src="{{asset('client/img/pic_1.jpg')}}" alt="" class="img-responsive styled"></a>
+                <a href="{{asset('client/video/vid-gallery')}}{{'/'.$data->contentName.'.'.$data->contentFileExtension}}" title="{{$data->contentDescription}}" class="video"><img src="{{asset('client/img/pic_1.jpg')}}" alt="" class="img-responsive styled"></a>
             </div>
-            <div class="col-md-4 col-sm-4">
-                <a href="https://www.youtube.com/watch?v=Zz5cu72Gv5Y" class="video" title="Video Youtube"><img src="{{asset('client/img/pic_2.jpg')}}" alt="" class="img-responsive styled"></a>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <a href="https://vimeo.com/45830194" class="video" title="Video Vimeo"><img src="{{asset('client/img/pic_3.jpg')}}" alt="" class="img-responsive styled"></a>
-            </div>
+            @endforeach
         </div><!-- End row -->
     </div>
 

@@ -1,8 +1,10 @@
 <?php namespace App\Http\Controllers;
 
+use App\Contacts;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\GalleryContent;
+use App\aboutUsPage;
 
 use Illuminate\Http\Request;
 
@@ -21,13 +23,16 @@ class clientNavigationController extends Controller {
 
 	//this function navigate client to the Gallery page
 	public function showGallery() {
-		$galleryContent =  GalleryContent::where('contentType','=','img')->get();
-		return view('pages.client.clientGallery',array('imageList' => $galleryContent));
+		$galleryContentImages =  GalleryContent::where('contentType','=','img')->get();
+		$galleryContentVideos =  GalleryContent::where('contentType','=','video')->get();
+		return view('pages.client.clientGallery',array('imageList' => $galleryContentImages,'videoList' => $galleryContentVideos));
 
 	}
 	//this function navigate client to the About Us page
 	public function showAbout()	{
-		return view('pages.client.clientAboutUs');
+		$aboutUs =  aboutUsPage::all();
+
+		return view('pages.client.clientAboutUs',array('aboutUs' => $aboutUs));
 	}
 
 	//this function navigate client to the Show Room List page
@@ -50,6 +55,11 @@ class clientNavigationController extends Controller {
 		return view('pages.client.clientFunctionList');
 	}
 
+	public function showContactUs(){
+
+		$contacts = Contacts::all();
+		return view('pages.admin.adminContactUs',array('contacts'=>$contacts));
+	}
 
 
 

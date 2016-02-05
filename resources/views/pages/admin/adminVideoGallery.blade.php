@@ -20,22 +20,22 @@
             <!-- general form elements -->
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Upload Image </h3>
+                    <h3 class="box-title">Upload Video </h3>
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" action="{{action('AdminDashboardController@uploadImageToGallery')}}" method="post"
-                      enctype="multipart/form-data">
+                <form role="form" action="{{action('AdminDashboardController@uploadVideoToGallery')}}" method="post"
+                      enctype="multipart/form-data" files=true >
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Image Title</label>
-                            <input type="text" class="form-control" name="imageTitle" id="imageTitle"
+                            <label for="exampleInputEmail1">Video Title</label>
+                            <input type="text" class="form-control" name="videoTitle" id="videoTitle"
                                    placeholder="Enter title">
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleInputFile">Choose image</label>
-                            <input input type="file" name="image" id="image">
+                            <label for="exampleInputFile">Choose video</label>
+                            <input input type="file" name="video" id="video">
                             <input type="hidden" value="{{csrf_token()}}" name="_token">
                         </div>
 
@@ -71,17 +71,13 @@
 
 
         <div class="col-md-9">
-            @foreach( $imageList as $data )
-                <div class="col-md-4 col-sm-4">
-                    <a href="{{asset('client/img/img-gallery')}}{{'/'.$data->contentName.'.'.$data->contentFileExtension}}"
-                       title="{{$data->contentDescription}}"><img
-                                src="{{asset('client/img/img-gallery')}}{{'/'.$data->contentName.'.'.$data->contentFileExtension}}"
-                                alt="" class="img-responsive styled"></a>
-                    <br>
-                    <button class="btn btn-danger" onclick="deleteImage({{$data->id}})"><i class="fa fa-trash"></i></button>
-                    <button class="btn btn-warning"><i class="fa fa-edit"></i></button>
-                </div>
-            @endforeach
+            <div class="row magnific">
+                @foreach( $videoList as $data )
+                    <div class="col-md-4 col-sm-4">
+                        <a href="{{asset('client/video/vid-gallery')}}{{'/'.$data->contentName.'.'.$data->contentFileExtension}}" title="{{$data->contentDescription}}" class="video"><img src="{{asset('client/img/pic_1.jpg')}}" alt="" class="img-responsive styled"></a>
+                    </div>
+                @endforeach
+            </div><!-- End row -->
         </div>
     </div><!-- End row -->
 
@@ -103,18 +99,6 @@
             });
         });
 
-        function deleteImage(id) {
-
-                $.ajax({
-                    method: "GET",
-                    url: 'img-gallery/delete/'+id ,
-                        success:function(data){
-                            alert(data);
-                        }
-
-                });
-
-        }
 
     </script>
 

@@ -137,6 +137,8 @@ return [
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Html\HtmlServiceProvider',
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider', //ide helper
+		'Cviebrock\ImageValidator\ImageValidatorServiceProvider', // image validation plugin
+
 
 		/*
 		 * Application Service Providers...

@@ -1,8 +1,14 @@
 <?php namespace App\Http\Controllers;
+use App\Contacts;
 use App\GalleryContent;
-use \Input as Input;
+use App\aboutUsPage;
+use Illuminate\Support\Facades\File;
 use App\Http\Requests;
-use Illuminate\Http\Request;
+use Validator;
+use Input;
+use Request;
+use Mail;
+
 
 
 
@@ -33,31 +39,51 @@ class AdminDashboardController extends Controller {
 		return view('pages.admin.adminImageGallery',array('imageList' => $galleryContent));
 	}
 
-	public function uploadImageToGallery(Request $request)
+	public function uploadImageToGallery(Requests\UploadGalleryImageRequest $request)
 	{
-		if (Input::hasFile('image')) {
 
-			$galleryContent = new GalleryContent();
 
-			$file = Input::file('image');
-			$fileName = explode(".",$file->getClientOriginalName());
-			$fileExtention = $file->getClientOriginalExtension();
-			$fileType ='img';
-			$fileDescription = $request->input('contentTitle');
-			$file->move('client/img/img-gallery', $file->getClientOriginalName());
-
-			$galleryContent->contentType = $fileType;
-			$galleryContent->contentName =$fileName[0];
-			$galleryContent->contentFileExtension =$fileExtention;
-			$galleryContent->contentDescription = $fileDescription;
-
-			$galleryContent->save();
-
-		}
+		$galleryContent = new GalleryContent();
+		$file = Input::file('image');
+		$fileName = explode(".", $file->getClientOriginalName());
+		$fileExtention = $file->getClientOriginalExtension();
+		$fileType = 'img';
+		$fileDescription = $request->input('imageTitle');
+		$file->move('client/img/img-gallery', $file->getClientOriginalName());
+		$galleryContent->contentType = $fileType;
+		$galleryContent->contentName = $fileName[0];
+		$galleryContent->contentFileExtension = $fileExtention;
+		$galleryContent->contentDescription = $fileDescription;
+		$galleryContent->save();
 
 		return redirect()->action('AdminDashboardController@showImageGallery');
 
 
+	}
+
+	public function deleteImageFromGallery($id) {
+		$galleryContent =  GalleryContent::find($id);
+		$path = 'client/img/img-gallery/'.$galleryContent->contentName.'.'.$galleryContent->contentFileExtension;
+		File::Delete($path);
+		$galleryContent->delete();
+
+		return redirect()->action('AdminDashboardController@showImageGallery');
+	}
+
+	public function uploadVideoToGallery(Request $request){
+		$galleryContent = new GalleryContent();
+		$file = Input::file('video');
+		$fileName = explode(".", $file->getClientOriginalName());
+		$fileExtention = $file->getClientOriginalExtension();
+		$fileType = 'video';
+		$fileDescription = $request->input('videoTitle');
+		$file->move('client/video/vid-gallery', $file->getClientOriginalName());
+		$galleryContent->contentType = $fileType;
+		$galleryContent->contentName = $fileName[0];
+		$galleryContent->contentFileExtension = $fileExtention;
+		$galleryContent->contentDescription = $fileDescription;
+		$galleryContent->save();
+		return redirect()->action('AdminDashboardController@showVideoGallery');
 	}
 
 	/**
@@ -67,7 +93,8 @@ class AdminDashboardController extends Controller {
 	 */
 	public function showVideoGallery()
 	{
-		return 'video gal';
+		$galleryContent =  GalleryContent::where('contentType','=','video')->get();
+		return view('pages.admin.adminVideoGallery',array('videoList' => $galleryContent));
 	}
 
 	/**
@@ -76,9 +103,9 @@ class AdminDashboardController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function showDinningList()
 	{
-		//
+		return view('pages.admin.adminDinningList');
 	}
 
 	/**
@@ -87,9 +114,9 @@ class AdminDashboardController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function showAddDinningMenu()
 	{
-		//
+		return view('pages.admin.adminAddDinningMenu');
 	}
 
 	/**
@@ -98,9 +125,15 @@ class AdminDashboardController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function showAboutUs()
 	{
-		//
+		$aboutUs =  aboutUsPage::all();
+		return view('pages.admin.adminAboutUs',array('aboutUs' => $aboutUs));
+	}
+
+	public function updateAboutUsBasics(Request $request){
+
+		return 'ok';
 	}
 
 	/**
@@ -109,9 +142,53 @@ class AdminDashboardController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function showContactUs()
 	{
-		//
+		$contacts = Contacts::all();
+		return view('pages.admin.adminContactUs',array('contacts'=>$contacts));
 	}
 
+	public function updateContactUs(Request $request) {
+		$contacts = Contacts::find(1);
+
+		$contacts->adddress = $request->input('adddress');
+		$contacts->telephone = $request->input('telephone');
+		$contacts->fax = $request->input('fax');
+		$contacts->mobile = $request->input('mobile');
+		$contacts->email = $request->input('email');
+
+		$contacts->save();
+
+		$contacts = Contacts::all();
+		return view('pages.admin.adminContactUs',array('contacts'=>$contacts));
+
+	}
+
+
+	public function showCreateNewsLetter(){
+
+		return view('pages.admin.createNewsLetter');
+	}
+
+	public function sendNewsLetter(){
+
+		if(Request::ajax()){
+
+			$data = Input::all();
+			var_dump($data);
+
+			Mail::send('pages.admin.newsletter',$data,function($message){
+
+				$message->from('namila.mail.tester@gmail.com', 'Amalya Reach');
+
+				$message->to('namila.mail.tester@gmail.com')->subject(Input::get('subject'))->setBody('lol kooooooooootiyayi');
+
+			});
+
+		}
+
+
+
+
+	}
 }

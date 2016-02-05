@@ -57,14 +57,44 @@ Route::get('cl-gallery', 'clientNavigationController@showGallery');
 //registed route for home page of the Admin
 Route::get('ad-home', 'AdminDashboardController@index');
 
+//registed route for About us page of the Admin
+Route::get('dashboard/about-us', 'AdminDashboardController@showAboutUs');
+
+//registed route for About us page update basic details of the Admin
+Route::post('dashboard/about-us/update-maintitle-description', 'AdminDashboardController@updateAboutUsBasics');
+
 //registed route for Image Gallery page of the Admin
 Route::get('dashboard/gallery/img-gallery', 'AdminDashboardController@showImageGallery');
 
 //registed route for Video Gallery page of the Admin
 Route::get('dashboard/gallery/vd-gallery', 'AdminDashboardController@showVideoGallery');
 
+//registed route for Dinning List page of the Admin
+Route::get('dashboard/dinning-list', 'AdminDashboardController@showDinningList');
+
+//registed route for add new dinning menu page of the Admin
+Route::get('dashboard/dinning-list/add', 'AdminDashboardController@showAddDinningMenu');
+
 //registed route for image Gallery image upload
+Route::get('dashboard/contact-us', 'AdminDashboardController@showContactUs');
+
+//registed route for create news letter page
+Route::get('newsletter/create', 'AdminDashboardController@showCreateNewsLetter');
+
+//registed route for send news letter
+Route::post('newsletter/create/send', 'AdminDashboardController@sendNewsLetter');
+
+//registed route for contact us page
 Route::post('dashboard/gallery/img-gallery/upload', 'AdminDashboardController@uploadImageToGallery');
+
+//registed route for  update contact us
+Route::post('dashboard/contact-us/update', 'AdminDashboardController@updateContactUs');
+
+//registed route for image Gallery image delete
+Route::get('dashboard/gallery/img-gallery/delete/{id}', 'AdminDashboardController@deleteImageFromGallery');
+
+//registed route for video Gallery video upload
+Route::post('dashboard/gallery/vd-gallery/upload', 'AdminDashboardController@uploadVideoToGallery');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

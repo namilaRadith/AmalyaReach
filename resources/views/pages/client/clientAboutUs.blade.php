@@ -37,10 +37,9 @@
                 <img src="{{asset('/client/img/best_price.')}}png" alt="">
             </p>
             <span></span>
-            <h2>Enjoy Country Holidays</h2>
-            <p class="lead">
-                Esse dicit accusam duo an. Modus simul ei nec. Sea et explicari pertinacia, <strong>cu vitae bonorum</strong> vocibus nec, corpora signiferumque no vim. Ad principes scriptorem duo, te omnium gubergren eam, et eam ancillae appareat dissentiet. Quando tantas animal vis ut, mandamus voluptatum duo ne, ne odio vidit commodo has.
-            </p>
+            <h2>{{$aboutUs{0}->header}}</h2>
+            <p class="lead">{{$aboutUs{0}->description}}</p>
+
         </div>
         <div class="row">
             <div class="col-md-8">
