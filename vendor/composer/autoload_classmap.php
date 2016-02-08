@@ -12,6 +12,7 @@ return array(
     'CreateGalleryContentsTable' => $baseDir . '/database/migrations/2016_01_23_033415_create_gallery_contents_table.php',
     'CreateImageMastersTable' => $baseDir . '/database/migrations/2016_01_30_200756_create_image_masters_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateSubscribersTable' => $baseDir . '/database/migrations/2016_02_06_185006_create_subscribers_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',

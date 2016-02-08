@@ -48,6 +48,9 @@ Route::get('cl-function-list', 'clientNavigationController@showFunctionList');
 //registed route for Gallery page of the Client
 Route::get('cl-gallery', 'clientNavigationController@showGallery');
 
+//registed route for Add Subscriber
+Route::post('add-subscriber', 'clientNavigationController@addSubscriber');
+
 /*
  ***********************************************************************************************************************
 											ADMIN NAVIGATION  ROUTES

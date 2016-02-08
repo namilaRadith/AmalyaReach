@@ -181,11 +181,12 @@
 				<h3>Newsletter</h3>
 				<p>Join our newsletter to keep be informed about offers and news.</p>
 				<div id="message-newsletter_2"></div>
-				<form method="post" action="assets/newsletter.php" name="newsletter_2" id="newsletter_2">
+				<form method="post"  name="newsletter_2" id="newsletter_2">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<div class="form-group">
 						<input name="email_newsletter_2" id="email_newsletter_2"  type="email" value=""  placeholder="Your mail" class="form-control">
 					</div>
-					<input type="submit" value="Subscribe" class="btn_1 white" id="submit-newsletter_2">
+					<input type="button" value="Subscribe" class="btn_1 white" id="submit-newsletter_2">
 				</form>
 			</div>
 		</div><!-- End row -->
@@ -221,6 +222,38 @@
 <script src="{{ asset('/client/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>
 <script src="{{ asset('/client/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
 <script src="{{ asset('/client/js/revolution_func.js')}}"></script>
+<script>
+
+	$("#submit-newsletter_2").click(function(){
+		// CSRF protection
+		$.ajaxSetup(
+				{
+					headers:
+					{
+						'X-CSRF-Token': $('input[name="_token"]').val()
+					}
+				});
+		//create and senf ajax request to the server
+		$.ajax({
+
+			method: "post",
+			url: '/add-subscriber' ,
+			data: {
+				email: $("#email_newsletter_2").val() ,
+
+
+			},
+
+			//on success remove loading animation & clear fields
+			success:function(data){
+				$("#email_newsletter_2").val('');
+				//alert(data);
+			}
+
+		});
+	});
+
+</script>
 @show
 
 

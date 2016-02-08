@@ -5,8 +5,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\GalleryContent;
 use App\aboutUsPage;
-
-use Illuminate\Http\Request;
+use App\Subscriber;
+use Request;
+use Input;
 
 /*
  * Specific controller class which is handling client side navigation
@@ -61,6 +62,14 @@ class clientNavigationController extends Controller {
 		return view('pages.admin.adminContactUs',array('contacts'=>$contacts));
 	}
 
+	public function addSubscriber() {
+		if(Request::ajax()){
+			$subsciber = new Subscriber();
+			$subsciber->email = Input::get('email');
+			$subsciber->save();
+
+		}
+	}
 
 
 }

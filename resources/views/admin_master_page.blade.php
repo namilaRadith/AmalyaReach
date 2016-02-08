@@ -303,10 +303,12 @@ desired effect
                     </ul>
                 </li>
 
-                <li class="treeview">
+                <li class="{{Request::segment(1) === 'newsletter' ? 'active' : '' }} treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>News Letter</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="{{action('AdminDashboardController@showCreateNewsLetter')}}">Create News Letter </a></li>
+                        <li class="{{Request::segment(2) === 'create' ? 'active' : '' }}">
+                            <a href="{{action('AdminDashboardController@showCreateNewsLetter')}}">Create News Letter </a>
+                        </li>
                         <li><a href="#">View News Letters</a></li>
                     </ul>
                 </li>

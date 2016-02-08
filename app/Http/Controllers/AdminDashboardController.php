@@ -2,6 +2,7 @@
 use App\Contacts;
 use App\GalleryContent;
 use App\aboutUsPage;
+use App\Subscriber;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests;
 use Validator;
@@ -170,25 +171,35 @@ class AdminDashboardController extends Controller {
 		return view('pages.admin.createNewsLetter');
 	}
 
-	public function sendNewsLetter(){
+	public function sendNewsLetter()
+	{
 
-		if(Request::ajax()){
+		if (Request::ajax()) {
 
 			$data = Input::all();
-			var_dump($data);
 
-			Mail::send('pages.admin.newsletter',$data,function($message){
+			$transport = \Swift_SmtpTransport:: newInstance('smtp.gmail.com', 465, 'ssl')
+				->setUserName('namila.mail.tester@gmail.com')
+				->setPassword('0771950394');
 
-				$message->from('namila.mail.tester@gmail.com', 'Amalya Reach');
+			$mailler = \Swift_Mailer::newInstance($transport);
 
-				$message->to('namila.mail.tester@gmail.com')->subject(Input::get('subject'))->setBody('lol kooooooooootiyayi');
+			$subscribers = Subscriber::all();
 
-			});
+			foreach ($subscribers as $s) {
+				$message = \Swift_Message::newInstance()
+					->setSubject(Input::get('subject'))
+					->setFrom('namila.mail.tester@gmail.com', 'Amalya Reach')
+					->setTo($s->email)
+					->setBody(Input::get('body'), 'text/html');
+
+				$numSent = $mailler->send($message);
+			}
+
+			printf("Sent %d messages\n", $numSent);
+
 
 		}
-
-
-
 
 	}
 }

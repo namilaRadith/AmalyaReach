@@ -26,9 +26,19 @@
 
                     <input type="button" id="submitNewsLetter" class="btn btn-default" name="submitNewsLetter" value="Send News Letter">
 
+                    <div class="message col-md-4 pull-right" >
+                        <div class="callout callout-success">
+                            <h4>Success !</h4>
+                            <p>News letter has been successfully sent.</p>
+                        </div>
+                    </div>
+
             </form>
 
         </div>
+
+
+
     </div>
     <!-- /.box -->
 
@@ -45,6 +55,16 @@
 
         });
 
+        $('.message').hide();
+        //function to handle waiting animation
+        function loader(task){
+            if(task === 'start')
+                $('.box').append("<div class=\"overlay\" > <i class=\"fa fa-refresh fa-spin\"></i> </div>");
+            if(task === 'stop')
+                $('.overlay').remove();
+        }
+
+        //news letter submit button click
         $('#submitNewsLetter').click(function(){
             var newsLetterBody = CKEDITOR.instances["editor1"].getData();
 
@@ -57,7 +77,10 @@
                         }
                     });
 
-            //alert(newsLetterBody);
+            //waiting animation start
+            loader('start');
+
+            //create and senf ajax request to the server
             $.ajax({
 
                 method: "post",
@@ -67,13 +90,22 @@
                         body: newsLetterBody,
 
                 },
+
+                //on success remove loading animation & clear fields
                 success:function(data){
+                    loader('stop');
+                    $("#newsLetterSubject").val('');
+                    CKEDITOR.instances["editor1"].setData('');
+                    $('.message').fadeIn('slow');
+                    $('.message').delay(2000).fadeOut('slow');
                     //alert(data);
                 }
 
             });
 
         });
+
+
     </script>
 
 
