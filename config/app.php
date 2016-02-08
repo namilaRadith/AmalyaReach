@@ -149,7 +149,7 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
-
+		'Anouar\Paypalpayment\PaypalpaymentServiceProvider',
 	],
 
 	/*
@@ -200,7 +200,7 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
         'Form'      => 'Illuminate\Html\FormFacade',
 		'Html'      => 'Illuminate\Html\HtmlFacade',
-
+		'Paypalpayment'   => 'Anouar\Paypalpayment\Facades\PaypalPayment',
 
 
 

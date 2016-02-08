@@ -39,89 +39,34 @@
         </div>
     </div><!-- End Position -->
 
-
-
-<!--
-Hello
--->
-
     <div class="container margin_60">
         <div class="row">
 
             <div class="col-lg-9 col-md-8">
 
-
-
                 <div class="strip_all_rooms_list wow fadeIn" data-wow-delay="0.3s">
-
                 </div>
-
-
-
-
                 <div id="roomList">
-                    <h3>Section 1</h3>
+                @foreach($rooms as $room)
+                    <h3>{{ $room->name }}</h3>
                     <div>
                         <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="img_list">
-                                    <a href="room_details.html"><img src="{{ asset('client/sampleImages/room3.jpg') }}" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="clearfix visible-xs-block">
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="rooms_list_desc">
-                                    <h3><strong>Single</strong> room</h3>
-                                    <p>
-                                        Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit....
-                                    </p>
-                                    <ul class="add_info">
-                                        <li>
-                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Plasma TV with cable channels"><i class="icon_set_2_icon-116"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Breakfast included"><i class="icon_set_1_icon-59"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="King size bed"><i class="icon_set_2_icon-104"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Shower"><i class="icon_set_2_icon-118"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="No smoking"><i class="icon_set_1_icon-47"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                <div class="price_list">
-                                    <div>
-                                        <sup>$</sup>89*<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
-                                        <p>
-                                            <a href="room_details.html" class="btn_1">Select</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h3>Section 2</h3>
-                    <div>
-                            <div class="row">
+                            <form name="roomSelectForm" id="roomSelectForm" action="selectRoomFormReservation" method="post">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="col-lg-4 col-md-4 col-sm-4">
                                     <div class="img_list">
-                                        <a href="room_details.html"><img src="{{ asset('client/sampleImages/room2.jpg') }}" alt=""></a>
+                                        <a href="room_details.html"><img src="{{ asset('client/sampleImages/room3.jpg') }}" alt=""></a>
                                     </div>
                                 </div>
+
+                                <input type="hidden" value="{{ $room->id }}" id="selected_room_id" name="selected_room_id" />
                                 <div class="clearfix visible-xs-block">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="rooms_list_desc">
-                                        <h3><strong>Double</strong> room</h3>
+                                        <h3><strong>{{$room->value}}</strong></h3>
                                         <p>
-                                            Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit....
+                                            {{ $room->description  }}
                                         </p>
                                         <ul class="add_info">
                                             <li>
@@ -145,76 +90,18 @@ Hello
                                 <div class="col-lg-2 col-md-2 col-sm-2">
                                     <div class="price_list">
                                         <div>
-                                            <sup>$</sup>89*<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
-                                            <p>
-                                                <a href="room_details.html" class="btn_1">Select</a>
-                                            </p>
+                                            <sup>$</sup>{{$room->price}}<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
+                                            <small>
+                                                <input type="submit" value="Select" class="btn_1" id="submit-contact">
+                                            </small>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                    </div>
-                    <h3>Section 3</h3>
-                    <div>
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="img_list">
-                                    <a href="room_details.html"><img src="{{ asset('client/sampleImages/room1.jpg') }}" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="clearfix visible-xs-block">
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="rooms_list_desc">
-                                    <h3><strong>King double</strong> room</h3>
-                                    <p>
-                                        Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit....
-                                    </p>
-                                    <ul class="add_info">
-                                        <li>
-                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Plasma TV with cable channels"><i class="icon_set_2_icon-116"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Breakfast included"><i class="icon_set_1_icon-59"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="King size bed"><i class="icon_set_2_icon-104"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="Shower"><i class="icon_set_2_icon-118"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="No smoking"><i class="icon_set_1_icon-47"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                <div class="price_list">
-                                    <div>
-                                        <sup>$</sup>89*<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
-                                        <p>
-                                            <a href="room_details.html" class="btn_1">Select</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+
+                            </form>
                         </div>
                     </div>
-                    <h3>Section 4</h3>
-                    <div>
-                        <p>
-                            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-                            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-                            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-                            mauris vel est.
-                        </p>
-                        <p>
-                            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                            inceptos himenaeos.
-                        </p>
-                    </div>
+                @endforeach
                 </div>
 
 

@@ -70,20 +70,20 @@
 			<div class="col-md-4 pull-right">
 				<div id="book">
 					<div id="message-booking"></div>
-					<form role="form" method="post" action="assets/check_avail.php" id="check_avail" autocomplete="off">
-
+					<form role="form" method="post" action="mainReservationFormSubmit" id="mainReservationForm" name="mainReservationForm" autocomplete="off">
+						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<div class="row">
 							<div class="col-md-6 col-sm-6 col-xs-6">
 								<div class="form-group">
 									<label>Check in</label>
-									<input class="date-pick form-control" data-date-format="M d, D" type="text" id="check_in" name="check_in" placeholder="Check in">
+									<input class="date-pick form-control" data-date-format="M d, D" type="text" id="checkIn" name="checkIn" placeholder="Check in">
 									<span class="input-icon"><i class=" icon-calendar"></i></span>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 col-xs-6">
 								<div class="form-group">
 									<label>Check out</label>
-									<input class="date-pick form-control" data-date-format="M d, D" type="text" id="check_out" name="check_out" placeholder="Check out">
+									<input class="date-pick form-control" data-date-format="M d, D" type="text" id="checkOut" name="checkOut" placeholder="Check out">
 									<span class="input-icon"><i class=" icon-calendar"></i></span>
 								</div>
 							</div>
@@ -114,32 +114,29 @@
 							<div class="col-md-12">
 								<div class="form-group">
 									<label>Room type</label>
-									<select class="form-control" name="room_type" id="room_type">
+									<select class="form-control" name="roomType" id="roomType">
 										<option value="">Select room type</option>
-										<option value="Single Room">Single Room</option>
-										<option value="Double Room">Double Room</option>
-										<option value="Luxury Double Room">Luxury Double Room</option>
+										<option value="1">Single Room</option>
+										<option value="2">Double Room</option>
+										<option value="3">Luxury Single Room</option>
+										<option value="4">Luxury Double Room</option>
 									</select>
 								</div>
 							</div>
-							<div class="col-md-12 col-sm-6">
+							<div class="col-md-12">
 								<div class="form-group">
-									<label>Name</label>
-									<input type="text" class="form-control" name="name_booking" id="name_booking" placeholder="Name and Last name">
+									<label>Have a Code?</label>
+									<input type="text" class="form-control" name="coding" id="coding" placeholder="Enter Code here">
 								</div>
 							</div>
-							<div class="col-md-12 col-sm-6">
-								<div class="form-group">
-									<label>Email</label>
-									<input type="text" class="form-control" name="email_booking" id="email_booking" placeholder="Your email">
-								</div>
-							</div>
+
 							<div class="col-md-12 col-sm-12">
 								<div class="form-group">
-									<input type="submit" value="Book now" class="btn_full" id="submit-booking">
+									<input type="submit" value="Check Availability" class="btn_full" id="checkAvailability">
 								</div>
 							</div>
 						</div>
+
 					</form>
 				</div>
 			</div>
@@ -156,25 +153,45 @@
 								<div class="form-group">
 									<label style="color: #3DA0DB"><i style="color: #7a43b6" class="fa fa-bookmark fa-3x"></i>
 										Up to 30% off with Amayla Insider Deals!
-										<a>Sign in to unlock</a></label>
+										<a>Sign in to unlock</a></label><label style="margin-left: 46%;color: #932ab6" class="down"><i class="fa fa-angle-double-down fa-3x"></i></label>
 								</div>
 							</div>
-							<a href="room_details.html"><img height="250px" width="100%" src="{{ asset('client/sampleImages/room2.jpg') }}" alt=""></a>
-
-
 						</div><!-- End row -->
+						<div class="row" id="PromoShow">
+							<div class="col-md-12 col-sm-12">
+								<div class="form-group"><div class="my-slider" style="width:315px;height: 200px;">
+										<ul style="margin-left: 25px;">
+											<li><img src="{{ asset('client/img/images.jpg') }}"></li>
+											<li><img src="{{ asset('client/img/images1.jpg') }}"></li>
+											<li><img src="{{ asset('client/img/images2.jpg') }}"></li>
+											<li><img src="{{ asset('client/img/images1.jpg') }}"></li>
+											<li><img src="{{ asset('client/img/images.jpg') }}"></li>
+										</ul>
+									</div>
 
-						<div class="row">
+									<!-- There'll be a load of other stuff here -->
+									<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+									<script src="{{asset('/client/js/unslider.js')}}"></script> <!-- but with the right path! -->
+									<link rel="stylesheet" href="{{asset('/client/css/unslider.css')}}">
+									<script>
+										jQuery(document).ready(function($) {
+											$('.my-slider').unslider({autoplay: true});
+
+										});
+									</script>
+									<div style="height: 15px">
+
+									</div>
+								</div>
+							</div>
 							<div class="col-md-12 col-sm-12">
 								<div class="form-group">
 									<input type="submit" value="View Promotion" class="btn_full" id="submit-booking">
 								</div>
 							</div>
-
-
 							<div class="col-md-12 col-sm-12">
 								<div align="center" class="form-group">
-									<label ><i class="fa fa-angle-double-up fa-3x"></i></label>
+									<label class="up" style="color: #932ab6"><i class="fa fa-angle-double-up fa-3x"></i></label>
 								</div>
 							</div>
 						</div>
@@ -184,10 +201,26 @@
 			<!-- END Promotions Message-->
 
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
+			<script type="text/javascript">
 
+				$( document ).ready(function(){
+					$("#PromoShow").hide();
+				});
+
+					$(".up").click(function () {
+						$(".down").slideDown();
+						$("#PromoShow").slideUp();
+					});
+
+					$(".down").click(function () {
+						$(".down").slideUp();
+						$("#PromoShow").slideDown();
+					});
+			</script>
 		</div>
-
+		<!--<a href="room_details.html" ><img height="250px" width="100%" src="{{ asset('client/sampleImages/room2.jpg') }}" alt=""></a>-->
 	</div>
 
 	<div id="general_decor_2">
@@ -243,12 +276,54 @@
 	</div><!-- End row -->
 </div><!-- End container -->
 
+
+
+
+<!--Special Offers Area -->
 <div class="bg_gray add_bottom_60">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 col-sm-4">
+	<div class="col-md-12 col-sm-12"  style=" text-align: center;" >
+	<h2>Special Offers</h2>
+	<hr class="UpperLine">
+	</div>
+	<style>
+
+		h2 { color: #990099; font-family: 'Sans-serif'; font-size: 36px; font-weight: normal; line-height: 48px; margin: 0 0 18px; text-shadow: 1px 0 0 #fff; }
+
+		hr.UpperLine {
+			height: 10px;
+			border: 0;
+			box-shadow: 0 10px 10px -10px #8c8b8b inset;
+		}
+
+
+
+		hr.LowerLine {
+			height: 30px;
+			border-style: solid;
+			border-color: #8c8b8b;
+			border-width: 1px 0 0 0;
+			border-radius: 20px;
+		}
+		hr.LowerLine:before {
+			display: block;
+			content: "";
+			height: 30px;
+			margin-top: -31px;
+			border-style: solid;
+			border-color: #8c8b8b;
+			border-width: 0 0 1px 0;
+			border-radius: 20px;
+		}
+
+
+
+
+	</style>
+	<div class="container" >
+		<div class="row" >
+			<div class="col-md-4 col-sm-4" >
 				<div class="img_zoom">
-					<a href="room_details.html"><img src="{{asset('client/img/room_1.jpg')}}" alt="" class="img-responsive"></a>
+					<a href="room_details.html"><img src="{{asset('client/img/images.jpg')}}" alt="" class="img-responsive"></a>
 				</div>
 				<h3> Our Reception Halls <span class="price_home">$90<em>Per night</em></span></h3>
 				<p>
@@ -260,7 +335,7 @@
 			</div>
 			<div class="col-md-4 col-sm-4">
 				<div class="img_zoom">
-					<a href="room_details.html"><img src="{{asset('client/img/room_2.jpg')}}" alt="" class="img-responsive"></a>
+					<a href="room_details.html"><img src="{{asset('client/img/images1.jpg')}}" alt="" class="img-responsive"></a>
 				</div>
 				<h3>Scrumptious Menus <span class="price_home">$120<em>Per night</em></span></h3>
 				<p>
@@ -272,7 +347,7 @@
 			</div>
 			<div class="col-md-4 col-sm-4">
 				<div class="img_zoom">
-					<a href="room_details.html"><img src="{{asset('client/img/room_3.jpg')}}" alt="" class="img-responsive"></a>
+					<a href="room_details.html"><img src="{{asset('client/img/images2.jpg')}}" alt="" class="img-responsive"></a>
 				</div>
 				<h3>Luxury Comfortable Rooms <span class="price_home">$140<em>Per night</em></span></h3>
 				<p>
@@ -285,6 +360,7 @@
 		</div><!-- End row -->
 	</div><!-- End container -->
 </div>
+<hr class="LowerLine">
 
 <div class="container add_bottom_60">
 	<div class="main_title add_bottom_45">
@@ -329,9 +405,16 @@
 				<i class="icon-light-up"></i> View Weahter forecast </a>
 			<!-- End  weather-->
 
+
+
+
 			<div id="banner">
-				<h3><span>-30% OFF</span>This week only for all rooms!</h3>
+				<h3><span>-20% OFF</span>This week only for all rooms!</h3>
 			</div><!-- End banner -->
+
+
+
+
 
 		</div>
 	</div><!-- End row -->

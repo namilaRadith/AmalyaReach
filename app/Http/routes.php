@@ -51,6 +51,9 @@ Route::get('cl-gallery', 'clientNavigationController@showGallery');
 //registed route for Add Subscriber
 Route::post('add-subscriber', 'clientNavigationController@addSubscriber');
 
+//registed route for Gallery page of the Client
+Route::get('cl-Special-Offers', 'clientNavigationController@showSpecialOffers');
+
 /*
  ***********************************************************************************************************************
 											ADMIN NAVIGATION  ROUTES
@@ -105,8 +108,55 @@ Route::controllers([
 ]);
 
 
+
+
+
+/*
+########################################################################################################################
+						<============== Sameera ===============>
+########################################################################################################################
+*/
+
 //Home page reservation forms
+Route::post('mainReservationFormSubmit','ReservationController@mainReservationFormSubmit');
+Route::post('selectRoomFormReservation','ReservationController@selectRoomFormReservationSubmit');
+Route::get('showReservationForm3','ReservationController@showReservationForm3');
+Route::post('reservationForm3Submit','PaypalPaymentController@makePayPalPayment');
+
+
+
+/*
+
 Route::get('checkAvailableRoomsForm2','ReservationController@checkAvailableRoomsForm2');
+Route::get('reservationDetailsForm3','ReservationController@reservationDetailsForm3');
+
+Route::get('selectRoomFormReservation','ReservationController@selectRoomFormReservation');
+//Route::post('reservationForm3Submit','ReservationController@reservationForm3Submit');
+//Route::post('reservationForm3Submit','PaypalPaymentController@makePayPalPayment');
+
+//PalPal Payment
+Route::get('successPayment', 'PaypalPaymentController@successPayment');
+Route::get('testPaypal', 'PaypalPaymentController@testPaypal');
+
+//sameera test routes
+Route::post('xxxx','PaypalPaymentController@showPayment');
+Route::post('reservationForm3Submiting','ReservationController@finalformsubmittest');
+*/
+
+/*
+########################################################################################################################
+						<============== Sameera ===============>
+########################################################################################################################
+*/
+
+
+
+
+
+
+
+
+
 
 
 Route::get('contact', 'AboutController@getContact');

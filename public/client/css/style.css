@@ -1096,10 +1096,10 @@ ul.list_ok li:before {
     background-attachment: scroll;
 }
 .sub_header#bg_general{
-	background-image:url(../img/header_bg.jpg);
+	background-image:url(../img/BANNER.jpg);
 }
 .sub_header#bg_room{
-	background-image: url(../img/room_bg.jpg);
+	background-image: url(../img/BANNER.jpg);
 }
 .sub_header_content{
    display: table;
