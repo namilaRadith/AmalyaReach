@@ -161,7 +161,7 @@
 							<div class="col-md-12 col-sm-12">
 								<div class="form-group"><div class="my-slider" style="width:315px;height: 200px;">
 										<ul style="margin-left: 25px;">
-											<li><img src="{{ asset('client/img/images.jpg') }}"></li>
+
 											<li><img src="{{ asset('client/img/images1.jpg') }}"></li>
 											<li><img src="{{ asset('client/img/images2.jpg') }}"></li>
 											<li><img src="{{ asset('client/img/images1.jpg') }}"></li>
@@ -186,7 +186,8 @@
 							</div>
 							<div class="col-md-12 col-sm-12">
 								<div class="form-group">
-									<input type="submit" value="View Promotion" class="btn_full" id="submit-booking">
+								<!--	<input type="submit" value="View Promotion" class="btn_full" id="submit-booking"> -->
+									<a class="btn_full" id="submit-booking" href="{{action('clientNavigationController@showSpecialOffers')}}">Veiw Offers<i></i></a>
 								</div>
 							</div>
 							<div class="col-md-12 col-sm-12">

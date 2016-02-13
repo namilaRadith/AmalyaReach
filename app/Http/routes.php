@@ -48,8 +48,12 @@ Route::get('cl-function-list', 'clientNavigationController@showFunctionList');
 //registed route for Gallery page of the Client
 Route::get('cl-gallery', 'clientNavigationController@showGallery');
 
-//registed route for Gallery page of the Client
+//registed route for Specials of the Client
 Route::get('cl-Special-Offers', 'clientNavigationController@showSpecialOffers');
+
+//registed route for Loyalty Page of the Client
+Route::get('cl-Loyalty', 'clientNavigationController@showLoyalty');
+
 
 /*
  ***********************************************************************************************************************
@@ -142,4 +146,7 @@ Route::get('specials','');
 
 //Promotions Routing
 Route::get('admin_add_promotion', 'AdminPromotions@index');
+
+//Loyalty Routing
+Route::post('LoyaltyFormSubmit','LoyaltyController@LoyaltyFormSubmit');
 

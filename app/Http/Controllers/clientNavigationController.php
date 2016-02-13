@@ -53,6 +53,10 @@ class clientNavigationController extends Controller {
 	public function showSpecialOffers() {
 		return view('pages.client.clientSpecialOffers');
 	}
+	//this function navigate client to Loyalty
+	public function showLoyalty() {
+		return view('pages.client.clientLoyalty');
+	}
 
 
 

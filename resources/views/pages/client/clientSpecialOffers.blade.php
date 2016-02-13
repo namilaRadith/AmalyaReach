@@ -126,7 +126,7 @@ Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, ege
                         <div class="col-lg-2 col-md-2 col-sm-2">
                             <div class="price_list">
                                 <div>
-                                    <sup>$</sup>89*<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
+                                    <sup>$</sup>89*<span class="normal_price_list">$120</span><small>*Pax/Per night</small>
                                     <p>
                                         <a href="room_details.html" class="btn_1">Details</a>
                                     </p>
@@ -173,7 +173,7 @@ Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, ege
                         <div class="col-lg-2 col-md-2 col-sm-2">
                             <div class="price_list">
                                 <div>
-                                    <sup>$</sup>89*<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
+                                    <sup>$</sup>150*<span class="normal_price_list">$199</span><small>*Pax/Per night</small>
                                     <p>
                                         <a href="room_details.html" class="btn_1">Details</a>
                                     </p>

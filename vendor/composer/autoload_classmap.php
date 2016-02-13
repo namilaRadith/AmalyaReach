@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'AddMoreColumns' => $baseDir . '/database/migrations/2016_01_23_165725_add_more_columns.php',
     'Anouar\\Paypalpayment\\Facades\\PaypalPayment' => $vendorDir . '/anouar/paypalpayment/src/Anouar/Paypalpayment/Facades/PaypalPayment.php',
     'Anouar\\Paypalpayment\\PaypalPayment' => $vendorDir . '/anouar/paypalpayment/src/Anouar/Paypalpayment/PaypalPayment.php',
     'Anouar\\Paypalpayment\\PaypalpaymentServiceProvider' => $vendorDir . '/anouar/paypalpayment/src/Anouar/Paypalpayment/PaypalpaymentServiceProvider.php',
@@ -24,6 +23,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\PasswordController' => $baseDir . '/app/Http/Controllers/Auth/PasswordController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\PaypalPaymentController' => $baseDir . '/app/Http/Controllers/PaypalPaymentController.php',
     'App\\Http\\Controllers\\ReservationController' => $baseDir . '/app/Http/Controllers/ReservationController.php',
     'App\\Http\\Controllers\\WelcomeController' => $baseDir . '/app/Http/Controllers/WelcomeController.php',
     'App\\Http\\Controllers\\clientNavigationController' => $baseDir . '/app/Http/Controllers/clientNavigationController.php',
@@ -33,7 +33,9 @@ return array(
     'App\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/Http/Middleware/RedirectIfAuthenticated.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Requests\\CheckForAvailableRoomsRequest' => $baseDir . '/app/Http/Requests/CheckForAvailableRoomsRequest.php',
+    'App\\Http\\Requests\\PaymentFormRequest' => $baseDir . '/app/Http/Requests/PaymentFormRequest.php',
     'App\\Http\\Requests\\Request' => $baseDir . '/app/Http/Requests/Request.php',
+    'App\\Http\\Requests\\ReservationFinalFormSubmitRequest' => $baseDir . '/app/Http/Requests/ReservationFinalFormSubmitRequest.php',
     'App\\Http\\Requests\\createFeedbackRequest' => $baseDir . '/app/Http/Requests/createFeedbackRequest.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\BusServiceProvider' => $baseDir . '/app/Providers/BusServiceProvider.php',
@@ -63,12 +65,9 @@ return array(
     'ClassPreloader\\Parser\\DirVisitor' => $vendorDir . '/classpreloader/classpreloader/src/Parser/DirVisitor.php',
     'ClassPreloader\\Parser\\FileVisitor' => $vendorDir . '/classpreloader/classpreloader/src/Parser/FileVisitor.php',
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/Parser/NodeTraverser.php',
-    'CreateArticlesTable' => $baseDir . '/database/migrations/2016_01_23_164542_create_articles_table.php',
     'CreateFeedbacksTable' => $baseDir . '/database/migrations/2016_01_20_033839_create_feedbacks_table.php',
     'CreateGalleryContentsTable' => $baseDir . '/database/migrations/2016_01_23_033415_create_gallery_contents_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-    'CreateReservationTable' => $baseDir . '/database/migrations/2016_01_24_001707_create_reservation_table.php',
-    'CreateRoomTypesTable' => $baseDir . '/database/migrations/2016_01_20_183757_create_roomTypes_table.php',
     'CreateRoomsTable' => $baseDir . '/database/migrations/2016_01_18_180628_create_rooms_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'Cron\\AbstractField' => $vendorDir . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
