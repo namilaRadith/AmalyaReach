@@ -77,11 +77,11 @@
                                                 </tr>
                                                 <tr>
                                                     <th>Discount</th>
-                                                    <td>0.00</td>
+                                                    <td>{{ $discount }}</td>
                                                 </tr>
                                                 <tr>
                                                     <th>Total</th>
-                                                    <td>{{ $room->price + 10.00 }}</td>
+                                                    <td>{{ $room->price + 10.00 - $discount }}</td>
                                                 </tr>
                                             </table>
 

@@ -34,6 +34,7 @@ class ReservationController extends Controller {
         session()->put('selected_room_id', \Input::get('selected_room_id'));
         $room = Room::getRoomDetails( \Input::get('selected_room_id') );
         session()->put('selected_room_price',$room->price);
+        session()->put('selected_room_discount',$room->discount);
         session()->put('room_qty',1);
 
         return redirect('showReservationForm3');

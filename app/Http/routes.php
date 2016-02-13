@@ -53,6 +53,9 @@ Route::post('add-subscriber', 'clientNavigationController@addSubscriber');
 
 //registed route for Gallery page of the Client
 Route::get('cl-Special-Offers', 'clientNavigationController@showSpecialOffers');
+//registed route for Loyalty page of the Client
+Route::get('cl-Customer-Loyalty', 'clientNavigationController@showLoyalty');
+Route::post('cl-Cutomer-Loyalty-submit', 'LoyaltyController@LoyaltyFormSubmit');
 
 /*
  ***********************************************************************************************************************

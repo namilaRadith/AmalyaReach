@@ -213,14 +213,15 @@ class PaypalPaymentController extends Controller {
         $roomID = session()->get('selected_room_id');
         $room = Room::getRoomDetails($roomID);
         $date = Carbon::now();
-
+        $selected_room_discount = session()->get('selected_room_discount');
 
         if ($state == "approved"){
 
             return view('pages.client.PayPalPayment.reseravationSuccessfull')
                 ->with('pid',$paymentID)
                 ->with('room',$room)
-                ->with('date',$date);
+                ->with('date',$date)
+                ->with('discount',$selected_room_discount);
 
         }else{
             return view('pages.client.PayPalPayment.reseravationUnsuccessfull');

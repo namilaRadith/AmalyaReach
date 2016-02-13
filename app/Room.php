@@ -14,7 +14,7 @@ class Room extends Model {
         $rooms = DB::table('tbl_rooms')
                     ->join('tbl_roomtypes', 'tbl_rooms.type', '=', 'tbl_roomtypes.id')
                     ->where('type','=',$roomType)
-                    ->select('tbl_rooms.id','tbl_rooms.type','tbl_rooms.name',
+                    ->select('tbl_rooms.id','tbl_rooms.type','tbl_rooms.name','tbl_rooms.discount',
                         'tbl_rooms.description','tbl_rooms.price','tbl_roomtypes.value')
                     ->get();
 

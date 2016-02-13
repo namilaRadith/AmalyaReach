@@ -14,25 +14,35 @@ use App\Room;
 use Carbon\Carbon;
 use DB;
 use Request;
+use App\customerLoyalty;
 
 class LoyaltyController extends Controller
 {
 
 
-    public function LoyaltyFormSubmit(\Input $request){
+    public function LoyaltyFormSubmit(){
 
-        $email = request::get('email');
-        $email = request::get('password');
-        $email = request::get('cust_name');
-        $email = request::get('phone');
-        $email = request::get('Street');
-        $email = request::get('city');
-        $email = request::get('country');
-        $email = request::get('gender');
-        $email = request::get('bday');
-        $email = request::get('bmonth');
-        $email = request::get('children');
+        $content = "Dear Valued customer thank you for registering to our Loyalty program.This mail is to confirm that we have received your kind request and send you a responce as soon as possible.";
+       $input = Request::all();
 
+        customerLoyalty::create($input);
+
+        $transport = \Swift_SmtpTransport:: newInstance('smtp.gmail.com', 465, 'ssl')
+            ->setUserName('namila.mail.tester@gmail.com')
+            ->setPassword('0771950394');
+
+        $mailer = \Swift_Mailer::newInstance($transport);
+
+
+            $message = \Swift_Message::newInstance()
+                ->setSubject('Hello Dear Valued Customer')
+                ->setFrom('namila.mail.tester@gmail.com', 'Amalya Reach')
+                ->setTo('kasun.kulathunge@gmail.com')
+                ->setBody($content, 'text/html');
+
+            $Sentmailer = $mailer->send($message);
+
+        return redirect('cl-Customer-Loyalty');
 
 
     }
