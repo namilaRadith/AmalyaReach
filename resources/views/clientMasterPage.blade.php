@@ -68,7 +68,11 @@
 				<li><a href="#">Fr</a></li>
 				<li><a href="#">Es</a></li>
 			</ul>
-			<a href="#" id="link_bt">Purchase this template</a>
+		@if(Auth::user())
+			<a href="auth/logout" id="link_bt">Log Out</a>
+		@else
+			<a href="auth/login" id="link_bt">Login</a>
+		@endif
 		</div><!-- End container-->
 	</div><!-- End top line-->
 

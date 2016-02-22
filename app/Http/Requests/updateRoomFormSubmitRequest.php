@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class PaymentFormRequest extends Request {
+class updateRoomFormSubmitRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -22,11 +22,9 @@ class PaymentFormRequest extends Request {
 	public function rules()
 	{
 		return [
-			'first_name'=>'required|min:2',
-			'last_name'=>'required|min:2',
-			'address'=>'required|min:8',
-			'email'=>'required|email',
-			'phone'=>'required|min:10'
+			'room_name'=>'required',
+			'room_description'=>'required',
+			'room_price'=>'required'
 		];
 	}
 

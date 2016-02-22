@@ -21,6 +21,8 @@
 
 Route::get('/', 'WelcomeController@index');
 
+Route::get('home','ReservationController@viewHome');
+
 /*
  ***********************************************************************************************************************
   											CLIENT NAVIGATION  ROUTES
@@ -91,6 +93,15 @@ Route::get('showReservationForm3','ReservationController@showReservationForm3');
 Route::post('reservationForm3Submit','PaypalPaymentController@makePayPalPayment');
 
 
+//Admin routes
+//add new rooms by admin view return
+Route::get('adminAddNewRooms','adminReservationController@addNewRooms');
+Route::get('adminRoomsHome','adminReservationController@adminRoomsHome');
+Route::post('addNewRoomFormSubmit','adminReservationController@addNewRoomFormSubmit');
+Route::get('adminViewRoomHistory_{id}','adminReservationController@adminViewRoomHistory');
+Route::get('adminUpdateRoom_{id}','adminReservationController@adminUpdateRoom');
+Route::get('adminRemoveRoom_{id}','adminReservationController@adminRemoveRoom');
+Route::post('updateRoomFormSubmit','adminReservationController@updateRoomFormSubmit');
 
 /*
 
