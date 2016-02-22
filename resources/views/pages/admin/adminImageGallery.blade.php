@@ -14,16 +14,9 @@
 
 
     <div class="row magnific-gallery add_bottom_60 ">
-        {{--<div class="col-md-3 col-sm-3">--}}
-            {{--<form action = "{{action('AdminDashboardController@uploadImageToGallery')}}" method="post" enctype="multipart/form-data">--}}
-                {{--<input type="file" name="image" class="btn btn-default" >--}}
-                {{--<input type="submit" name="submit"  class="btn btn-default">--}}
-                {{--<input type="hidden" value="{{csrf_token()}}" name="_token">--}}
-            {{--</form>--}}
-        {{--</div>--}}
-
         <!-- left column -->
         <div class="col-md-3 col-sm-3">
+
             <!-- general form elements -->
             <div class="box box-primary">
                 <div class="box-header with-border">
@@ -31,16 +24,18 @@
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" action = "{{action('AdminDashboardController@uploadImageToGallery')}}" method="post" enctype="multipart/form-data">
+                <form role="form" action="{{action('AdminDashboardController@uploadImageToGallery')}}" method="post"
+                      enctype="multipart/form-data">
                     <div class="box-body">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Image Title</label>
-                            <input type="text" class="form-control" name="contentTitle" id="exampleInputEmail1" placeholder="Enter title">
+                            <input type="text" class="form-control" name="imageTitle" id="imageTitle"
+                                   placeholder="Enter title">
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputFile">Choose image</label>
-                            <input input type="file" name="image">
+                            <input input type="file" name="image" id="image">
                             <input type="hidden" value="{{csrf_token()}}" name="_token">
                         </div>
 
@@ -48,23 +43,46 @@
                     <!-- /.box-body -->
 
                     <div class="box-footer">
-                        <button type="submit" name="submit"  class="btn btn-primary">Upload</button>
+                        <button type="submit" name="submit" class="btn btn-primary">Upload</button>
                         <input type="hidden" value="{{csrf_token()}}" name="_token">
+
+                        @if( $errors->any())
+                            <div class="alert alert-danger" role="alert" style="margin-top: 2em;">
+
+                                @foreach($errors -> all() as $error)
+                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                    <span class="sr-only">Error:</span>
+                                    {{ $error }}<br/>
+
+                                @endforeach
+
+                            </div>
+                        @endif
+
                     </div>
                 </form>
             </div>
+            <script>
+
+
+            </script>
             <!-- /.box -->
-         </div>
-
-
-
-
-    @foreach( $imageList as $data )
-        <div class="col-md-3 col-sm-3">
-            <a href="{{asset('client/img/img-gallery')}}{{'/'.$data->contentName.'.'.$data->contentFileExtension}}" title="{{$data->contentDescription}}"><img src="{{asset('client/img/img-gallery')}}{{'/'.$data->contentName.'.'.$data->contentFileExtension}}" alt="" class="img-responsive styled"></a>
         </div>
-    @endforeach
 
+
+        <div class="col-md-9">
+            @foreach( $imageList as $data )
+                <div class="col-md-4 col-sm-4">
+                    <a href="{{asset('client/img/img-gallery')}}{{'/'.$data->contentName.'.'.$data->contentFileExtension}}"
+                       title="{{$data->contentDescription}}"><img
+                                src="{{asset('client/img/img-gallery')}}{{'/'.$data->contentName.'.'.$data->contentFileExtension}}"
+                                alt="" class="img-responsive styled"></a>
+                    <br>
+                    <button class="btn btn-danger" onclick="deleteImage({{$data->id}})"><i class="fa fa-trash"></i></button>
+                    <button class="btn btn-warning"><i class="fa fa-edit"></i></button>
+                </div>
+            @endforeach
+        </div>
     </div><!-- End row -->
 
 @stop
@@ -84,6 +102,19 @@
                 gallery:{enabled:true}
             });
         });
+
+        function deleteImage(id) {
+
+                $.ajax({
+                    method: "GET",
+                    url: 'img-gallery/delete/'+id ,
+                        success:function(data){
+                            alert(data);
+                        }
+
+                });
+
+        }
 
     </script>
 

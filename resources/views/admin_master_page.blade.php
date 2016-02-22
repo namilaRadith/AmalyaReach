@@ -10,6 +10,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <title>AMALYA REACH | Admin Panel</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @section('css_ref')
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{ asset('/admin/bootstrap/css/bootstrap.min.css')}}">
@@ -268,15 +269,15 @@ desired effect
                     <a href="#"><i class="fa fa-link"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="#">Home Page</a></li>
-                        <li><a href="#">About-Us Page</a></li>
-                        <li><a href="#">Dinning Page</a></li>
+                        <li><a href="{{action('AdminDashboardController@showAboutUs')}}">About-Us Page</a></li>
+                        <li><a href="{{action('AdminDashboardController@showDinningList')}}">Dinning Page</a></li>
                         <li><a href="#">Facilities Page</a></li>
                         <li><a href="#">Functions Page</a></li>
-                        <li><a href="#">Contact-Us Page</a></li>
+                        <li><a href="{{action('AdminDashboardController@showContactUs')}}">Contact-Us Page</a></li>
                         <li class="{{Request::segment(2) === 'gallery' ? 'active' : '' }}"><a href="#">Gallery Page<i class="fa fa-angle-left pull-right"></i></a>
                             <ul class="treeview-menu">
                                 <li class="{{Request::segment(3) ==='img-gallery' ? 'active' : '' }}"><a  href="{{action('AdminDashboardController@showImageGallery')}}" ><i class="fa fa-circle-o"></i> Photo Gallery </a></li>
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Video Gallery</a></li>
+                                <li class="{{Request::segment(3) ==='vd-gallery' ? 'active' : '' }}"><a href="{{action('AdminDashboardController@showVideoGallery')}}"><i class="fa fa-circle-o"></i> Video Gallery</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -305,6 +306,24 @@ desired effect
                         <li><a href="adminAddNewRooms">Add New Room</a></li>
                     </ul>
                 </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Accommodations</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">Add New Accommodation</a></li>
+                        <li><a href="#">Add New Accommodation</a></li>
+                    </ul>
+                </li>
+
+                <li class="{{Request::segment(1) === 'newsletter' ? 'active' : '' }} treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>News Letter</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li class="{{Request::segment(2) === 'create' ? 'active' : '' }}">
+                            <a href="{{action('AdminDashboardController@showCreateNewsLetter')}}">Create News Letter </a>
+                        </li>
+                        <li><a href="#">View News Letters</a></li>
+                    </ul>
+                </li>
+
             </ul>
             <!-- /.sidebar-menu -->
         </section>
@@ -429,6 +448,13 @@ immediately after the control sidebar -->
 <script src="{{asset('/admin/bootstrap/js/bootstrap.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('/admin/dist/js/app.min.js')}}"></script>
+<script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-Token': $('meta[name="csrf_token"]').attr('content')
+        }
+    });
+</script>
 
 
 <!-- DataTables -->

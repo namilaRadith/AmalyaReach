@@ -137,6 +137,9 @@ return [
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Html\HtmlServiceProvider',
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider', //ide helper
+		'Cviebrock\ImageValidator\ImageValidatorServiceProvider', // image validation plugin
+		'YOzaz\LaravelSwiftmailer\ServiceProvider',				 //swiftmailler
+
 
 		/*
 		 * Application Service Providers...
@@ -180,7 +183,8 @@ return [
 		'Inspiring' => 'Illuminate\Foundation\Inspiring',
 		'Lang'      => 'Illuminate\Support\Facades\Lang',
 		'Log'       => 'Illuminate\Support\Facades\Log',
-		'Mail'      => 'Illuminate\Support\Facades\Mail',
+		//'Mail'      => 'Illuminate\Support\Facades\Mail',
+		'Mail' => 'YOzaz\LaravelSwiftmailer\Facade',
 		'Password'  => 'Illuminate\Support\Facades\Password',
 		'Queue'     => 'Illuminate\Support\Facades\Queue',
 		'Redirect'  => 'Illuminate\Support\Facades\Redirect',
