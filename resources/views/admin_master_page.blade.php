@@ -292,6 +292,7 @@ desired effect
                 <li class="treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Loyalty</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
+                        <li><a href="{{action('LoyaltyController@show_loyalty_request')}}">Customer Loyalty Requests</a></li>
                     </ul>
                 </li>
 

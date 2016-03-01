@@ -23,9 +23,12 @@ class LoyaltyController extends Controller
     public function LoyaltyFormSubmit(){
 
         $content = "Dear Valued customer thank you for registering to our Loyalty program.This mail is to confirm that we have received your kind request and send you a responce as soon as possible.";
-       $input = Request::all();
+        $input = Request::all();
 
         customerLoyalty::create($input);
+
+        $cust_email = Request::input('email');
+
 
         $transport = \Swift_SmtpTransport:: newInstance('smtp.gmail.com', 465, 'ssl')
             ->setUserName('namila.mail.tester@gmail.com')
@@ -37,7 +40,7 @@ class LoyaltyController extends Controller
             $message = \Swift_Message::newInstance()
                 ->setSubject('Hello Dear Valued Customer')
                 ->setFrom('namila.mail.tester@gmail.com', 'Amalya Reach')
-                ->setTo('kasun.kulathunge@gmail.com')
+                ->setTo($cust_email)
                 ->setBody($content, 'text/html');
 
             $Sentmailer = $mailer->send($message);
@@ -45,5 +48,21 @@ class LoyaltyController extends Controller
         return redirect('cl-Customer-Loyalty');
 
 
+    }
+
+    public function show_loyalty_request(){
+
+        $loyaltyies = customerLoyalty::where('flag', 0)
+            ->get();
+
+        return view('pages.admin.Loyalty.cust_loyalty_request',array('loyalties' => $loyaltyies));
+    }
+
+    public function get_cust_Details($id){
+
+        $cust_details = customerLoyalty::where('id', $id)
+            ->get();
+
+        return $cust_details;
     }
 }

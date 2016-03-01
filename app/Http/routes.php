@@ -178,4 +178,6 @@ Route::get('specials','');
 
 //Promotions Routing
 Route::get('admin_add_promotion', 'AdminPromotions@index');
-
+//Loyalty
+Route::get('ad-Customer-Loyalty', 'LoyaltyController@show_loyalty_request');
+Route::get('searchcustomer/{q}', 'LoyaltyController@get_cust_Details');
