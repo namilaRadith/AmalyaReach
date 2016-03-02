@@ -2,19 +2,31 @@
 use App\Contacts;
 use App\GalleryContent;
 use App\aboutUsPage;
+
+use App\Http\Requests\UploadGalleryImageRequest;
+use App\SliderImage;
 use App\Subscriber;
-use Illuminate\Support\Facades\File;
-use App\Http\Requests;
-use Validator;
+
+use Illuminate\Http\Request;
+
+
+
+
 use Input;
-use Request;
-use Mail;
 
 
 
 
 
 class AdminDashboardController extends Controller {
+
+	public function __construct()
+	{
+		$this->middleware('auth');
+		$this->middleware('admin');
+
+
+	}
 
 	function set_active($path, $active = 'active') {
 
@@ -32,59 +44,61 @@ class AdminDashboardController extends Controller {
 		return view('pages.admin.admin_index');
 	}
 
+	public function showImageSlider(){
+		$s =  SliderImage::all();
+		return view('pages.admin.adminSliderImageGallery',array('imageList' => $s));
+
+	}
+
+	public function uploadImageSliderContent(Request $request)
+	{
+		$s = new SliderImage;
+		$s->addSliderImage($request);
+
+		return redirect()->action('AdminDashboardController@showImageSlider');
+
+	}
+
 
 	public function showImageGallery()
 	{
 
-		$galleryContent =  GalleryContent::where('contentType','=','img')->get();
-		return view('pages.admin.adminImageGallery',array('imageList' => $galleryContent));
+		$galleryContent =  GalleryContent::where('contentType','=','image')->get();
+		return view('pages.admin.adminImageGallery',array('imageList' => $galleryContent, 'status' =>null));
 	}
 
-	public function uploadImageToGallery(Requests\UploadGalleryImageRequest $request)
+	public function uploadImageToGallery(UploadGalleryImageRequest $request)
 	{
 
-
-		$galleryContent = new GalleryContent();
-		$file = Input::file('image');
-		$fileName = explode(".", $file->getClientOriginalName());
-		$fileExtention = $file->getClientOriginalExtension();
-		$fileType = 'img';
-		$fileDescription = $request->input('imageTitle');
-		$file->move('client/img/img-gallery', $file->getClientOriginalName());
-		$galleryContent->contentType = $fileType;
-		$galleryContent->contentName = $fileName[0];
-		$galleryContent->contentFileExtension = $fileExtention;
-		$galleryContent->contentDescription = $fileDescription;
-		$galleryContent->save();
-
-		return redirect()->action('AdminDashboardController@showImageGallery');
+		if (GalleryContent::saveContent($request, 'image', 'imageTitle', 'client/img/img-gallery')) {
+			return redirect()->action('AdminDashboardController@showImageGallery')->with('message', 'Image has been successfully uploaded');
+		} else {
+			return redirect()->action('AdminDashboardController@showImageGallery')->with('message', 'error occurred');
+		}
 
 
 	}
 
 	public function deleteImageFromGallery($id) {
-		$galleryContent =  GalleryContent::find($id);
-		$path = 'client/img/img-gallery/'.$galleryContent->contentName.'.'.$galleryContent->contentFileExtension;
-		File::Delete($path);
-		$galleryContent->delete();
 
-		return redirect()->action('AdminDashboardController@showImageGallery');
+		if (GalleryContent::deleteContent($id,'client/img/img-gallery/')){
+			return redirect()->action('AdminDashboardController@showImageGallery')->with('message', 'Image has been removed from the server ');;
+		} else {
+			return redirect()->action('AdminDashboardController@showImageGallery')->with('message', 'error occurred');;
+		}
+
+
 	}
 
-	public function uploadVideoToGallery(Request $request){
-		$galleryContent = new GalleryContent();
-		$file = Input::file('video');
-		$fileName = explode(".", $file->getClientOriginalName());
-		$fileExtention = $file->getClientOriginalExtension();
-		$fileType = 'video';
-		$fileDescription = $request->input('videoTitle');
-		$file->move('client/video/vid-gallery', $file->getClientOriginalName());
-		$galleryContent->contentType = $fileType;
-		$galleryContent->contentName = $fileName[0];
-		$galleryContent->contentFileExtension = $fileExtention;
-		$galleryContent->contentDescription = $fileDescription;
-		$galleryContent->save();
-		return redirect()->action('AdminDashboardController@showVideoGallery');
+	public function uploadVideoToGallery(Request $request)
+	{
+		if (GalleryContent::saveContent($request, 'video', 'videoTitle', 'client/video/vid-gallery')) {
+			return redirect()->action('AdminDashboardController@showImageGallery')->with('message', 'Image has been successfully uploaded');
+		} else {
+			return redirect()->action('AdminDashboardController@showImageGallery')->with('message', 'error occurred');
+		}
+
+
 	}
 
 	/**
@@ -202,4 +216,31 @@ class AdminDashboardController extends Controller {
 		}
 
 	}
+
+	public function sendEmails()
+	{
+		$data = Input::all();
+
+		$transport = \Swift_SmtpTransport:: newInstance('smtp.gmail.com', 465, 'ssl')
+			->setUserName('namila.mail.tester@gmail.com')
+			->setPassword('0771950394');
+
+		$mailler = \Swift_Mailer::newInstance($transport);
+
+		$subscribers = Subscriber::all();
+
+		foreach ($subscribers as $s) {
+			$message = \Swift_Message::newInstance()
+				->setSubject(Input::get('subject'))
+				->setFrom('namila.mail.tester@gmail.com', 'Amalya Reach')
+				->setTo($s->email)
+				->setBody(Input::get('body'), 'text/html');
+
+			$numSent = $mailler->send($message);
+		}
+
+		printf("Sent %d messages\n", $numSent);
+	}
+
+
 }

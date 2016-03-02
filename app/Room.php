@@ -1,5 +1,6 @@
 <?php namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use DB;
 
@@ -29,5 +30,46 @@ class Room extends Model {
     public static function getRoomTypeValue($id){
         $type = DB::table('tbl_roomtypes')->where('id','=',$id)->pluck('value');
         return $type;
+    }
+
+    public static function getAllRoomTypes(){
+        $room_types = DB::table('tbl_roomtypes')->get();
+        return $room_types;
+    }
+
+    public static function addNewRoomDetails($name,$type,$price,$description){
+
+        $now = Carbon::now();
+
+        DB::table('tbl_rooms')->insert(
+            [
+                'type' => $type,
+                'name' => $name,
+                'description' => $description,
+                'price' => $price,
+                'created_at' => $now,
+                'updated_at' => $now
+            ]
+        );
+    }
+
+    public static function updateRoomDetails($id,$room_name,$room_type,$room_description,$room_price){
+        $now = Carbon::now();
+
+        DB::table('tbl_rooms')
+            ->where('id', $id)
+            ->update(
+                [
+                    'type' => $room_type,
+                    'name' => $room_name,
+                    'description' => $room_description,
+                    'price' => $room_price,
+                    'updated_at' => $now
+                ]
+            );
+    }
+
+    public static function removeRoom($id){
+        DB::table('tbl_rooms')->where('id', '=', $id)->delete();
     }
 }

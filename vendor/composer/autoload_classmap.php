@@ -17,6 +17,7 @@ return array(
     'CreateMeetingsReservationsTable' => $baseDir . '/database/migrations/2016_02_05_171541_create_meetings_reservations_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateRoomsTable' => $baseDir . '/database/migrations/2016_01_18_180628_create_rooms_table.php',
+    'CreateSliderImagesTable' => $baseDir . '/database/migrations/2016_02_29_173754_create_slider_images_table.php',
     'CreateSubscribersTable' => $baseDir . '/database/migrations/2016_02_06_185006_create_subscribers_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',

@@ -26,6 +26,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     -->
     <link rel="stylesheet" href="{{ asset('/admin/dist/css/skins/skin-blue.min.css')}}">
 
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset('/admin/plugins/datatables/dataTables.bootstrap.css') }}">
+
     <!-- Custom style -->
     <link rel="stylesheet" href="{{ asset('/admin/dist/css/custom.css')}}">
 
@@ -57,6 +60,16 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
+<style>
+    label.error {
+        color:red;
+    }
+    input.error {
+        border:1px solid red;
+    }
+
+</style>
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
@@ -265,7 +278,12 @@ desired effect
                 <li class=" {{Request::segment(1) === 'dashboard' ? 'active' : '' }} treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="#">Home Page</a></li>
+                        <li><a href="#">Home Page</a>
+                            <ul class="treeview-menu">
+                                <li class="#"><a href="{{action('AdminDashboardController@showImageSlider')}}"><i class="fa fa-circle-o"></i>Slider Images</a></li>
+
+                            </ul>
+                        </li>
                         <li><a href="{{action('AdminDashboardController@showAboutUs')}}">About-Us Page</a></li>
                         <li><a href="#">Facilities Page</a></li>
                         <li><a href="#">Functions Page</a></li>
@@ -294,6 +312,14 @@ desired effect
                     </ul>
                 </li>
 
+                <!-- Rooms -->
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Rooms</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="adminRoomsHome">Rooms Home</a></li>
+                        <li><a href="adminAddNewRooms">Add New Room</a></li>
+                    </ul>
+                </li>
                 <li class="treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Accommodations</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
@@ -331,113 +357,136 @@ desired effect
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <h1>
-                Page Header
-                <small>Optional description</small>
-            </h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                <li class="active">Here</li>
-            </ol>
+
+        @yield('content_header')
+
         </section>
 
         <!-- Main content -->
         <section class="content">
 
-            @yield('content')
+        @yield('content')
 
         </section>
-        <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
+
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
 
 
-    <!-- Main Footer -->
-    <footer class="main-footer">
-        <!-- To the right -->
-        <div class="pull-right hidden-xs">
-            Anything you want
+<!-- Main Footer -->
+<footer class="main-footer">
+<!-- To the right -->
+<div class="pull-right hidden-xs">
+Anything you want
+</div>
+<!-- Default to the left -->
+<strong>Copyright &copy; 2015 <a href="#">Company</a>.</strong> All rights reserved.
+</footer>
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+<!-- Create the tabs -->
+<ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+<li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+<li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+<!-- Home tab content -->
+<div class="tab-pane active" id="control-sidebar-home-tab">
+    <h3 class="control-sidebar-heading">Recent Activity</h3>
+    <ul class="control-sidebar-menu">
+        <li>
+            <a href="javascript::;">
+                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                <div class="menu-info">
+                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                    <p>Will be 23 on April 24th</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <!-- /.control-sidebar-menu -->
+
+    <h3 class="control-sidebar-heading">Tasks Progress</h3>
+    <ul class="control-sidebar-menu">
+        <li>
+            <a href="javascript::;">
+                <h4 class="control-sidebar-subheading">
+                    Custom Template Design
+                    <span class="label label-danger pull-right">70%</span>
+                </h4>
+
+                <div class="progress progress-xxs">
+                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <!-- /.control-sidebar-menu -->
+
+</div>
+<!-- /.tab-pane -->
+<!-- Stats tab content -->
+<div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+<!-- /.tab-pane -->
+<!-- Settings tab content -->
+<div class="tab-pane" id="control-sidebar-settings-tab">
+    <form method="post">
+        <h3 class="control-sidebar-heading">General Settings</h3>
+
+        <div class="form-group">
+            <label class="control-sidebar-subheading">
+                Report panel usage
+                <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+                Some information about this general settings option
+            </p>
         </div>
-        <!-- Default to the left -->
-        <strong>Copyright &copy; 2015 <a href="#">Company</a>.</strong> All rights reserved.
-    </footer>
-
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Create the tabs -->
-        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-            <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <!-- Home tab content -->
-            <div class="tab-pane active" id="control-sidebar-home-tab">
-                <h3 class="control-sidebar-heading">Recent Activity</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript::;">
-                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                                <p>Will be 23 on April 24th</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.control-sidebar-menu -->
-
-                <h3 class="control-sidebar-heading">Tasks Progress</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript::;">
-                            <h4 class="control-sidebar-subheading">
-                                Custom Template Design
-                                <span class="label label-danger pull-right">70%</span>
-                            </h4>
-
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.control-sidebar-menu -->
-
-            </div>
-            <!-- /.tab-pane -->
-            <!-- Stats tab content -->
-            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-            <!-- /.tab-pane -->
-            <!-- Settings tab content -->
-            <div class="tab-pane" id="control-sidebar-settings-tab">
-                <form method="post">
-                    <h3 class="control-sidebar-heading">General Settings</h3>
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Report panel usage
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-
-                        <p>
-                            Some information about this general settings option
-                        </p>
-                    </div>
-                    <!-- /.form-group -->
-                </form>
-            </div>
-            <!-- /.tab-pane -->
-        </div>
-    </aside>
-    <!-- /.control-sidebar -->
-    <!-- Add the sidebar's background. This div must be placed
-         immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
+        <!-- /.form-group -->
+    </form>
+</div>
+<!-- /.tab-pane -->
+</div>
+</aside>
+<!-- /.control-sidebar -->
+<!-- Add the sidebar's background. This div must be placed
+immediately after the control sidebar -->
+<div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
+
+
+<div class="example-modal">
+    <div class="modal "  id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modelTitle"></h4>
+                </div>
+                <div class="modal-body">
+                    <p id="modalMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline">Save changes</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</div>
+<!-- /.example-modal -->
+
 
 @section('js_ref')
 
@@ -455,12 +504,47 @@ desired effect
             'X-CSRF-Token': $('meta[name="csrf_token"]').attr('content')
         }
     });
+
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').focus()
+    })
+
+    function modalCall(messageType,Title,Message){
+
+        $('#myModal').removeClass();
+        $('#myModal').addClass("modal");
+        $('#myModal').addClass("modal-"+messageType);
+        $('#modelTitle').html(Title);
+        $('#modalMessage').html(Message);
+
+        $('#myModal').modal('show');
+
+        setTimeout(function(){
+            $('#myModal').modal('hide');
+        },2000);
+
+    }
 </script>
+
+
+
+
+<!-- DataTables -->
+<script src="{{ asset('admin/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
+
+<script>
+    $(function () {
+        $("#adminRoomsHomeTable").DataTable();
+    });
+</script>
+
+
 
 @show
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. Slimscroll is required when using the
-     fixed layout. -->
+Both of these plugins are recommended to enhance the
+user experience. Slimscroll is required when using the
+fixed layout. -->
 </body>
 </html>
