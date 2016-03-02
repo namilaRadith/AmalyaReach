@@ -103,7 +103,9 @@
 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        Already have an account? <a href="loginn">Sign In</a> here.
+                                    @if(!Auth::user())
+                                        Already have an account? <a href="auth/login">Sign In</a> here.
+                                    @endif
                                     </div>
                                 </div>
 
@@ -115,7 +117,7 @@
                                             <div class="col-md-3 col-sm-3">
                                                 <div class="form-group">
                                                     <label>Title</label>
-                                                    <select class="form-control" id="title" name="title" >
+                                                    <select class="form-control" id="title" name="title">
                                                         <option>Mr.</option>
                                                         <option>Mrs.</option>
                                                         <option>Ms.</option>
@@ -125,7 +127,11 @@
                                             <div class="col-md-9 col-sm-9">
                                                 <div class="form-group">
                                                     <label>First Name</label>
-                                                    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter First Name" value="{{ old('first_name') }}">
+                                                    @if( $u_logged_status == "success")
+                                                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter First Name" value="{{ Session::get('u_name') }}">
+                                                    @else
+                                                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter First Name" value="{{ old('first_name') }}">
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -133,7 +139,11 @@
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label>Last Name</label>
-                                            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter Last Name" value="{{ old('last_name') }}">
+                                            @if( $u_logged_status == "success")
+                                                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter Last Name" value="{{ Session::get('u_last_name') }}">
+                                            @else
+                                                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter Last Name" value="{{ old('last_name') }}">
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -142,7 +152,11 @@
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label>Address</label>
-                                            <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address">
+                                            @if( $u_logged_status == "success")
+                                                <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address"  value="{{ Session::get('u_address') }}">
+                                            @else
+                                                <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address"  value="{{ old('address') }}">
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
@@ -161,13 +175,21 @@
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label>Email</label>
-                                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email">
+                                            @if( $u_logged_status == "success")
+                                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email"  value="{{ Session::get('u_email') }}">
+                                            @else
+                                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email"  value="{{ old('email') }}">
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label>Phone</label>
-                                            <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Phone Number">
+                                            @if( $u_logged_status == "success")
+                                                <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Phone Number" value="{{ Session::get('u_phone') }}">
+                                            @else
+                                                <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Phone Number" value="{{ old('phone') }}">
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -175,7 +197,7 @@
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label>Postal Code</label>
-                                            <input type="text" id="pcode" name="pcode" class="form-control" placeholder="Enter Postal Code">
+                                            <input type="text" id="pcode" name="pcode" class="form-control" placeholder="Enter Postal Code" value="{{ old('pcode') }}">
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6">

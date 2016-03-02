@@ -1,48 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36c70c86-ba3e-48ab-b398-ebf44edbd8b8" name="Default" comment="reservation controller updated">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/client/PayPalPayment/reseravationSuccessfull.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/client/PayPalPayment/reseravationUnsuccessfull.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/client/PayPalPayment/testPaypal.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm3.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/client/test.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/pages/client/reservationForm3.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/phpunit.xml.dist" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/AmalayaReach.iml" afterPath="$PROJECT_DIR$/.idea/AmalayaReach.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+    <list default="true" id="36c70c86-ba3e-48ab-b398-ebf44edbd8b8" name="Default" comment="Login Updted3_2">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/README.md" afterPath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/composer.json" afterPath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/src/Cron/AbstractField.php" afterPath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/src/Cron/AbstractField.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/src/Cron/CronExpression.php" afterPath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/src/Cron/CronExpression.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/src/Cron/DayOfWeekField.php" afterPath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/src/Cron/DayOfWeekField.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/src/Cron/HoursField.php" afterPath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/src/Cron/HoursField.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/src/Cron/MinutesField.php" afterPath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/src/Cron/MinutesField.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/tests/Cron/CronExpressionTest.php" afterPath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/tests/Cron/CronExpressionTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/tests/Cron/HoursFieldTest.php" afterPath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/tests/Cron/HoursFieldTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/tests/Cron/MonthFieldTest.php" afterPath="$PROJECT_DIR$/vendor/mtdowling/cron-expression/tests/Cron/MonthFieldTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/services.json" afterPath="$PROJECT_DIR$/vendor/services.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php56/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php56/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php56/README.md" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php56/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php56/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php56/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-util/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-util/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-util/README.md" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-util/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-util/TestListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-util/TestListener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-util/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-util/composer.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/pages/client/reservationForm2.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm2.blade.php" />
     </list>
     <ignored path="AmalayaReach.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,7 +22,7 @@
     <phpPath>C:\xampp\php\php.exe</phpPath>
   </component>
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="L:\Laravel\GIT\amalaya\AmalyaReach" />
   </component>
   <component name="DatabaseView">
     <option name="GROUP_SCHEMA" value="true" />
@@ -79,6 +40,20 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - amalya@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="tbl_rooms" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -86,77 +61,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-              <folding>
-                <element signature="e#7#392#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReservationController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReservationController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding>
-                <element signature="e#40#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaypalPaymentController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PaypalPaymentController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding>
-                <element signature="e#40#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaymentFormRequest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Requests/PaymentFormRequest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.0">
-              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.8367876">
+              <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clientIndex.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/client/clientIndex.blade.php">
+      <file leaf-file-name="adminReservationController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/adminReservationController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
-              <folding />
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding>
+                <element signature="e#39#61#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reservationForm2.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm2.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="123" selection-start-line="53" selection-start-column="119" selection-end-line="53" selection-end-column="123" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reservationForm3.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="reservationForm3.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm3.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9399294">
-              <caret line="112" column="67" selection-start-line="112" selection-start-column="67" selection-end-line="112" selection-end-column="67" />
+            <state vertical-scroll-proportion="-24.666666">
+              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateRoomFormSubmitRequest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Requests/updateRoomFormSubmitRequest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Room.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Room.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-24.592592">
+              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="roomHome.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/admin/reservation/roomHome.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_view_history.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/admin/reservation/admin_view_history.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_master_page.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin_master_page.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-300.66666">
+              <caret line="478" column="0" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clientMasterPage.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/clientMasterPage.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.666667">
+              <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -175,6 +176,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -198,11 +202,22 @@
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/client/reservationForm3.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm2.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PaypalPaymentController.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/PaymentFormRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/clientMasterPage.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin_master_page.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/adminAddNewRoomsFormSubmitRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/admin/reservation/add_new_room.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/admin/reservation/update_room.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/updateRoomFormSubmitRequest.php" />
+        <option value="$PROJECT_DIR$/app/Room.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/admin/reservation/roomHome.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/admin/reservation/admin_view_history.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/adminReservationController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm3.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
       </list>
     </option>
   </component>
@@ -280,13 +295,15 @@
       <path value="$PROJECT_DIR$/vendor/illuminate/html" />
       <path value="$PROJECT_DIR$/vendor/paypal/rest-api-sdk-php" />
       <path value="$PROJECT_DIR$/vendor/anouar/paypalpayment" />
+      <path value="$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/cviebrock/image-validator" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -313,6 +330,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="AmalyaReach">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -363,68 +394,6 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AmalayaReach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AmalyaReach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AmalayaReach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AmalyaReach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AmalayaReach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AmalyaReach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -456,64 +425,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AmalayaReach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AmalyaReach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Requests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AmalayaReach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AmalyaReach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="AmalyaReach">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -553,6 +464,211 @@
       <recent name="L:\Laravel\GIT\amalaya\AmalyaReach\resources\views\pages\client\RoomReservation" />
       <recent name="C:\xampp\htdocs\AmalayaReach\public" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Http/Controllers/clientNavigationController.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Http/routes.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/composer.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/composer.lock</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/config/app.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/config/mail.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/admin_master_page.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/clientMasterPage.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/adminImageGallery.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/client/clientAboutUs.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/client/clientGallery.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/composer/autoload_classmap.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/composer/autoload_files.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/composer/autoload_namespaces.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/composer/autoload_psr4.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/composer/installed.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/View/Factory.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/View/View.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/ERRATA.md</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/README.md</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/byte_safe_strings.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/cast_to_int.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_com_dotnet.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_dev_urandom.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_libsodium.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_libsodium_legacy.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_mcrypt.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_openssl.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_int.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/CODE_OF_CONDUCT.md</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/ChangeLog-4.8.md</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/LICENSE</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestCase.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Version.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/PHP/Default.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/XML.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Util/XMLTest.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/services.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Escaper.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Inline.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/LICENSE</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Parser.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Tests/DumperTest.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsSpecificationExamples.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsTypeTransfers.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Tests/ParserTest.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Unescaper.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Yaml.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Contacts.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Subscriber.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/aboutUsPage.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/imageMaster.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/database/migrations/2016_01_30_200756_create_image_masters_table.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/database/migrations/2016_01_30_201855_create_about_us_pages_table.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/database/migrations/2016_01_31_003701_create_contacts_table.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/database/migrations/2016_02_06_185006_create_subscribers_table.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/adminAboutUs.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/adminAddDinningMenu.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/adminContactUs.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/adminDinningList.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/adminVideoGallery.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/createNewsLetter.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/newsletter.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/storage/framework/sessions/93da0014d64867ee4e9075fc02e1b3a1e4106cb0</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/.gitignore</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/.travis.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/LICENSE.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/README.md</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/composer.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/phpunit.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/src/YOzaz/LaravelSwiftmailer/Facade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/src/YOzaz/LaravelSwiftmailer/Mailer.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/src/YOzaz/LaravelSwiftmailer/ServiceProvider.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/tests/.gitkeep</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/client/img/img-gallery/blog-bg6.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/client/img/img-gallery/tangolunda_bay_huatulco_mexico-wallpaper-1920x1080.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/.gitignore</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/.scrutinizer.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/.travis.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/phpunit.sh</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/phpunit.xml.dist</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/full/DieHardTest.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/full/StatTest.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/specific/capicom.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/specific/dev_urandom.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/specific/libsodium.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/specific/mcrypt.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/specific/openssl.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/unit/RandomBytesTest.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/unit/RandomIntTest.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/unit/UtilityTest.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -677,30 +793,60 @@
       <option name="project" value="LOCAL" />
       <updated>1454602329813</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="payment gateway updated">
+      <created>1454687972660</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1454687972660</updated>
+    </task>
+    <task id="LOCAL-00015" summary="payment gateway updated">
+      <created>1454688142532</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1454688142532</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Login Updted2">
+      <created>1456154246233</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1456154246233</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Login Updted3">
+      <created>1456154469407</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1456154469407</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Login Updted3_2">
+      <created>1456155015606</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1456155015606</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28517398" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22334754" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22087745" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3301179" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10305958" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20574887" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.113612" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3301179" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -753,126 +899,19 @@
     <MESSAGE value="reservation controller added noww" />
     <MESSAGE value="reservation controller added noww2" />
     <MESSAGE value="reservation controller updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="reservation controller updated" />
+    <MESSAGE value="payment gateway updated" />
+    <MESSAGE value="Login Updted2" />
+    <MESSAGE value="Login Updted3" />
+    <MESSAGE value="Login Updted3_2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login Updted3_2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#392#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReservationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PaypalPaymentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/PaymentFormRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/client/clientIndex.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm2.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="123" selection-start-line="53" selection-start-column="119" selection-end-line="53" selection-end-column="123" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm3.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="360" column="20" selection-start-line="360" selection-start-column="20" selection-end-line="360" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.2609457">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.1943958">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/client/assets/review.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2662116">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/client/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21550742">
@@ -943,13 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32801822">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/client/clientRoomList.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -964,13 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.333333">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/client/test.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31746033">
@@ -981,13 +1006,6 @@
     <entry file="file://$PROJECT_DIR$/resources/views/pages/client/PayPalPayment/reseravationUnsuccessfull.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Room.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.20634921">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -1013,24 +1031,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/clientMasterPage.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/client/PayPalPayment/testPaypal.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="19" selection-start-line="37" selection-start-column="12" selection-end-line="57" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin_master_page.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6666667">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1062,32 +1066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/client/clientIndex.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm2.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="123" selection-start-line="53" selection-start-column="119" selection-end-line="53" selection-end-column="123" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReservationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/ReservationFinalFormSubmitRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49202734">
@@ -1095,38 +1073,215 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm2.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03180212">
+          <caret line="53" column="123" selection-start-line="53" selection-start-column="119" selection-end-line="53" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/client/clientIndex.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03180212">
+          <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#392#0#PHP" expanded="true" />
-          </folding>
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93121696">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReservationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PaypalPaymentController.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44620812">
+          <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71428573">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/admin/admin_index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#62#0#PHP" expanded="true" />
-          </folding>
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.35547575">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/admin/adminImageGallery.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/adminAddNewRoomsFormSubmitRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.666667">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/48947daf/0513dc1b-d4e3-4b2a-9b50-97001bb81e0c/amalya.tbl_rooms">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/PaymentFormRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.0">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.69787985">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/admin/reservation/add_new_room.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03180212">
+          <caret line="43" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="99" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/admin/reservation/update_room.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53886926">
+          <caret line="86" column="108" selection-start-line="86" selection-start-column="98" selection-end-line="86" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/admin/reservation/roomHome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/admin/reservation/admin_view_history.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/updateRoomFormSubmitRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/adminReservationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#39#61#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm3.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9399294">
-          <caret line="112" column="67" selection-start-line="112" selection-start-column="67" selection-end-line="112" selection-end-column="67" />
+        <state vertical-scroll-proportion="-24.666666">
+          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin_master_page.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-300.66666">
+          <caret line="478" column="0" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Room.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.592592">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/clientMasterPage.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.666667">
+          <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8367876">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
           <folding />
         </state>
       </provider>

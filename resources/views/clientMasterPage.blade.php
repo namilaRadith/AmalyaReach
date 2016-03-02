@@ -77,18 +77,20 @@
 
 <!-- Header================================================== -->
 <header>
-    <div id="top_line">
-        <div class="container">
-            <ul id="top_links">
-                <li><a href="#">En</a></li>
-                <li><a href="#">Fr</a></li>
-                <li><a href="#">Es</a></li>
-            </ul>
-            <a href="#" id="link_bt">Purchase this template</a>
-        </div>
-        <!-- End container-->
-    </div>
-    <!-- End top line-->
+	<div id="top_line">
+		<div class="container">
+			<ul id="top_links">
+				<li><a href="#">En</a></li>
+				<li><a href="#">Fr</a></li>
+				<li><a href="#">Es</a></li>
+			</ul>
+		@if(Auth::user())
+			<a href="auth/logout" id="link_bt">Log Out</a>
+		@else
+			<a href="auth/login" id="link_bt">Login</a>
+		@endif
+		</div><!-- End container-->
+	</div><!-- End top line-->
 
     <div id="top_header">
         <div class="container">
