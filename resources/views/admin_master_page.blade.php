@@ -57,6 +57,16 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
+<style>
+    label.error {
+        color:red;
+    }
+    input.error {
+        border:1px solid red;
+    }
+
+</style>
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
@@ -265,7 +275,12 @@ desired effect
                 <li class=" {{Request::segment(1) === 'dashboard' ? 'active' : '' }} treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="#">Home Page</a></li>
+                        <li><a href="#">Home Page</a>
+                            <ul class="treeview-menu">
+                                <li class="#"><a href="{{action('AdminDashboardController@showImageSlider')}}"><i class="fa fa-circle-o"></i>Slider Images</a></li>
+
+                            </ul>
+                        </li>
                         <li><a href="{{action('AdminDashboardController@showAboutUs')}}">About-Us Page</a></li>
                         <li><a href="{{action('AdminDashboardController@showDinningList')}}">Dinning Page</a></li>
                         <li><a href="#">Facilities Page</a></li>
@@ -431,6 +446,33 @@ desired effect
 </div>
 <!-- ./wrapper -->
 
+
+<div class="example-modal">
+    <div class="modal "  id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modelTitle"></h4>
+                </div>
+                <div class="modal-body">
+                    <p id="modalMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline">Save changes</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</div>
+<!-- /.example-modal -->
+
+
 @section('js_ref')
 
 <!-- REQUIRED JS SCRIPTS -->
@@ -447,7 +489,29 @@ desired effect
             'X-CSRF-Token': $('meta[name="csrf_token"]').attr('content')
         }
     });
+
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').focus()
+    })
+
+    function modalCall(messageType,Title,Message){
+
+        $('#myModal').removeClass();
+        $('#myModal').addClass("modal");
+        $('#myModal').addClass("modal-"+messageType);
+        $('#modelTitle').html(Title);
+        $('#modalMessage').html(Message);
+
+        $('#myModal').modal('show');
+
+        setTimeout(function(){
+            $('#myModal').modal('hide');
+        },2000);
+
+    }
 </script>
+
+
 
 @show
 <!-- Optionally, you can add Slimscroll and FastClick plugins.

@@ -51,6 +51,9 @@ Route::get('cl-gallery', 'clientNavigationController@showGallery');
 //registed route for Add Subscriber
 Route::post('add-subscriber', 'clientNavigationController@addSubscriber');
 
+//registed route for check subscribe email
+Route::get('check-s-email/{email}', 'clientNavigationController@isSubscriberIn');
+
 //registed route for Gallery page of the Client
 Route::get('cl-Special-Offers', 'clientNavigationController@showSpecialOffers');
 
@@ -61,10 +64,19 @@ Route::get('cl-Special-Offers', 'clientNavigationController@showSpecialOffers');
  */
 
 //registed route for home page of the Admin
+Route::get('ad-login', 'AdminAuthController@showLogin');
+
+//registed route for home page of the Admin
 Route::get('ad-home', 'AdminDashboardController@index');
 
 //registed route for About us page of the Admin
 Route::get('dashboard/about-us', 'AdminDashboardController@showAboutUs');
+
+//registed route for home image slider page of the Admin
+Route::get('dashboard/home/image-slider', 'AdminDashboardController@showImageSlider');
+
+//registed route for home image slider upload content page of the Admin
+Route::post('dashboard/home/image-slider/upload', 'AdminDashboardController@uploadImageSliderContent');
 
 //registed route for About us page update basic details of the Admin
 Route::post('dashboard/about-us/update-maintitle-description', 'AdminDashboardController@updateAboutUsBasics');
