@@ -267,7 +267,6 @@ desired effect
                     <ul class="treeview-menu">
                         <li><a href="#">Home Page</a></li>
                         <li><a href="{{action('AdminDashboardController@showAboutUs')}}">About-Us Page</a></li>
-                        <li><a href="{{action('AdminDashboardController@showDinningList')}}">Dinning Page</a></li>
                         <li><a href="#">Facilities Page</a></li>
                         <li><a href="#">Functions Page</a></li>
                         <li><a href="{{action('AdminDashboardController@showContactUs')}}">Contact-Us Page</a></li>
@@ -300,6 +299,15 @@ desired effect
                     <ul class="treeview-menu">
                         <li><a href="#">Add New Accommodation</a></li>
                         <li><a href="#">Add New Accommodation</a></li>
+                    </ul>
+                </li>
+
+                <!--Dinning Area -->
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Dinning</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{action('dinningController@diningMenu')}}">Dinning Menu</a></li>
+                        <li><a href="{{action('dinningController@diningAddMenuForm')}}">Add Dinning Menu</a></li>
                     </ul>
                 </li>
 

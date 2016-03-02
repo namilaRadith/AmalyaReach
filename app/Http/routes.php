@@ -169,10 +169,35 @@ Route::get('feedback/{recordId}', 'feedbackController@show');
 Route::post('feedback', 'feedbackController@store');
 
 
-//
-Route::get('specials','');
+//specials
+Route::get('specials','specialsController@specialsHome');
+
+//Swimmng pool
+Route::get('pool','poolController@checkAvailability');
+Route::post('poolReservation','poolController@poolReservation');
+Route::post('poolFormSubmit','poolController@poolFormSubmit');
+
+//dinning Client
+Route::get('dinningReservation','dinningController@dinningReservation');
+Route::post('diningReservationSubmit','dinningController@diningReservationSubmit');
+Route::get('dinningMenuDisplay','dinningController@dinningMenuDisplay');
+Route::get('test','dinningController@test');
 
 
-//Promotions Routing
-Route::get('admin_add_promotion', 'AdminPromotions@index');
+//dinning Admin
+Route::get('diningAddMenu','dinningController@diningAddMenuForm');
+Route::post('diningAddMenuSubmit','dinningController@diningAddMenu');
+Route::get('diningMenu','dinningController@diningMenu');
+Route::get('diningMenuEdit/{id}','dinningController@diningMenuEdit');
+Route::post('diningMenuUpdate/{id}/edit','dinningController@updateDiningItem');
+Route::get('diningMenuUpdate/{id}/delete','dinningController@deleteFoodItem');
 
+
+
+//meeting
+Route::get('meetingReservation','meetingsController@meetingsReservation');
+Route::get('meetingReservationForm','meetingsController@meetingsReservationForm');
+Route::post('meetingResFormSubmit','meetingsController@meetingsResFormSubmit');
+
+//Dewmi paypal test
+Route::get('paypal_test_dewmi','AboutController@paypalTestControllerMethod');

@@ -33,4 +33,10 @@ class AboutController extends Controller {
 
 
 
+
+    //for payment gateway
+    public function paypalTestControllerMethod(){
+        return view('pages.specials.paypal_test');
+    }
+
 }
