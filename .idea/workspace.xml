@@ -2,8 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36c70c86-ba3e-48ab-b398-ebf44edbd8b8" name="Default" comment="Login Updted3_2">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/tests/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/tests/images/200x250.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/.semver" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/TODO.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/lang/de/validation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/lang/en/validation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/lang/fr/validation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/lang/nl/validation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/lang/pt-BR/validation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/lang/pt/validation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/lang/ru/validation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/lang/tr/validation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/src/ImageValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/src/ImageValidatorServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/tests/ValidateServiceProviderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/tests/ValidatorImageAspectTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/tests/ValidatorImageSizeTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Util/StreamHasher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/dist/random_compat.phar.pubkey" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/dist/random_compat.phar.pubkey.asc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/other/build_phar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpspec/prophecy/spec/Prophecy/Argument/Token/ApproximateValueTokenSpec.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpspec/prophecy/spec/Prophecy/Comparator/ProphecyComparatorSpec.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpspec/prophecy/spec/Prophecy/Exception/Doubler/MethodNotExtendableExceptionSpec.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpspec/prophecy/src/Prophecy/Argument/Token/ApproximateValueToken.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpspec/prophecy/src/Prophecy/Comparator/ProphecyComparator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpspec/prophecy/src/Prophecy/Exception/Doubler/MethodNotExtendableException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-apcu/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-apcu/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-apcu/Resources/stubs/APCUIterator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-apcu/bootstrap.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
     </list>
     <ignored path="AmalayaReach.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,8 +102,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8367876">
-              <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.38448277">
+              <caret line="190" column="19" selection-start-line="190" selection-start-column="19" selection-end-line="191" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -86,7 +124,7 @@
       <file leaf-file-name="reservationForm3.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm3.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.666666">
+            <state vertical-scroll-proportion="0.0">
               <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
               <folding />
             </state>
@@ -97,7 +135,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -116,19 +154,11 @@
       <file leaf-file-name="Room.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Room.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.592592">
-              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roomHome.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/admin/reservation/roomHome.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding />
+              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+              <folding>
+                <element signature="e#22#40#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,7 +176,7 @@
       <file leaf-file-name="admin_master_page.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin_master_page.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-300.66666">
+            <state vertical-scroll-proportion="0.0">
               <caret line="478" column="0" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
               <folding />
             </state>
@@ -156,8 +186,8 @@
       <file leaf-file-name="clientMasterPage.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/clientMasterPage.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.666667">
-              <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="109" column="46" selection-start-line="109" selection-start-column="46" selection-end-line="109" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -218,6 +248,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/adminReservationController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm3.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu/composer.json" />
       </list>
     </option>
   </component>
@@ -297,13 +328,14 @@
       <path value="$PROJECT_DIR$/vendor/anouar/paypalpayment" />
       <path value="$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/cviebrock/image-validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -330,21 +362,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="AmalyaReach">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -429,6 +446,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="AmalyaReach">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -464,211 +496,6 @@
       <recent name="L:\Laravel\GIT\amalaya\AmalyaReach\resources\views\pages\client\RoomReservation" />
       <recent name="C:\xampp\htdocs\AmalayaReach\public" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Http/Controllers/clientNavigationController.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Http/routes.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/composer.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/composer.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/config/app.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/config/mail.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/admin_master_page.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/clientMasterPage.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/adminImageGallery.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/client/clientAboutUs.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/client/clientGallery.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/composer/autoload_classmap.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/composer/autoload_files.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/composer/autoload_namespaces.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/composer/autoload_psr4.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/composer/installed.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/View/Factory.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/View/View.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/ERRATA.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/byte_safe_strings.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/cast_to_int.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_com_dotnet.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_dev_urandom.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_libsodium.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_libsodium_legacy.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_mcrypt.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_openssl.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_int.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/CODE_OF_CONDUCT.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/ChangeLog-4.8.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/LICENSE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestCase.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Version.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/PHP/Default.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/XML.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Util/XMLTest.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/services.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Escaper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Inline.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/LICENSE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Parser.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Tests/DumperTest.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsSpecificationExamples.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsTypeTransfers.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Tests/ParserTest.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Unescaper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/symfony/yaml/Yaml.php</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Contacts.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Subscriber.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/aboutUsPage.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/imageMaster.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/database/migrations/2016_01_30_200756_create_image_masters_table.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/database/migrations/2016_01_30_201855_create_about_us_pages_table.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/database/migrations/2016_01_31_003701_create_contacts_table.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/database/migrations/2016_02_06_185006_create_subscribers_table.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/adminAboutUs.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/adminAddDinningMenu.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/adminContactUs.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/adminDinningList.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/adminVideoGallery.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/createNewsLetter.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/admin/newsletter.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/storage/framework/sessions/93da0014d64867ee4e9075fc02e1b3a1e4106cb0</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/.gitignore</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/.travis.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/LICENSE.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/composer.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/phpunit.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/src/YOzaz/LaravelSwiftmailer/Facade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/src/YOzaz/LaravelSwiftmailer/Mailer.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/src/YOzaz/LaravelSwiftmailer/ServiceProvider.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/yozaz/laravel-swiftmailer/tests/.gitkeep</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/client/img/img-gallery/blog-bg6.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/client/img/img-gallery/tangolunda_bay_huatulco_mexico-wallpaper-1920x1080.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/.gitignore</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/.scrutinizer.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/.travis.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/phpunit.sh</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/phpunit.xml.dist</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/full/DieHardTest.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/full/StatTest.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/specific/capicom.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/specific/dev_urandom.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/specific/libsodium.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/specific/mcrypt.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/specific/openssl.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/unit/RandomBytesTest.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/unit/RandomIntTest.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendor/paragonie/random_compat/tests/unit/UtilityTest.php</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -827,21 +654,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22334754" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22327965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10305958" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20574887" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.113612" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5488959" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3301179" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -1171,18 +998,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/48947daf/0513dc1b-d4e3-4b2a-9b50-97001bb81e0c/amalya.tbl_rooms">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/PaymentFormRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.69787985">
@@ -1231,7 +1046,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1248,7 +1063,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/client/RoomReservation/reservationForm3.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.666666">
+        <state vertical-scroll-proportion="0.0">
           <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
           <folding />
         </state>
@@ -1256,7 +1071,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin_master_page.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-300.66666">
+        <state vertical-scroll-proportion="0.0">
           <caret line="478" column="0" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
           <folding />
         </state>
@@ -1264,24 +1079,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Room.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.592592">
+        <state vertical-scroll-proportion="0.0">
           <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#22#40#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/clientMasterPage.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.666667">
-          <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="109" column="46" selection-start-line="109" selection-start-column="46" selection-end-line="109" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8367876">
-          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.38448277">
+          <caret line="190" column="19" selection-start-line="190" selection-start-column="19" selection-end-line="191" selection-end-column="28" />
           <folding />
         </state>
       </provider>
