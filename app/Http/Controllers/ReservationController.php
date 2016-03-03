@@ -8,9 +8,23 @@ use App\Room;
 use Carbon\Carbon;
 use DB;
 use Request;
-
+use Auth;
+use Redirect;
 
 class ReservationController extends Controller {
+
+    public function viewHome(){
+/*
+        if (Auth::user()){
+            return Auth::user();
+        }else{
+            return "login failed user";
+        }
+*/
+       // return Redirect::back();
+
+        return view('pages.client.clientIndex');
+    }
 
 
     public function mainReservationFormSubmit(CheckForAvailableRoomsRequest $request){
@@ -47,7 +61,42 @@ class ReservationController extends Controller {
         $selected_room_id = session()->get('selected_room_id');
         $room = Room::getRoomDetails($selected_room_id);
 
-        return view('pages.client.RoomReservation.reservationForm3')->with('room',$room);
+
+        if (Auth::user()){
+            $u_id = Auth::user()->id;
+            $u_name = Auth::user()->name;
+            $u_email = Auth::user()->email;
+            $u_title = Auth::user()->title;
+            $u_last_name = Auth::user()->last_name;
+            $u_address = Auth::user()->address;
+            $u_country = Auth::user()->country;
+            $u_phone = Auth::user()->phone;
+            $u_logged_status = "success";
+
+            session()->put('u_id',$u_id);
+            session()->put('u_name',$u_name);
+            session()->put('u_email',$u_email);
+            session()->put('u_title',$u_title);
+            session()->put('u_last_name',$u_last_name);
+            session()->put('u_address',$u_address);
+            session()->put('u_country',$u_country);
+            session()->put('u_phone',$u_phone);
+            session()->put('u_logged_status',$u_logged_status);
+
+        }else{
+            $u_logged_status = "failed";
+            session()->put('u_logged_status',$u_logged_status);
+
+        }
+
+
+
+
+
+
+        return view('pages.client.RoomReservation.reservationForm3')
+            ->with('room',$room)
+            ->with('u_logged_status',$u_logged_status);
 
     }
 

@@ -397,7 +397,7 @@
 								li.data('transition',"fade");
 								li.data('masterspeed',500);
 								li.data('slotamount',1);
-								var img = li.find('>img').first();
+								var img = li.find('>img).first();
 								img.data('kenburns',"off");
 							});
 						}
@@ -1745,7 +1745,7 @@
 			container.parent().css({'overflow':'visible'});
 
 
-			container.find('>ul:first >li >img').each(function(j) {
+			container.find('>ul:first >li >img).each(function(j) {
 
 				var img=jQuery(this);
 
@@ -5747,12 +5747,12 @@
 				if (nextsh.find('.kenburnimg').length==0)
 					nextsh.append('<div class="kenburnimg" style="position:absolute;z-index:1;width:100%;height:100%;top:0px;left:0px;"><img src="'+defimg.attr('src')+'" style="-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;position:absolute;width:'+imgobj.w+'%;height:'+imgobj.h+'%;"></div>');
 				else {
-					nextsh.find('.kenburnimg img').css({width:imgobj.w+'%',height:imgobj.h+'%'});
+					nextsh.find('.kenburnimg img).css({width:imgobj.w+'%',height:imgobj.h+'%'});
 				}
 
 
 
-				var kbimg = nextsh.find('.kenburnimg img');
+				var kbimg = nextsh.find('.kenburnimg img);
 
 
 				var imgs = calculateKenBurnImgPos(opt,bgps,bgfs,kbimg,turned),
@@ -5916,13 +5916,13 @@
 				var defimg = jQuery(this);
 				punchgs.TweenLite.killTweensOf(defimg,false);
 				punchgs.TweenLite.set(defimg,{scale:1,rotationZ:0});
-				punchgs.TweenLite.killTweensOf(defimg.data('kenburn img'),false);
+				punchgs.TweenLite.killTweensOf(defimg.data('kenburn img),false);
 				if (defimg.data('kenburn') != undefined) {
 					defimg.data('kenburn').pause();
 				}
 				if (defimg.data('currotate') != undefined && defimg.data('bgposition') !=undefined && defimg.data('curscale') != undefined)
 					punchgs.TweenLite.set(defimg,{rotation:defimg.data('currotate'), backgroundPosition:defimg.data('bgposition'), backgroundSize:defimg.data('curscale')});
-				if (defimg!= undefined && defimg.data('kenburn img') != undefined && defimg.data('kenburn img').length>0) punchgs.TweenLite.set(defimg.data('kenburn img'),{autoAlpha:0});
+				if (defimg!= undefined && defimg.data('kenburn img) != undefined && defimg.data('kenburn img).length>0) punchgs.TweenLite.set(defimg.data('kenburn img),{autoAlpha:0});
 
 			});
 		}

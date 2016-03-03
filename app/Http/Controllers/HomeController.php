@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App\SliderImage;
+
 class HomeController extends Controller {
 
 	/*
@@ -30,7 +32,8 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		$s =  SliderImage::all();
+		return view('pages.client.clientIndex',array('imageList' => $s));
 	}
 
 }

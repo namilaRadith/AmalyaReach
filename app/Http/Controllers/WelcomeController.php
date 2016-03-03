@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App\SliderImage;
+
 class WelcomeController extends Controller {
 
 	/*
@@ -31,7 +33,10 @@ class WelcomeController extends Controller {
 	 */
 
 	public function index(){
-		return view('pages.client.clientIndex');
+
+		$s =  SliderImage::all();
+		return view('pages.client.clientIndex',array('imageList' => $s));
+
 	}
 
 }

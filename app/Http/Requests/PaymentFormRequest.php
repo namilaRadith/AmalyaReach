@@ -22,8 +22,11 @@ class PaymentFormRequest extends Request {
 	public function rules()
 	{
 		return [
-			'first_name'=>'required',
-			'last_name'=>'required'
+			'first_name'=>'required|min:2',
+			'last_name'=>'required|min:2',
+			'address'=>'required|min:8',
+			'email'=>'required|email',
+			'phone'=>'required|min:10'
 		];
 	}
 
