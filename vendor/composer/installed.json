@@ -3667,5 +3667,47 @@
         ],
         "description": "Symfony ClassLoader Component",
         "homepage": "https://symfony.com"
+    },
+    {
+        "name": "andheiberg/notify",
+        "version": "2.0.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/AndreasHeiberg/laravel-notify.git",
+            "reference": "c25c8f8b2e98ee39068feffd388626f08059be1c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/AndreasHeiberg/laravel-notify/zipball/c25c8f8b2e98ee39068feffd388626f08059be1c",
+            "reference": "c25c8f8b2e98ee39068feffd388626f08059be1c",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/config": ">=4.0.0, <6.0.0",
+            "illuminate/session": ">=4.0.0, <6.0.0",
+            "illuminate/support": ">=4.0.0, <6.0.0",
+            "illuminate/translation": ">=4.0.0, <6.0.0",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpspec/phpspec": "2.0.*@dev"
+        },
+        "time": "2015-08-27 10:03:18",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Andheiberg\\Notify": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Andreas Peter Heiberg",
+                "email": "heibergandreas@gmail.com"
+            }
+        ],
+        "description": "A site notification package for laravel."
     }
 ]

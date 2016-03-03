@@ -110,6 +110,8 @@
 
     </div><!-- End row -->
 
+
+
 @stop
 
 
@@ -242,18 +244,39 @@
 
         //delete image
         function deleteImage(id) {
-            if(confirm("This operation will remove this image form the sever. Are you sure to continue ?")) {
-                $.ajax({
-                    method: "GET",
-                    url: 'img-slider/delete/' + id,
-                    success: function (data) {
-                        location.reload(true);
-                    }
+            swal({
+                title: "Are you sure?",
+                text: "Selected image will be removed from the server permanently",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel plx!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    deleteNow(id);
+                    swal("Deleted!", "Selected image was successfully deleted.", "success");
+                } else {
+                    swal("Cancelled", "Operation aborted", "error");
+                }
+            });
 
-                });
-            }
+        };
 
-        }
+        //trigger delete
+        function deleteNow(id){
+            $.ajax({
+                method: "GET",
+                url: 'img-slider/delete/' + id,
+                success: function (data) {
+                    location.reload(true);
+                }
+
+            });
+        };
+
 
         setTimeout(function(){
             $('.alert').fadeOut("slow");

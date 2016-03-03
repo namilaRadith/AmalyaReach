@@ -8,6 +8,9 @@ $baseDir = dirname($vendorDir);
 return array(
     'APCUIterator' => $vendorDir . '/symfony/polyfill-apcu/Resources/stubs/APCUIterator.php',
     'AddMoreColumns' => $baseDir . '/database/migrations/2016_01_23_165725_add_more_columns.php',
+    'Andheiberg\\Notify\\Facades\\Notify' => $vendorDir . '/andheiberg/notify/src/Andheiberg/Notify/Facades/Notify.php',
+    'Andheiberg\\Notify\\Notify' => $vendorDir . '/andheiberg/notify/src/Andheiberg/Notify/Notify.php',
+    'Andheiberg\\Notify\\NotifyServiceProvider' => $vendorDir . '/andheiberg/notify/src/Andheiberg/Notify/NotifyServiceProvider.php',
     'Anouar\\Paypalpayment\\Facades\\PaypalPayment' => $vendorDir . '/anouar/paypalpayment/src/Anouar/Paypalpayment/Facades/PaypalPayment.php',
     'Anouar\\Paypalpayment\\PaypalPayment' => $vendorDir . '/anouar/paypalpayment/src/Anouar/Paypalpayment/PaypalPayment.php',
     'Anouar\\Paypalpayment\\PaypalpaymentServiceProvider' => $vendorDir . '/anouar/paypalpayment/src/Anouar/Paypalpayment/PaypalpaymentServiceProvider.php',

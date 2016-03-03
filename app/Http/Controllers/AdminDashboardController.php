@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use Andheiberg\Notify\Facades\Notify;
 use App\Contacts;
 use App\GalleryContent;
 use App\aboutUsPage;
@@ -65,7 +66,7 @@ class AdminDashboardController extends Controller
     {
         $s = new SliderImage;
         $s->addSliderImage($request);
-
+        Notify::success('Image uploaded successfully');
         return redirect()->action('AdminDashboardController@showImageSlider');
 
     }

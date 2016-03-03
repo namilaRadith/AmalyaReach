@@ -32,6 +32,8 @@
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="{{ asset('/admin/plugins/sweetAlert/sweetalert.css')}}">
 
     @section('css_ref')
             <!-- BASE CSS -->
@@ -271,6 +273,8 @@
 <script src="{{ asset('/client/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
 <script src="{{ asset('/client/js/revolution_func.js')}}"></script>
 <script src="{{ asset('/admin/plugins/validator/jquery.validate.min.js')}}"></script>
+<!-- Sweet Alert -->
+<script src="{{asset('/admin/plugins/sweetAlert/sweetalert.min.js')}}"></script>
 <script>
 
     $(document).ready(function () {
@@ -324,7 +328,8 @@
                     //on success remove loading animation & clear fields
                     success: function (data) {
                         $("#email_newsletter_5").val('');
-                        alert(data);
+                        //alert(data);
+                        swal("success!", data, "success")
                     }
 
 

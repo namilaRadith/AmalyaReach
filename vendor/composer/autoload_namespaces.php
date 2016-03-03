@@ -30,4 +30,5 @@ return array(
     'Diff' => array($vendorDir . '/phpspec/php-diff/lib'),
     'Cron' => array($vendorDir . '/mtdowling/cron-expression/src'),
     'Anouar\\Paypalpayment' => array($vendorDir . '/anouar/paypalpayment/src'),
+    'Andheiberg\\Notify' => array($vendorDir . '/andheiberg/notify/src'),
 );

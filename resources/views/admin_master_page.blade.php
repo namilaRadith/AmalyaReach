@@ -32,6 +32,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Custom style -->
     <link rel="stylesheet" href="{{ asset('/admin/dist/css/custom.css')}}">
 
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="{{ asset('/admin/plugins/sweetAlert/sweetalert.css')}}">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -361,6 +364,9 @@ desired effect
 
         </section>
 
+
+
+
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
@@ -480,6 +486,9 @@ immediately after the control sidebar -->
 <!-- /.example-modal -->
 
 
+
+
+
 @section('js_ref')
 
 <!-- REQUIRED JS SCRIPTS -->
@@ -490,6 +499,9 @@ immediately after the control sidebar -->
 <script src="{{asset('/admin/bootstrap/js/bootstrap.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('/admin/dist/js/app.min.js')}}"></script>
+<!-- Sweet Alert -->
+<script src="{{asset('/admin/plugins/sweetAlert/sweetalert.min.js')}}"></script>
+
 <script type="text/javascript">
     $.ajaxSetup({
         headers: {
@@ -529,6 +541,24 @@ immediately after the control sidebar -->
     $(function () {
         $("#adminRoomsHomeTable").DataTable();
     });
+
+    @if (Notify::has('success'))
+    swal("success!", "{{ Notify::first('success') }}", "success");
+
+    @endif
+
+    @if (Notify::has('error'))
+        swal("error!", "{{ Notify::first('success') }}", "error");
+    @endif
+
+    @if (Notify::has('warning'))
+        swal("warning!", "{{ Notify::first('success') }}", "warning");
+    @endif
+
+    @if (Notify::has('info'))
+        swal("info!", "{{ Notify::first('success') }}", "info");
+    @endif
+
 </script>
 
 
@@ -538,5 +568,9 @@ immediately after the control sidebar -->
 Both of these plugins are recommended to enhance the
 user experience. Slimscroll is required when using the
 fixed layout. -->
+
+
+
+
 </body>
 </html>
