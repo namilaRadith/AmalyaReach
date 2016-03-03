@@ -100,37 +100,37 @@
                         <div class="box-body col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
-                                <input id="form_cust_email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <input id="form_cust_email" type="email" class="form-control" id="exampleInputEmail1"  disabled="disabled">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Name</label>
-                                <input type="text" id="form_cust_name" class="form-control" id="exampleInputPassword1">
+                                <input type="text" id="form_cust_name" class="form-control" id="exampleInputPassword1" disabled="disabled" >
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Address</label>
-                                <input type="text" id="form_cust_address" class="form-control" id="exampleInputPassword1">
+                                <input type="text" id="form_cust_address" class="form-control" id="exampleInputPassword1" disabled="disabled" >
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Contact</label>
-                                <input type="text" id="form_cust_contact" class="form-control" id="exampleInputPassword1" >
+                                <input type="text" id="form_cust_contact" class="form-control" id="exampleInputPassword1" disabled="disabled">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Gender</label>
-                                <input type="text" id="form_cust_gender" class="form-control" id="exampleInputPassword1" >
+                                <input type="text" id="form_cust_gender" class="form-control" id="exampleInputPassword1" disabled="disabled">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">D.O.B</label>
-                                <input type="text" id="form_cust_DOB" class="form-control" id="exampleInputPassword1">
+                                <input type="text" id="form_cust_DOB" class="form-control" id="exampleInputPassword1" disabled="disabled">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Nationality</label>
-                                <input type="text" id="form_cust_nationality" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <input type="text" id="form_cust_nationality" class="form-control" id="exampleInputPassword1" disabled="disabled">
                             </div>
                         </div>
                         <div class="box-body col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Children</label>
-                                <input type="text" id="form_cust_children" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <input type="text" id="form_cust_children" class="form-control" id="exampleInputEmail1" disabled="disabled">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Allow Personalized Offers</label>
@@ -140,8 +140,47 @@
                                 <label for="exampleInputPassword1">Allow Parters Personlized Offers</label>
                                 <input type="text" id="form_cust_allowPPO" class="form-control" id="exampleInputPassword1">
                             </div>
+
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                        Approve
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        Not Approve
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Select</label>
+                                <select class="form-control">
+                                    @foreach ($loyalty_master as $master)
+                                        <option><?php  echo $master -> type;?></option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        Send Special Offers
+                                    </label>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        Send Special Personlized Offers
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Register</button>
                             </div>
 
                             </div>
@@ -214,6 +253,7 @@
 
         function show_details(){
 
+            $("#cust_detail_form").hide();
             $("#cust_detail_form").show();
         }
 

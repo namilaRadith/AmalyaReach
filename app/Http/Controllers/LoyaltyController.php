@@ -54,8 +54,9 @@ class LoyaltyController extends Controller
 
         $loyaltyies = customerLoyalty::where('flag', 0)
             ->get();
+        $loyaltyies_master = DB::table('loyalty_master')->get();
 
-        return view('pages.admin.Loyalty.cust_loyalty_request',array('loyalties' => $loyaltyies));
+        return view('pages.admin.Loyalty.cust_loyalty_request',array('loyalties' => $loyaltyies,'loyalty_master' => $loyaltyies_master));
     }
 
     public function get_cust_Details($id){

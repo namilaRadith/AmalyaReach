@@ -83,8 +83,8 @@
                                                     <tr>
                                                         <td>{{ $room->price }}</td>
                                                         <td>1</td>
-                                                        <td>0.00</td>
-                                                        <td>{{ $room->price }}</td>
+                                                        <td>{{ $room->discount }}</td>
+                                                        <td>{{ ($room->price - $room->discount) }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
