@@ -30,7 +30,7 @@ class GalleryContent extends Model {
 			$file->move($pathToSave, $file->getClientOriginalName());
 			$galleryContent->contentType = $fileType;
 			$galleryContent->contentName = $fileName[0];
-			$galleryContent->contentFileExtension = $fileExtention;+
+			$galleryContent->contentFileExtension = $fileExtention;
 			$galleryContent->contentDescription = $fileDescription;
 			$galleryContent->save();
 			$status = true;

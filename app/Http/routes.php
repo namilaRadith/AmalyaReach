@@ -77,6 +77,9 @@ Route::get('dashboard/about-us', 'AdminDashboardController@showAboutUs');
 //registed route for home image slider page of the Admin
 Route::get('dashboard/home/image-slider', 'AdminDashboardController@showImageSlider');
 
+//registed route for image Gallery image delete
+Route::get('dashboard/home/img-slider/delete/{id}', 'AdminDashboardController@deleteImageFromSlider');
+
 //registed route for home image slider upload content page of the Admin
 Route::post('dashboard/home/image-slider/upload', 'AdminDashboardController@uploadImageSliderContent');
 
@@ -112,6 +115,8 @@ Route::post('dashboard/contact-us/update', 'AdminDashboardController@updateConta
 
 //registed route for image Gallery image delete
 Route::get('dashboard/gallery/img-gallery/delete/{id}', 'AdminDashboardController@deleteImageFromGallery');
+
+
 
 //registed route for video Gallery video upload
 Route::post('dashboard/gallery/vd-gallery/upload', 'AdminDashboardController@uploadVideoToGallery');

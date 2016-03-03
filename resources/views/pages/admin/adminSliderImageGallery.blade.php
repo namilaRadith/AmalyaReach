@@ -101,7 +101,7 @@
                        title="#"><img src="{{asset('client/img/slides_bg')}}{{'/'.$data->fileName}}" alt=""
                                       class="img-responsive styled"></a>
                     <br>
-                    <button class="btn btn-danger" onclick="#"><i class="fa fa-trash"></i></button>
+                    <button class="btn btn-danger" onclick="deleteImage({{$data->id}})"><i class="fa fa-trash"></i></button>
                     <button class="btn btn-warning"><i class="fa fa-edit"></i></button>
                 </div>
             @endforeach
@@ -199,6 +199,7 @@
             $("#h").val(data.height);
         }
 
+        //valicate input
         $(document).ready(function () {
             $("#image-form").validate({
 
@@ -237,6 +238,27 @@
                 }
             });
         });
+
+
+        //delete image
+        function deleteImage(id) {
+            if(confirm("This operation will remove this image form the sever. Are you sure to continue ?")) {
+                $.ajax({
+                    method: "GET",
+                    url: 'img-slider/delete/' + id,
+                    success: function (data) {
+                        location.reload(true);
+                    }
+
+                });
+            }
+
+        }
+
+        setTimeout(function(){
+            $('.alert').fadeOut("slow");
+        },2000);
+
 
 
     </script>

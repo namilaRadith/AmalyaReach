@@ -4,6 +4,8 @@ use Illuminate\Database\Eloquent\Model;
 // import the Intervention Image Manager Class
 use Intervention\Image\ImageManagerStatic as Image;
 use Input;
+use File;
+
 
 class SliderImage extends Model {
 
@@ -33,6 +35,15 @@ class SliderImage extends Model {
 
         Image::make(Input::file('img_pre'))->crop($width, $height, $x, $y)->save('client/img/slides_bg/cropped-' . Input::file('img_pre')->getClientOriginalName());
 
+    }
+
+
+    public static function deleteSliderImage($id){
+
+        $sliderImage = SliderImage::find($id);
+        $path = 'client/img/slides_bg/'.$sliderImage->fileName;
+        File::delete($path);
+        $sliderImage->delete();
     }
 
 }
