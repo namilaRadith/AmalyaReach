@@ -26,12 +26,7 @@
 
                     <input type="button" id="submitNewsLetter" class="btn btn-default" name="submitNewsLetter" value="Send News Letter">
 
-                    <div class="message col-md-4 pull-right" >
-                        <div class="callout callout-success">
-                            <h4>Success !</h4>
-                            <p>News letter has been successfully sent.</p>
-                        </div>
-                    </div>
+
 
             </form>
 
@@ -96,9 +91,13 @@
                     loader('stop');
                     $("#newsLetterSubject").val('');
                     CKEDITOR.instances["editor1"].setData('');
-                    $('.message').fadeIn('slow');
-                    $('.message').delay(2000).fadeOut('slow');
+                    swal("Sent!", "You news letter has successfully sent to "+data+" subscibers ", "success");
                     //alert(data);
+                },
+
+                error:function(){
+                    loader('stop');
+                    swal("Connecttion failed!", "Please check your internet connection and try again ! ", "error");
                 }
 
             });

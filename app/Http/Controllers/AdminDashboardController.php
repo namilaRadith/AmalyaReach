@@ -64,9 +64,14 @@ class AdminDashboardController extends Controller
      */
     public function uploadImageSliderContent(Request $request)
     {
-        $s = new SliderImage;
-        $s->addSliderImage($request);
-        Notify::success('Image uploaded successfully');
+        $sliderImage = new SliderImage;
+
+            if ($sliderImage->addSliderImage($request)) {
+                Notify::success('Image uploaded successfully');
+            } else {
+                Notify::error('Image is already existing in server');
+            }
+
         return redirect()->action('AdminDashboardController@showImageSlider');
 
     }
@@ -93,7 +98,7 @@ class AdminDashboardController extends Controller
     {
 
         $galleryContent = GalleryContent::where('contentType', '=', 'image')->get();
-        return view('pages.admin.adminImageGallery', array('imageList' => $galleryContent, 'status' => null));
+        return view('pages.admin.adminImageGallery2', array('imageList' => $galleryContent, 'status' => null));
     }
 
 
@@ -102,15 +107,16 @@ class AdminDashboardController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function uploadImageToGallery(UploadGalleryImageRequest $request)
+    public function uploadImageToGallery( Request $request)
     {
 
-        if (GalleryContent::saveContent($request, 'image', 'imageTitle', 'client/img/img-gallery')) {
-            return redirect()->action('AdminDashboardController@showImageGallery')->with('message', 'Image has been successfully uploaded');
+        if (GalleryContent::saveContentImage($request, 'img_pre', 'imageTitle', 'client/img/img-gallery')) {
+            Notify::success('Image uploaded successfully');
         } else {
-            return redirect()->action('AdminDashboardController@showImageGallery')->with('message', 'error occurred');
+            Notify::error('Image is already existing in server');
         }
 
+        return redirect()->action('AdminDashboardController@showImageGallery');
 
     }
 
@@ -123,10 +129,12 @@ class AdminDashboardController extends Controller
     {
 
         if (GalleryContent::deleteContent($id, 'client/img/img-gallery/')) {
-            return redirect()->action('AdminDashboardController@showImageGallery')->with('message', 'Image has been removed from the server ');;
+            Notify::success('Image removed form gallery successfully');
         } else {
-            return redirect()->action('AdminDashboardController@showImageGallery')->with('message', 'error occurred');;
+            Notify::success('Video uploaded successfully');
         }
+
+        return redirect()->action('AdminDashboardController@showImageGallery');
 
 
     }
@@ -152,12 +160,29 @@ class AdminDashboardController extends Controller
     public function uploadVideoToGallery(Request $request)
     {
         if (GalleryContent::saveContent($request, 'video', 'videoTitle', 'client/video/vid-gallery')) {
-            return redirect()->action('AdminDashboardController@showImageGallery')->with('message', 'Image has been successfully uploaded');
+            Notify::success('Video uploaded successfully');
+            return redirect()->action('AdminDashboardController@showVideoGallery');
         } else {
-            return redirect()->action('AdminDashboardController@showImageGallery')->with('message', 'error occurred');
+            Notify::error('Video is already existing in server');
+            return redirect()->action('AdminDashboardController@showVideoGallery');
         }
 
 
+    }
+
+    /**
+     * delete existing video to the database
+     * @param int $id
+     * @return Response
+     */
+    public function deleteVideoFromGallery($id){
+        if (GalleryContent::deleteContent($id, 'client/video/vid-gallery/')) {
+            Notify::success('Video deleted successfully');
+            return redirect()->action('AdminDashboardController@showVideoGallery');
+        } else {
+            Notify::warning('Video was not deleted');
+            return redirect()->action('AdminDashboardController@showVideoGallery');
+        }
     }
 
 

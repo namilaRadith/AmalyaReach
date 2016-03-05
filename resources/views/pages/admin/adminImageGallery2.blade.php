@@ -26,7 +26,7 @@
 
     <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 
-        <form action="{{action('AdminDashboardController@uploadImageSliderContent')}}" id="image-form" method="post"
+        <form action="{{action('AdminDashboardController@uploadImageToGallery')}}" id="image-form" method="post"
               enctype="multipart/form-data">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -43,16 +43,10 @@
 
                                 <div class="form-group">
                                     <lable>Slider Image Title</lable>
-                                    <input type="text" name="silderImageTitle" class="form-control"
-                                           id="silderImageTitle">
+                                    <input type="text" name="imageTitle" class="form-control"
+                                           id="imageTitle">
                                 </div>
 
-
-                                <div class="form-group">
-                                    <lable>Slider Image Description</lable>
-                                    <input type="text" name="silderImageDescription" class="form-control"
-                                           id="silderImageDescription">
-                                </div>
                                 <div class="form-group">
                                     <lable>Choose a file</lable>
                                     <input type="file" name="img_pre" id="" onchange="previewFile()"> <br>
@@ -70,7 +64,7 @@
                                 <input type="hidden" name="h" id="h">
                                 <input type="hidden" value="{{csrf_token()}}" name="_token">
 
-                                <img src="{{asset('/client/img/slides_bg/placeholder.jpg')}}" alt="Image preview" id="img_pre" class="img-responsive">
+                                <img src="{{asset('client/img/img-gallery/placeholder.jpg')}}" alt="Image preview" id="img_pre" class="img-responsive">
                                 <img src="" alt="Image preview" id="img_pre_temp" class="img-responsive" style="visibility:hidden">
                             </div>
 
@@ -97,9 +91,10 @@
         <div class="col-md-9">
             @foreach( $imageList as $data )
                 <div class="col-md-4 col-sm-4">
-                    <a href="{{asset('client/img/slides_bg')}}{{'/'.$data->fileName}}"
-                       title="#"><img src="{{asset('client/img/slides_bg')}}{{'/'.$data->fileName}}" alt=""
-                                      class="img-responsive styled"></a>
+                    <a href="{{asset('client/img/img-gallery')}}{{'/'.$data->contentName.'.'.$data->contentFileExtension}}"
+                       title="{{$data->contentDescription}}"><img
+                                src="{{asset('client/img/img-gallery')}}{{'/'.$data->contentName.'.'.$data->contentFileExtension}}"
+                                alt="" class="img-responsive styled"></a>
                     <br>
                     <button class="btn btn-danger" onclick="deleteImage({{$data->id}})"><i class="fa fa-trash"></i></button>
 
@@ -151,7 +146,7 @@
 
                 console.log(tempPreview.naturalWidth);
 
-                if (tempPreview.naturalWidth >= 1700 && tempPreview.naturalHeight >= 600) {
+                if (tempPreview.naturalWidth >= 800 && tempPreview.naturalHeight >= 533) {
                     preview.src = reader.result;
                     $("#img_pre").cropper("destroy");
 
@@ -178,9 +173,10 @@
 
                     });
 
-                    $("#img_pre").cropper("setData", {width: 1700, height: 600});
+                    $("#img_pre").cropper("setData", {width: 800, height: 533});
                 } else {
-                    alert("Please select a image which at least 1700 x 600");
+                    //alert("Please select a image which at least 1700 x 600");
+                    swal("Error !", "Please select a image which at least 800 x 533", "error");
                 }
 
 
@@ -206,15 +202,12 @@
             $("#image-form").validate({
 
                 rules: {
-                    silderImageTitle: {
+                    imageTitle: {
                         required: true,
                         pattern: "^[a-zA-Z0-9]*$"
                     },
 
-                    silderImageDescription: {
-                        required: true,
-                        pattern: "^[a-zA-Z0-9]*$"
-                    },
+
 
                     img_pre:{
                         required: true,
@@ -223,15 +216,11 @@
                 },
 
                 messages: {
-                    silderImageTitle: {
+                    imageTitle: {
                         required: "filed can't be empty",
                         pattern: "Special characters are not allowed"
                     },
 
-                    silderImageDescription: {
-                        required: "filed can't be empty",
-                        pattern: "Special characters are not allowed"
-                    },
 
                     img_pre:{
                         required: "filed select a image",
@@ -269,7 +258,7 @@
         function deleteNow(id){
             $.ajax({
                 method: "GET",
-                url: 'img-slider/delete/' + id,
+                url: 'img-gallery/delete/' + id,
                 success: function (data) {
                     location.reload(true);
                     swal("Deleted!", "Selected video was successfully deleted.", "success");

@@ -128,5 +128,10 @@ class clientNavigationController extends Controller
         }
     }
 
+    public function showMyProfile()
+    {
+        return view('pages.client.clientUserProfile');
+    }
+
 
 }

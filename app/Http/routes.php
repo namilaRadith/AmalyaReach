@@ -59,6 +59,9 @@ Route::get('check-s-email/{email}', 'clientNavigationController@isSubscriberIn')
 //registed route for Gallery page of the Client
 Route::get('cl-Special-Offers', 'clientNavigationController@showSpecialOffers');
 
+//registed route for Gallery page of the Client
+Route::get('cl-my-profile', 'clientNavigationController@showMyProfile');
+
 /*
  ***********************************************************************************************************************
 											ADMIN NAVIGATION  ROUTES
@@ -116,7 +119,8 @@ Route::post('dashboard/contact-us/update', 'AdminDashboardController@updateConta
 //registed route for image Gallery image delete
 Route::get('dashboard/gallery/img-gallery/delete/{id}', 'AdminDashboardController@deleteImageFromGallery');
 
-
+//registed route for image Gallery image delete
+Route::get('dashboard/gallery/vd-gallery/delete/{id}', 'AdminDashboardController@deleteVideoFromGallery');
 
 //registed route for video Gallery video upload
 Route::post('dashboard/gallery/vd-gallery/upload', 'AdminDashboardController@uploadVideoToGallery');

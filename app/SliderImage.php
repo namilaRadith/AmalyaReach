@@ -13,17 +13,24 @@ class SliderImage extends Model {
 
     public function addSliderImage($request)
     {
+        $status = false;
 
-        $sliderImage = new SliderImage;
-        $image = Input::file('img_pre');
+        try {
+            $sliderImage = new SliderImage;
+            $image = Input::file('img_pre');
 
-        $this->cropImage($request);
+            $this->cropImage($request);
 
-        $sliderImage->title = $request->input('silderImageTitle');
-        $sliderImage->description = $request->input('silderImageDescription');
-        $sliderImage->fileName = 'cropped-' . $image->getClientOriginalName();
-        $sliderImage->save();
+            $sliderImage->title = $request->input('silderImageTitle');
+            $sliderImage->description = $request->input('silderImageDescription');
+            $sliderImage->fileName = 'cropped-' . $image->getClientOriginalName();
+            $sliderImage->save();
+            $status = true;
+        } catch (\Exception $e) {
 
+        }
+
+        return $status;
     }
 
     public function cropImage($request)

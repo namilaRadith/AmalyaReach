@@ -88,9 +88,14 @@
 			</ul>
 		@if(Auth::user())
 			<a href="auth/logout" id="link_bt">Log Out</a>
+                @if(Auth::user()->isAdmin())
+                    <a href="{{action('AdminDashboardController@index')}}" id="link_bt">Admin Dashboard</a>
+                @endif
 		@else
 			<a href="auth/login" id="link_bt">Login</a>
 		@endif
+
+
 		</div><!-- End container-->
 	</div><!-- End top line-->
 

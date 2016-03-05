@@ -213,15 +213,10 @@ desired effect
                             <!-- Menu Body -->
                             <li class="user-body">
                                 <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
+                                    <div class=" text-center">
+                                        <a href="{{action('HomeController@index')}}">Back to Client mode</a>
                                     </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                    </div>
+
                                 </div>
                                 <!-- /.row -->
                             </li>
@@ -231,7 +226,7 @@ desired effect
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="auth/logout" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -339,6 +334,13 @@ desired effect
                             <a href="{{action('AdminDashboardController@showCreateNewsLetter')}}">Create News Letter </a>
                         </li>
                         <li><a href="#">View News Letters</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Subscribers</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">List All Subscribers</a></li>
                     </ul>
                 </li>
 
@@ -548,15 +550,15 @@ immediately after the control sidebar -->
     @endif
 
     @if (Notify::has('error'))
-        swal("error!", "{{ Notify::first('success') }}", "error");
+        swal("error!", "{{ Notify::first('error') }}", "error");
     @endif
 
     @if (Notify::has('warning'))
-        swal("warning!", "{{ Notify::first('success') }}", "warning");
+        swal("warning!", "{{ Notify::first('warning') }}", "warning");
     @endif
 
     @if (Notify::has('info'))
-        swal("info!", "{{ Notify::first('success') }}", "info");
+        swal("info!", "{{ Notify::first('info') }}", "info");
     @endif
 
 </script>
