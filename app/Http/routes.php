@@ -53,14 +53,24 @@ Route::get('cl-gallery', 'clientNavigationController@showGallery');
 //registed route for Add Subscriber
 Route::post('add-subscriber', 'clientNavigationController@addSubscriber');
 
+//registed route for Remove Subscriber
+Route::get('remove-subscriber/{email}', 'clientNavigationController@removeSubscriber');
+
 //registed route for check subscribe email
 Route::get('check-s-email/{email}', 'clientNavigationController@isSubscriberIn');
 
 //registed route for Gallery page of the Client
 Route::get('cl-Special-Offers', 'clientNavigationController@showSpecialOffers');
 
-//registed route for Gallery page of the Client
-Route::get('cl-my-profile', 'clientNavigationController@showMyProfile');
+//registed route for  Client profile
+Route::get('cl-my-profile', 'UserController@showMyProfile');
+
+//registed route for client profile update
+Route::post('cl-my-profile/update', 'UserController@updateMyProfile');
+
+
+
+
 
 /*
  ***********************************************************************************************************************
@@ -109,6 +119,12 @@ Route::get('newsletter/create', 'AdminDashboardController@showCreateNewsLetter')
 
 //registed route for send news letter
 Route::post('newsletter/create/send', 'AdminDashboardController@sendNewsLetter');
+
+//registed route for list all users
+Route::get('users/list-all/', 'AdminDashboardController@listAllUsers');
+
+//registed route for add power user
+Route::get('users/add-admin', 'AdminDashboardController@showAddPowerUser');
 
 //registed route for contact us page
 Route::post('dashboard/gallery/img-gallery/upload', 'AdminDashboardController@uploadImageToGallery');

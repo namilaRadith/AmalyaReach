@@ -13,7 +13,7 @@ class Subscriber extends Model
      * @param string $email
      * @return Boolean
      */
-    private function isSubscriberIn($email)
+    public static function isSubscriberIn($email)
     {
 
 
@@ -35,10 +35,10 @@ class Subscriber extends Model
      * @param string $email
      * @return Response
      */
-    public function addSubsciber($email)
+    public static function addSubsciber($email)
     {
 
-        if ($this->isSubscriberIn($email)) {
+        if (self::isSubscriberIn($email)) {
             $subsciber = new Subscriber();
             $subsciber->email = $email;
             $subsciber->save();
@@ -49,5 +49,21 @@ class Subscriber extends Model
         }
 
     }
+
+    public static function removeSubsciber($email)
+    {
+
+
+
+            $subscriber = Subscriber::where('email', '=', $email)->get();
+            $subscriber->delete();
+
+            echo 'Subscription was canceled ';
+
+
+
+    }
+
+
 
 }

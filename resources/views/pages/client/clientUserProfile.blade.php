@@ -4,6 +4,7 @@
     <!-- SPECIFIC CSS -->
     <link rel="stylesheet" href="{{asset('client/css/weather.css')}}" >
     <link rel="stylesheet" href="{{asset('/admin/plugins/datepicker/datepicker3.css')}}">
+    <link href="{{asset('/admin/plugins/strengthMeter/css/strength-meter.min.css')}}" rel="stylesheet">
 
 @stop
 
@@ -34,53 +35,76 @@
 
     <div class="container margin_60">
         <div class="row">
+            <div class="pull-right">
+                @if(!\App\Subscriber::isSubscriberIn($user->email))
+                    <input type="button" id="unSubscribe"  class="btn btn-deafult" value="Unsubscribe">
+                    {{--<a href="{{action('clientNavigationController@removeSubscriber',$user->email)}}" class="btn btn-deafult" >Unsubscribe</a>--}}
+                @else
+                    <input type="button" id="subscribe"  class="btn btn-success"  onclick="Subscribe()" value="Subscribe">
+                @endif
+             </div>
+
+        </div>
+        <div class="row">
             <div class="col-md-8">
 
                 <div id="message-contact"></div>
-                <form method="post" action="#" id="contactform">
+                <form method="post" action="{{action('UserController@updateMyProfile')}}">
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
+                            <input type="hidden" value="{{$user->id}}" name="id">
                             <div class="form-group">
                                 <label>First Name</label>
-                                <input type="text" class="form-control" id="name_contact" name="name_contact" placeholder="Enter Name">
+                                <input type="text" class="form-control" value="{{$user->name}}" id="name_contact" name="fname" required pattern="^[a-zA-Z0-9]*$"
+                                       title="special charachters not allowed" placeholder="First Name">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-group">
                                 <label>Last Name</label>
-                                <input type="text" class="form-control" id="lastname_contact" name="lastname_contact" placeholder="Enter Last Name">
+                                <input type="text" class="form-control" id="lastname_contact" value="{{$user->last_name}}"  name="lname" required pattern="^[a-zA-Z0-9]*$"
+                                       title="special charachters not allowed"  placeholder="Enter Last Name">
                             </div>
                         </div>
                     </div>
                     <!-- End row -->
+
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-group">
                                 <label>Email</label>
-                                <input type="email" id="email_contact" name="email_contact" class="form-control" placeholder="Enter Email">
+                                <input type="email" id="email_contact" readonly name="email_contact" value="{{$user->email}}"  class="form-control" placeholder="Enter Email">
 
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-group">
                                 <label>Phone</label>
-                                <input type="text" id="phone_contact" name="phone_contact" class="form-control" placeholder="Enter Phone number">
+                                <input type="text" id="phone_contact" name="phone" class="form-control" value="{{$user->phone}}"  required pattern="^\d{10}"
+                                       title="enter valid phone number " placeholder="Enter Phone number">
                             </div>
                         </div>
                     </div>
                     <!-- End row -->
-                    
+
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
-                            <div class="form-group">
-                                <label>Date of birth </label>
-                                <input class="datepicker form-control" data-date-format="mm/dd/yyyy"  >
-                            </div>
+                            <label>Address</label>
+                            <style>
+                                textarea {
+                                    text-align: justify;
+                                    white-space: normal;
+                                }
+                            </style>
+                            <textarea name="caddress"  cols="30" rows="5" class="form-control text-left" >
+                                {{$user->address}}
+                            </textarea>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-group">
                                 <label>Country</label>
-                                <select name="" id="" class="form-control">
+                                <select name="country" required id="country"  value="{{$user->country}}" class="form-control">
+
                                     <option value="Afghanistan">Afghanistan</option>
                                     <option value="Albania">Albania</option>
                                     <option value="Algeria">Algeria</option>
@@ -323,15 +347,18 @@
                                 </select>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6"></div>
-                            <div class="col-md-6 col-sm-6 ">
-                                <input type="button" class="btn btn-default pull-right" value="Edit Profile">
-                            </div>
-                        </div>
                     </div>
                     <!-- End row -->
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6"></div>
+                        <div class="col-md-6 col-sm-6 ">
+                            <input type="hidden" value="{{csrf_token()}}" name="_token">
+                            <input type="submit" class="btn btn-default pull-right" value="Save Profile">
+                        </div>
+                    </div>
+
+
 
                 </form>
             </div><!-- End col-md-8 -->
@@ -339,12 +366,12 @@
        </div><!-- End row -->
 
         <div class="row">
-            <form action="">
+            <form action="" id="passWordChange">
                 <div class="row">
                     <div class="col-md-3 col-sm-3">
                         <div class="form-group">
                             <label>Old password</label>
-                            <input type="password" class="form-control" id="name_contact" name="name_contact" placeholder="Enter Name">
+                            <input type="password" class="form-control" id="oldPassword" name="name_contact" placeholder="old password">
                         </div>
                     </div>
                 </div>
@@ -353,7 +380,7 @@
                     <div class="col-md-3 col-sm-3">
                         <div class="form-group">
                             <label>New Password</label>
-                            <input type="password" class="form-control" id="name_contact" name="name_contact" placeholder="Enter Name">
+                            <input type="password" class="form-control" id="newPassword"  name="name_contact" placeholder="new password">
                         </div>
                     </div>
                 </div>
@@ -362,7 +389,7 @@
                     <div class="col-md-3 col-sm-3">
                         <div class="form-group">
                             <label>Confirm New Password</label>
-                            <input type="password" class="form-control" id="name_contact" name="name_contact" placeholder="Enter Name">
+                            <input type="password" class="form-control" id="ConfirmNewPassword" name="name_contact" placeholder="again new password">
                         </div>
                     </div>
                 </div>
@@ -370,7 +397,7 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-3">
                         <div class="form-group">
-                            <input type="button" value="Change Password" class="btn btn-default">
+                            <input type="submit" value="Change Password" class="btn btn-default">
                         </div>
                     </div>
                 </div>
@@ -380,7 +407,9 @@
         </div>
     </div><!-- End Container -->
 
+    <form action="">
 
+    </form>
 
 
 
@@ -388,8 +417,118 @@
 @section('js_ref')
 @parent
     <script src="{{asset('/admin/plugins/datepicker/bootstrap-datepicker.js')}}"></script>
+    <script src="{{ asset('/admin/plugins/validator/jquery.validate.min.js')}}"></script>
+    <script src="{{ asset('/admin/plugins/validator/additional-methods.min.js')}}"></script>
+    <script src="{{asset('/admin/plugins/strengthMeter/js/strength-meter.min.js')}}"></script>
+
     <script>
         $('.datepicker').datepicker();
+
+        $("#country").val("{{$user->country}}");
+
+        $("#newPassword").strength({showMeter: true, toggleMask: false});
+
+
+
+        //password update
+        $("#passWordChange").submit(function (e) {
+
+            if ($("#newPassword").strength('score') >= 60 ) {
+                if ($("#newPassword").val() === $("#ConfirmNewPassword").val()) {
+                 // CSRF protection
+                    $.ajaxSetup(
+                            {
+                                headers: {
+                                    'X-CSRF-Token': $('input[name="_token"]').val()
+                                }
+                            });
+
+
+                    //create and senf ajax request to the server
+                    $.ajax({
+
+                        method: "post",
+                        url: 'cl-my-profile/changepw',
+                        data: {
+                            oldPassword: $("#oldPassword").val(),
+                            newPassword: $("#newPassword").val(),
+
+
+                        },
+
+                        //on success pop up alerts according to the retuen
+                        success: function (data) {
+
+                            //alert(data);
+                            if(data == "true") {
+                                swal("success!", "Password changed successfully", "success");
+                            } else {
+                                swal("Old password!", "Enterd old password does not match with our records , ","error");
+                            }
+                        },
+
+                        error: function (d) {
+
+                        }
+
+                    });
+                } else {
+
+                    swal("Password matching !", "New password and confirm new password fileds are does not match ", "error");
+                }
+            } else {
+
+                swal("Password Strength !", "Password strength must be at least 60% ", "error");
+            }
+
+            $("#passWordChange input[type='password']").val('');
+            $("#newPassword").strength('reset')
+
+
+
+            // stop the form from submitting the normal way and refreshing the page
+            event.preventDefault();
+
+        });
+
+        function unSubscribe(email){
+
+        }
+
+
+
+        function Subscribe(){
+            // CSRF protection
+            $.ajaxSetup(
+                    {
+                        headers: {
+                            'X-CSRF-Token': $('input[name="_token"]').val()
+                        }
+                    });
+
+            //create and senf ajax request to the server
+            $.ajax({
+
+                method: "post",
+                url: '/add-subscriber',
+                data: {
+                    email: "{{$user->email}}",
+
+
+                },
+
+                //on success remove loading animation & clear fields
+                success: function (data) {
+
+                    swal("success!", data, "success");
+
+
+                }
+
+
+            });
+        }
+
     </script>
 
 @stop

@@ -338,6 +338,14 @@ desired effect
                 </li>
 
                 <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Users</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{action('AdminDashboardController@listAllUsers')}}">View all users</a></li>
+                        <li><a href="{{action('AdminDashboardController@showAddPowerUser')}}">Add Power users</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Subscribers</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="#">List All Subscribers</a></li>

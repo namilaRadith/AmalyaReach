@@ -41,6 +41,7 @@
     <!-- REVOLUTION SLIDER CSS -->
     <link href="{{asset('/client/rs-plugin/css/settings.css')}}" rel="stylesheet">
     <link href="{{asset('/client/css/extralayers.css')}}" rel="stylesheet">
+
     <style>
         label.error {
             color:red;
@@ -88,6 +89,8 @@
 			</ul>
 		@if(Auth::user())
 			<a href="auth/logout" id="link_bt">Log Out</a>
+            <a href="{{action('UserController@showMyProfile')}}" id="link_bt">My Profile</a>
+
                 @if(Auth::user()->isAdmin())
                     <a href="{{action('AdminDashboardController@index')}}" id="link_bt">Admin Dashboard</a>
                 @endif
@@ -278,6 +281,7 @@
 <script src="{{ asset('/client/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
 <script src="{{ asset('/client/js/revolution_func.js')}}"></script>
 <script src="{{ asset('/admin/plugins/validator/jquery.validate.min.js')}}"></script>
+
 <!-- Sweet Alert -->
 <script src="{{asset('/admin/plugins/sweetAlert/sweetalert.min.js')}}"></script>
 <script>
@@ -349,6 +353,27 @@
 
 
     });
+
+
+
+</script>
+<script>
+    @if (Notify::has('success'))
+swal("success!", "{{ Notify::first('success') }}", "success");
+
+    @endif
+
+    @if (Notify::has('error'))
+        swal("error!", "{{ Notify::first('error') }}", "error");
+    @endif
+
+    @if (Notify::has('warning'))
+        swal("warning!", "{{ Notify::first('warning') }}", "warning");
+    @endif
+
+    @if (Notify::has('info'))
+        swal("info!", "{{ Notify::first('info') }}", "info");
+    @endif
 
 </script>
 @show

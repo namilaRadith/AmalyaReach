@@ -7,9 +7,10 @@ use Input;
 use Intervention\Image\ImageManagerStatic as Image;
 
 
-
-
-
+/**
+ * Class GalleryContent
+ * @package App
+ */
 class GalleryContent extends Model {
 
 	protected $fillable = ['contentType','contentName','contentFileExtension','contentDescription'];
@@ -53,6 +54,14 @@ class GalleryContent extends Model {
 
 	}
 
+	/**
+	 * crop and upload image
+	 * @param $request
+	 * @param $contentType
+	 * @param $contentTitle
+	 * @param $pathToSave
+	 * @return bool
+     */
 	public static function saveContentImage( $request,$contentType,$contentTitle,$pathToSave)
 	{
 		$status = false;
@@ -82,6 +91,10 @@ class GalleryContent extends Model {
 
 	}
 
+	/**
+	 * @param $request
+	 * @param $pathToSave
+     */
 	public static function cropImage($request,$pathToSave)
 	{
 		$x = (int)$request->input('x');

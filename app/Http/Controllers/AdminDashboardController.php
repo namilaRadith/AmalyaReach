@@ -9,6 +9,7 @@ use App\aboutUsPage;
 use App\Http\Requests\UploadGalleryImageRequest;
 use App\SliderImage;
 use App\Subscriber;
+use App\User;
 use Illuminate\Http\Request;
 
 
@@ -108,6 +109,7 @@ class AdminDashboardController extends Controller
      * @return Response
      */
     public function uploadImageToGallery( Request $request)
+
     {
 
         if (GalleryContent::saveContentImage($request, 'img_pre', 'imageTitle', 'client/img/img-gallery')) {
@@ -310,5 +312,14 @@ class AdminDashboardController extends Controller
 
     }
 
+    public function listAllUsers(){
+        $users = User::all();
+
+        return view('pages.admin.adminListAllUsers',array("users" => $users));
+    }
+
+    public function showAddPowerUser(){
+        return view('pages.admin.adminAddPowerUser');
+    }
 
 }
