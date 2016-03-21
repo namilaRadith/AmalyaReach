@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'APCUIterator' => $vendorDir . '/symfony/polyfill-apcu/Resources/stubs/APCUIterator.php',
     'AddMoreColumns' => $baseDir . '/database/migrations/2016_01_23_165725_add_more_columns.php',
     'CreateAboutUsPagesTable' => $baseDir . '/database/migrations/2016_01_30_201855_create_about_us_pages_table.php',
     'CreateArticlesTable' => $baseDir . '/database/migrations/2016_01_23_164542_create_articles_table.php',
@@ -15,12 +14,14 @@ return array(
     'CreateGalleryContentsTable' => $baseDir . '/database/migrations/2016_01_23_033415_create_gallery_contents_table.php',
     'CreateImageMastersTable' => $baseDir . '/database/migrations/2016_01_30_200756_create_image_masters_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateQuestionersTable' => $baseDir . '/database/migrations/2016_03_21_092805_create_questioners_table.php',
+    'CreateQuestionsTable' => $baseDir . '/database/migrations/2016_03_21_092815_create_questions_table.php',
     'CreateReservationTable' => $baseDir . '/database/migrations/2016_01_24_001707_create_reservation_table.php',
     'CreateRoomTypesTable' => $baseDir . '/database/migrations/2016_01_20_183757_create_roomTypes_table.php',
     'CreateRoomsTable' => $baseDir . '/database/migrations/2016_01_18_180628_create_rooms_table.php',
     'CreateSliderImagesTable' => $baseDir . '/database/migrations/2016_02_29_173754_create_slider_images_table.php',
     'CreateSubscribersTable' => $baseDir . '/database/migrations/2016_02_06_185006_create_subscribers_table.php',
-    'CreateUsersTable' => $baseDir . '/database/migrations/2016_03_05_190538_create_users_table.php',
+    'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',

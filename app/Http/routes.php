@@ -141,6 +141,20 @@ Route::get('dashboard/gallery/vd-gallery/delete/{id}', 'AdminDashboardController
 //registed route for video Gallery video upload
 Route::post('dashboard/gallery/vd-gallery/upload', 'AdminDashboardController@uploadVideoToGallery');
 
+
+//	| Questioners
+
+//registed route for questioners manage show
+Route::get('customer/questioners/manage', 'AdminDashboardController@showManageQuestioners');
+
+//registed route for questioners manage show
+Route::get('customer/questioners/manage/create', 'AdminDashboardController@showCreateQuestioners');
+
+//registed route for questioners manage show
+Route::post('customer/questioners/manage/create/new', 'AdminDashboardController@createQuestioners');
+
+
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

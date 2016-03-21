@@ -352,6 +352,28 @@ desired effect
                     </ul>
                 </li>
 
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Customers</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">List All customers</a></li>
+                        <li>
+                            <a href="#">Customer reviews</a>
+                            <ul class="treeview-menu">
+                                <li><a href="#">Questioner Results</a></li>
+                                <li><a href="{{action('AdminDashboardController@showManageQuestioners')}}">Manage Questioner</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">Customer feedbacks</a>
+                            <ul class="treeview-menu">
+                                <li><a href="#">List all customer feedbacks</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
             <!-- /.sidebar-menu -->
         </section>

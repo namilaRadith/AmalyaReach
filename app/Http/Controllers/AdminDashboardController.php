@@ -7,6 +7,7 @@ use App\GalleryContent;
 use App\aboutUsPage;
 
 use App\Http\Requests\UploadGalleryImageRequest;
+use App\Questioner;
 use App\SliderImage;
 use App\Subscriber;
 use App\User;
@@ -320,6 +321,41 @@ class AdminDashboardController extends Controller
 
     public function showAddPowerUser(){
         return view('pages.admin.adminAddPowerUser');
+    }
+
+
+    /**
+     * show showManageQuestioners page
+     *
+     * @return Response
+     */
+    public function  showManageQuestioners()
+    {
+        return view('pages.admin.manageQuestioners');
+    }
+
+    /**
+     * show showManageQuestioners page
+     *
+     * @return Response
+     */
+    public function  showCreateQuestioners()
+    {
+        return view('pages.admin.adminCreateQuestioner');
+    }    /**
+     * show showManageQuestioners page
+     *
+     * @return Response
+     */
+
+    public function  createQuestioners()
+    {
+        if (\Request::isJson()) {
+            $data = Input::all();
+            //var_dump($data);
+
+            Questioner::createQuestioner($data);
+        }
     }
 
 }
