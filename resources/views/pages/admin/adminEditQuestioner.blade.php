@@ -7,8 +7,10 @@
 @stop
 
 @section('content')
+
+
 	<div ng-app="AmalyaReach">
-		<div ng-controller="questionController">
+		<div ng-controller="questionController" data-ng-init="getData()">
 			<form id="qf" name="qform" ng-submit="submitForm(qform.$valid)" novalidate>
 			<div class="box">
 				<div class="box-header">
@@ -53,14 +55,14 @@
 			</div>
 			<!-- /.box -->
 
-				<input type="submit" ng-click="sendData()" value="Create Questioners"  ng-if="!isEmpty()"  class="btn btn-success btn-lg pull-right" ng-disabled="qform.$invalid" >
+				<input type="submit" ng-click="updateQuestioner()" value="Update Questioners"  ng-if="!isEmpty()"  class="btn btn-success btn-lg pull-right" ng-disabled="qform.$invalid" >
 			</form>
 
 
 
 
-			{{--<pre> @{{ items }}</pre>--}}
-			{{--<pre> @{{ questionerTitle }}</pre>--}}
+			<pre> @{{ items }}</pre>
+			<pre> @{{ questionerTitle }}</pre>
 		</div>
 		<!-- /.ng-controller-->
 	</div>
@@ -79,7 +81,7 @@
 	<script src="{{ asset('/admin/scripts/angularScripts.js')}}"></script>
 
 	<script>
-		angularQuestionerHandeller('{!! csrf_token() !!}',null);
+		angularQuestionerHandeller('{!! csrf_token() !!}','{!! $q !!}');
 	</script>
 
 

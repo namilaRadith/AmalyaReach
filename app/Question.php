@@ -8,11 +8,18 @@ class Question extends Model {
 
     protected $fillable = ['question','questioner_id','question_type'];
 
-    public function question()
+
+
+    public function questioner()
     {
         return $this->belongsTo('App\Questioner');
     }
 
+    /**
+     * add questions to database
+     * @param $data
+     * @param $questionerId
+     */
     public static function  addQuestions($data,$questionerId){
 
         foreach($data['Questions'] as $value) {
@@ -25,5 +32,30 @@ class Question extends Model {
 
         }
     }
+
+    /**
+     * update questions in database
+     * @param $data
+     * @param $questionerId
+     */
+    public static function updateQuestions($data,$questionerId){
+        self::deleteQuestions($questionerId);
+        self::addQuestions($data,$questionerId);
+    }
+
+    /**
+     * @param $questionerId
+     */
+    public static function deleteQuestions($questionerId)
+    {
+        $question = Question::where('questioner_id', '=', $questionerId)->get();
+
+        foreach ($question as $q) {
+            $q->delete();
+        }
+    }
+
+
+
 
 }

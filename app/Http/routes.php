@@ -147,11 +147,26 @@ Route::post('dashboard/gallery/vd-gallery/upload', 'AdminDashboardController@upl
 //registed route for questioners manage show
 Route::get('customer/questioners/manage', 'AdminDashboardController@showManageQuestioners');
 
-//registed route for questioners manage show
+//registed route for questioners create show
 Route::get('customer/questioners/manage/create', 'AdminDashboardController@showCreateQuestioners');
 
-//registed route for questioners manage show
+//registed route for questioner create
 Route::post('customer/questioners/manage/create/new', 'AdminDashboardController@createQuestioners');
+
+//registed route for questioner update
+Route::post('customer/questioners/manage/edit-questioner/{id}/update', 'AdminDashboardController@updateQuestioner');
+
+//registed route for  get all questioners
+Route::get('customer/questioners/manage/get-questioners', 'AdminDashboardController@getAllQuestioners');
+
+//registed route for  get all questions
+Route::get('customer/questioners/manage/get-questions/{id}', 'AdminDashboardController@getAllQuestions');
+
+//registed route for  edit all questioner
+Route::get('customer/questioners/manage/edit-questioner/{id}', 'AdminDashboardController@showEditQuestioner');
+
+//registed route for  publish questioner
+Route::get('customer/questioners/manage/publish-questioner/{id}', 'AdminDashboardController@publishQuestioner');
 
 
 

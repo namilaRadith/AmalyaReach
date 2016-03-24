@@ -1,12 +1,15 @@
 <?php
 namespace App\Http\Controllers;
 
+
+
 use Andheiberg\Notify\Facades\Notify;
 use App\Contacts;
 use App\GalleryContent;
 use App\aboutUsPage;
 
 use App\Http\Requests\UploadGalleryImageRequest;
+use App\Question;
 use App\Questioner;
 use App\SliderImage;
 use App\Subscriber;
@@ -331,7 +334,7 @@ class AdminDashboardController extends Controller
      */
     public function  showManageQuestioners()
     {
-        return view('pages.admin.manageQuestioners');
+        return view('pages.admin.adminManageQuestioners');
     }
 
     /**
@@ -342,7 +345,30 @@ class AdminDashboardController extends Controller
     public function  showCreateQuestioners()
     {
         return view('pages.admin.adminCreateQuestioner');
-    }    /**
+    }
+
+
+    /**
+     * show showManageQuestioners page
+     *
+     * @return Response
+     */
+    public function  getAllQuestioners()
+    {
+       echo Questioner::all();
+    }
+
+    /**
+     * show showManageQuestioners page
+     *
+     * @return Response
+     */
+    public function  getAllQuestions($id)
+    {
+        echo Question::where('questioner_id', '=', $id)->get();
+    }
+
+    /**
      * show showManageQuestioners page
      *
      * @return Response
@@ -358,4 +384,36 @@ class AdminDashboardController extends Controller
         }
     }
 
+    /**
+     * show showManageQuestioners page
+     *
+     * @return Response
+     */
+
+    public function  showEditQuestioner($id)
+    {
+        if (Questioner::isEditable($id)) {
+
+            $questioner = '{ "questioner" :' . Questioner::find($id);
+            $questioner .= ', "questions" : ' . Questioner::find($id)->question . ' }';
+
+            return view('pages.admin.adminEditQuestioner')->with('q', $questioner);
+        } else {
+
+            Notify::error('System not allowed to proceed this operation');
+            return redirect()->action('AdminDashboardController@showManageQuestioners');
+        }
+
+    }
+
+    public function updateQuestioner($id){
+        if (\Request::isJson()) {
+            $data = Input::all();
+            Questioner::updateQuestioner($data);
+        }
+    }
+
+    public function publishQuestioner($id){
+        Questioner::makePublic($id);
+    }
 }

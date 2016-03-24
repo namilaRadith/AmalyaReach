@@ -24,24 +24,16 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Title</th>
-                    <th>Publish</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
+                    <th>Questioner Title</th>
+                    <th>Publish Status</th>
+                    <th>Created at </th>
+                    <th width="1">View</th>
+                    <th width="1">Publish</th>
+                    <th width="1">Edit</th>
+                    <th width="1">Delete</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                        Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
-                </tr>
 
-                </tbody>
             </table>
         </div>
         <!-- /.box-body -->
@@ -58,25 +50,13 @@
             <table id="questionsTable" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Publish</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
+                    <th width="20">#</th>
+                    <th>Question</th>
+                    <th width="3">Answering Type</th>
+
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                        Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
-                </tr>
 
-                </tbody>
             </table>
         </div>
         <!-- /.box-body -->
@@ -93,12 +73,6 @@
     @parent
 
     <script src="{{asset('/admin/plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
-    <script>
-        $(function () {
-            $("#questionerTable").DataTable();
-            $("#questionsTable").DataTable();
-
-        });
-    </script>
+    <script src="{{asset('/admin/scripts/manageQuestionerScripts.js')}}"></script>
 
 @stop
