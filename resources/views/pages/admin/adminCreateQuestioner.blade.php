@@ -53,7 +53,7 @@
 			</div>
 			<!-- /.box -->
 
-				<input type="submit" ng-click="sendData()" value="Create Questioners"  ng-if="!isEmpty()"  class="btn btn-success btn-lg pull-right" ng-disabled="qform.$invalid" >
+				<input type="submit" ng-click="createQuestioner()" value="Create Questioners"  ng-if="!isEmpty()"  class="btn btn-success btn-lg pull-right" ng-disabled="qform.$invalid" >
 			</form>
 
 

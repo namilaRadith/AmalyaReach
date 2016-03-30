@@ -6,6 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/anouar/paypalpayment" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-ide-helper" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/cmgmyr/messenger" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/cviebrock/image-validator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/danielstjules/stringy" />
@@ -112,6 +113,7 @@
           <root url="file://$MODULE_DIR$/vendor/phpspec/prophecy" />
           <root url="file://$MODULE_DIR$/vendor/sebastian/exporter" />
           <root url="file://$MODULE_DIR$/vendor/symfony/console" />
+          <root url="file://$MODULE_DIR$/vendor/cmgmyr/messenger" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
           <root url="file://$MODULE_DIR$/vendor/symfony/class-loader" />
@@ -178,6 +180,7 @@
           <root url="file://$MODULE_DIR$/vendor/phpspec/prophecy" />
           <root url="file://$MODULE_DIR$/vendor/sebastian/exporter" />
           <root url="file://$MODULE_DIR$/vendor/symfony/console" />
+          <root url="file://$MODULE_DIR$/vendor/cmgmyr/messenger" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
           <root url="file://$MODULE_DIR$/vendor/symfony/class-loader" />

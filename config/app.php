@@ -141,6 +141,7 @@ return [
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider', //ide helper
 		'Cviebrock\ImageValidator\ImageValidatorServiceProvider', // image validation plugin
 		'YOzaz\LaravelSwiftmailer\ServiceProvider',				 //swiftmailler
+		'App\Providers\QuestionerServiceProvider',
 
 
 		/*
@@ -204,7 +205,9 @@ return [
         'Form'      => 'Illuminate\Html\FormFacade',
 		'Html'      => 'Illuminate\Html\HtmlFacade',
 		'Paypalpayment'   => 'Anouar\Paypalpayment\Facades\PaypalPayment',
-		'Notify' => 'Andheiberg\Notify\Facades\Notify'
+		'Notify' 	=> 'Andheiberg\Notify\Facades\Notify',
+		'Q' 		=> 'App\Facades\QuestionerFacade'
+
 
 
 

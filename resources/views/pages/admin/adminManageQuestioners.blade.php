@@ -31,6 +31,7 @@
                     <th width="1">Publish</th>
                     <th width="1">Edit</th>
                     <th width="1">Delete</th>
+                    <th width="1">Analyze</th>
                 </tr>
                 </thead>
 
