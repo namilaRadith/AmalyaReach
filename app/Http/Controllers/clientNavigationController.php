@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\GalleryContent;
 use App\aboutUsPage;
 use App\Subscriber;
+use App\User;
 use Request;
 use Input;
 
@@ -127,6 +128,20 @@ class clientNavigationController extends Controller
 
         }
     }
+
+
+    /** remove subscriber controller.
+     * @param $email
+     */
+    public function removeSubscriber($email){
+
+        $s = new Subscriber();
+        $s->removeSubsciber($email);
+
+        return redirect()->action('UserController@showMyProfile');
+    }
+
+
 
 
 }

@@ -34,6 +34,8 @@
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="{{ asset('/admin/plugins/sweetAlert/sweetalert.css')}}">
 
     @section('css_ref')
 
@@ -43,6 +45,7 @@
     <!-- REVOLUTION SLIDER CSS -->
     <link href="{{asset('/client/rs-plugin/css/settings.css')}}" rel="stylesheet">
     <link href="{{asset('/client/css/extralayers.css')}}" rel="stylesheet">
+
     <style>
         label.error {
             color:red;
@@ -90,9 +93,16 @@
 			</ul>
 		@if(Auth::user())
 			<a href="auth/logout" id="link_bt">Log Out</a>
+            <a href="{{action('UserController@showMyProfile')}}" id="link_bt">My Profile</a>
+
+                @if(Auth::user()->isAdmin())
+                    <a href="{{action('AdminDashboardController@index')}}" id="link_bt">Admin Dashboard</a>
+                @endif
 		@else
 			<a href="auth/login" id="link_bt">Login</a>
 		@endif
+
+
 		</div><!-- End container-->
 	</div><!-- End top line-->
 
@@ -275,6 +285,9 @@
 <script src="{{ asset('/client/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
 <script src="{{ asset('/client/js/revolution_func.js')}}"></script>
 <script src="{{ asset('/admin/plugins/validator/jquery.validate.min.js')}}"></script>
+
+<!-- Sweet Alert -->
+<script src="{{asset('/admin/plugins/sweetAlert/sweetalert.min.js')}}"></script>
 <script>
 
     $(document).ready(function () {
@@ -328,7 +341,8 @@
                     //on success remove loading animation & clear fields
                     success: function (data) {
                         $("#email_newsletter_5").val('');
-                        alert(data);
+                        //alert(data);
+                        swal("success!", data, "success")
                     }
 
 
@@ -343,6 +357,27 @@
 
 
     });
+
+
+
+</script>
+<script>
+    @if (Notify::has('success'))
+swal("success!", "{{ Notify::first('success') }}", "success");
+
+    @endif
+
+    @if (Notify::has('error'))
+        swal("error!", "{{ Notify::first('error') }}", "error");
+    @endif
+
+    @if (Notify::has('warning'))
+        swal("warning!", "{{ Notify::first('warning') }}", "warning");
+    @endif
+
+    @if (Notify::has('info'))
+        swal("info!", "{{ Notify::first('info') }}", "info");
+    @endif
 
 </script>
 @show

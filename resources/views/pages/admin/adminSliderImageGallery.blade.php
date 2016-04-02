@@ -104,14 +104,16 @@
                        title="#"><img src="{{asset('client/img/slides_bg')}}{{'/'.$data->fileName}}" alt=""
                                       class="img-responsive styled"></a>
                     <br>
-                    <button class="btn btn-danger" onclick="#"><i class="fa fa-trash"></i></button>
-                    <button class="btn btn-warning"><i class="fa fa-edit"></i></button>
+                    <button class="btn btn-danger" onclick="deleteImage({{$data->id}})"><i class="fa fa-trash"></i></button>
+
                 </div>
             @endforeach
         </div>
 
 
     </div><!-- End row -->
+
+
 
 @stop
 
@@ -202,6 +204,7 @@
             $("#h").val(data.height);
         }
 
+        //valicate input
         $(document).ready(function () {
             $("#image-form").validate({
 
@@ -240,6 +243,52 @@
                 }
             });
         });
+
+
+        //delete image
+        function deleteImage(id) {
+            swal({
+                title: "Are you sure?",
+                text: "Selected image will be removed from the server permanently",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel plx!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    deleteNow(id);
+
+                } else {
+                    swal("Cancelled", "Operation aborted", "error");
+                }
+            });
+
+        };
+
+        //trigger delete
+        function deleteNow(id){
+            $.ajax({
+                method: "GET",
+                url: 'img-slider/delete/' + id,
+                success: function (data) {
+                    location.reload(true);
+                    swal("Deleted!", "Selected video was successfully deleted.", "success");
+                },
+                error: function(d) {
+                    swal("Error", "Operation was fail due to internal error ", "error");
+                }
+
+            });
+        };
+
+
+        setTimeout(function(){
+            $('.alert').fadeOut("slow");
+        },2000);
+
 
 
     </script>

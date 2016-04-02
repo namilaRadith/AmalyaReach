@@ -23,7 +23,7 @@ class ReservationController extends Controller {
 */
        // return Redirect::back();
 
-        return view('pages.client.clientIndex');
+        return redirect()->action('HomeController@index');
     }
 
 
