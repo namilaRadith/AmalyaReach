@@ -23,7 +23,7 @@ class adminAddNewRoomsFormSubmitRequest extends Request {
 	{
 		return [
 			'room_name'=>'required',
-			'room_price'=>'required',
+			'room_price'=>'required|numeric',
 			'room_description'=>'required'
 		];
 	}

@@ -113,28 +113,82 @@ Route::controllers([
 
 
 
-/*
-########################################################################################################################
-						<============== Sameera ===============>
-########################################################################################################################
-*/
 
-//Home page reservation forms
+//************************************* Client routes (Reservation) **********************************************
+
+//Home page reservation form Submit
 Route::post('mainReservationFormSubmit','ReservationController@mainReservationFormSubmit');
+
+//Room select form Submit
 Route::post('selectRoomFormReservation','ReservationController@selectRoomFormReservationSubmit');
 Route::get('showReservationForm3','ReservationController@showReservationForm3');
 Route::post('reservationForm3Submit','PaypalPaymentController@makePayPalPayment');
 
 
-//Admin routes
+//mail routes
+Route::post('sendMailForReservation','ReservationController@sendMailsForReservation');
+
+
+//Paypal Routes
+Route::get('payment_success_request','ReservationController@paypalSuccessRequest');
+Route::get('payment_failed_request','ReservationController@paypalFailedRequest');
+
+
+
+
+//************************************* Admin Routes (Reservation) **********************************************
+
 //add new rooms by admin view return
 Route::get('adminAddNewRooms','adminReservationController@addNewRooms');
+
+//Goto rooms home
 Route::get('adminRoomsHome','adminReservationController@adminRoomsHome');
+
+//Admin add new room form submit
 Route::post('addNewRoomFormSubmit','adminReservationController@addNewRoomFormSubmit');
+
+//Display history of a room
 Route::get('adminViewRoomHistory_{id}','adminReservationController@adminViewRoomHistory');
+
+//Update room details
 Route::get('adminUpdateRoom_{id}','adminReservationController@adminUpdateRoom');
-Route::get('adminRemoveRoom_{id}','adminReservationController@adminRemoveRoom');
 Route::post('updateRoomFormSubmit','adminReservationController@updateRoomFormSubmit');
+
+//Remove a Room
+Route::get('adminRemoveRoom_{id}','adminReservationController@adminRemoveRoom');
+
+//View Reservation Details
+Route::get('view_all_reservations','adminReservationController@viewAllReservations');
+
+//Reservations mark as complete
+Route::get('adminReservationMarkAsComplete_{id}','adminReservationController@adminReservationMarkAsComplete');
+
+//Admin recover reservations
+Route::get('adminReservationRecover_{id}','adminReservationController@adminReservationRecover');
+
+//Mark reservation as called
+Route::get('markReservationAsCalled_{id}','adminReservationController@markReservationAsCalled');
+
+
+//Admin Event Reports room reservations
+Route::get('admin_event_reports_room','adminReservationController@adminEventReportsRoom');
+Route::post('admin_view_room_reports_search_form_submit','adminReservationController@adminEventReportsRoomSubmit');
+
+//Admin Event Reports room reservations
+Route::get('admin_event_reports_dining','adminReservationController@adminEventReportsDining');
+
+//Admin Event Reports room reservations
+Route::get('admin_event_reports_wedding','adminReservationController@adminEventReportsWedding');
+
+//Admin Event Reports room reservations
+Route::get('admin_event_reports_pool','adminReservationController@adminEventReportsPool');
+
+//Test
+Route::get('/testt','adminReservationController@test');
+
+//Defaulf error route
+Route::get('/{id}','adminReservationController@errorPage');
+
 
 /*
 
@@ -153,16 +207,6 @@ Route::get('testPaypal', 'PaypalPaymentController@testPaypal');
 Route::post('xxxx','PaypalPaymentController@showPayment');
 Route::post('reservationForm3Submiting','ReservationController@finalformsubmittest');
 */
-
-/*
-######################################################################################################################
-						<============== Sameera ===============>
-######################################################################################################################
-*/
-
-
-
-
 
 
 

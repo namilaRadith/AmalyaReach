@@ -84,39 +84,40 @@ desired effect
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <!-- Messages: style can be found in dropdown.less-->
-                    <li class="dropdown messages-menu">
-                        <!-- Menu toggle button -->
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="label label-success">4</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 4 messages</li>
-                            <li>
-                                <!-- inner menu: contains the messages -->
-                                <ul class="menu">
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <!-- User Image -->
-                                                <img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
-                                            </div>
-                                            <!-- Message title and timestamp -->
-                                            <h4>
-                                                Support Team
-                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                            </h4>
-                                            <!-- The message -->
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <!-- end message -->
-                                </ul>
-                                <!-- /.menu -->
-                            </li>
-                            <li class="footer"><a href="#">See All Messages</a></li>
-                        </ul>
-                    </li>
+
+                    {{--<li class="dropdown messages-menu">--}}
+                        {{--<!-- Menu toggle button -->--}}
+                        {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--}}
+                            {{--<i class="fa fa-envelope-o"></i>--}}
+                            {{--<span class="label label-success">4</span>--}}
+                        {{--</a>--}}
+                        {{--<ul class="dropdown-menu">--}}
+                            {{--<li class="header">You have 4 messages</li>--}}
+                            {{--<li>--}}
+                                {{--<!-- inner menu: contains the messages -->--}}
+                                {{--<ul class="menu">--}}
+                                    {{--<li><!-- start message -->--}}
+                                        {{--<a href="#">--}}
+                                            {{--<div class="pull-left">--}}
+                                                {{--<!-- User Image -->--}}
+                                                {{--<img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">--}}
+                                            {{--</div>--}}
+                                            {{--<!-- Message title and timestamp -->--}}
+                                            {{--<h4>--}}
+                                                {{--Support Team--}}
+                                                {{--<small><i class="fa fa-clock-o"></i> 5 mins</small>--}}
+                                            {{--</h4>--}}
+                                            {{--<!-- The message -->--}}
+                                            {{--<p>Why not buy a new awesome theme?</p>--}}
+                                        {{--</a>--}}
+                                    {{--</li>--}}
+                                    {{--<!-- end message -->--}}
+                                {{--</ul>--}}
+                                {{--<!-- /.menu -->--}}
+                            {{--</li>--}}
+                            {{--<li class="footer"><a href="#">See All Messages</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
                     <!-- /.messages-menu -->
 
                     <!-- Notifications Menu -->
@@ -124,60 +125,65 @@ desired effect
                         <!-- Menu toggle button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-bell-o"></i>
-                            <span class="label label-warning">10</span>
+                            <span class="label label-danger">{{ \App\Reservation::newReservationsCount() +  \App\Reservation::notCallCount() }}</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="header">You have 10 notifications</li>
+                            <li class="header" style="text-align: center"><B>Reservations</B></li>
                             <li>
                                 <!-- Inner Menu: contains the notifications -->
                                 <ul class="menu">
-                                    <li><!-- start notification -->
+                                    <li style="text-align: center"><!-- start notification -->
                                         <a href="#">
-                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                             You have {{ \App\Reservation::newReservationsCount() }} New Reservations
+                                        </a>
+                                        <a href="#">
+                                            You have to take another {{ \App\Reservation::notCallCount() }} Calls
                                         </a>
                                     </li>
                                     <!-- end notification -->
                                 </ul>
                             </li>
-                            <li class="footer"><a href="#">View all</a></li>
+                            <li class="footer"><a href="view_all_reservations">View all</a></li>
                         </ul>
                     </li>
+
                     <!-- Tasks Menu -->
-                    <li class="dropdown tasks-menu">
-                        <!-- Menu Toggle Button -->
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-flag-o"></i>
-                            <span class="label label-danger">9</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 9 tasks</li>
-                            <li>
-                                <!-- Inner menu: contains the tasks -->
-                                <ul class="menu">
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <!-- Task title and progress text -->
-                                            <h3>
-                                                Design some buttons
-                                                <small class="pull-right">20%</small>
-                                            </h3>
-                                            <!-- The progress bar -->
-                                            <div class="progress xs">
-                                                <!-- Change the css width attribute to simulate progress -->
-                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">20% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="#">View all tasks</a>
-                            </li>
-                        </ul>
-                    </li>
+                    {{--<li class="dropdown tasks-menu">--}}
+                        {{--<!-- Menu Toggle Button -->--}}
+                        {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--}}
+                            {{--<i class="fa fa-flag-o"></i>--}}
+                            {{--<span class="label label-danger">9</span>--}}
+                        {{--</a>--}}
+                        {{--<ul class="dropdown-menu">--}}
+                            {{--<li class="header">You have 9 tasks</li>--}}
+                            {{--<li>--}}
+                                {{--<!-- Inner menu: contains the tasks -->--}}
+                                {{--<ul class="menu">--}}
+                                    {{--<li><!-- Task item -->--}}
+                                        {{--<a href="#">--}}
+                                            {{--<!-- Task title and progress text -->--}}
+                                            {{--<h3>--}}
+                                                {{--Design some buttons--}}
+                                                {{--<small class="pull-right">20%</small>--}}
+                                            {{--</h3>--}}
+                                            {{--<!-- The progress bar -->--}}
+                                            {{--<div class="progress xs">--}}
+                                                {{--<!-- Change the css width attribute to simulate progress -->--}}
+                                                {{--<div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">--}}
+                                                    {{--<span class="sr-only">20% Complete</span>--}}
+                                                {{--</div>--}}
+                                            {{--</div>--}}
+                                        {{--</a>--}}
+                                    {{--</li>--}}
+                                    {{--<!-- end task item -->--}}
+                                {{--</ul>--}}
+                            {{--</li>--}}
+                            {{--<li class="footer">--}}
+                                {{--<a href="#">View all tasks</a>--}}
+                            {{--</li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
+                    {{----}}
                     <!-- User Account Menu -->
                     <li class="dropdown user user-menu">
                         <!-- Menu Toggle Button -->
@@ -304,6 +310,21 @@ desired effect
                     <ul class="treeview-menu">
                         <li><a href="adminRoomsHome">Rooms Home</a></li>
                         <li><a href="adminAddNewRooms">Add New Room</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Reservations</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="view_all_reservations">View All</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Event Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="admin_event_reports_room">Room Reservations</a></li>
+                        <li><a href="admin_event_reports_dining">Dining Reservations</a></li>
+                        <li><a href="admin_event_reports_wedding">Wedding Reservations</a></li>
+                        <li><a href="admin_event_reports_pool">Pool Reservations</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -465,8 +486,27 @@ immediately after the control sidebar -->
     $(function () {
         $("#adminRoomsHomeTable").DataTable();
     });
+    $(function () {
+        $("#events_reports_rooms").DataTable();
+    });
+
 </script>
 
+
+
+
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+{{--<script src="//code.jquery.com/jquery-1.10.2.js"></script>--}}
+
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script>
+    $(function() {
+        $( ".dateadmin" ).datepicker();
+    });
+</script>
 
 
 @show

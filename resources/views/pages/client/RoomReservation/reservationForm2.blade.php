@@ -48,25 +48,27 @@
                 </div>
                 <div id="roomList">
                 @foreach($rooms as $room)
-                    <h3>{{ $room->name }}</h3>
+                    <h3>{{ $room["name"] }}</h3>
                     <div>
                         <div class="row">
                             <form name="roomSelectForm" id="roomSelectForm" action="selectRoomFormReservation" method="post">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="col-lg-4 col-md-4 col-sm-4">
                                     <div class="img_list">
-                                        <a href="room_details.html"><img src="{{ asset('client/sampleImages/room3.jpg') }}" alt=""></a>
+                                        <a href="room_details.html"><img src="{{ $room["image"] }}" alt=""></a>
                                     </div>
                                 </div>
 
-                                <input type="hidden" value="{{ $room->id }}" id="selected_room_id" name="selected_room_id" />
+                                <input type="hidden" value="{{ $room["id"] }}" id="selected_room_id" name="selected_room_id" />
+                                <input type="hidden" value="{{ $room["image"] }}" id="selected_room_image" name="selected_room_image" />
+
                                 <div class="clearfix visible-xs-block">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="rooms_list_desc">
-                                        <h3><strong>{{$room->value}}</strong></h3>
+                                        <h3><strong>xffd</strong></h3>
                                         <p>
-                                            {{ $room->description  }}
+                                            {{ $room["description"]  }}
                                         </p>
                                         <ul class="add_info">
                                             <li>
@@ -90,7 +92,7 @@
                                 <div class="col-lg-2 col-md-2 col-sm-2">
                                     <div class="price_list">
                                         <div>
-                                            <sup>$</sup>{{$room->price}}<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
+                                            <sup>$</sup>{{ $room["price"] }}<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
                                             <small>
                                                 <input type="submit" value="Select" class="btn_1" id="submit-contact">
                                             </small>

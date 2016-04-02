@@ -31,7 +31,10 @@ class WelcomeController extends Controller {
 	 */
 
 	public function index(){
-		return view('pages.client.clientIndex');
+		$name = "sameera";
+		return view('pages.client.clientIndex')
+			->with('name',$name);
 	}
+
 
 }
