@@ -58,17 +58,17 @@
                 <div>&nbsp;</div>
                   <div class="col-md-2"></div>
                   <div class="col-md-10">
-                      <img src="http://www.avanihotels.com/kalutara/wp-content/themes/avanihotels/images/meet-icons.gif">
+                      <img src="{{asset('client/img/meet-icons.gif')}}">
                   </div>
                   <hr>
               </div>
                 <br>
                <hr>
                 <div class="col-md-2 ">
-                <p>Capacity</p>
+                <p><B>Capacity</B></p>
                 </div>
                 <div class="col-md-9">
-                    <p>Upto 85 Guests</p>
+                    <p><B>Upto 85 Guests</B></p>
                 </div>
             </div>
            </div>
@@ -78,7 +78,12 @@
             <div class="col-md-2" >
             </div>
             <div class="col-md-10">
-                    <a href="{{URL::to('meetingReservationForm')}}" class="btn_full btn" style="background-color: #4d536d;color: white" >Meeting Resrvation Form</a>
+                    @if(Auth::user())
+                     <a href="{{URL::to('meetingReservationForm')}}" class="btn_full btn" style="background-color: #4d536d;color: white" >Meeting Resrvation Form</a>
+                    @endif
+                        @if(!Auth::user())
+                            <a href="auth/login" class="btn_full btn" style="background-color: #4d536d;color: white" >Meeting Resrvation Form</a>
+                        @endif
           </div>
 
         </div>

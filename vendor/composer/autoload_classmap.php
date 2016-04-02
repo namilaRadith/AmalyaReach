@@ -6,7 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'APCUIterator' => $vendorDir . '/symfony/polyfill-apcu/Resources/stubs/APCUIterator.php',
+    'AddMoreColumns' => $baseDir . '/database/migrations/2016_01_23_165725_add_more_columns.php',
     'CreateAboutUsPagesTable' => $baseDir . '/database/migrations/2016_01_30_201855_create_about_us_pages_table.php',
+    'CreateArticlesTable' => $baseDir . '/database/migrations/2016_01_23_164542_create_articles_table.php',
     'CreateContactsTable' => $baseDir . '/database/migrations/2016_01_31_003701_create_contacts_table.php',
     'CreateDinningDetailsTable' => $baseDir . '/database/migrations/2016_01_26_162931_create_dinning_details_table.php',
     'CreateDinningMenuItemsTable' => $baseDir . '/database/migrations/2016_02_23_034725_create_dinning_menu_items_table.php',
@@ -16,6 +19,10 @@ return array(
     'CreateImageMastersTable' => $baseDir . '/database/migrations/2016_01_30_200756_create_image_masters_table.php',
     'CreateMeetingsReservationsTable' => $baseDir . '/database/migrations/2016_02_05_171541_create_meetings_reservations_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreatePoolCheckAvailabilityTable' => $baseDir . '/database/migrations/2016_03_30_035121_create_poolCheckAvailability_table.php',
+    'CreatePoolReservationsTable' => $baseDir . '/database/migrations/2016_03_30_034626_create_poolReservations_table.php',
+    'CreateReservationTable' => $baseDir . '/database/migrations/2016_01_24_001707_create_reservation_table.php',
+    'CreateRoomTypesTable' => $baseDir . '/database/migrations/2016_01_20_183757_create_roomTypes_table.php',
     'CreateRoomsTable' => $baseDir . '/database/migrations/2016_01_18_180628_create_rooms_table.php',
     'CreateSliderImagesTable' => $baseDir . '/database/migrations/2016_02_29_173754_create_slider_images_table.php',
     'CreateSubscribersTable' => $baseDir . '/database/migrations/2016_02_06_185006_create_subscribers_table.php',

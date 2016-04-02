@@ -15,7 +15,20 @@ class CreateMeetingsReservationsTable extends Migration {
 		Schema::create('meetings_reservations', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->timestamps();
+			$table->timestamp('created_at');
+			$table->string('dateFrom');
+			$table->string('datesFlexible');
+			$table->integer('noOfGuestsRooms');
+			$table->string('foodAndBev');
+			$table->string('audioAndVisual');
+			$table->string('locFlex');
+			$table->integer('noOfGuests');
+			$table->integer('noOfMeetingRooms');
+			$table->string('otherDetails');
+			$table->string('company');
+			$table->string('likeContact');
+			$table->string('resStatus');
+			$table->integer('custId');
 		});
 	}
 

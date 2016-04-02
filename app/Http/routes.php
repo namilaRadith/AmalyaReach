@@ -19,6 +19,7 @@
  *
  */
 
+
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home','ReservationController@viewHome');
@@ -116,6 +117,7 @@ Route::get('dashboard/gallery/img-gallery/delete/{id}', 'AdminDashboardControlle
 //registed route for video Gallery video upload
 Route::post('dashboard/gallery/vd-gallery/upload', 'AdminDashboardController@uploadVideoToGallery');
 
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
@@ -200,27 +202,61 @@ Route::get('pool','poolController@checkAvailability');
 Route::post('poolReservation','poolController@poolReservation');
 Route::post('poolFormSubmit','poolController@poolFormSubmit');
 
-//dinning Client
+//dinning Client route collection
+//registed route for Client diining reservaton page
 Route::get('dinningReservation','dinningController@dinningReservation');
+
+//registed route for Client diining reservaton form submit
 Route::post('diningReservationSubmit','dinningController@diningReservationSubmit');
+
+//registed route for Client to view dinning menu
 Route::get('dinningMenuDisplay','dinningController@dinningMenuDisplay');
-Route::get('test','dinningController@test');
 
 
 //dinning Admin
+//registed route for admin to add  dinning menu
 Route::get('diningAddMenu','dinningController@diningAddMenuForm');
+
+//registed route for admin to submit dinning menu add from
 Route::post('diningAddMenuSubmit','dinningController@diningAddMenu');
+
+//registed route for admin to view dinning menu
 Route::get('diningMenu','dinningController@diningMenu');
+
+//registed route for admin dinning menu edit form submit
+Route::post('diningMenu/{id}/edit','dinningController@updateDiningItem');
+
+
+//registed route for admin to edit  dinning menu
 Route::get('diningMenuEdit/{id}','dinningController@diningMenuEdit');
-Route::post('diningMenuUpdate/{id}/edit','dinningController@updateDiningItem');
+
+
+
+//registed route for admin dinning menu delete
 Route::get('diningMenuUpdate/{id}/delete','dinningController@deleteFoodItem');
 
+//registed route for admin to view dinning reservations
+Route::get('viewDinningReservations','dinningController@viewDinningReservations');
+Route::post('resNotifications','dinningController@getNewNotifyCount');
 
 
-//meeting
+
+//registed route for admin to view detailed dinning reservations
+Route::get('dinningRes/view/{id}','dinningController@viewMoreDinningRes');
+
+
+//meeting client
+//registed route for client to navigate to meeting request form
 Route::get('meetingReservation','meetingsController@meetingsReservation');
+
+//registed route for clients meetings request form
 Route::get('meetingReservationForm','meetingsController@meetingsReservationForm');
+
+//registed route for clients meetings request form submit
 Route::post('meetingResFormSubmit','meetingsController@meetingsResFormSubmit');
 
-//Dewmi paypal test
-Route::get('paypal_test_dewmi','AboutController@paypalTestControllerMethod');
+//meeting admin
+Route::get('meetingResAdminPg','meetingsController@meetingResAdminPg');
+
+//meeting admin
+Route::get('meetingRes/viewRes/{id}','meetingsController@viewMeetingRes');

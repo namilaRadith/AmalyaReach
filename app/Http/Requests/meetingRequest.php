@@ -22,8 +22,15 @@ class meetingRequest extends Request {
 	public function rules()
 	{
 		return [
-			'noMeetingRooms'=>'required'
+			'dateTo'=>'required',
+			'dateFrom'=>'required',
+			'noOfGuessRooms'=>'required|numeric',
+			'noOfGuests'=>'required|numeric',
+			'noOfMeetingRooms'=>'required|numeric',
+			'company' =>'required'
 		];
 	}
+
+
 
 }

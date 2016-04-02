@@ -70,8 +70,10 @@
                                 <input type="hidden" name="h" id="h">
                                 <input type="hidden" value="{{csrf_token()}}" name="_token">
 
-                                <img src="{{asset('/client/img/slides_bg/placeholder.jpg')}}" alt="Image preview" id="img_pre" class="img-responsive">
-                                <img src="" alt="Image preview" id="img_pre_temp" class="img-responsive" style="visibility:hidden">
+                                <img src="{{asset('/client/img/slides_bg/placeholder.jpg')}}" alt="Image preview"
+                                     id="img_pre" class="img-responsive">
+                                <img src="" alt="Image preview" id="img_pre_temp" class="img-responsive"
+                                     style="visibility:hidden">
                             </div>
 
                         </div>
@@ -84,9 +86,10 @@
                         <button type="submit" class="btn btn-primary">Upload</button>
                     </div>
                 </div>
-        </form>
 
-    </div>
+
+            </div>
+        </form>
     </div>
 
 
@@ -213,9 +216,9 @@
                         pattern: "^[a-zA-Z0-9]*$"
                     },
 
-                    img_pre:{
+                    img_pre: {
                         required: true,
-                        accept:"image/*"
+                        accept: "image/*"
                     }
                 },
 
@@ -230,9 +233,9 @@
                         pattern: "Special characters are not allowed"
                     },
 
-                    img_pre:{
+                    img_pre: {
                         required: "filed select a image",
-                        accept:"Please upload a image file"
+                        accept: "Please upload a image file"
                     }
                 }
             });

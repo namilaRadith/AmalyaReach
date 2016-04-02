@@ -8,7 +8,8 @@ use App\SliderImage;
 use App\Subscriber;
 
 use Illuminate\Http\Request;
-
+use App\DinningReservation;
+use App\meetingsReservation;
 
 
 
@@ -41,7 +42,13 @@ class AdminDashboardController extends Controller {
 	 */
 	public function index()
 	{
-		return view('pages.admin.admin_index');
+
+        $newMeetingResCount=meetingsReservation::getNewResCount();
+        $diningNewResCount=DinningReservation::getResCount();
+
+        $count=$newMeetingResCount+$diningNewResCount;
+
+        return view('pages.admin.admin_index',compact('newMeetingResCount','diningNewResCount','count'));
 	}
 
 	public function showImageSlider(){

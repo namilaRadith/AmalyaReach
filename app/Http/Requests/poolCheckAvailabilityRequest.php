@@ -26,7 +26,7 @@ class poolCheckAvailabilityRequest extends Request {
 			'end_date' => 'required',
 			'activity_type' => 'required',
 			'age_group' => 'required',
-			'ageRange' => 'required'
+
 
 
 		];

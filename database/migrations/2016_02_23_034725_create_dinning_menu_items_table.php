@@ -17,6 +17,7 @@ class CreateDinningMenuItemsTable extends Migration {
 
 			$table->increments('id');
 			$table->string('itemName');
+			$table->string('quantitiy');
 			$table->string('foodCatagory');
 			$table->double('price');
 		});

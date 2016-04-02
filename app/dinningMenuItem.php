@@ -1,17 +1,22 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class dinningMenuItem extends Model {
 
     public $timestamps=false;
-
-    protected  $fillable=[
-        'itemName',
-        'foodCatagory',
-        'price',
-
-    ];
+    public static function dinningMenuDataInsert($itemName,$foodCat,$qty,$price)
+    {
+        DB::table('dinning_menu_items')->insert([
+            [
+                'itemName' => $itemName,
+                'quantitiy' => $foodCat,
+                'foodCatagory' => $qty,
+                'price' => $price,
+            ]
+        ]);
+    }
 
 
     public function scopeFoodCat1($query)
@@ -53,5 +58,13 @@ class dinningMenuItem extends Model {
     {
         $query->where('foodCatagory', '=' , 'Desserts');
 
+    }
+
+    public static function checkUniqueItems($foodCat,$item)
+    {
+      $count=DB::table('dinning_menu_items')->where('foodCatagory', '=',$foodCat)
+                ->where('itemName','=',$item)
+                ->count();
+           return $count;
     }
 }

@@ -54,7 +54,7 @@ return [
 
 		'mysql' => [
 			'driver'    => 'mysql',
-			'host'      => 'localhost:3307',
+			'host'      => 'localhost',
 			'database'  => 'amalyadb',
 			'username'  => 'root',
 			'password'  => '',

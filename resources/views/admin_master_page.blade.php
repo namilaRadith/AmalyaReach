@@ -12,7 +12,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @section('css_ref')
-    <!-- Bootstrap 3.3.5 -->
+            <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{ asset('/admin/bootstrap/css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -132,25 +132,39 @@ desired effect
                     <!-- Notifications Menu -->
                     <li class="dropdown notifications-menu">
                         <!-- Menu toggle button -->
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown"  id="dropDownNotify">
                             <i class="fa fa-bell-o"></i>
-                            <span class="label label-warning">10</span>
+                            @if($count >0)
+                            <span class="label label-warning" id="lblNotify">{{$count}}</span>
+                            @endif
                         </a>
+                        @if($count >0)
                         <ul class="dropdown-menu">
-                            <li class="header">You have 10 notifications</li>
+                            <li class="header">You have {{$count}} notifications</li>
                             <li>
                                 <!-- Inner Menu: contains the notifications -->
                                 <ul class="menu">
+                                    @if($diningNewResCount>0)
                                     <li><!-- start notification -->
-                                        <a href="#">
-                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        <a href="{{URL::to('viewDinningReservations')}}" id="viewNewRes" class="viewNewRes">
+                                            <i class="fa fa-users text-aqua"></i>{{$diningNewResCount}} new dinning reservations are placed.
                                         </a>
                                     </li>
+                                    @endif
+                                     @if($newMeetingResCount>0)
+                                     <li><!-- start notification -->
+                                         <a href="{{URL::to('meetingResAdminPg')}}" id="viewNewRes" class="viewNewRes">
+                                            <i class="fa fa-users text-aqua"></i>{{$newMeetingResCount}} new meetings reservations are placed.
+                                         </a>
+                                     </li>
+                                            @endif
                                     <!-- end notification -->
                                 </ul>
                             </li>
                             <li class="footer"><a href="#">View all</a></li>
                         </ul>
+                        @endif
                     </li>
                     <!-- Tasks Menu -->
                     <li class="dropdown tasks-menu">
@@ -334,6 +348,15 @@ desired effect
                     <ul class="treeview-menu">
                         <li><a href="{{action('dinningController@diningMenu')}}">Dinning Menu</a></li>
                         <li><a href="{{action('dinningController@diningAddMenuForm')}}">Add Dinning Menu</a></li>
+                        <li><a href="{{action('dinningController@viewDinningReservations')}}">Dinning Reservations</a></li>
+                    </ul>
+                </li>
+
+                <!--Meetings Area -->
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Meetings</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{action('meetingsController@meetingResAdminPg')}}">Meetings Reservations</a></li>
                     </ul>
                 </li>
 
@@ -358,106 +381,106 @@ desired effect
         <!-- Content Header (Page header) -->
         <section class="content-header">
 
-        @yield('content_header')
+            @yield('content_header')
 
         </section>
 
         <!-- Main content -->
         <section class="content">
 
-        @yield('content')
+            @yield('content')
 
         </section>
 
-<!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
 
 
-<!-- Main Footer -->
-<footer class="main-footer">
-<!-- To the right -->
-<div class="pull-right hidden-xs">
-Anything you want
-</div>
-<!-- Default to the left -->
-<strong>Copyright &copy; 2015 <a href="#">Company</a>.</strong> All rights reserved.
-</footer>
-
-<!-- Control Sidebar -->
-<aside class="control-sidebar control-sidebar-dark">
-<!-- Create the tabs -->
-<ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-<li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-<li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-</ul>
-<!-- Tab panes -->
-<div class="tab-content">
-<!-- Home tab content -->
-<div class="tab-pane active" id="control-sidebar-home-tab">
-    <h3 class="control-sidebar-heading">Recent Activity</h3>
-    <ul class="control-sidebar-menu">
-        <li>
-            <a href="javascript::;">
-                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
-                <div class="menu-info">
-                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                    <p>Will be 23 on April 24th</p>
-                </div>
-            </a>
-        </li>
-    </ul>
-    <!-- /.control-sidebar-menu -->
-
-    <h3 class="control-sidebar-heading">Tasks Progress</h3>
-    <ul class="control-sidebar-menu">
-        <li>
-            <a href="javascript::;">
-                <h4 class="control-sidebar-subheading">
-                    Custom Template Design
-                    <span class="label label-danger pull-right">70%</span>
-                </h4>
-
-                <div class="progress progress-xxs">
-                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                </div>
-            </a>
-        </li>
-    </ul>
-    <!-- /.control-sidebar-menu -->
-
-</div>
-<!-- /.tab-pane -->
-<!-- Stats tab content -->
-<div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-<!-- /.tab-pane -->
-<!-- Settings tab content -->
-<div class="tab-pane" id="control-sidebar-settings-tab">
-    <form method="post">
-        <h3 class="control-sidebar-heading">General Settings</h3>
-
-        <div class="form-group">
-            <label class="control-sidebar-subheading">
-                Report panel usage
-                <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-                Some information about this general settings option
-            </p>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+            Anything you want
         </div>
-        <!-- /.form-group -->
-    </form>
-</div>
-<!-- /.tab-pane -->
-</div>
-</aside>
-<!-- /.control-sidebar -->
-<!-- Add the sidebar's background. This div must be placed
-immediately after the control sidebar -->
-<div class="control-sidebar-bg"></div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2015 <a href="#">Company</a>.</strong> All rights reserved.
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div class="tab-pane active" id="control-sidebar-home-tab">
+                <h3 class="control-sidebar-heading">Recent Activity</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript::;">
+                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                                <p>Will be 23 on April 24th</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+                <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript::;">
+                            <h4 class="control-sidebar-subheading">
+                                Custom Template Design
+                                <span class="label label-danger pull-right">70%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+            </div>
+            <!-- /.tab-pane -->
+            <!-- Stats tab content -->
+            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+            <!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <form method="post">
+                    <h3 class="control-sidebar-heading">General Settings</h3>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Report panel usage
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Some information about this general settings option
+                        </p>
+                    </div>
+                    <!-- /.form-group -->
+                </form>
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+    immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
 
@@ -490,7 +513,7 @@ immediately after the control sidebar -->
 
 @section('js_ref')
 
-<!-- REQUIRED JS SCRIPTS -->
+        <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 2.1.4 -->
 <script src="{{asset('/admin/plugins/jQuery/jQuery-2.1.4.min.js')}}"></script>
@@ -539,10 +562,31 @@ immediately after the control sidebar -->
     });
 </script>
 
+<script>
+    $(function () {
+        $("#adminDinResTable").DataTable();
+    });
+</script>
+
+<script>
+    $("#dropDownNotify").on('click', function(){
+        $("#lblNotify").hide();
+
+    });
+
+</script>
+
+<script>
+    $(function () {
+        $("#admineetinResTbl").DataTable();
+    });
+</script>
+
+
 
 
 @show
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
+        <!-- Optionally, you can add Slimscroll and FastClick plugins.
 Both of these plugins are recommended to enhance the
 user experience. Slimscroll is required when using the
 fixed layout. -->

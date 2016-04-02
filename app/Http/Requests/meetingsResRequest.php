@@ -22,17 +22,6 @@ class meetingsResRequest extends Request {
 	public function rules()
 	{
 		return [
-	//		'dateTo' => 'required',
-	//		'dateFrom' => 'required',
-	//		'dateFlex' => 'required',
-	//		'mtnEvenReq' => 'required',
-	//		'locFlex' => 'required',
-	//		'noGuests' => 'required',
-			'noMeetingRooms' => 'required'
-		//	'noGuessRooms' => 'required',
-		//	'addDetails' => 'required',
-		//	'company' => 'required'
-
 
 
 		];

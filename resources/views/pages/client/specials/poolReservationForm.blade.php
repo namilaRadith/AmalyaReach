@@ -7,19 +7,42 @@
         <!-- SPECIFIC CSS -->
 <link href="{{asset('/client/css/date_time_picker.css')}}" rel="stylesheet">
 
+<style>
+.ui-widget-overlay {
+display:none;
+position:fixed;
+top:125px;
+left:100px;
+right:100px;
 
+
+}
+
+.popup-close {
+width:30px;
+height:30px;
+padding-top:4px;
+position:absolute;
+top:1px;
+right:10px;
+transform:translate(50%, -50%);
+border-radius:1000px;
+background:rgba(0,0,0,0.8);
+font-family:Arial, Sans-Serif;
+font-size:20px;
+text-align:center;
+line-height:100%;
+color:#fff;
+}
+
+.ui-dialog .ui-dialog-titlebar{
+display:none;
+}
+</style>
 
 @section('content')
 
-        <script>
-           function suncessfull()
-           {
-               alert('Reservation made sucessfully');
-
-           }
-
-
-        </script>
+    <div class="wrap">
 
 
         <section class="sub_header" id="bg_room">
@@ -32,7 +55,6 @@
                 </div>
             </div>
         </section>
-
 
         <div id="position">
     <div class="container">
@@ -57,7 +79,7 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="img_list">
-                                        <a href="room_details.html"><img src="{{ asset('client/img/02.jpg') }}" alt=""></a>
+                                        <a href=""><img src="{{ asset('client/img/02.jpg') }}" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-md-9">
@@ -83,8 +105,8 @@
                                                 <th>Total Price</th>
                                             </tr>
                                             <tr>
-                                                <td>{{Session::get('start_time')}}</td>
-                                                <td>{{Session::get('end_time')}}</td>
+                                                <td>{{Session::get('startTime')}}</td>
+                                                <td>{{Session::get('endTime')}}</td>
                                                 <td>{{$price}}$</td>
                                             </tr>
                                         </table>
@@ -117,7 +139,8 @@
                                     <div class="col-md-9 col-sm-9">
                                         <div class="form-group">
                                             <label>First Name</label>
-                                            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter First Name">
+                                            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter First Name" value="{{Session::get('userName')}}" readonly
+                                                   style="background-color: white">
                                         </div>
                                     </div>
                                 </div>
@@ -125,7 +148,8 @@
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
                                     <label>Last Name</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter Last Name">
+                                    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter Last Name" value="{{Session::get('latsName')}}" readonly
+                                           style="background-color: white">
                                 </div>
                             </div>
                         </div>
@@ -133,13 +157,15 @@
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
                                     <label>Address</label>
-                                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address">
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address" value="{{Session::get('userAddress')}}" readonly
+                                           style="background-color: white">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
                                     <label>Country</label>
-                                    <select class="form-control" id="country" name="country" >
+                                    <select class="form-control" id="country" name="country" readonly
+                                            style="background-color: white" >
                                         <option>Sri Lanka</option>
                                         <option>China</option>
                                         <option>Japan</option>
@@ -151,13 +177,15 @@
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email">
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" value="{{Session::get('userEmail')}}" readonly
+                                           style="background-color: white">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
                                     <label>Phone</label>
-                                    <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Phone Number">
+                                    <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Phone Number" value="{{Session::get('userPhone')}}" readonly
+                                           style="background-color: white">
                                 </div>
                             </div>
                         </div>
@@ -180,9 +208,7 @@
                             </div>
                         </div>
                         <hr/>
-                        <label>
-                            <input type="checkbox"> Yes, I'd like to receive newsletter emails from Amaya Reach Holiday Resort.
-                        </label>
+                        <input type="submit" class="btn btn_full" id="btnPoolRes" name="btnPoolRes" style="background-color: #005599;color: white" value="Send Request"  >
                         <br>
                         <br>
                         <div class="row add_bottom_10">
@@ -217,33 +243,39 @@
         </div>
 
     </div>
-    <div class="col-md-4">
-        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
-
-            <!-- Identify your business so that you can collect the payments. -->
-            <input type="hidden" name="business" value="sameerachandrasena-facilitator@gmail.com">
-
-            <!-- Specify a Buy Now button. -->
-            <input type="hidden" name="cmd" value="_xclick">
-
-            <!-- Specify details about the item that buyers will purchase. -->
-            <input type="hidden" name="item_name" value="Swimming Pool Reservation at Amalya Kalutara">
-            <!-- Total amount comes here -->
-            <input type="hidden" name="amount" value="{{$price}}">
-            <input type="hidden" name="currency_code" value="USD">
-
-            <input type="hidden" name="return" value="success" />
-            <input type="hidden" name="cancel_return" value="{{URL::to('pool')}}" />
-
-            <!-- Display the payment button. -->
-            <input type="image" name="submit" border="0" src="{{ asset('client/img/payypal.png') }}" alt="PayPal - The safer, easier way to pay online" width="155px">
-            <img alt="" border="0" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
 
         </form>
     </div>
 </div>
 
 
+        <!--Reservation sucessfull pop up-->
+        <div class=".ui-widget  ui-widget-overlay " id="sucessMsgPopUp" >
+            <div class="panel panel-default">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel-heading" style="background-color: #500a6f; color: white"> Amalya Resorts </div>
+
+                        <input type="button" class="popup-close" id="btnSucessMsgClose" value="x">
+                    </div>
+                    <div class="panel-body col-md-12">
+                        <div class="row">
+                            <div class="col-md-12"></div>
+                            <div class="col-md-10"></div>
+                            <div class="col-md-2"></div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                <h5>Thank you for making a reservation. We will contact you shortly to confirm the reservation details.</h5>
+                                <div class="col-md-12"></div>
+                                <div class="col-md-12"></div>
+                                <div class="col-md-12"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
 
 @stop
@@ -257,5 +289,51 @@
 <script>$('input.date-pick').datepicker();</script>
 
 
+        <!-- --Scripts for pop ups-- -->
+<script src="{{asset('/client/js/jquery-1.11.2.min.js')}}"></script>
+<script src="{{asset('/client/js/jquery-ui.min.js')}}"></script>
+<script>
+
+
+    $(function () {
+        var dialog,
+
+                dialog = $("#sucessMsgPopUp").dialog({
+                    autoOpen: false,
+                    modal: true,
+
+                });
+
+        $("#btnPoolRes").button().on("click", function () {
+            dialog.dialog("open");
+            $(".wrap").css({
+                overflow: 'hidden',
+                opacity: .3,
+
+            });
+            $("body").css({
+                backgroundColor: 'dimgray'
+
+            });
+        });
+
+
+        $("#btnSucessMsgClose").button().on("click", function () {
+            dialog.dialog("close");
+            $(".wrap").css({
+                opacity: 1
+            });
+            $("body").css({
+                backgroundColor: ''
+
+            });
+            $('#poolReservationForm').submit();
+
+        });
+
+      });
+
+
+</script>
 
 @stop
