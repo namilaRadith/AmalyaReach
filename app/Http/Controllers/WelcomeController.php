@@ -31,6 +31,10 @@ class WelcomeController extends Controller {
 	 */
 
 	public function index(){
+
+		$s =  SliderImage::all();
+		return view('pages.client.clientIndex',array('imageList' => $s));
+
 		$name = "sameera";
 		return view('pages.client.clientIndex')
 			->with('name',$name);

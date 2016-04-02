@@ -32,6 +32,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Custom style -->
     <link rel="stylesheet" href="{{ asset('/admin/dist/css/custom.css')}}">
 
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="{{ asset('/admin/plugins/sweetAlert/sweetalert.css')}}">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -60,6 +63,16 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
+<style>
+    label.error {
+        color:red;
+    }
+    input.error {
+        border:1px solid red;
+    }
+
+</style>
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
@@ -206,15 +219,10 @@ desired effect
                             <!-- Menu Body -->
                             <li class="user-body">
                                 <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
+                                    <div class=" text-center">
+                                        <a href="{{action('HomeController@index')}}">Back to Client mode</a>
                                     </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                    </div>
+
                                 </div>
                                 <!-- /.row -->
                             </li>
@@ -224,7 +232,7 @@ desired effect
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="auth/logout" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -274,7 +282,12 @@ desired effect
                 <li class=" {{Request::segment(1) === 'dashboard' ? 'active' : '' }} treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="#">Home Page</a></li>
+                        <li><a href="#">Home Page</a>
+                            <ul class="treeview-menu">
+                                <li class="#"><a href="{{action('AdminDashboardController@showImageSlider')}}"><i class="fa fa-circle-o"></i>Slider Images</a></li>
+
+                            </ul>
+                        </li>
                         <li><a href="{{action('AdminDashboardController@showAboutUs')}}">About-Us Page</a></li>
                         <li><a href="{{action('AdminDashboardController@showDinningList')}}">Dinning Page</a></li>
                         <li><a href="#">Facilities Page</a></li>
@@ -345,6 +358,43 @@ desired effect
                     </ul>
                 </li>
 
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Users</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{action('AdminDashboardController@listAllUsers')}}">View all users</a></li>
+                        <li><a href="{{action('AdminDashboardController@showAddPowerUser')}}">Add Power users</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Subscribers</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">List All Subscribers</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Customers</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">List All customers</a></li>
+                        <li>
+                            <a href="#">Customer reviews</a>
+                            <ul class="treeview-menu">
+                                <li><a href="#">Questioner Results</a></li>
+                                <li><a href="{{action('AdminDashboardController@showManageQuestioners')}}">Manage Questioner</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">Customer feedbacks</a>
+                            <ul class="treeview-menu">
+                                <li><a href="#">List all customer feedbacks</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
             <!-- /.sidebar-menu -->
         </section>
@@ -366,6 +416,9 @@ desired effect
         @yield('content')
 
         </section>
+
+
+
 
 <!-- /.content -->
 </div>
@@ -459,6 +512,36 @@ immediately after the control sidebar -->
 </div>
 <!-- ./wrapper -->
 
+
+<div class="example-modal">
+    <div class="modal "  id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modelTitle"></h4>
+                </div>
+                <div class="modal-body">
+                    <p id="modalMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline">Save changes</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</div>
+<!-- /.example-modal -->
+
+
+
+
+
 @section('js_ref')
 
 <!-- REQUIRED JS SCRIPTS -->
@@ -469,13 +552,38 @@ immediately after the control sidebar -->
 <script src="{{asset('/admin/bootstrap/js/bootstrap.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('/admin/dist/js/app.min.js')}}"></script>
+<!-- Sweet Alert -->
+<script src="{{asset('/admin/plugins/sweetAlert/sweetalert.min.js')}}"></script>
+
 <script type="text/javascript">
     $.ajaxSetup({
         headers: {
             'X-CSRF-Token': $('meta[name="csrf_token"]').attr('content')
         }
     });
+
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').focus()
+    })
+
+    function modalCall(messageType,Title,Message){
+
+        $('#myModal').removeClass();
+        $('#myModal').addClass("modal");
+        $('#myModal').addClass("modal-"+messageType);
+        $('#modelTitle').html(Title);
+        $('#modalMessage').html(Message);
+
+        $('#myModal').modal('show');
+
+        setTimeout(function(){
+            $('#myModal').modal('hide');
+        },2000);
+
+    }
 </script>
+
+
 
 
 <!-- DataTables -->
@@ -506,6 +614,24 @@ immediately after the control sidebar -->
     $(function() {
         $( ".dateadmin" ).datepicker();
     });
+
+    @if (Notify::has('success'))
+    swal("success!", "{{ Notify::first('success') }}", "success");
+
+    @endif
+
+    @if (Notify::has('error'))
+        swal("error!", "{{ Notify::first('error') }}", "error");
+    @endif
+
+    @if (Notify::has('warning'))
+        swal("warning!", "{{ Notify::first('warning') }}", "warning");
+    @endif
+
+    @if (Notify::has('info'))
+        swal("info!", "{{ Notify::first('info') }}", "info");
+    @endif
+
 </script>
 
 
@@ -514,5 +640,9 @@ immediately after the control sidebar -->
 Both of these plugins are recommended to enhance the
 user experience. Slimscroll is required when using the
 fixed layout. -->
+
+
+
+
 </body>
 </html>

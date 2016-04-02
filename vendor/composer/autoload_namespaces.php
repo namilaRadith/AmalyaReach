@@ -29,5 +29,7 @@ return array(
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
     'Diff' => array($vendorDir . '/phpspec/php-diff/lib'),
     'Cron' => array($vendorDir . '/mtdowling/cron-expression/src'),
+    'Cmgmyr\\Messenger\\' => array($vendorDir . '/cmgmyr/messenger/src'),
     'Anouar\\Paypalpayment' => array($vendorDir . '/anouar/paypalpayment/src'),
+    'Andheiberg\\Notify' => array($vendorDir . '/andheiberg/notify/src'),
 );

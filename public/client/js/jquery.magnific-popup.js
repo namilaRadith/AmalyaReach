@@ -1330,10 +1330,10 @@ $.magnificPopup.registerModule('image', {
 				imgSt = mfp.st.image;
 
 
-			var el = template.find('.mfp-img');
+			var el = template.find('.mfp-img);
 			if(el.length) {
 				var img = document.createElement('img');
-				img.className = 'mfp-img';
+				img.className = 'mfp-img;
 				if(item.el && item.el.find('img').length) {
 					img.alt = item.el.find('img').attr('alt');
 				}
@@ -1735,7 +1735,7 @@ $.magnificPopup.registerModule('gallery', {
 			_mfpOn(OPEN_EVENT+ns, function() {
 
 				if(gSt.navigateByImgClick) {
-					mfp.wrap.on('click'+ns, '.mfp-img', function() {
+					mfp.wrap.on('click'+ns, '.mfp-img, function() {
 						if(mfp.items.length > 1) {
 							mfp.next();
 							return false;

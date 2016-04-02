@@ -8,11 +8,6 @@
 @section('content')
 
 
-
-
-
-
-
     <div class="row magnific-gallery add_bottom_60 ">
         <!-- left column -->
         <div class="col-md-3 col-sm-3">
@@ -60,7 +55,10 @@
                         @endif
 
                     </div>
-                </form>
+                </f
+                    orm>
+
+
             </div>
             <script>
 
@@ -83,7 +81,11 @@
                 </div>
             @endforeach
         </div>
+
     </div><!-- End row -->
+    @if(Session::has('message'))
+        <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+    @endif
 
 @stop
 
@@ -104,17 +106,26 @@
         });
 
         function deleteImage(id) {
-
+            if(confirm("This operation will remove this image form the sever. Are you sure to continue ?")) {
                 $.ajax({
                     method: "GET",
-                    url: 'img-gallery/delete/'+id ,
-                        success:function(data){
-                            alert(data);
-                        }
+                    url: 'img-gallery/delete/' + id,
+                    success: function (data) {
+                        location.reload(true);
+                    }
 
                 });
+            }
 
         }
+
+        setTimeout(function(){
+            $('.alert').fadeOut("slow");
+        },2000);
+
+
+
+
 
     </script>
 
