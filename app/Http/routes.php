@@ -53,6 +53,9 @@ Route::get('cl-gallery', 'clientNavigationController@showGallery');
 //registed route for Add Subscriber
 Route::post('add-subscriber', 'clientNavigationController@addSubscriber');
 
+//registed route for Remove Subscriber
+Route::get('remove-subscriber/{email}', 'clientNavigationController@removeSubscriber');
+
 //registed route for check subscribe email
 Route::get('check-s-email/{email}', 'clientNavigationController@isSubscriberIn');
 
@@ -61,6 +64,16 @@ Route::get('cl-Special-Offers', 'clientNavigationController@showSpecialOffers');
 //registed route for Loyalty page of the Client
 Route::get('cl-Customer-Loyalty', 'clientNavigationController@showLoyalty');
 Route::post('cl-Cutomer-Loyalty-submit', 'LoyaltyController@LoyaltyFormSubmit');
+
+//registed route for  Client profile
+Route::get('cl-my-profile', 'UserController@showMyProfile');
+
+//registed route for client profile update
+Route::post('cl-my-profile/update', 'UserController@updateMyProfile');
+
+
+
+
 
 /*
  ***********************************************************************************************************************
@@ -79,6 +92,9 @@ Route::get('dashboard/about-us', 'AdminDashboardController@showAboutUs');
 
 //registed route for home image slider page of the Admin
 Route::get('dashboard/home/image-slider', 'AdminDashboardController@showImageSlider');
+
+//registed route for image Gallery image delete
+Route::get('dashboard/home/img-slider/delete/{id}', 'AdminDashboardController@deleteImageFromSlider');
 
 //registed route for home image slider upload content page of the Admin
 Route::post('dashboard/home/image-slider/upload', 'AdminDashboardController@uploadImageSliderContent');
@@ -107,6 +123,12 @@ Route::get('newsletter/create', 'AdminDashboardController@showCreateNewsLetter')
 //registed route for send news letter
 Route::post('newsletter/create/send', 'AdminDashboardController@sendNewsLetter');
 
+//registed route for list all users
+Route::get('users/list-all/', 'AdminDashboardController@listAllUsers');
+
+//registed route for add power user
+Route::get('users/add-admin', 'AdminDashboardController@showAddPowerUser');
+
 //registed route for contact us page
 Route::post('dashboard/gallery/img-gallery/upload', 'AdminDashboardController@uploadImageToGallery');
 
@@ -116,8 +138,43 @@ Route::post('dashboard/contact-us/update', 'AdminDashboardController@updateConta
 //registed route for image Gallery image delete
 Route::get('dashboard/gallery/img-gallery/delete/{id}', 'AdminDashboardController@deleteImageFromGallery');
 
+//registed route for image Gallery image delete
+Route::get('dashboard/gallery/vd-gallery/delete/{id}', 'AdminDashboardController@deleteVideoFromGallery');
+
 //registed route for video Gallery video upload
 Route::post('dashboard/gallery/vd-gallery/upload', 'AdminDashboardController@uploadVideoToGallery');
+
+
+//	| Questioners
+
+//registed route for questioners manage show
+Route::get('customer/questioners/manage', 'AdminDashboardController@showManageQuestioners');
+
+//registed route for questioners create show
+Route::get('customer/questioners/manage/create', 'AdminDashboardController@showCreateQuestioners');
+
+//registed route for questioner create
+Route::post('customer/questioners/manage/create/new', 'AdminDashboardController@createQuestioners');
+
+//registed route for questioner update
+Route::post('customer/questioners/manage/edit-questioner/{id}/update', 'AdminDashboardController@updateQuestioner');
+
+//registed route for  get all questioners
+Route::get('customer/questioners/manage/get-questioners', 'AdminDashboardController@getAllQuestioners');
+
+//registed route for  get all questions
+Route::get('customer/questioners/manage/get-questions/{id}', 'AdminDashboardController@getAllQuestions');
+
+//registed route for  edit all questioner
+Route::get('customer/questioners/manage/edit-questioner/{id}', 'AdminDashboardController@showEditQuestioner');
+
+//registed route for  publish questioner
+Route::get('customer/questioners/manage/publish-questioner/{id}', 'AdminDashboardController@publishQuestioner');
+
+//registed route for  publish questioner
+Route::post('send-feedback', 'UserController@sendFeedback');
+
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

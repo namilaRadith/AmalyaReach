@@ -32,6 +32,8 @@
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="{{ asset('/admin/plugins/sweetAlert/sweetalert.css')}}">
 
     @section('css_ref')
             <!-- BASE CSS -->
@@ -39,12 +41,19 @@
     <!-- REVOLUTION SLIDER CSS -->
     <link href="{{asset('/client/rs-plugin/css/settings.css')}}" rel="stylesheet">
     <link href="{{asset('/client/css/extralayers.css')}}" rel="stylesheet">
+
+    {{--star rating CSS--}}
+    <link rel="stylesheet" href="{{asset('/admin/plugins/bootstrap-star-rating/css/star-rating.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/admin/plugins/bootstrap-star-rating/css/theme-krajee-fa.min.css')}}">
+
+
     <style>
         label.error {
-            color:red;
+            color: red;
         }
+
         input.error {
-            border:1px solid red;
+            border: 1px solid red;
         }
 
     </style>
@@ -77,25 +86,85 @@
 
 <!-- Header================================================== -->
 <header>
-	<div id="top_line">
-		<div class="container">
-			<ul id="top_links">
-				<li><a href="#">En</a></li>
-				<li><a href="#">Fr</a></li>
-				<li><a href="#">Es</a></li>
-			</ul>
-		@if(Auth::user())
-			<a href="auth/logout" id="link_bt">Log Out</a>
-		@else
-			<a href="auth/login" id="link_bt">Login</a>
-		@endif
-		</div><!-- End container-->
-	</div><!-- End top line-->
+    <div id="top_line">
+        <div class="container">
+            <ul id="top_links">
+                <li><a href="#">En</a></li>
+                <li><a href="#">Fr</a></li>
+                <li><a href="#">Es</a></li>
+            </ul>
+            @if(Auth::user())
+
+                <a href="auth/logout" id="link_bt">Log Out</a>
+                <a href="{{action('UserController@showMyProfile')}}" id="link_bt">My Profile</a>
+                @if(Q::isUserEligible())
+
+                    <a href="#" id="link_bt" class="feedback_btn"  data-toggle="modal" data-target="#questionerModal">Feedback Session</a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="questionerModal" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title"
+                                        id="myModalLabel">{{Q::presentQuestioner()[0]['questioner_title']}}</h4>
+                                </div>
+                                <div class="modal-body">
+                                    {{ $i=1 }}
+                                    @foreach( Q::presentQuestioner() as $d)
+
+                                        <label for="input-1" style="color: black;"
+                                               class="control-label">{{$i." ".")"." "}}{{$d['question']}}</label>
+                                        @if($d['question_type'] == 'R')
+                                            <input id="{{"feedback-".$d['question_id']." "}} input-1-ltr-star-xs"
+                                                   class="rating rating-loading" data-min="0" data-max="5"
+                                                   data-size="xs" data-step="1">
+                                        @else
+                                            <input type="text " name="" id="{{"feedback-".$d['question_id']." "}}"
+                                                   class="form-control">
+                                        @endif
+                                        {{ $i++ }}
+                                    @endforeach
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" onclick="submitFeedback()" class="btn btn-primary" data-dismiss="modal">Save
+                                        changes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                @endif
+
+
+
+
+
+
+
+
+                @if(Auth::user()->isAdmin())
+                    <a href="{{action('AdminDashboardController@index')}}" id="link_bt">Admin Dashboard</a>
+                @endif
+            @else
+                <a href="auth/login" id="link_bt">Login</a>
+            @endif
+
+
+        </div>
+        <!-- End container-->
+    </div>
+    <!-- End top line-->
 
     <div id="top_header">
         <div class="container">
             <div class="row">
-                <div class="col-md-2 col-sm-2 col-xs-2">
+                <div class="col-md-3 col-sm-3 col-xs-3">
                     <div id="logo">
                         <a href="{{action('WelcomeController@index')}}"><img src="{{asset('/client/img/logo.png')}}"
                                                                              width="240" height="40"
@@ -103,7 +172,7 @@
                                                                              data-retina="true"></a>
                     </div>
                 </div>
-                <nav class="col-md-10 col-sm-10 col-xs-10">
+                <nav class="col-md-9 col-sm-9 col-xs-9">
                     <a class="cmn-toggle-switch cmn-toggle-switch__rot  open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
 
                     <div class="main-menu">
@@ -131,10 +200,6 @@
                                 <a href="{{action('clientNavigationController@showSpecialOffers')}}">SPECIAL
                                     OFFERS<i></i></a>
                             </li>
-                            <li>
-                                <a href="{{action('clientNavigationController@showLoyalty')}}" style = "color: purple">Loyalty<i></i></a>
-                            </li>
-
                             <li class="submenu">
                                 <a href="javascript:void(0);" class="show-submenu">Accomadation <i
                                             class="icon-down-open-mini"></i></a>
@@ -274,7 +339,12 @@
 <script src="{{ asset('/client/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>
 <script src="{{ asset('/client/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
 <script src="{{ asset('/client/js/revolution_func.js')}}"></script>
+<script src="{{ asset('/admin/plugins/validator/jquery.validate.min.js')}}"></script>
 
+<!-- Sweet Alert -->
+<script src="{{asset('/admin/plugins/sweetAlert/sweetalert.min.js')}}"></script>
+<!-- Star Rating JS -->
+<script src="{{asset('/admin/plugins/bootstrap-star-rating/js/star-rating.min.js')}}"></script>
 <script>
 
     $(document).ready(function () {
@@ -328,7 +398,8 @@
                     //on success remove loading animation & clear fields
                     success: function (data) {
                         $("#email_newsletter_5").val('');
-                        alert(data);
+                        //alert(data);
+                        swal("success!", data, "success")
                     }
 
 
@@ -344,6 +415,77 @@
 
     });
 
+
+</script>
+<script>
+    @if (Notify::has('success'))
+swal("success!", "{{ Notify::first('success') }}", "success");
+
+    @endif
+
+    @if (Notify::has('error'))
+        swal("error!", "{{ Notify::first('error') }}", "error");
+    @endif
+
+    @if (Notify::has('warning'))
+        swal("warning!", "{{ Notify::first('warning') }}", "warning");
+    @endif
+
+    @if (Notify::has('info'))
+        swal("info!", "{{ Notify::first('info') }}", "info");
+    @endif
+
+    function submitFeedback() {
+        console.log("Length : " + $('input[id^="feedback-"]').length);
+
+        JSONAsnwers = [];
+
+        $('input[id^="feedback-"]').each(function (input) {
+
+
+            var value = $(this).val();
+            var id = $(this).attr('id');
+            id = id.split(" ");
+            id = id[0].split("-");
+            id = id[1];
+
+            JSONAsnwers.push({id: id, value: value});
+
+
+            //console.log('ID : '+id + ' VALUE : ' + value);
+            //console.log("loop");
+        });
+
+        var data2 = JSON.stringify(JSONAsnwers);
+        console.log(data2);
+        $.ajaxSetup(
+                {
+                    headers: {
+                        'X-CSRF-Token': "{!! csrf_token() !!}"
+                    }
+                });
+
+
+        //create and senf ajax request to the server
+        $.ajax({
+
+            method: "post",
+            dataType: "json",
+            url: '/send-feedback',
+            data: {data: JSONAsnwers},
+
+            //on success remove loading animation & clear fields
+            success: function (data) {
+                $(".feedback_btn").hide();
+
+                swal("success!", "Thank you for your feedback", "success");
+                // console.log(data);
+            }
+
+
+        });
+
+    }
 </script>
 @show
 

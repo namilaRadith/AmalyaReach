@@ -136,10 +136,12 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Html\HtmlServiceProvider',
+		'Andheiberg\Notify\NotifyServiceProvider', //message service provider
 		'Intervention\Image\ImageServiceProvider', //Intervention
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider', //ide helper
 		'Cviebrock\ImageValidator\ImageValidatorServiceProvider', // image validation plugin
 		'YOzaz\LaravelSwiftmailer\ServiceProvider',				 //swiftmailler
+		'App\Providers\QuestionerServiceProvider',
 
 
 		/*
@@ -203,6 +205,9 @@ return [
         'Form'      => 'Illuminate\Html\FormFacade',
 		'Html'      => 'Illuminate\Html\HtmlFacade',
 		'Paypalpayment'   => 'Anouar\Paypalpayment\Facades\PaypalPayment',
+		'Notify' 	=> 'Andheiberg\Notify\Facades\Notify',
+		'Q' 		=> 'App\Facades\QuestionerFacade'
+
 
 
 

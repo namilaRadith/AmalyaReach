@@ -7,6 +7,7 @@ use App\GalleryContent;
 use App\aboutUsPage;
 use App\Room;
 use App\Subscriber;
+use App\User;
 use Request;
 use Input;
 use DB;
@@ -148,6 +149,20 @@ class clientNavigationController extends Controller
 
         return view('pages.client.Loyalty.clientLoyalty');
     }
+
+
+    /** remove subscriber controller.
+     * @param $email
+     */
+    public function removeSubscriber($email){
+
+        $s = new Subscriber();
+        $s->removeSubsciber($email);
+
+        return redirect()->action('UserController@showMyProfile');
+    }
+
+
 
 
 }
