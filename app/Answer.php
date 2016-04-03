@@ -23,7 +23,10 @@ class Answer extends Model {
             $answer->save();
 
 
-            echo $d['id'] ." ". $d['value']."\n";
+            //echo $d['id'] ." ". $d['value']."\n";
         }
+
+        return true;
+
     }
 }

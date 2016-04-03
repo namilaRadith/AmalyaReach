@@ -23,11 +23,17 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home','ReservationController@viewHome');
 
+//registed route for home page of the Client
+Route::get('debug', 'debugController@debug');
+
 /*
  ***********************************************************************************************************************
   											CLIENT NAVIGATION  ROUTES
  ***********************************************************************************************************************
  */
+
+
+
 
 //registed route for home page of the Client
 Route::get('cl-home', 'HomeController@index');
