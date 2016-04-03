@@ -202,5 +202,18 @@ Route::get('specials','');
 //Promotions Routing
 Route::get('admin_add_promotion', 'AdminPromotions@index');
 //Loyalty
-Route::get('ad-Customer-Loyalty', 'LoyaltyController@show_loyalty_request');
+Route::get('verifyemail/','LoyaltyController@verify_customer_email');
+Route::get('ad-Customer-new-Loyalty', 'LoyaltyController@show_new_loyalty_request');
+Route::get('ad-Customer-Loyalty', 'LoyaltyController@show_accepted_loyalty_request');
+Route::post('ad-Cutomer-Loyalty-submit', 'LoyaltyController@Accept_loyalty_request_submit');
 Route::get('searchcustomer/{q}', 'LoyaltyController@get_cust_Details');
+Route::get('ad-discounts','AdminPromotions@display_add_discount_page');
+Route::get('searchroomdetails/','AdminPromotions@get_room_Details');
+Route::get('searchdinningdetails/','AdminPromotions@get_dinning_Details');
+Route::get('removeroomdetails/{q}', 'AdminPromotions@update_offer_table_content');
+Route::get('ad-special-offers','AdminPromotions@display_special_offers_page');
+Route::post('ad-add_special_offer', 'AdminPromotions@add_special_promotions');
+Route::get('ad-veiw_special_offers','AdminPromotions@display_special_offers_list');
+Route::get('searchoffer/{q}', 'AdminPromotions@get_offer_Details');
+Route::post('ad-update_special_offer', 'AdminPromotions@update_special_promotions');
+Route::post('ad-Cutomer-Loyalty-submit', 'LoyaltyController@update_loyalty_request_submit');

@@ -38,6 +38,7 @@ class CreateCustomerLoyaltiesTable extends Migration {
 			$table->timestamps();
 
 		});
+
 	}
 
 	/**

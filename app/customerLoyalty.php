@@ -14,8 +14,6 @@ class customerLoyalty extends Model {
         'country',
         'gender',
         'bday',
-        'bmonth',
-        'byear',
         'nationality',
         'children',
         'recieve_p_offers',

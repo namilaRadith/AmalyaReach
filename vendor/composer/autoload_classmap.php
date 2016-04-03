@@ -6,14 +6,22 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'APCUIterator' => $vendorDir . '/symfony/polyfill-apcu/Resources/stubs/APCUIterator.php',
+    'AddMoreColumns' => $baseDir . '/database/migrations/2016_01_23_165725_add_more_columns.php',
     'CreateAboutUsPagesTable' => $baseDir . '/database/migrations/2016_01_30_201855_create_about_us_pages_table.php',
+    'CreateArticlesTable' => $baseDir . '/database/migrations/2016_01_23_164542_create_articles_table.php',
     'CreateContactsTable' => $baseDir . '/database/migrations/2016_01_31_003701_create_contacts_table.php',
+    'CreateCustomerLoyaltiesTable' => $baseDir . '/database/migrations/2016_02_13_173305_create_customer_loyalties_table.php',
     'CreateFeedbacksTable' => $baseDir . '/database/migrations/2016_01_20_033839_create_feedbacks_table.php',
     'CreateGalleryContentsTable' => $baseDir . '/database/migrations/2016_01_23_033415_create_gallery_contents_table.php',
     'CreateImageMastersTable' => $baseDir . '/database/migrations/2016_01_30_200756_create_image_masters_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateReservationTable' => $baseDir . '/database/migrations/2016_01_24_001707_create_reservation_table.php',
+    'CreateRoomTypesTable' => $baseDir . '/database/migrations/2016_01_20_183757_create_roomTypes_table.php',
     'CreateRoomsTable' => $baseDir . '/database/migrations/2016_01_18_180628_create_rooms_table.php',
     'CreateSliderImagesTable' => $baseDir . '/database/migrations/2016_02_29_173754_create_slider_images_table.php',
+    'CreateSpecialOfferContentsTable' => $baseDir . '/database/migrations/2016_03_06_044152_create_special_offer_contents_table.php',
+    'CreateSpecialOffersTable' => $baseDir . '/database/migrations/2016_03_05_173435_create_special_offers_table.php',
     'CreateSubscribersTable' => $baseDir . '/database/migrations/2016_02_06_185006_create_subscribers_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
@@ -455,4 +463,5 @@ return array(
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'UpdateCustomerLoyalty' => $baseDir . '/database/migrations/2016_03_23_182403_update_customer_loyalty.php',
 );

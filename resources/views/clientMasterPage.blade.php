@@ -95,7 +95,7 @@
     <div id="top_header">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="col-md-2 col-sm-2 col-xs-2">
                     <div id="logo">
                         <a href="{{action('WelcomeController@index')}}"><img src="{{asset('/client/img/logo.png')}}"
                                                                              width="240" height="40"
@@ -103,7 +103,7 @@
                                                                              data-retina="true"></a>
                     </div>
                 </div>
-                <nav class="col-md-9 col-sm-9 col-xs-9">
+                <nav class="col-md-10 col-sm-10 col-xs-10">
                     <a class="cmn-toggle-switch cmn-toggle-switch__rot  open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
 
                     <div class="main-menu">
@@ -131,6 +131,10 @@
                                 <a href="{{action('clientNavigationController@showSpecialOffers')}}">SPECIAL
                                     OFFERS<i></i></a>
                             </li>
+                            <li>
+                                <a href="{{action('clientNavigationController@showLoyalty')}}" style = "color: purple">Loyalty<i></i></a>
+                            </li>
+
                             <li class="submenu">
                                 <a href="javascript:void(0);" class="show-submenu">Accomadation <i
                                             class="icon-down-open-mini"></i></a>
@@ -270,7 +274,7 @@
 <script src="{{ asset('/client/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>
 <script src="{{ asset('/client/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
 <script src="{{ asset('/client/js/revolution_func.js')}}"></script>
-<script src="{{ asset('/admin/plugins/validator/jquery.validate.min.js')}}"></script>
+
 <script>
 
     $(document).ready(function () {

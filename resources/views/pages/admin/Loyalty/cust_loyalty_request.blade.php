@@ -44,6 +44,7 @@
                                 <th>Country</th>
                                 <th>Allow Personalized Offers</th>
                                 <th>Allow Partners Personalized Offers</th>
+                                <th>Status</th>
                                 <th>Details</th>
                             </tr>
                             </thead>
@@ -56,8 +57,15 @@
                                     <th style="color: #2b2b2b"><?php echo $loyalty['name']; ?></th>
                                     <th style="color: #2b2b2b"><?php echo $loyalty['phone']; ?></th>
                                     <th style="color: #2b2b2b"><?php echo $loyalty['country']; ?></th>
-                                    <th style="color: #2b2b2b"><?php echo $loyalty['recieve_p_offers']; ?></th>
-                                    <th style="color: #2b2b2b"><?php echo $loyalty['allow_p_p_offers']; ?></th>
+                                    <th style="color: #2b2b2b"><?php  if($loyalty['recieve_p_offers']){echo 'YES';}
+                                            else{
+                                                echo "NO";
+                                            }?></th>
+                                    <th style="color: #2b2b2b"><?php if($loyalty['allow_p_p_offers']){echo 'YES';}
+                                        else{
+                                            echo "NO";
+                                        } ?></th>
+                                    <th style="color: #2b2b2b"><?php if($loyalty['flag'] == '1'){echo "Active";}else echo "InActive"; ?></th>
                                     <th style="color: #2b2b2b"><button type="button" onclick = "get_cust_details(<?php echo $loyalty['id']; ?>)" class="btn btn-primary"><i class="fa fa-search-plus"></i></button></th>
                                 </tr>
                                 <?php $a++; ?>
@@ -71,6 +79,7 @@
                                 <th>Country</th>
                                 <th>Allow Personalized Offers</th>
                                 <th>Allow Partners Personalized Offers</th>
+                                <th>Status</th>
                                 <th>Details</th>
                             </tfoot>
                         </table>
@@ -96,7 +105,8 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form role="form">
+                    <form role="form" action="{{ action('LoyaltyController@update_loyalty_request_submit') }}" method="post" accept-charset="UTF-8">
+                        <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
                         <div class="box-body col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
@@ -140,47 +150,50 @@
                                 <label for="exampleInputPassword1">Allow Parters Personlized Offers</label>
                                 <input type="text" id="form_cust_allowPPO" class="form-control" id="exampleInputPassword1">
                             </div>
+                            <div class="form-group">
 
+                                <input type="text" id="cust_id" class="form-control" name="cust_id" style="display: none">
+                            </div>
                             <div class="form-group">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked>
                                         Approve
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="0">
                                         Not Approve
                                     </label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label>Select</label>
-                                <select class="form-control">
+                                <select class="form-control" id = "loyalty_type" name ="loyalty_type">
                                     @foreach ($loyalty_master as $master)
-                                        <option><?php  echo $master -> type;?></option>
+                                        <option value="<?php  echo $master -> type;?>"><?php  echo $master -> type;?></option>
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox">
-                                        Send Special Offers
-                                    </label>
-                                </div>
+                            {{--<div class="form-group">--}}
+                                {{--<div class="checkbox">--}}
+                                    {{--<label>--}}
+                                        {{--<input type="checkbox">--}}
+                                        {{--Send Special Offers--}}
+                                    {{--</label>--}}
+                                {{--</div>--}}
 
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox">
-                                        Send Special Personlized Offers
-                                    </label>
-                                </div>
+                                {{--<div class="checkbox">--}}
+                                    {{--<label>--}}
+                                        {{--<input type="checkbox">--}}
+                                        {{--Send Special Personlized Offers--}}
+                                    {{--</label>--}}
+                                {{--</div>--}}
 
-                            </div>
+                            {{--</div>--}}
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Register</button>
+                                <button type="submit" class="btn btn-primary">Edit</button>
                             </div>
 
                             </div>
@@ -285,7 +298,7 @@
                     null,
                     function(data) {
                         console.log(data);
-
+                        $("#cust_id").val(data[0]['id']);
                         $('#form_cust_email').val(data[0]['email']);
                         $('#form_cust_name').val(data[0]['name']);
                         $('#form_cust_address').val(formatAddress(data[0]['street'],data[0]['city'],data[0]['country']));
@@ -297,6 +310,14 @@
                         $('#form_cust_allowPO').val(get_yesNo(data[0]['recieve_p_offers']));
                         $('#form_cust_allowPPO').val(get_yesNo(data[0]['allow_p_p_offers']));
 
+                        $("#loyalty_type").val(data[0]['type']);
+                        var Approved_status = data[0]['flag'];
+
+                        if(Approved_status =='1'){
+                            $("#optionsRadios1").prop('checked',true);
+                        }else{
+                            $("#optionsRadios2").prop('checked',true);
+                        }
 
 
                     }

@@ -11,6 +11,8 @@
 @parent
         <!-- SPECIFIC CSS -->
 
+<meta name="csrf-token" content="{{ csrf_token() }}" />
+//hosted by Microsoft Ajax CDN
 
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 <style>
@@ -143,16 +145,6 @@
         </div>
     </section><!-- End Section -->
 
-    <div id="position">
-        <div class="container">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Category</a></li>
-                <li>Page active</li>
-            </ul>
-        </div>
-    </div><!-- End Position -->
-
     <div class="container margin_60">
         <div class="row">
 
@@ -191,64 +183,52 @@
 
                 <div class="col-md-9 col-sm-9"  style=" text-align: center" >
 
-                    {!! Form::open(array('url' => 'cl-Cutomer-Loyalty-submit','id' => 'LoyaltyForm','class' => 'register','name' => 'LoyaltyForm')) !!}
+                    {{--{!! Form::open(array('url' => 'cl-Cutomer-Loyalty-submit','id' => 'LoyaltyForm','class' => 'register','name' => 'LoyaltyForm')) !!}--}}
+                    <form id = "LoyaltyForm" class="register">
+                        <input type="hidden" name="_token" id="csrf-token" value="{{ csrf_token() }}" />
 
-
-
-                        <h1  style="color: #990099">Loyalty Registration Form</h1>
+                        <h6  style="color: #990099">Loyalty Registration Form</h6>
                         <fieldset class="row1">
                             <legend>Account Details
                             </legend>
                             <p>
-                                        <!-- Email -->
-                                {!! Form::label('email','Email *') !!}
-                                {!! Form::text('email', '' ,['placeholder' => 'example@gmail.com']) !!}
 
+                                <label>Email * </label>
+                                <input type="email" placeholder="example@gmail.com" name ="email" id="email">
                             </p>
                             <p>
-                                     <!-- Password -->
-                                {!! Form::label('password','Password*') !!}
-                                {!! Form::password('password') !!}
-
-
-                                        <!-- Repeat Password -->
-                                {!! Form::label('repassword','Repeat Password *') !!}
-                                {!! Form::password('repassword') !!}
-
-                                {!! Form::label('fields','* obligatory fields',['class' => 'obinfo']) !!}
-
+                                <label>Password* </label>
+                                <input type="password" id="password" name="password">
+                                <label>Repeat Password * </label>
+                                <input type="password" id="repassword" name="repassword">
                             </p>
                         </fieldset>
                         <fieldset class="row2">
                             <legend>Personal Details
                             </legend>
                             <p>
-
-                                {!! Form::label('name','Name * ') !!}
-                                {!! Form::text('name', ' ', ['class'=>'long']) !!}
-
+                                <label>Name * </label>
+                                <input type="text" id="name" name="name">
                             </p>
                             <p>
-
-                                {!! Form::label('phone','Phone *') !!}
-                                {!! Form::text('phone', ' ', array('maxlength'=>'10','id' => 'phone')) !!}
-
+                                <label>Phone * </label>
+                                <input type="text" id="phone" name="phone" maxlength="10">
                             </p>
                             <p>
-
-                                {!! Form::label('street','Street',['class' => 'optional']) !!}
-                                {!! Form::text('street', ' ', ['class'=>'long']) !!}
-
+                                <label>Street </label>
+                                <input type="text" id="street" name="street">
                             </p>
                             <p>
-
-                                {!! Form::label('city','City *') !!}
-                                {!! Form::text('city', ' ', ['class'=>'long']) !!}
+                                <label>City * </label>
+                                <input type="text" id="city" name="city">
                             </p>
                             <p>
-                                {!! Form::label('country','Country *') !!}
-                                {!! Form::select('country', array('1' => 'United States', '2' => 'Srilanka'), '2') !!}
-
+                                <label>Country * </label>
+                               <select name="country" id="country">
+                                   <option value="United States">United States</option>
+                                   <option selected="selected" value="Srilanka">Srilanka</option>
+                                   <option value="Greece">Greece</option>
+                               </select>
                             </p>
                             <p>
 
@@ -259,36 +239,26 @@
                             <legend>Further Information
                             </legend>
                             <p>
-                                {!! Form::label('gender','Gender *') !!}
-
-                               {!! Form::radio('gender', 'male') !!}
-                                {!! Form::label('gender','Male',['class' => 'gender']) !!}
-
-                                {!! Form::radio('gender', 'female') !!}
-                                {!! Form::label('gender','Female',['class' => 'gender']) !!}
-
+                                <label>Gender * </label>
+                                <input type="radio" value="Male" name="gender"><label class="gender">Male</label>
+                                <input type="radio" value="Female" name="gender"><label class="gender">Male</label>
 
                             </p>
                             <p>
-
-                                {!! Form::label('bday', 'Birthdate *') !!}
-
-                                {!! Form::selectRange('bday', 01, 31,['class' => 'date']) !!}
-
-                                {!! Form::selectMonth('bmonth') !!}
-
-                                {!! Form::selectRange('byear', 1987, 1997) !!}
+                                <label>Birthdate * </label>
+                                <input type="text" id="bday" name="bday">
                             </p>
                             <p>
-
-                                {!! Form::label('nationality', 'Nationality *') !!}
-                                {!! Form::select('nationality', array('1' => 'United States', '2' => 'Srilankan'), '2') !!}
-
+                                <label>Nationality * </label>
+                                <select name = "nationality" id="nationality">
+                                    <option value="United States">United States</option>
+                                    <option selected="selected" value="Srilankan">Srilankan</option>
+                                    <option value="Greece">Greece</option>
+                                </select>
                             </p>
                             <p>
-                                {!! Form::label('children', 'Children *') !!}
-                                {!! Form::checkbox('children', 'true', false) !!}
-
+                                <label>Children * </label>
+                                <input type="checkbox" name="children" id="children" value="true">
                             </p>
                             <div class="infobox"><h4>YOU DESERVE TO BE REWARDED
                                     JOIN NOW</h4>
@@ -302,26 +272,27 @@
                             <legend>Terms and Mailing
                             </legend>
                             <p class="agreement">
-                                {!! Form::checkbox('termsConditions', 'true', false) !!}
-                                {!! Form::label('termsConditions', '*  I accept the Terms and Conditions') !!}
+
+
+                                <input type="checkbox" name="termsConditions" id="termsConditions" value="true">
+                                <label>I accept the Terms and Conditions</label>
                              </p>
                             <p class="agreement">
-                                {!! Form::checkbox('recieve_p_offers', 'true', false) !!}
-                                {!! Form::label('recieve_p_offers', 'I want to receive personalized offers by your site') !!}
+
+                                <input type="checkbox" name="recieve_p_offers" id="recieve_p_offers" value="true">
+                                <label>I want to receive personalized offers by your site</label>
                             </p>
                             <p class="agreement">
-                                {!! Form::checkbox('allow_p_p_offers', 'true', false) !!}
-                                {!! Form::label('allow_p_p_offers', 'Allow partners to send me personalized offers and related services') !!}
+
+                                <input type="checkbox" name="allow_p_p_offers" id="allow_p_p_offers" value="true">
+                                <label>Allow partners to send me personalized offers and related services</label>
 
                             </p>
                         </fieldset>
 
-                        <div> <input class="button" type="submit" name="submit" value="Register &raquo;"></div>
+                        <div> <input id="request_cust_loyalty" class="button" value="Register &raquo;" ></div>
 
-                    {!! Form::close() !!}
-                    <!--/form-->
-
-
+                    </form>
                 </div>
 
 
@@ -347,87 +318,298 @@
 
                     </ul>
                     <p>
-                        His <strong>civibus tacimates</strong> ex, an quo nominavi qualisque. In erant dissentiunt vel, dicit legimus docendi an nam. Te congue perfecto eos, aliquid corrumpit ea est, eam petentium repudiandae ad.
+                        Sri Lanka is rich in unusual experiences that can be safely enjoyed on our especially arranged excursions. Whether you want to join in activities, learn more about the island’s fascinating legends, see how village people live, explore the lush wilderness, photograph wildlife or taste tea at its source, we have designed tours to satisfy both the intrepid adventurer and the more relaxed traveller.
                     </p>
                 </div>
             </div><!-- End col-lg-3 -->
         </div><!-- End row -->
     </div><!-- End Container -->
+    <button id="create-user">Email Verification</button>
+    <div id="dialog-form" class= "dialog-form" title="Email Verification">
+        <p id="old_code_link" class="validateTips">A verification Code has been sent to te email provided. Please Enter the verification Code Below</p>
+        <p id="new_code_link" style="display: none" class="validateTips">A <span style="color:red">New</span> verification Code has been sent to te email provided. Please Enter the verification Code Below</p>
+        <p id="resend_code_link" style="color:red;display: none" onclick="resend_email_ver_code()">Click HERE to re - send a new Verification Code</p>
+
+        <form>
+            <fieldset>
+                <label for="name">Code</label>
+                <input type="text" name="code" id="code" value="******" class="text ui-widget-content ui-corner-all">
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px" value="Verify">
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+    </div>
 
 
     @stop
     @section('js_ref')
     @parent
             <!-- Specific scripts -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
-    <script type="text/javascript" src="{{asset('/client/js/jquery.js')}}"></script>
-    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
-    <script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="{{asset('/client/js/jquery_ui_block.js')}}"></script>
+    <style>
+        body { font-size: 62.5%; }
+        label, input { display:block; }
+        input.text { margin-bottom:12px; width:95%; padding: .4em; }
+        fieldset { padding:0; border:0; margin-top:25px; }
+        h1 { font-size: 1.2em; margin: .6em 0; }
+        div#users-contain { width: 350px; margin: 20px 0; }
+        div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+        div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+        .ui-dialog .ui-state-error { padding: .3em; }
+        .validateTips { border: 1px solid transparent; padding: 0.3em; }
+    </style>
+    <script type="text/javascript">
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        verification_code = "";
+
+            var dialog, form,
+
+            // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
+                    emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+                    name = $( "#code" ),
+                    email = $( "#email" ),
+                    password = $( "#password" ),
+                    allFields = $( [] ).add( code ).add( email ).add( password ),
+                    tips = $( ".validateTips" );
+
+            function updateTips( t ) {
+                tips
+                        .text( t )
+                        .addClass( "ui-state-highlight" );
+                setTimeout(function() {
+                    tips.removeClass( "ui-state-highlight", 1500 );
+                }, 500 );
+            }
+
+            function checkLength( o, n, min, max ) {
+                if ( o.val().length > max || o.val().length < min ) {
+                    o.addClass( "ui-state-error" );
+                    updateTips( "Length of " + n + " must be between " +
+                            min + " and " + max + "." );
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+            function checkRegexp( o, regexp, n ) {
+                if ( !( regexp.test( o.val() ) ) ) {
+                    o.addClass( "ui-state-error" );
+                    updateTips( n );
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+            function addUser() {
+                $.blockUI({ message: '<h1><img src=\"{{asset('/client/img/477.gif')}}\" /> Please wait kindly we are Processing your Request...</h1>' });
+                $.blockUI({ css: { backgroundColor: '#f00', color: '#fff'} });
+                $.blockUI();
+                var code = $("#code").val();
+                n = verification_code.localeCompare(code);
+
+                                if(n == 0) {
+                                    var email = $("#email").val();
+                                    var password = $("#password").val();
+                                    var name = $("#name").val();
+                                    var phone = $("#phone").val();
+                                    var street = $("#street").val();
+                                    var city = $("#city").val();
+                                    var country = $("#country").val();
+                                    var gender = $('input[name=gender]:checked', '#LoyaltyForm').val();
+                                    var bday = $("#bday").val();
+                                    var nationality = $("#nationality").val();
+                                    var children = $("#children").val();
+                                    var termsConditions = $("#termsConditions").val();
+                                    var recieve_p_offers = $("#recieve_p_offers").val();
+                                    var allow_p_p_offers = $("#allow_p_p_offers").val();
+                                    var _token = $('input[name=_token]').val();
 
 
+                                    $.post("cl-Cutomer-Loyalty-submit", {
+                                        email: email,
+                                        password: password,
+                                        name: name,
+                                        phone: phone,
+                                        street: street,
+                                        city: city,
+                                        country: country,
+                                        gender: gender,
+                                        bday: bday,
+                                        nationality: nationality,
+                                        children: children,
+                                        recieve_p_offers: recieve_p_offers,
+                                        allow_p_p_offers: allow_p_p_offers
 
-        $().ready(function() {
+                                    }, function (data) {
+                                        console.log(data);
+                                        $.unblockUI();
+                                    }, "json");
+
+                                }
+                                else{
+
+                                    $("#resend_code_link").show();
+                                    $.unblockUI();                                }
+
+                }
 
 
-            // validate signup form on keyup and submit
-            $("#LoyaltyForm").validate({
-                rules: {
-                    cust_name: "required",
-                    phone: "required",
-                    password: {
-                        required: true,
-                        minlength: 5
-                    },
-                    repassword: {
-                        required: true,
-                        minlength: 5,
-                        equalTo: "#password"
-                    },
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    termsConditions: "Please tick if u Agree"
+            dialog = $( "#dialog-form" ).dialog({
+                autoOpen: false,
+                height: 300,
+                width: 350,
+                modal: true,
+                buttons: {
+                    "Verify Email": addUser,
+                    Cancel: function() {
+                        dialog.dialog( "close" );
+                    }
                 },
-                messages: {
-                    cust_name: "Please enter your firstname",
-                    phone: "Please enter your lastname",
-                    password: {
-                        required: "Please provide a password",
-                        minlength: "Your password must be at least 5 characters long"
-                    },
-                    repassword: {
-                        required: "Please provide a password",
-                        minlength: "Your password must be at least 5 characters long",
-                        equalTo: "Please enter the same password as above"
-                    },
-                    email: "Please enter a valid email address",
-                    termsConditions: "Please tick if u Agree"
+                close: function() {
+                    form[ 0 ].reset();
+                    allFields.removeClass( "ui-state-error" );
                 }
             });
 
-
-        });
-    </script>
-
-    <script type="text/javascript" src="{{asset('/client/js/strength.js')}}"></script>
-    <script type="text/javascript" src="{{asset('/client/js/js.js')}}"></script>
-    <script type="text/javascript">
-
-        $(document).ready(function($) {
-
-            $('#123').strength({
-                strengthClass: 'strength',
-                strengthMeterClass: 'strength_meter',
-                strengthButtonClass: 'button_strength',
-                strengthButtonText: 'Show Password',
-                strengthButtonTextToggle: 'Hide Password'
+            form = dialog.find( "form" ).on( "submit", function( event ) {
+                event.preventDefault();
+                addUser();
             });
 
+//            $( "#create-user" ).button().on( "click", function() {
+//
+//            });
+
+    </script>
+    <script type="text/javascript">
+
+        $(function() {
+            $( "#bday" ).datepicker();
+        });
+
+
+        function resend_email_ver_code(){
+            $.blockUI({ message: '<h1><img src=\"{{asset('/client/img/477.gif')}}\" /> Please wait kindly we are Processing your Request...</h1>' });
+            $.blockUI({ css: { backgroundColor: '#f00', color: '#fff'} });
+            $.blockUI();
+            var email  = $("#email").val();
+
+
+            $.getJSON(
+                    "verifyemail/?email=" + email,
+                    null,
+                    function(data) {
+                        console.log(data);
+                        verification_code = data;
+                        $("#old_code_link").hide();
+                        $("#new_code_link").show();
+                        $("#resend_code_link").hide();
+                        $.unblockUI();
+
+                    }
+            );
+
+        }
+
+
+        function verify_email(){
+
+            $.blockUI({ message: '<h1><img src=\"{{asset('/client/img/477.gif')}}\" /> Please wait kindly we are Processing your Request...</h1>' });
+            $.blockUI({ css: { backgroundColor: '#f00', color: '#fff'} });
+            $.blockUI();
+
+
+
+            var email  = $("#email").val();
+
+
+            $.getJSON(
+                    "verifyemail/?email=" + email,
+                    null,
+                    function(data) {
+                        console.log(data);
+                        verification_code = data;
+
+                        $.unblockUI();
+                        dialog.dialog( "open" );
+                    }
+            );
+
+        }
+        $(document).ready(function () {
+        $('#request_cust_loyalty').click(function() {
+            if ($('#LoyaltyForm').valid()) {
+                verify_email();
+            }
         });
 
 
 
+
+
+
+
+                $("#LoyaltyForm").validate({
+                    rules: {
+                        name: "required",
+                        phone: "required",
+                        street: "required",
+                        city: "required",
+                        country: "required",
+                        gender: "required",
+                        bday: "required",
+                        nationality: "required",
+                        termsConditions: "required",
+                        password: {
+                            required: true,
+                            minlength: 5
+                        },
+                        repassword: {
+                            required: true,
+                            minlength: 5,
+                            equalTo: "#password"
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        }
+                    },
+                    messages: {
+                        name: "Please enter your firstname",
+                        phone: "Please enter your phone no",
+                        street: "Please enter your address Street",
+                        city: "Please enter your address city",
+                        country: "Please enter your country",
+                        gender: "Please enter your address gender",
+                        bday: "Please enter your Birthday",
+                        nationality: "Please enter your Nationality",
+                        termsConditions: "Please tick if u Agree to continue",
+                        password: {
+                            required: "Please provide a password",
+                            minlength: "Your password must be at least 5 characters long"
+                        },
+                        repassword: {
+                            required: "Please provide a password",
+                            minlength: "Your password must be at least 5 characters long",
+                            equalTo: "Please enter the same password as above"
+                        },
+                        email: "Please enter a valid email address"
+
+                    }
+                });
+
+
+        });
     </script>
 
 @stop

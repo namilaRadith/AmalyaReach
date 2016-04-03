@@ -77,7 +77,7 @@ desired effect
     <header class="main-header">
 
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="{{action("AdminDashboardController@index")}}" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>A</b>LT</span>
             <!-- logo for regular state and mobile devices -->
@@ -303,15 +303,27 @@ desired effect
                 <li class="treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Promotions</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="">Add Promotion</a></li>
+                        <li><a href="">New Promotion</a></li>
+                        <li><a href="">Create Promotion Banner</a></li>
+                        <li><a href="">Promotion Stat Board</a></li>
+                        <li><a href="{{action('AdminPromotions@display_add_discount_page')}}">Discounts</a></li>
+                        <li><a href="{{action('AdminPromotions@display_special_offers_page')}}">Create Special Offers</a></li>
+                        <li><a href="{{action('AdminPromotions@display_special_offers_list')}}">Special offers List</a></li>
                     </ul>
                 </li>
-
+                <!-- Customer Loyalty area  -->
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Loyalty</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Customer Loyalty</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="{{action('LoyaltyController@show_loyalty_request')}}">Customer Loyalty Requests</a></li>
+                        <li><a href="{{action('LoyaltyController@show_accepted_loyalty_request')}}">Loyalty Master</a></li>
                     </ul>
+                    <ul class="treeview-menu">
+                        <li><a href="{{action('LoyaltyController@show_new_loyalty_request')}}">New Requests</a></li>
+                    </ul>
+                    <ul class="treeview-menu">
+                        <li><a href="{{action('LoyaltyController@show_accepted_loyalty_request')}}">Existing Loyalties</a></li>
+                    </ul>
+
                 </li>
 
                 <!-- Rooms -->
