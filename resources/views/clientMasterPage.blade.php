@@ -97,6 +97,7 @@
 
                 <a href="auth/logout" id="link_bt">Log Out</a>
                 <a href="{{action('UserController@showMyProfile')}}" id="link_bt">My Profile</a>
+
                 @if(Q::isUserEligible())
 
                     <a href="#" id="link_bt" class="feedback_btn"  data-toggle="modal" data-target="#questionerModal">Feedback Session</a>
@@ -109,20 +110,20 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                                 aria-hidden="true">&times;</span></button>
                                     <h4 class="modal-title"
-                                        id="myModalLabel">{{Q::presentQuestioner()[0]['questioner_title']}}</h4>
+                                        id="myModalLabel">{{Q::presentQuestioner()['questioner']->questioner_title}}</h4>
                                 </div>
                                 <div class="modal-body">
                                     {{ $i=1 }}
-                                    @foreach( Q::presentQuestioner() as $d)
+                                    @foreach( Q::presentQuestioner()['questions']  as $d)
 
                                         <label for="input-1" style="color: black;"
                                                class="control-label">{{$i." ".")"." "}}{{$d['question']}}</label>
                                         @if($d['question_type'] == 'R')
-                                            <input id="{{"feedback-".$d['question_id']." "}} input-1-ltr-star-xs"
+                                            <input id="{{"feedback-".$d['id']." "}} input-1-ltr-star-xs"
                                                    class="rating rating-loading" data-min="0" data-max="5"
                                                    data-size="xs" data-step="1">
                                         @else
-                                            <input type="text " name="" id="{{"feedback-".$d['question_id']." "}}"
+                                            <input type="text " name="" id="{{"feedback-".$d['id']." "}}"
                                                    class="form-control">
                                         @endif
                                         {{ $i++ }}
@@ -479,8 +480,14 @@ swal("success!", "{{ Notify::first('success') }}", "success");
                 $(".feedback_btn").hide();
 
                 swal("success!", "Thank you for your feedback", "success");
+
+                // console.log("sucess");
                 // console.log(data);
+            },
+            error:function(d){
+                //swal("success!", "Thank you for your feedback", "error");
             }
+
 
 
         });

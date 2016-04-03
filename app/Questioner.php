@@ -14,14 +14,15 @@ class Questioner extends Model {
      */
     public static function isUserEligible()
     {
+        //get active questioner
         $qOld = Questioner::where('active', '=', 1)->get();
+        //get authenticated user id
         $user_id = \Auth::user()->id;
+        //check whether user alrady answer this questioner
         $count = DB::table('questionerview')->where('questionerview.uid', '=', $user_id)
             ->where('questionerview.quesioner_id', '=', $qOld[0]['id'])->count();
 
-
-
-
+        //count == 0 then return true else false
         if ($count <= 0) {
             return boolval(true);
         } else {
@@ -99,22 +100,16 @@ class Questioner extends Model {
         });
     }
 
-    public static function presentQuestioner(){
+    public static function presentQuestioner()
+    {
         //get active questioner
 
 
-            $d  = Questioner::where('active', '=', 1)->get();
-            $data = DB::table('questionerview')->where('questionerview.quesioner_id', '=',$d[0]->id)->get();
+        $questioner = Questioner::where('active', '=', 1)->first();
+        $questions = Question::where('questioner_id', '=', $questioner->id)->get();
 
 
-            $array = json_decode(json_encode($data), True);
-
-       return $array ;
-
-
-
-
-
+        return array('questioner' => $questioner, 'questions' => $questions);
 
 
     }

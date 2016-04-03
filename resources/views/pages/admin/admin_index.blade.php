@@ -9,7 +9,7 @@
 
 
 
-	@foreach( Q::presentQuestioner() as $ds)
+	{{--@foreach( Q::presentQuestioner() as $ds)--}}
 
 		{{--@for($i = 0;$i <= sizeof(Q::presentQuestioner());$i++)--}}
 
@@ -17,8 +17,8 @@
 
 		{{--@endfor--}}
 
-		{{$ds['creator_id']}}
-	@endforeach
+		{{--{{$ds['creator_id']}}--}}
+	{{--@endforeach--}}
 
 @stop
 
