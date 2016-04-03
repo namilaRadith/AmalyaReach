@@ -83,9 +83,11 @@
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/andheiberg/notify" />
           <root url="file://$MODULE_DIR$/vendor/anouar/paypalpayment" />
           <root url="file://$MODULE_DIR$/vendor/barryvdh/laravel-ide-helper" />
           <root url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader" />
+          <root url="file://$MODULE_DIR$/vendor/cmgmyr/messenger" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/cviebrock/image-validator" />
           <root url="file://$MODULE_DIR$/vendor/danielstjules/stringy" />
@@ -148,9 +150,11 @@
           <root url="file://$MODULE_DIR$/vendor/yozaz/laravel-swiftmailer" />
         </CLASSES>
         <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/andheiberg/notify" />
           <root url="file://$MODULE_DIR$/vendor/anouar/paypalpayment" />
           <root url="file://$MODULE_DIR$/vendor/barryvdh/laravel-ide-helper" />
           <root url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader" />
+          <root url="file://$MODULE_DIR$/vendor/cmgmyr/messenger" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/cviebrock/image-validator" />
           <root url="file://$MODULE_DIR$/vendor/danielstjules/stringy" />
