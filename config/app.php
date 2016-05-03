@@ -142,7 +142,7 @@ return [
 		'Cviebrock\ImageValidator\ImageValidatorServiceProvider', // image validation plugin
 		'YOzaz\LaravelSwiftmailer\ServiceProvider',				 //swiftmailler
 		'App\Providers\QuestionerServiceProvider',
-
+		'App\Providers\TrackingServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -206,7 +206,8 @@ return [
 		'Html'      => 'Illuminate\Html\HtmlFacade',
 		'Paypalpayment'   => 'Anouar\Paypalpayment\Facades\PaypalPayment',
 		'Notify' 	=> 'Andheiberg\Notify\Facades\Notify',
-		'Q' 		=> 'App\Facades\QuestionerFacade'
+		'Q' 		=> 'App\Facades\QuestionerFacade',
+		'Track' 		=> 'App\Facades\TrackingFacade'
 
 
 
