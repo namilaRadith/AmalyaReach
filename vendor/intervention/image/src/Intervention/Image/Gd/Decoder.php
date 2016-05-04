@@ -25,6 +25,7 @@ class Decoder extends \Intervention\Image\AbstractDecoder
         // define core
         switch ($info[2]) {
             case IMAGETYPE_PNG:
+<<<<<<< Updated upstream
                 $core = imagecreatefrompng($path);
                 $this->gdResourceToTruecolor($core);
                 break;
@@ -37,6 +38,17 @@ class Decoder extends \Intervention\Image\AbstractDecoder
             case IMAGETYPE_GIF:
                 $core = imagecreatefromgif($path);
                 $this->gdResourceToTruecolor($core);
+=======
+                $core = @imagecreatefrompng($path);
+                break;
+
+            case IMAGETYPE_JPEG:
+                $core = @imagecreatefromjpeg($path);
+                break;
+
+            case IMAGETYPE_GIF:
+                $core = @imagecreatefromgif($path);
+>>>>>>> Stashed changes
                 break;
 
             default:
@@ -45,6 +57,17 @@ class Decoder extends \Intervention\Image\AbstractDecoder
                 );
         }
 
+<<<<<<< Updated upstream
+=======
+        if ($core === false) {
+            throw new \Intervention\Image\Exception\NotReadableException(
+                "Unable to read image from file ({$path})."
+            );
+        }
+
+        $this->gdResourceToTruecolor($core);
+
+>>>>>>> Stashed changes
         // build image
         $image = $this->initFromGdResource($core);
         $image->mime = $info['mime'];

@@ -1,5 +1,16 @@
 # CHANGELOG
 
+<<<<<<< Updated upstream
+=======
+## 1.3.0 - 2016-04-13
+
+* Added remaining interfaces needed for full PSR7 compatibility
+  (ServerRequestInterface, UploadedFileInterface, etc.).
+* Added support for stream_for from scalars.
+* Can now extend Uri.
+* Fixed a bug in validating request methods by making it more permissive.
+
+>>>>>>> Stashed changes
 ## 1.2.3 - 2016-02-18
 
 * Fixed support in `GuzzleHttp\Psr7\CachingStream` for seeking forward on remote

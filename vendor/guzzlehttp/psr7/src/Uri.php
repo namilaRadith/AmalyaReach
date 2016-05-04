@@ -174,7 +174,11 @@ class Uri implements UriInterface
             $parts['fragment'] = $relParts['fragment'];
         }
 
+<<<<<<< Updated upstream
         return new self(static::createUriString(
+=======
+        return new self(self::createUriString(
+>>>>>>> Stashed changes
             $parts['scheme'],
             $parts['authority'],
             $parts['path'],
@@ -528,7 +532,11 @@ class Uri implements UriInterface
             return false;
         }
 
+<<<<<<< Updated upstream
         return !isset(static::$schemes[$scheme]) || $port !== static::$schemes[$scheme];
+=======
+        return !isset(self::$schemes[$scheme]) || $port !== self::$schemes[$scheme];
+>>>>>>> Stashed changes
     }
 
     /**
