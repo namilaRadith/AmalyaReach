@@ -47,7 +47,11 @@ class Reservation extends Model {
      * @return mixed
      */
     public static function getReservationDetails(){
-        $reservations = DB::table('tbl_reservation')->orderBy('id','desc')->get();
+
+        $reservations = DB::table('tbl_reservation')
+                            ->orderBy('id','desc')
+                            ->get();
+
         return $reservations;
     }
 

@@ -328,44 +328,46 @@ desired effect
                 <li class="treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Reservations</span> <i
                                 class="fa fa-angle-left pull-right"></i></a>
-                    <a href="#"><i class="fa fa-link"></i> <span>Accommodations</span> <i
-                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="view_all_reservations">View All</a></li>
                     </ul>
                 </li>
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Event Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="admin_event_reports_room">Room Reservations</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Markups</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="admin_add_markups">Add Markups</a></li>
+                    </ul>
+                </li>
+
+                <!--Dinning Area -->
                 <li class="treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Dinning</span> <i
-                                class="fa fa-angle-left pull-right"></i></a>
-                    <a href="#"><i class="fa fa-link"></i> <span>Event Reports</span> <i
                                 class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="{{action('dinningController@diningMenu')}}">Dinning Menu</a></li>
                         <li><a href="{{action('dinningController@diningAddMenuForm')}}">Add Dinning Menu</a></li>
                         <li><a href="{{action('dinningController@viewDinningReservations')}}">Dinning Reservations</a>
                         </li>
-                        <li><a href="admin_event_reports_room">Room Reservations</a></li>
                     </ul>
                 </li>
+
+                <!--Meetings Area -->
                 <li class="treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Meetings</span> <i
                                 class="fa fa-angle-left pull-right"></i></a>
-                    <a href="#"><i class="fa fa-link"></i> <span>Markups</span> <i
-                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="admin_add_markups">Add Markups</a></li>
+                        <li><a href="{{action('meetingsController@meetingResAdminPg')}}">Meetings Reservations</a></li>
                     </ul>
                 </li>
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Accommodations</span> <i
-                                class="fa fa-angle-left pull-right"></i></a>
-                    <a href="#"><i class="fa fa-link"></i> <span>Accommodations</span> <i
-                                class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="#">Add New Accommodation</a></li>
-                        <li><a href="#">Add New Accommodation</a></li>
-                    </ul>
-                </li>
+
 
 
                 <!--Pool Area -->

@@ -192,8 +192,6 @@
                                     <th>Check In</th>
                                     <th>Check Out</th>
                                     <th>Room No</th>
-                                    <th>Name</th>
-                                    <th>Phone Number</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -204,8 +202,6 @@
                                     <td><span class="label label-primary">{{ $res->check_in  }}</span></td>
                                     <td><span class="label label-primary">{{ $res->check_out }}</span></td>
                                     <td>{{ $res->selected_room_id }}</td>
-                                    <td>{{ \App\Customer::getCustomerName($res->customer_id) }}</td>
-                                    <td>{{ \App\Customer::getCustomerContactNumber($res->customer_id) }}</td>
                                 </tr>
                                 @endforeach
 
@@ -242,8 +238,6 @@
                                     <th>Check In</th>
                                     <th>Check Out</th>
                                     <th>Room No</th>
-                                    <th>Name</th>
-                                    <th>Phone Number</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -253,8 +247,6 @@
                                         <td><span class="label label-success">{{ $this_month_reservation['check_in']  }}</span></td>
                                         <td><span class="label label-success">{{ $this_month_reservation['check_out'] }}</span></td>
                                         <td>{{ $res->selected_room_id }}</td>
-                                        <td>{{ \App\Customer::getCustomerName($res->customer_id) }}</td>
-                                        <td>{{ \App\Customer::getCustomerContactNumber( $this_month_reservation['customer_id']) }}</td>
                                     </tr>
                                 @endforeach
 
@@ -292,8 +284,6 @@
                                     <th>Check In</th>
                                     <th>Check Out</th>
                                     <th>Room No</th>
-                                    <th>Name</th>
-                                    <th>Phone Number</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -304,8 +294,6 @@
                                         <td><span class="label label-warning">{{ $res->check_in  }}</span></td>
                                         <td><span class="label label-warning">{{ $res->check_out }}</span></td>
                                         <td>{{ $res->selected_room_id }}</td>
-                                        <td>{{ \App\Customer::getCustomerName($res->customer_id) }}</td>
-                                        <td>{{ \App\Customer::getCustomerContactNumber($res->customer_id) }}</td>
                                     </tr>
                                 @endforeach
 

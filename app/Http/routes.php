@@ -280,6 +280,25 @@ Route::get('adminRemoveMarkup_{id}','adminReservationController@adminAddMarkupsR
 
 
 
+
+
+
+
+
+
+Route::get('contact', 'AboutController@getContact');
+Route::post('contact', 'AboutController@getContactUsForm');
+
+//cutomer feedbacks
+Route::get('feedback', 'feedbackController@index');
+Route::get('feedback/create', 'feedbackController@create');
+Route::get('feedback/{recordId}', 'feedbackController@show');
+Route::post('feedback', 'feedbackController@store');
+
+
+//specials
+Route::get('specials','specialsController@specialsHome');
+
 //Swimmng pool
 Route::get('pool','poolController@checkAvailability');
 Route::post('poolReservation','poolController@poolReservation');
@@ -293,45 +312,46 @@ Route::get('rejectPoolRes/{id}','poolController@rejectPoolRes');
 //registed route for Client diining reservaton page
 Route::get('dinningReservation','dinningController@dinningReservation');
 
-//specials
-Route::post('poolFormSubmit','specialsController@specialsHome');
-
-/*
-
-Route::get('checkAvailableRoomsForm2','ReservationController@checkAvailableRoomsForm2');
-Route::get('reservationDetailsForm3','ReservationController@reservationDetailsForm3');
-
-Route::get('selectRoomFormReservation','ReservationController@selectRoomFormReservation');
-//Route::post('reservationForm3Submit','ReservationController@reservationForm3Submit');
-//Route::post('reservationForm3Submit','PaypalPaymentController@makePayPalPayment');
-
-//PalPal Payment
-Route::get('successPayment', 'PaypalPaymentController@successPayment');
-Route::get('testPaypal', 'PaypalPaymentController@testPaypal');
-
-//sameera test routes
-Route::post('xxxx','PaypalPaymentController@showPayment');
-Route::post('reservationForm3Submiting','ReservationController@finalformsubmittest');
-*/
+//registed route for Client diining reservaton form submit
+Route::post('diningReservationSubmit','dinningController@diningReservationSubmit');
 
 
 
 
 
+
+//registed route for Client to view dinning menu
+Route::get('dinningMenuDisplay','dinningController@dinningMenuDisplay');
+
+
+//dinning Admin
+//registed route for admin to add  dinning menu
+Route::get('diningAddMenu','dinningController@diningAddMenuForm');
+
+//registed route for admin to submit dinning menu add from
+Route::post('diningAddMenuSubmit','dinningController@diningAddMenu');
+
+//registed route for admin to view dinning menu
+Route::get('diningMenu','dinningController@diningMenu');
+
+//registed route for admin dinning menu edit form submit
+Route::post('diningMenu/{id}/edit','dinningController@updateDiningItem');
+
+
+//registed route for admin to edit  dinning menu
+Route::get('diningMenuEdit/{id}','dinningController@diningMenuEdit');
+
+
+
+//registed route for admin dinning menu delete
+Route::get('diningMenuUpdate/{id}/delete','dinningController@deleteFoodItem');
 
 //registed route for admin to view dinning reservations
 Route::get('viewDinningReservations','dinningController@viewDinningReservations');
 
-Route::get('contact', 'AboutController@getContact');
-Route::post('contact', 'AboutController@getContactUsForm');
 //registed route for admin to send acceptence email
 Route::get('confirmDining/{id}','dinningController@confirmDinningRes');
 
-//cutomer feedbacks
-Route::get('feedback', 'feedbackController@index');
-Route::get('feedback/create', 'feedbackController@create');
-Route::get('feedback/{recordId}', 'feedbackController@show');
-Route::post('feedback', 'feedbackController@store');
 
 //registed route for admin to send rejection email
 Route::get('rejectDining/{id}','dinningController@rejectDinningRes');
@@ -341,12 +361,13 @@ Route::get('rejectDining/{id}','dinningController@rejectDinningRes');
 //registed route for admin to view detailed dinning reservations
 Route::get('dinningRes/view/{id}','dinningController@viewMoreDinningRes');
 
-//
-Route::get('specials','');
 
+//meeting client
+//registed route for client to navigate to meeting request form
+Route::get('meetingReservation','meetingsController@meetingsReservation');
 
-//Promotions Routing
-Route::get('admin_add_promotion', 'AdminPromotions@index');
+//registed route for clients meetings request form
+Route::get('meetingReservationForm','meetingsController@meetingsReservationForm');
 
 //registed route for clients meetings request form submit
 Route::post('meetingResFormSubmit','meetingsController@meetingsResFormSubmit');
@@ -360,24 +381,13 @@ Route::get('meetingResAccept/{id}','meetingsController@confirmMeeting');
 //registed route for send meeting rejection email
 Route::get('meetingResReject/{id}','meetingsController@rejectMeeting');
 
-//registed route for admin to view dinning menu
-Route::get('diningMenu','dinningController@diningMenu');
 
-//registed route for admin to add  dinning menu
-Route::get('diningAddMenu','dinningController@diningAddMenuForm');
 
 //meeting admin
 Route::get('meetingRes/viewRes/{id}','meetingsController@viewMeetingRes');
 
-//registed route for Client to view dinning menu
-Route::get('dinningMenuDisplay','dinningController@dinningMenuDisplay');
-
-//meeting client
-//registed route for client to navigate to meeting request form
-Route::get('meetingReservation','meetingsController@meetingsReservation');
-//registed route for clients meetings request form
-Route::get('meetingReservationForm','meetingsController@meetingsReservationForm');
 
 
 //Show Admin notifications
 Route::get('adminNotify','AdminDashboardController@showNotifications');
+

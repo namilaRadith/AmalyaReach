@@ -298,10 +298,38 @@ display:none;
 <script src="{{asset('/client/js/jquery-ui.min.js')}}"></script>
 <script>
 
-    function submitForm() {
-        alert("Reservation Completed!");
+    function submitForm(){
 
-        document.getElementById("poolReservationForm").submit();
+        $(function () {
+            var dialog,
+
+                    dialog = $("#sucessMsgPopUp").dialog({
+                        autoOpen: false,
+                        modal: true,
+
+                    });
+
+            $("#btnPoolRes").button().on("click", function () {
+                dialog.dialog("open");
+                $(".wrap").css({
+                    overflow: 'hidden',
+                    opacity: .3,
+
+                });
+                $("body").css({
+                    backgroundColor: 'dimgray'
+
+                });
+            });
+
+            $("#btnSucessMsgClose").button().on("click", function () {
+                $('#poolReservationForm').submit();
+                dialog.dialog("close");
+
+            });
+
+        });
+
     }
 
 </script>
