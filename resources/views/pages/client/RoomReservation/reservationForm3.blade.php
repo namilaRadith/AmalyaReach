@@ -101,10 +101,10 @@
                                                 <th>Total</th>
                                             </tr>
                                             <tr>
-                                                <td>$ {{ $room->price }}</td>
+                                                <td>{{ \App\Reservation::getUserCurrency() }}&nbsp; {{ \App\Reservation::getConvertedPrice($room->price) }}</td>
                                                 <td>1</td>
-                                                <td>$ 0.00</td>
-                                                <td>$ {{ $room->price }}</td>
+                                                <td>{{ \App\Reservation::getUserCurrency() }} 0.00</td>
+                                                <td>{{ \App\Reservation::getUserCurrency() }}&nbsp; {{ \App\Reservation::getConvertedPrice($room->price) }}</td>
                                             </tr>
                                         </table>
                                     </div>
@@ -149,6 +149,7 @@
                                     <div class="col-md-9 col-sm-9">
                                         <div class="form-group">
                                             <label>First Name</label><label id="first_name_error_label" name="first_name_error_label"></label>
+                                            <input type="hidden" name="token" id="token" value="{{ csrf_token() }}">
                                             @if( $u_logged_status == "success")
                                                 <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter First Name" value="{{ Session::get('u_name') }}">
                                             @else
@@ -624,8 +625,48 @@
             result = false;
         }
 
-
         return result;
+        
+
+//        //return result;
+//
+//        if(result == true){
+//
+//            var CSRF_TOKEN  = document.getElementById("token").value;
+//
+//
+//
+//            $.ajax({
+//                url: 'saveCustomerDetails_',
+//                type: 'GET',
+//                data: {_token: CSRF_TOKEN , email: email, fname:first_name, lname: last_name,phone: phone},
+//                dataType: 'JSON',
+//                success: function (data) {
+//                }
+//            });
+//
+//
+//
+//
+//
+//
+//
+//            return result;
+//        }else{
+//            return result;
+//        }
+
+
+
+
+
+
+
+
+
+
+
+
 
     });
 

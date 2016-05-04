@@ -48,12 +48,20 @@ class Room extends Model {
         $need_days = Reservation::getDateRange($checkIn,$checkOut, "+1 day", "d-m-Y");
         $selected_rooms = array();
 
+
+
+
+        var_dump($need_days);
+
         foreach($rooms as $room){
 
             $room_id = $room->id;
             $status = true;
 
             foreach($need_days as $need_day){
+
+
+
 
                 $res = DB::table('tbl_room_booking_controll')
                             ->where('room_id','=',$room_id)
@@ -65,7 +73,9 @@ class Room extends Model {
                 }
             }
 
-            if($status){
+
+
+            if($status == true){
                 $selected_rooms[] = array(
                     "id" => $room->id,
                     "name" => $room->name,
@@ -82,7 +92,6 @@ class Room extends Model {
 
 
         }
-
 
 
 
@@ -214,6 +223,10 @@ class Room extends Model {
         }
     }
 
+
+    public static function removeMarkup($id){
+        DB::table('tbl_markups')->where('id', '=', $id)->delete();
+    }
 
 
 }

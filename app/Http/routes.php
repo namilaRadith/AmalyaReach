@@ -250,10 +250,28 @@ Route::get('admin_event_reports_wedding','adminReservationController@adminEventR
 Route::get('admin_event_reports_pool','adminReservationController@adminEventReportsPool');
 
 //Test
-Route::get('/testt','adminReservationController@test');
+Route::get('/testt_{amount}_{from}_{to}','adminReservationController@test');
+
+//Admin add markups
+Route::get('admin_add_markups','adminReservationController@adminAddMarkups');
+
+Route::post('addNewMarkup','adminReservationController@adminAddMarkupsSubmit');
+
+Route::get('getDetailsForMarkup_{id}','adminReservationController@adminAddMarkupsSubmitAjax');
+
+Route::get('saveCustomerDetails_','ReservationController@saveCustomerAjax');
+//Route::get('saveCustomerDetails','ReservationController@saveCustomerAjaxx');
+
+
+
+Route::get('adminRemoveMarkup_{id}','adminReservationController@adminAddMarkupsRemove');
+
+
+
 
 //Defaulf error route
 Route::get('/{id}','adminReservationController@errorPage');
+
 
 
 /*

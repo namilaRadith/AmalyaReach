@@ -3,7 +3,7 @@
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use DB;
-
+use App\CustomClasses\CurrencyConverterFacade;
 
 class Reservation extends Model {
 
@@ -271,13 +271,11 @@ class Reservation extends Model {
             }
         }
 
-
         return $this_month_reservations;
-
-
     }
 
     public static function currencyConverter($amount,$from_Currency,$to_Currency){
+
 
         $amount = urlencode($amount);
         $from_Currency = urlencode($from_Currency);
@@ -288,5 +286,77 @@ class Reservation extends Model {
         $converted_amount = preg_replace("/[^0-9\.]/", null, $get[0]);
 
         return $converted_amount;
+
+
+
     }
+
+    public static function getUserCurrency(){
+        $currency = session()->get('user_currency_type');
+        return $currency;
+    }
+
+    public static function getConvertedPrice($amount){
+
+        $currency = session()->get('user_currency_type');
+
+
+        $count = DB::table('tbl_currency_types')->where('from','=',"USD")->where('to','=',$currency)->count();
+
+        if($count == 1){
+            $rate = DB::table('tbl_currency_types')->where('from','=',"USD")->where('to','=',$currency)->pluck('value');
+        }else{
+
+            $facade = new CurrencyConverterFacade();
+
+            $facade->setCurrencyFrom("USD");
+            $facade->setCurrencyTo($currency);
+            $rate = $facade->getExchangeRate();
+        }
+
+
+
+        $new =  $rate * $amount;
+
+        return number_format((float)$new, 2, '.', '');
+    }
+
+    public static function getRoomMarkup($id){
+        $count = DB::table('tbl_markups')->where('room_id','=',$id)->count();
+        if($count == 1){
+            $percentage = DB::table('tbl_markups')->where('room_id','=',$id)->pluck('markup_percentage');
+            return $percentage;
+        }else{
+            return -1;
+        }
+    }
+
+    public static function getMarkupAddedPrice($room_price,$room_markup){
+
+        if($room_markup == -1){
+            $new_price = $room_price;
+        }else{
+            $new_price = $room_price + ($room_price * $room_markup / 100.0);
+        }
+
+        return $new_price;
+    }
+
+
+    public static function insertMarkup($roomID,$percantage,$date){
+
+         DB::table('tbl_markups')->insert(
+            [
+                'room_id' => $roomID,
+                'markup_percentage' => $percantage,
+                'date' => $date
+            ]);
+
+    }
+
+    public static function getRoomDetails($id){
+        return DB::table('tbl_rooms')->where('id','=',$id)->get();
+    }
+
+
 }

@@ -32,7 +32,7 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		$s =  SliderImage::all();
+		$s =  SliderImage::getAll();
 		return view('pages.client.clientIndex',array('imageList' => $s));
 	}
 

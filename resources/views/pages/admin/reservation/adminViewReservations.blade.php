@@ -74,7 +74,7 @@
                                     </a>
                                     @if($reservation->called_status == 0)
                                         <a href="markReservationAsCalled_{{ $reservation->id }}">
-                                            <span class="label label-warning">Mark As Contacted</span>
+                                            <span class="label label-success">Mark As Contacted</span>
                                         </a>
                                     @endif
                                 @else
@@ -82,12 +82,12 @@
                                         <span class="label label-warning">Recover</span>
                                     </a>
                                 @endif
-                                <a href="">
-                                    <span class="label label-primary">Mail</span>
-                                </a>
-                                <a href="">
-                                    <span class="label label-success">SMS</span>
-                                </a>
+                                {{--<a href="">--}}
+                                    {{--<span class="label label-primary">Mail</span>--}}
+                                {{--</a>--}}
+                                {{--<a href="">--}}
+                                    {{--<span class="label label-success">SMS</span>--}}
+                                {{--</a>--}}
                             </td>
                         </tr>
                     @endforeach

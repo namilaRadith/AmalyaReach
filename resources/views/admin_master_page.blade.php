@@ -335,9 +335,12 @@ desired effect
                     <a href="#"><i class="fa fa-link"></i> <span>Event Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="admin_event_reports_room">Room Reservations</a></li>
-                        <li><a href="admin_event_reports_dining">Dining Reservations</a></li>
-                        <li><a href="admin_event_reports_wedding">Wedding Reservations</a></li>
-                        <li><a href="admin_event_reports_pool">Pool Reservations</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Markups</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="admin_add_markups">Add Markups</a></li>
                     </ul>
                 </li>
                 <li class="treeview">

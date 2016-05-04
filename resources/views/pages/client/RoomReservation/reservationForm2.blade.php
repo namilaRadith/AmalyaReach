@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="rooms_list_desc">
-                                        <h3><strong>xffd</strong></h3>
+                                        <h3><strong>{{ $room["name"] }}</strong></h3>
                                         <p>
                                             {{ $room["description"]  }}
                                         </p>
@@ -92,7 +92,19 @@
                                 <div class="col-lg-2 col-md-2 col-sm-2">
                                     <div class="price_list">
                                         <div>
-                                            <sup>$</sup>{{ $room["price"] }}<span class="normal_price_list">$99</span><small>*Pax/Per night</small>
+                                            <span style="font-size: 20px">
+                                                <?php
+                                                       $room_price = \App\Reservation::getConvertedPrice($room["price"]);
+                                                       $room_markup =  \App\Reservation::getRoomMarkup($room['id']);
+                                                       $final_price = \App\Reservation::getMarkupAddedPrice($room_price,$room_markup);
+                                                       $final_updated = number_format((float)$final_price, 2, '.', '');
+                                                ?>
+
+                                                {{ $final_updated }}&nbsp;<sup><span style="font-size: 12px">{{ \App\Reservation::getUserCurrency() }}</span></sup>
+
+                                            </span>
+                                            <br/>
+                                            <small>*Pax/Per night</small>
                                             <small>
                                                 <input type="submit" value="Select" class="btn_1" id="submit-contact">
                                             </small>
@@ -130,8 +142,8 @@
                 <div class=" box_style_2">
                     <i class="icon_set_1_icon-90"></i>
                     <h4>Need help? Call us</h4>
-                    <a href="tel://004542344599" class="phone">+45 423 445 99</a>
-                    <small>Monday to Friday 9.00am - 7.30pm</small>
+                    <a href="tel://004542344599" class="phone">+9411 440 40</a>
+                    <small>Monday to Friday 6.00am - 11.00pm</small>
                 </div>
             </div><!-- End col-lg-3 -->
 

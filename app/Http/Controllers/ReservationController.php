@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 
+use App\Customer;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CheckForAvailableRoomsRequest;
@@ -14,8 +15,7 @@ use Redirect;
 use Mail;
 use Illuminate\Support\Facades\File;
 use App\Subscriber;
-
-
+use Input;
 
 class ReservationController extends Controller {
 
@@ -44,6 +44,7 @@ class ReservationController extends Controller {
         session()->put('children', Request::get('children'));
         session()->put('roomType', Request::get('roomType'));
         session()->put('roomTypeValue', Room::getRoomTypeValue(Request::get('roomType')));
+        session()->put('user_currency_type', Request::get('currencyType'));
 
         $rooms = Room::getRoomsByTypeFilter(Request::get('roomType'),Request::get('checkIn'),Request::get('checkOut'));
 
@@ -152,7 +153,6 @@ class ReservationController extends Controller {
             ->setBody($body, 'text/html');
 
         $numSent = $mailler->send($message);
-
         return $numSent;
 
     }
@@ -177,8 +177,9 @@ class ReservationController extends Controller {
 
         $rid = Reservation::createNewReservation($selected_room_id,$selected_room_type,$u_id,$checkIn,$checkOut,$adults,$children,$price);
 
-        $customer_name = Auth::user()->name;
+        $customer_name = session()->get('u_name');
         $room_type = Room::getRoomTypeValue($selected_room_type);
+
 
 
 
@@ -196,7 +197,7 @@ class ReservationController extends Controller {
         //Send Success Email
 
         $subject = "Room Booking Successful - Amalya Reach";
-        $sendTo = Auth::user()->email;
+        $sendTo =  session()->get('u_email');
         $body = "We are happy to inform you about your payment & reservation at Amalya Reach is successful.";
         $body .= "<br>";
         $body .= "<br>";
@@ -271,6 +272,31 @@ class ReservationController extends Controller {
             ->with('checkIn',$checkIn)
             ->with('checkOut',$checkOut);
 
+    }
+
+
+    public function saveCustomerAjax(){
+
+        $e = Input::get('email');
+        $f = Input::get('fname');
+        $l = Input::get('lname');
+        $p = Input::get('phone');
+
+        $status = Customer::checkcustomer($e);
+
+        if($status == 1){
+            $cid =  Customer::getCustomerId($e);
+            session()->put('u_id',$cid);
+        }else{
+            Customer::createNewCustomer($f,$l,$e,$p);
+        }
+
+        return json_encode($e);
+    }
+
+
+    public function saveCustomerAjaxx(){
+        return json_encode("saa");
     }
 
 
@@ -385,6 +411,7 @@ class ReservationController extends Controller {
     public function finalformsubmittest(Requests\PaymentFormRequest $request){
         return "sameera";
     }
+
 
 }
 

@@ -24,6 +24,9 @@
 <div class="tp-banner-container">
 	<div class="tp-banner">
 		<ul>
+			<?php
+			if(isset($imageList)){
+			?>
 			@foreach($imageList as $data)
 			<!-- SLIDE  -->
 			<li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
@@ -43,7 +46,9 @@
 				</div>
 			</li>
 			@endforeach
-
+			<?php
+			}
+			?>
 		</ul>
 
 	</div>
@@ -118,6 +123,20 @@
 								</div>
 							</div>
 						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label style="color:white;">Currency Type</label>
+									<select class="form-control" name="currencyType" id="currencyType">
+										<option value="USD">USD</option>
+										<option value="LKR">LKR</option>
+										<option value="AUD">AUD</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
 
 						<div class="col-md-12 col-sm-12" style="color: red">
 							<div class="form-group" id="error_div_room_type" name="error_div_room_type">
@@ -539,6 +558,10 @@
 				result = false;
 			}
 
+			if(adults==0 && children>0){
+				document.getElementById('error_div_count').innerHTML += "* Children can't order rooms without elder...";
+				result = false;
+			}
 
 			if(roomType == 1){
 				if(people_count != 1){
@@ -612,6 +635,8 @@
 
 <!-- Specific scripts -->
 <script src="{{asset('/client/js/quantity-bt.js')}}"></script>
+
 <script src="{{asset('/client/js/bootstrap-datepicker.js')}}"></script>
-<script>$('input.date-pick').datepicker();</script>
+
+	<script>$('input.date-pick').datepicker();</script>
 @stop
