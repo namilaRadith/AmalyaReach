@@ -71,7 +71,9 @@ display:none;
     <div class="row">
         <div class="col-md-9">
 
-            <form method="post" action="poolFormSubmit" id="poolReservationForm"><input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <form method="post" action="poolFormSubmit" id="poolReservationForm">
+
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                 <div class="panel panel-default">
                     <div class="panel-heading">Your Selection</div>
@@ -219,8 +221,9 @@ display:none;
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
+
+            </form>
+        </div>
 
         <div class="col-md-3">
             <div class="box_style_1">
@@ -295,39 +298,12 @@ display:none;
 <script src="{{asset('/client/js/jquery-ui.min.js')}}"></script>
 <script>
 
-    function submitForm(){
+    function submitForm() {
+        alert("Reservation Completed!");
 
-    $(function () {
-        var dialog,
-
-                dialog = $("#sucessMsgPopUp").dialog({
-                    autoOpen: false,
-                    modal: true,
-
-                });
-
-        $("#btnPoolRes").button().on("click", function () {
-            dialog.dialog("open");
-            $(".wrap").css({
-                overflow: 'hidden',
-                opacity: .3,
-
-            });
-            $("body").css({
-                backgroundColor: 'dimgray'
-
-            });
-        });
-
-        $("#btnSucessMsgClose").button().on("click", function () {
-            $('#poolReservationForm').submit();
-            dialog.dialog("close");
-
-        });
-
-      });
-
+        document.getElementById("poolReservationForm").submit();
     }
+
 </script>
 
 

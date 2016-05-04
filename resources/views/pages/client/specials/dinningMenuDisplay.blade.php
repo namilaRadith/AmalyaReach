@@ -43,7 +43,7 @@
                                                 <td>{{$diningMenuCat1->quantitiy}}</td>
                                             </div>
                                             <div class="col-sm-4">
-                                                <td>{{$diningMenuCat1->price}}</td>
+                                                <td>{{$diningMenuCat1->price}}.00</td>
                                             </div>
                                         </div>
                                     </tr>
@@ -69,7 +69,7 @@
                                                 <td>{{$diningMenuCat2->quantitiy}}</td>
                                             </div>
                                             <div class="col-sm-4">
-                                                <td>{{$diningMenuCat2->price}}</td>
+                                                <td>{{$diningMenuCat2->price}}.00</td>
                                             </div>
                                         </div>
                                     </tr>
@@ -95,7 +95,7 @@
                                                 <td>{{$diningMenuCat6->quantitiy}}</td>
                                             </div>
                                             <div class="col-sm-4">
-                                                <td>{{$diningMenuCat6->price}}</td>
+                                                <td>{{$diningMenuCat6->price}}.00</td>
                                             </div>
                                         </div>
                                     </tr>
@@ -120,7 +120,7 @@
                                                 <td>{{$diningMenuCat3->quantitiy}}</td>
                                             </div>
                                             <div class="col-sm-4">
-                                                <td>{{$diningMenuCat3->price}}</td>
+                                                <td>{{$diningMenuCat3->price}}.00</td>
                                             </div>
                                         </div>
                                     </tr>

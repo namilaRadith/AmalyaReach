@@ -329,7 +329,6 @@
                                                 <div class="form-group">
                                                     <select class="form-control" id="expiration_year" name="expiration_year">
                                                         <option value="0">Year</option>
-                                                        <option value="2015">2015</option>
                                                         <option value="2016">2016</option>
                                                         <option value="2017">2017</option>
                                                         <option value="2018">2018</option>

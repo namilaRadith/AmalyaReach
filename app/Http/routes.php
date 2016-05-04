@@ -293,7 +293,8 @@ Route::get('rejectPoolRes/{id}','poolController@rejectPoolRes');
 //registed route for Client diining reservaton page
 Route::get('dinningReservation','dinningController@dinningReservation');
 
-
+//specials
+Route::post('poolFormSubmit','specialsController@specialsHome');
 
 /*
 

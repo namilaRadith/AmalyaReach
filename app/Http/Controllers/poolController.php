@@ -140,8 +140,8 @@ class poolController extends Controller
             poolReservation::insertToPoolCheckAvailability($reservationDate, $id);
         }
 
-        return redirect()->action('specialsController@specialsHome');
-
+        //return redirect()->action('specialsController@specialsHome');
+        return view('pages.client.specials.specialsHome');
     }
 
 
