@@ -12,7 +12,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @section('css_ref')
-    <!-- Bootstrap 3.3.5 -->
+            <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{ asset('/admin/bootstrap/css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -65,10 +65,11 @@ desired effect
 -->
 <style>
     label.error {
-        color:red;
+        color: red;
     }
+
     input.error {
-        border:1px solid red;
+        border: 1px solid red;
     }
 
 </style>
@@ -112,7 +113,8 @@ desired effect
                                         <a href="#">
                                             <div class="pull-left">
                                                 <!-- User Image -->
-                                                <img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+                                                <img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}"
+                                                     class="img-circle" alt="User Image">
                                             </div>
                                             <!-- Message title and timestamp -->
                                             <h4>
@@ -177,7 +179,9 @@ desired effect
                                             <!-- The progress bar -->
                                             <div class="progress xs">
                                                 <!-- Change the css width attribute to simulate progress -->
-                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%"
+                                                     role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                     aria-valuemax="100">
                                                     <span class="sr-only">20% Complete</span>
                                                 </div>
                                             </div>
@@ -196,14 +200,16 @@ desired effect
                         <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!-- The user image in the navbar-->
-                            <img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
+                            <img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}" class="user-image"
+                                 alt="User Image">
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
                             <span class="hidden-xs">Alexander Pierce</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
                             <li class="user-header">
-                                <img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+                                <img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle"
+                                     alt="User Image">
 
                                 <p>
                                     Alexander Pierce - Web Developer
@@ -274,11 +280,13 @@ desired effect
                 <li class="header">Amalya Reach Admin Panel</li>
                 <!-- Tree View Dashboard -->
                 <li class=" {{Request::segment(1) === 'dashboard' ? 'active' : '' }} treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Dashboard</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="#">Home Page</a>
                             <ul class="treeview-menu">
-                                <li class="#"><a href="{{action('AdminDashboardController@showImageSlider')}}"><i class="fa fa-circle-o"></i>Slider Images</a></li>
+                                <li class="#"><a href="{{action('AdminDashboardController@showImageSlider')}}"><i
+                                                class="fa fa-circle-o"></i>Slider Images</a></li>
 
                             </ul>
                         </li>
@@ -287,10 +295,15 @@ desired effect
                         <li><a href="#">Facilities Page</a></li>
                         <li><a href="#">Functions Page</a></li>
                         <li><a href="{{action('AdminDashboardController@showContactUs')}}">Contact-Us Page</a></li>
-                        <li class="{{Request::segment(2) === 'gallery' ? 'active' : '' }}"><a href="#">Gallery Page<i class="fa fa-angle-left pull-right"></i></a>
+                        <li class="{{Request::segment(2) === 'gallery' ? 'active' : '' }}"><a href="#">Gallery Page<i
+                                        class="fa fa-angle-left pull-right"></i></a>
                             <ul class="treeview-menu">
-                                <li class="{{Request::segment(3) ==='img-gallery' ? 'active' : '' }}"><a  href="{{action('AdminDashboardController@showImageGallery')}}" ><i class="fa fa-circle-o"></i> Photo Gallery </a></li>
-                                <li class="{{Request::segment(3) ==='vd-gallery' ? 'active' : '' }}"><a href="{{action('AdminDashboardController@showVideoGallery')}}"><i class="fa fa-circle-o"></i> Video Gallery</a></li>
+                                <li class="{{Request::segment(3) ==='img-gallery' ? 'active' : '' }}"><a
+                                            href="{{action('AdminDashboardController@showImageGallery')}}"><i
+                                                class="fa fa-circle-o"></i> Photo Gallery </a></li>
+                                <li class="{{Request::segment(3) ==='vd-gallery' ? 'active' : '' }}"><a
+                                            href="{{action('AdminDashboardController@showVideoGallery')}}"><i
+                                                class="fa fa-circle-o"></i> Video Gallery</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -299,28 +312,32 @@ desired effect
 
                 <!-- Promotions area  -->
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Promotions</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Promotions</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="">Add Promotion</a></li>
                     </ul>
                 </li>
 
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Loyalty</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Loyalty</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                     </ul>
                 </li>
 
                 <!-- Rooms -->
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Rooms</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Rooms</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="adminRoomsHome">Rooms Home</a></li>
                         <li><a href="adminAddNewRooms">Add New Room</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Accommodations</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Accommodations</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="#">Add New Accommodation</a></li>
                         <li><a href="#">Add New Accommodation</a></li>
@@ -328,17 +345,20 @@ desired effect
                 </li>
 
                 <li class="{{Request::segment(1) === 'newsletter' ? 'active' : '' }} treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>News Letter</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>News Letter</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li class="{{Request::segment(2) === 'create' ? 'active' : '' }}">
-                            <a href="{{action('AdminDashboardController@showCreateNewsLetter')}}">Create News Letter </a>
+                            <a href="{{action('AdminDashboardController@showCreateNewsLetter')}}">Create News
+                                Letter </a>
                         </li>
                         <li><a href="#">View News Letters</a></li>
                     </ul>
                 </li>
 
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Users</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Users</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="{{action('AdminDashboardController@listAllUsers')}}">View all users</a></li>
                         <li><a href="{{action('AdminDashboardController@showAddPowerUser')}}">Add Power users</a></li>
@@ -346,21 +366,24 @@ desired effect
                 </li>
 
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Subscribers</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Subscribers</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="#">List All Subscribers</a></li>
                     </ul>
                 </li>
 
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Customers</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Customers</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="#">List All customers</a></li>
                         <li>
                             <a href="#">Customer reviews</a>
                             <ul class="treeview-menu">
                                 <li><a href="#">Questioner Results</a></li>
-                                <li><a href="{{action('AdminDashboardController@showManageQuestioners')}}">Manage Questioner</a></li>
+                                <li><a href="{{action('AdminDashboardController@showManageQuestioners')}}">Manage
+                                        Questioner</a></li>
 
                             </ul>
                         </li>
@@ -385,115 +408,113 @@ desired effect
         <!-- Content Header (Page header) -->
         <section class="content-header">
 
-        @yield('content_header')
+            @yield('content_header')
 
         </section>
 
         <!-- Main content -->
         <section class="content">
 
-        @yield('content')
+            @yield('content')
 
         </section>
 
 
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
 
 
-<!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
-
-
-<!-- Main Footer -->
-<footer class="main-footer">
-<!-- To the right -->
-<div class="pull-right hidden-xs">
-Anything you want
-</div>
-<!-- Default to the left -->
-<strong>Copyright &copy; 2015 <a href="#">Company</a>.</strong> All rights reserved.
-</footer>
-
-<!-- Control Sidebar -->
-<aside class="control-sidebar control-sidebar-dark">
-<!-- Create the tabs -->
-<ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-<li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-<li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-</ul>
-<!-- Tab panes -->
-<div class="tab-content">
-<!-- Home tab content -->
-<div class="tab-pane active" id="control-sidebar-home-tab">
-    <h3 class="control-sidebar-heading">Recent Activity</h3>
-    <ul class="control-sidebar-menu">
-        <li>
-            <a href="javascript::;">
-                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
-                <div class="menu-info">
-                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                    <p>Will be 23 on April 24th</p>
-                </div>
-            </a>
-        </li>
-    </ul>
-    <!-- /.control-sidebar-menu -->
-
-    <h3 class="control-sidebar-heading">Tasks Progress</h3>
-    <ul class="control-sidebar-menu">
-        <li>
-            <a href="javascript::;">
-                <h4 class="control-sidebar-subheading">
-                    Custom Template Design
-                    <span class="label label-danger pull-right">70%</span>
-                </h4>
-
-                <div class="progress progress-xxs">
-                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                </div>
-            </a>
-        </li>
-    </ul>
-    <!-- /.control-sidebar-menu -->
-
-</div>
-<!-- /.tab-pane -->
-<!-- Stats tab content -->
-<div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-<!-- /.tab-pane -->
-<!-- Settings tab content -->
-<div class="tab-pane" id="control-sidebar-settings-tab">
-    <form method="post">
-        <h3 class="control-sidebar-heading">General Settings</h3>
-
-        <div class="form-group">
-            <label class="control-sidebar-subheading">
-                Report panel usage
-                <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-                Some information about this general settings option
-            </p>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+            Anything you want
         </div>
-        <!-- /.form-group -->
-    </form>
-</div>
-<!-- /.tab-pane -->
-</div>
-</aside>
-<!-- /.control-sidebar -->
-<!-- Add the sidebar's background. This div must be placed
-immediately after the control sidebar -->
-<div class="control-sidebar-bg"></div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2015 <a href="#">Company</a>.</strong> All rights reserved.
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div class="tab-pane active" id="control-sidebar-home-tab">
+                <h3 class="control-sidebar-heading">Recent Activity</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript::;">
+                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                                <p>Will be 23 on April 24th</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+                <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript::;">
+                            <h4 class="control-sidebar-subheading">
+                                Custom Template Design
+                                <span class="label label-danger pull-right">70%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+            </div>
+            <!-- /.tab-pane -->
+            <!-- Stats tab content -->
+            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+            <!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <form method="post">
+                    <h3 class="control-sidebar-heading">General Settings</h3>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Report panel usage
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Some information about this general settings option
+                        </p>
+                    </div>
+                    <!-- /.form-group -->
+                </form>
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+    immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
 
 
 <div class="example-modal">
-    <div class="modal "  id="myModal">
+    <div class="modal " id="myModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -518,12 +539,9 @@ immediately after the control sidebar -->
 <!-- /.example-modal -->
 
 
-
-
-
 @section('js_ref')
 
-<!-- REQUIRED JS SCRIPTS -->
+        <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 2.1.4 -->
 <script src="{{asset('/admin/plugins/jQuery/jQuery-2.1.4.min.js')}}"></script>
@@ -533,6 +551,9 @@ immediately after the control sidebar -->
 <script src="{{asset('/admin/dist/js/app.min.js')}}"></script>
 <!-- Sweet Alert -->
 <script src="{{asset('/admin/plugins/sweetAlert/sweetalert.min.js')}}"></script>
+<!-- DataTables -->
+<script src="{{ asset('admin/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
 
 <script type="text/javascript">
     $.ajaxSetup({
@@ -541,33 +562,8 @@ immediately after the control sidebar -->
         }
     });
 
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').focus()
-    })
-
-    function modalCall(messageType,Title,Message){
-
-        $('#myModal').removeClass();
-        $('#myModal').addClass("modal");
-        $('#myModal').addClass("modal-"+messageType);
-        $('#modelTitle').html(Title);
-        $('#modalMessage').html(Message);
-
-        $('#myModal').modal('show');
-
-        setTimeout(function(){
-            $('#myModal').modal('hide');
-        },2000);
-
-    }
 </script>
 
-
-
-
-<!-- DataTables -->
-<script src="{{ asset('admin/plugins/datatables/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('admin/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
 
 <script>
     $(function () {
@@ -594,14 +590,11 @@ immediately after the control sidebar -->
 </script>
 
 
-
 @show
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
+        <!-- Optionally, you can add Slimscroll and FastClick plugins.
 Both of these plugins are recommended to enhance the
 user experience. Slimscroll is required when using the
 fixed layout. -->
-
-
 
 
 </body>

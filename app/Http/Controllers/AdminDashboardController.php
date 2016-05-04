@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Andheiberg\Notify\Facades\Notify;
+use App\Answer;
 use App\Contacts;
 use App\GalleryContent;
 use App\aboutUsPage;
@@ -415,5 +416,11 @@ class AdminDashboardController extends Controller
 
     public function publishQuestioner($id){
         Questioner::makePublic($id);
+    }
+
+    public function viewQuestionerResult($id){
+        //Answer::getUserRatingsCountPerQuestion(21,4);
+       $data = Questioner::getQuestionerResults($id);
+        return view('pages.admin.adminAnalizeQuestioner')->with('data',$data);
     }
 }

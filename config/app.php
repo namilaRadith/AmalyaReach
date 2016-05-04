@@ -187,6 +187,7 @@ return [
 		'Lang'      => 'Illuminate\Support\Facades\Lang',
 		'Log'       => 'Illuminate\Support\Facades\Log',
 		//'Mail'      => 'Illuminate\Support\Facades\Mail',
+		'Socialize' => 'Laravel\Socialite\Facades\Socialite',
 		'Mail' => 'YOzaz\LaravelSwiftmailer\Facade',
 		'Image' => 'Intervention\Image\Facades\Image',
 		'Password'  => 'Illuminate\Support\Facades\Password',

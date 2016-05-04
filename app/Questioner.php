@@ -114,6 +114,37 @@ class Questioner extends Model {
 
     }
 
+    public static function  getQuestionerResults($qid){
+        $userCount[]  = array();
+        $usersFeedBacks[] = array();
+
+        $questioner = Questioner::find($qid);
+        //get all questions
+        $questions = Question::where('questioner_id', '=', $questioner->id)->get();
+
+        $j =0;
+        foreach($questions as $q){
+            for($i = 0 ; $i < 6 ; $i++) {
+                $count = Answer::getUserRatingsCountPerQuestion($q->id,$i);
+//                echo " ";
+//                echo "ID: ".$q->id;
+//                echo " ";
+//                echo "COUNT: ".$count;
+                $userCount['QID_'.$q->id.'_rate_'.$i] =   $count ;
+
+            }
+
+            if($q->question_type == 'A'){
+                $usersFeedBacks[$j] = Answer::getUsersFeedBacks($q->id);
+                ++$j;
+            }
+        }
+
+        return array('questioner'=> $questioner , 'questions'=>$questions , 'userCount' =>$userCount,"usersFeedBacks"=>$usersFeedBacks);
+
+
+    }
+
 
 
 

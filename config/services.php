@@ -34,4 +34,10 @@ return [
 		'secret' => '',
 	],
 
+	'facebook' => [
+		'client_id'     => env('FB_ID'),
+		'client_secret' => env('FB_SECRET'),
+		'redirect'      => env('FB_REDIRECT')
+	]
+
 ];

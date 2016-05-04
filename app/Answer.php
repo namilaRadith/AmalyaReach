@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Answer extends Model {
 
     protected $fillable =['qid','uid','answer'];
@@ -14,19 +15,36 @@ class Answer extends Model {
 
     public static  function addUserFeedback ($data)
     {
-        $userID = \Auth::user()->id;
-        foreach($data['data'] as $d){
-            $answer = new Answer();
-            $answer->uid = $userID;
-            $answer->qid = $d['id'];
-            $answer->answer = $d['value'];
-            $answer->save();
+        try {
+            $userID = \Auth::user()->id;
 
+            foreach ($data['data'] as $d) {
+                $answer = new Answer();
+                $answer->uid = $userID;
+                $answer->qid = $d['id'];
+                $answer->answer = $d['value'];
+                $answer->save();
 
-            //echo $d['id'] ." ". $d['value']."\n";
+            }
+
+            return true;
+
+        } catch (\Exception $e) {
+
+            return false;
         }
 
-        return true;
 
+
+    }
+
+    public static function getUserRatingsCountPerQuestion($questionId,$rateValue){
+        $count = Answer::where('qid', '=', $questionId)->where('answer', '=', $rateValue)->count();
+        return $count;
+    }
+
+    public static  function getUsersFeedBacks($questionId){
+        $feedback = Answer::where('qid', '=', $questionId)->get();
+        return $feedback;
     }
 }

@@ -39,7 +39,7 @@ $(function () {
                 },
                 {"defaultContent": '<button class="btn btn-sm btn-danger center-block "><i class="fa fa-trash-o"></i></button>'} ,
 
-                {"defaultContent": '<button class="btn btn-sm btn-info center-block ">Analyze</button>'}
+                {"defaultContent": '<button id="btnAnalyze" class="btn btn-sm btn-info center-block ">Analyze</button>'}
 
             ],
 
@@ -70,6 +70,19 @@ $(function () {
         console.log(data);
 
         var url = 'manage/edit-questioner/' + data['id'];
+        // do something with the url client side variable, for example redirect
+        window.location.href = url;
+
+
+    });
+
+    //analyze button on click event
+    $('#questionerTable tbody').on('click', '#btnAnalyze', function () {
+
+        var data = table.row($(this).parents('tr')).data();
+        console.log(data);
+
+        var url = 'manage/questioner-result/' + data['id'];
         // do something with the url client side variable, for example redirect
         window.location.href = url;
 

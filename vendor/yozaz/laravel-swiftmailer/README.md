@@ -4,13 +4,22 @@
 [![Total Downloads](https://poser.pugx.org/YOzaz/Laravel-SwiftMailer/downloads.svg)](https://packagist.org/packages/yozaz/laravel-swiftmailer)
 [![License](https://poser.pugx.org/YOzaz/Laravel-SwiftMailer/license.svg)](https://packagist.org/packages/yozaz/laravel-swiftmailer)
 
+## WAS Deprecated...
+
+This package was deprecated, as starting from Laravel 5.0 and above, original Mail class automatically theoretically reconnects on every message. See commit here: [Force reconnection to fix mailing on daemon queues] (https://github.com/laravel/framework/commit/af8eb1face000f82e5c85e6eb822075fc313cbb9).
+
+However, it looks like just calling `stop` on a transport doesn't do full reset, therefore may throw an error - see discussion here:
+https://github.com/laravel/framework/issues/4573#issuecomment-211889196
+
+---
+
 Package, which tries to solve long-term daemon worker issue.
 For reference:
 
 * [swiftmailer/swiftmailer#490](https://github.com/swiftmailer/swiftmailer/issues/490)
 * [laravel/framework#4573](https://github.com/laravel/framework/issues/4573)
 
-Package is compatible with Laravel 4th and 5th versions.
+Compatible with Laravel 4th and 5th versions.
 
 ## Installation
 
@@ -111,3 +120,7 @@ All credits go to [xdecock](https://github.com/xdecock), author of [Swift Mailer
 ## License
 
 Laravel-SwiftMailer package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/YOzaz/laravel-swiftmailer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

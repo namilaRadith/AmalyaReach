@@ -128,11 +128,11 @@
                                         @endif
                                         {{ $i++ }}
                                     @endforeach
-
+                                    <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" onclick="submitFeedback()" class="btn btn-primary" data-dismiss="modal">Save
+                                    <button type="button" onclick="submitFeedback();" class="btn btn-primary" data-dismiss="modal">Save
                                         changes
                                     </button>
                                 </div>
@@ -141,14 +141,6 @@
                     </div>
 
                 @endif
-
-
-
-
-
-
-
-
                 @if(Auth::user()->isAdmin())
                     <a href="{{action('AdminDashboardController@index')}}" id="link_bt">Admin Dashboard</a>
                 @endif
@@ -332,6 +324,9 @@
 @section('js_ref')
         <!-- Common scripts -->
 <script src="{{ asset('/client/js/jquery-1.11.2.min.js')}}"></script>
+<!-- custom ajax scripts -->
+<script src="{{asset('/admin/scripts/ajaxSendingScripts.js')}}"></script>
+
 <script src="{{ asset('/client/js/common_scripts_min.js')}}"></script>
 <script src="{{ asset('/client/js/functions.js')}}"></script>
 <script src="{{ asset('/client/assets/validate.js')}}"></script>
@@ -346,78 +341,8 @@
 <script src="{{asset('/admin/plugins/sweetAlert/sweetalert.min.js')}}"></script>
 <!-- Star Rating JS -->
 <script src="{{asset('/admin/plugins/bootstrap-star-rating/js/star-rating.min.js')}}"></script>
-<script>
-
-    $(document).ready(function () {
-        $("#newsletter_5").validate({
-            //set rules
-            rules: {
-                email_newsletter_5: {
-                    required: true,
-                    email: true,
 
 
-                }
-
-            },
-
-            //set messages
-            messages: {
-                email_newsletter_5: {
-                    required: "Please enter email address",
-                    email: "Please enter valid email address",
-
-                }
-            }
-        });
-
-
-        //listen submit event
-        $("#newsletter_5").submit(function (e) {
-            //check is validation successes
-            if ($("#newsletter_5").valid()) {
-                // CSRF protection
-                $.ajaxSetup(
-                        {
-                            headers: {
-                                'X-CSRF-Token': $('input[name="_token"]').val()
-                            }
-                        });
-
-
-                //create and senf ajax request to the server
-                $.ajax({
-
-                    method: "post",
-                    url: '/add-subscriber',
-                    data: {
-                        email: $("#email_newsletter_5").val(),
-
-
-                    },
-
-                    //on success remove loading animation & clear fields
-                    success: function (data) {
-                        $("#email_newsletter_5").val('');
-                        //alert(data);
-                        swal("success!", data, "success")
-                    }
-
-
-                });
-
-            }
-
-            // stop the form from submitting the normal way and refreshing the page
-            event.preventDefault();
-
-        });
-
-
-    });
-
-
-</script>
 <script>
     @if (Notify::has('success'))
 swal("success!", "{{ Notify::first('success') }}", "success");
@@ -436,63 +361,6 @@ swal("success!", "{{ Notify::first('success') }}", "success");
         swal("info!", "{{ Notify::first('info') }}", "info");
     @endif
 
-    function submitFeedback() {
-        console.log("Length : " + $('input[id^="feedback-"]').length);
-
-        JSONAsnwers = [];
-
-        $('input[id^="feedback-"]').each(function (input) {
-
-
-            var value = $(this).val();
-            var id = $(this).attr('id');
-            id = id.split(" ");
-            id = id[0].split("-");
-            id = id[1];
-
-            JSONAsnwers.push({id: id, value: value});
-
-
-            //console.log('ID : '+id + ' VALUE : ' + value);
-            //console.log("loop");
-        });
-
-        var data2 = JSON.stringify(JSONAsnwers);
-        console.log(data2);
-        $.ajaxSetup(
-                {
-                    headers: {
-                        'X-CSRF-Token': "{!! csrf_token() !!}"
-                    }
-                });
-
-
-        //create and senf ajax request to the server
-        $.ajax({
-
-            method: "post",
-            dataType: "json",
-            url: '/send-feedback',
-            data: {data: JSONAsnwers},
-
-            //on success remove loading animation & clear fields
-            success: function (data) {
-                $(".feedback_btn").hide();
-
-                swal("success!", "Thank you for your feedback", "success");
-
-                // console.log("sucess");
-                // console.log(data);
-            },
-            error:function(d){
-                //swal("success!", "Thank you for your feedback", "error");
-            }
-
-
-
-        });
-
-    }
 </script>
 @show
 

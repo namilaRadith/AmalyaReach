@@ -54,15 +54,17 @@ class UserController extends Controller {
 
 	}
 
-	public function sendFeedback(){
+	public function sendFeedback()
+	{
 
-		if(\Request::ajax()){
+		if (\Request::ajax()) {
 
-		$data = \Input::all();
-		if(Answer::addUserFeedback($data)){
-			return 'sucess';
-		}
-
+			$data = \Input::all();
+			if (Answer::addUserFeedback($data)) {
+				echo 'sucess';
+			} else {
+				echo 'fail';
+			}
 
 
 		}
