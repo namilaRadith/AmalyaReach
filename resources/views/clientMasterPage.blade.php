@@ -102,7 +102,6 @@
 
                 <a href="auth/logout" id="link_bt">Log Out</a>
                 <a href="{{action('UserController@showMyProfile')}}" id="link_bt">My Profile</a>
-
                 @if(Q::isUserEligible())
 
                     <a href="#" id="link_bt" class="feedback_btn"  data-toggle="modal" data-target="#questionerModal">Feedback Session</a>
@@ -115,29 +114,29 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                                 aria-hidden="true">&times;</span></button>
                                     <h4 class="modal-title"
-                                        id="myModalLabel">{{Q::presentQuestioner()['questioner']->questioner_title}}</h4>
+                                        id="myModalLabel">{{Q::presentQuestioner()[0]['questioner_title']}}</h4>
                                 </div>
                                 <div class="modal-body">
                                     {{ $i=1 }}
-                                    @foreach( Q::presentQuestioner()['questions']  as $d)
+                                    @foreach( Q::presentQuestioner() as $d)
 
                                         <label for="input-1" style="color: black;"
                                                class="control-label">{{$i." ".")"." "}}{{$d['question']}}</label>
                                         @if($d['question_type'] == 'R')
-                                            <input id="{{"feedback-".$d['id']." "}} input-1-ltr-star-xs"
+                                            <input id="{{"feedback-".$d['question_id']." "}} input-1-ltr-star-xs"
                                                    class="rating rating-loading" data-min="0" data-max="5"
                                                    data-size="xs" data-step="1">
                                         @else
-                                            <input type="text " name="" id="{{"feedback-".$d['id']." "}}"
+                                            <input type="text " name="" id="{{"feedback-".$d['question_id']." "}}"
                                                    class="form-control">
                                         @endif
                                         {{ $i++ }}
                                     @endforeach
-                                    <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
+
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" onclick="submitFeedback();" class="btn btn-primary" data-dismiss="modal">Save
+                                    <button type="button" onclick="submitFeedback()" class="btn btn-primary" data-dismiss="modal">Save
                                         changes
                                     </button>
                                 </div>
@@ -146,6 +145,14 @@
                     </div>
 
                 @endif
+
+
+
+
+
+
+
+
                 @if(Auth::user()->isAdmin())
                     <a href="{{action('AdminDashboardController@index')}}" id="link_bt">Admin Dashboard</a>
                 @endif
@@ -186,12 +193,8 @@
                                 <a href="javascript:void(0);" class="show-submenu">Dinning <i
                                             class="icon-down-open-mini"></i></a>
                                 <ul>
-                                    <li><a href="{{action('clientNavigationController@showDinningList')}}">All Recipes
-                                            List</a></li>
-                                    <li><a href="#">Horses</a></li>
-                                    <li><a href="#">Discover local food</a></li>
-                                    <li><a href="#">Cooking local food</a></li>
-                                    <li><a href="#">Farm activities</a></li>
+                                    <li><a href="{{action('dinningController@dinningMenuDisplay')}}">Dinning Menu</a></li>
+                                    <li><a href="{{action('dinningController@dinningReservation')}}">Dinning Reservation</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -211,15 +214,11 @@
                                 </ul>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Facilities <i
+                                <a href="javascript:void(0);" class="show-submenu">Specials <i
                                             class="icon-down-open-mini"></i></a>
                                 <ul>
-                                    <li><a href="{{action('clientNavigationController@showFacilitiesList')}}">All
-                                            Facilities</a></li>
-                                    <li><a href="#">Horses</a></li>
-                                    <li><a href="#">Discover local food</a></li>
-                                    <li><a href="#">Cooking local food</a></li>
-                                    <li><a href="#">Farm activities</a></li>
+                                    <li><a href="{{action('poolController@checkAvailability')}}">Swimming Pool</a></li>
+                                    <li><a href="{{action('meetingsController@meetingsReservation')}}">Meetings</a></li>
                                 </ul>
                             </li>
                             <li class="submenu">

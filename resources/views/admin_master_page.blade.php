@@ -24,7 +24,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           page. However, you can choose any other skin. Make sure you
           apply the skin class to the body tag so the changes take effect.
     -->
-    <link rel="stylesheet" href="{{ asset('/admin/dist/css/skins/skin-blue.min.css')}}">
+    <link rel="stylesheet" hreft="{{ asset('/admin/dist/css/AdminLTE.min.css')}}">
 
     <!-- DataTables -->
     <link rel="stylesheet" href="{{ asset('/admin/plugins/datatables/dataTables.bootstrap.css') }}">
@@ -75,6 +75,7 @@ desired effect
 </style>
 
 <body class="hold-transition skin-blue sidebar-mini">
+
 <div class="wrapper">
 
     <!-- Main Header -->
@@ -135,8 +136,23 @@ desired effect
                     <!-- /.messages-menu -->
 
                     <!-- Notifications Menu -->
-                    <li class="dropdown notifications-menu">
+                    <li class="dropdown notifications-menu" id="notifications">
                         <!-- Menu toggle button -->
+
+                    </li>
+                    <!-- Tasks Menu -->
+                    <li class="dropdown tasks-menu">
+                        <!-- Menu Toggle Button -->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-flag-o"></i>
+                            <span class="label label-danger">9</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 9 tasks</li>
+                            <li>
+                                <!-- Inner menu: contains the tasks -->
+                                <ul class="menu">
+                                    <li><!-- Task item -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-bell-o"></i>
                             <span class="label label-danger">{{ \App\Reservation::newReservationsCount() +  \App\Reservation::notCallCount() }}</span>
@@ -151,6 +167,20 @@ desired effect
                                              You have {{ \App\Reservation::newReservationsCount() }} New Reservations
                                         </a>
                                         <a href="#">
+                                            <!-- Task title and progress text -->
+                                            <h3>
+                                                Design some buttons
+                                                <small class="pull-right">20%</small>
+                                            </h3>
+                                            <!-- The progress bar -->
+                                            <div class="progress xs">
+                                                <!-- Change the css width attribute to simulate progress -->
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%"
+                                                     role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                     aria-valuemax="100">
+                                                    <span class="sr-only">20% Complete</span>
+                                                </div>
+                                            </div>
                                             You have to take another {{ \App\Reservation::notCallCount() }} Calls
                                         </a>
                                     </li>
@@ -340,17 +370,27 @@ desired effect
                 </li>
                 <li class="treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Reservations</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Accommodations</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="view_all_reservations">View All</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Dinning</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <a href="#"><i class="fa fa-link"></i> <span>Event Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
+                        <li><a href="{{action('dinningController@diningMenu')}}">Dinning Menu</a></li>
+                        <li><a href="{{action('dinningController@diningAddMenuForm')}}">Add Dinning Menu</a></li>
+                        <li><a href="{{action('dinningController@viewDinningReservations')}}">Dinning Reservations</a>
+                        </li>
                         <li><a href="admin_event_reports_room">Room Reservations</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Meetings</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <a href="#"><i class="fa fa-link"></i> <span>Markups</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="admin_add_markups">Add Markups</a></li>
@@ -363,6 +403,16 @@ desired effect
                     <ul class="treeview-menu">
                         <li><a href="#">Add New Accommodation</a></li>
                         <li><a href="#">Add New Accommodation</a></li>
+                    </ul>
+                </li>
+
+
+                <!--Pool Area -->
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Swimming pool</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{action('poolController@adminPoolRes')}}">Swimming Pool Reservations</a></li>
                     </ul>
                 </li>
 
@@ -583,6 +633,27 @@ desired effect
             'X-CSRF-Token': $('meta[name="csrf_token"]').attr('content')
         }
     });
+    //
+    //    $('#myModal').on('shown.bs.modal', function () {
+    //        $('#myInput').focus()
+    //    })
+    //
+    //    function modalCall(messageType,Title,Message){
+    //
+    //        $('#myModal').removeClass();
+    //        $('#myModal').addClass("modal");
+    //        $('#myModal').addClass("modal-"+messageType);
+    //        $('#modelTitle').html(Title);
+    //        $('#modalMessage').html(Message);
+    //
+    //        $('#myModal').modal('show');
+    //
+    //        setTimeout(function(){
+    //            $('#myModal').modal('hide');
+    //        },2000);
+    //
+    //    }
+</script>
 
 </script>
 
@@ -600,6 +671,9 @@ desired effect
 
 
 
+<!-- DataTables -->
+<script src="{{ asset('admin/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
@@ -630,6 +704,55 @@ desired effect
     @endif
 
 </script>
+
+<script>
+    $(function () {
+        $("#adminDinResTable").DataTable();
+    });
+</script>
+
+<script>
+    $("#dropDownNotify").on('click', function () {
+        $("#lblNotify").hide();
+
+    });
+
+</script>
+
+
+
+<script>
+    $(function () {
+        $("#admineetinResTbl").DataTable();
+    });
+</script>
+
+<script>
+
+
+
+    function showNotifications()
+    {
+        $.ajax({
+            url  : '/adminNotify',
+            type : 'get',
+
+            success : function(data){
+                document.getElementById("notifications").innerHTML = data;
+//               alert("blah");
+            },
+            error :function(err,req){
+                alert(JSON.stringify(data));
+            },
+        });
+
+      setTimeout("showNotifications()",300)
+    }
+
+    onLoad=showNotifications();
+
+</script>
+
 
 @show
         <!-- Optionally, you can add Slimscroll and FastClick plugins.

@@ -16,10 +16,13 @@ use App\SliderImage;
 use App\Subscriber;
 use App\User;
 use Illuminate\Http\Request;
-
+use App\DinningReservation;
+use App\meetingsReservation;
+use App\poolReservation;
 
 use Input;
 
+class AdminDashboardController extends Controller {
 
 class AdminDashboardController extends Controller
 {
@@ -39,15 +42,7 @@ class AdminDashboardController extends Controller
 
     }
 
-    /**
-     * Display  admin panel index page
-     *
-     * @return Response
-     */
-    public function index()
-    {
-        return view('pages.admin.admin_index');
-    }
+
 
 
     /**
@@ -63,6 +58,18 @@ class AdminDashboardController extends Controller
     }
 
 
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+	public function index()
+	{
+
+
+
+        return view('pages.admin.admin_index');
+	}
     /**
      * upload new slider image to the database
      * @param Request $request
@@ -423,4 +430,22 @@ class AdminDashboardController extends Controller
        $data = Questioner::getQuestionerResults($id);
         return view('pages.admin.adminAnalizeQuestioner')->with('data',$data);
     }
+
+
+    public  function showNotifications()
+    {
+        $newMeetingResCount=meetingsReservation::getNewResCount();
+        $diningNewResCount=DinningReservation::getResCount();
+        $poolNewReservation=poolReservation::getNotificationsCount();
+
+        $count=$newMeetingResCount+$diningNewResCount+$poolNewReservation;
+
+        return view('notifications.viewNotifications',compact('count','newMeetingResCount','diningNewResCount','poolNewReservation'));
+
+    }
+
 }
+
+
+
+
