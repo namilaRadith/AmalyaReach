@@ -23,7 +23,7 @@ class Questioner extends Model {
             ->where('questionerview.quesioner_id', '=', $qOld[0]['id'])->count();
 
         //count == 0 then return true else false
-        if ($count <= 0) {
+        if ($count == 0) {
             return boolval(true);
         } else {
             return boolval(false);

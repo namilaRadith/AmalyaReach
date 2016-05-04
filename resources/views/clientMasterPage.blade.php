@@ -98,10 +98,14 @@
                 <li><a href="#">Fr</a></li>
                 <li><a href="#">Es</a></li>
             </ul>
+
             @if(Auth::user())
 
                 <a href="auth/logout" id="link_bt">Log Out</a>
                 <a href="{{action('UserController@showMyProfile')}}" id="link_bt">My Profile</a>
+
+
+
                 @if(Q::isUserEligible())
 
                     <a href="#" id="link_bt" class="feedback_btn"  data-toggle="modal" data-target="#questionerModal">Feedback Session</a>
@@ -114,20 +118,24 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                                 aria-hidden="true">&times;</span></button>
                                     <h4 class="modal-title"
-                                        id="myModalLabel">{{Q::presentQuestioner()[0]['questioner_title']}}</h4>
+                                        id="myModalLabel">{{Q::presentQuestioner()['questioner']['questioner_title']}}</h4>
+                                    {{--<pre>--}}
+                                        {{--{{var_dump(Q::presentQuestioner())}}--}}
+                                    {{--</pre>--}}
+
                                 </div>
                                 <div class="modal-body">
                                     {{ $i=1 }}
-                                    @foreach( Q::presentQuestioner() as $d)
+                                    @foreach( Q::presentQuestioner()['questions'] as $d)
 
                                         <label for="input-1" style="color: black;"
                                                class="control-label">{{$i." ".")"." "}}{{$d['question']}}</label>
                                         @if($d['question_type'] == 'R')
-                                            <input id="{{"feedback-".$d['question_id']." "}} input-1-ltr-star-xs"
+                                            <input id="{{"feedback-".$d['id']." "}} input-1-ltr-star-xs"
                                                    class="rating rating-loading" data-min="0" data-max="5"
                                                    data-size="xs" data-step="1">
                                         @else
-                                            <input type="text " name="" id="{{"feedback-".$d['question_id']." "}}"
+                                            <input type="text " name="" id="{{"feedback-".$d['id']." "}}"
                                                    class="form-control">
                                         @endif
                                         {{ $i++ }}
@@ -136,6 +144,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
                                     <button type="button" onclick="submitFeedback()" class="btn btn-primary" data-dismiss="modal">Save
                                         changes
                                     </button>
@@ -145,13 +154,6 @@
                     </div>
 
                 @endif
-
-
-
-
-
-
-
 
                 @if(Auth::user()->isAdmin())
                     <a href="{{action('AdminDashboardController@index')}}" id="link_bt">Admin Dashboard</a>
