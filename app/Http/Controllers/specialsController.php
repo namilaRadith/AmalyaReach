@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class specialsController extends Controller {
 
-    //
+	//
 
-    function specialsHome()
-    {
-        return view('pages.client.specials.specialsHome');
-    }
+       function specialsHome()
+       {
+              return view('pages.client.specials.specialsHome');
+       }
 }
