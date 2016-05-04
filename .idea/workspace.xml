@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36c70c86-ba3e-48ab-b398-ebf44edbd8b8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Questioner.php" afterPath="$PROJECT_DIR$/app/Questioner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/client/clientIndex.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/client/clientIndex.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/clientMasterPage.blade.php" afterPath="$PROJECT_DIR$/resources/views/clientMasterPage.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="128d3e35-94b3-4ddc-9389-0131def2e1ff" name="image added" comment="" />
@@ -952,7 +949,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462385971919</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="questioner bug fix">
+      <created>1462392913124</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1462392913124</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1050,7 +1053,8 @@
     <MESSAGE value="temp" />
     <MESSAGE value="header fixed" />
     <MESSAGE value="added dellmies un added pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="added dellmies un added pages" />
+    <MESSAGE value="questioner bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="questioner bug fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
