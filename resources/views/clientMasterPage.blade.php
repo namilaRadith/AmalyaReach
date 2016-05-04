@@ -194,6 +194,7 @@
                                             class="icon-down-open-mini"></i></a>
                                 <ul>
                                     <li><a href="{{action('dinningController@dinningMenuDisplay')}}">Dinning Menu</a></li>
+
                                     <li><a href="{{action('dinningController@dinningReservation')}}">Dinning Reservation</a></li>
                                 </ul>
                             </li>

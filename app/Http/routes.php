@@ -359,11 +359,23 @@ Route::get('meetingResAccept/{id}','meetingsController@confirmMeeting');
 //registed route for send meeting rejection email
 Route::get('meetingResReject/{id}','meetingsController@rejectMeeting');
 
+//registed route for admin to view dinning menu
+Route::get('diningMenu','dinningController@diningMenu');
 
+//registed route for admin to add  dinning menu
+Route::get('diningAddMenu','dinningController@diningAddMenuForm');
 
 //meeting admin
 Route::get('meetingRes/viewRes/{id}','meetingsController@viewMeetingRes');
 
+//registed route for Client to view dinning menu
+Route::get('dinningMenuDisplay','dinningController@dinningMenuDisplay');
+
+//meeting client
+//registed route for client to navigate to meeting request form
+Route::get('meetingReservation','meetingsController@meetingsReservation');
+//registed route for clients meetings request form
+Route::get('meetingReservationForm','meetingsController@meetingsReservationForm');
 
 
 //Show Admin notifications

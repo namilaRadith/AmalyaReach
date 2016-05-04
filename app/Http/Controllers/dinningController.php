@@ -87,7 +87,7 @@ class dinningController extends Controller
      *
      * @return Response
      */
-    function  dinningMenuDisplay()
+   public function  dinningMenuDisplay()
     {
         //Retrive dinning menu informaion in catagories
         $diningMenuCat1 = dinningMenuItem::FoodCat1()->get();

@@ -2,792 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36c70c86-ba3e-48ab-b398-ebf44edbd8b8" name="Default" comment="branches 1st">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/_static/guzzle-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/_static/guzzle-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/_static/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/_static/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/.scrutinizer.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/AbstractBackoffStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/AbstractBackoffStrategyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/AbstractBatchDecorator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/AbstractBatchDecoratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Cache/AbstractCacheAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/AbstractCommand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/AbstractCommandTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/AbstractConfigLoader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/AbstractConfigLoaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Adapter/Curl/AbstractCurl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/AbstractEntityBodyDecorator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/AbstractEntityBodyDecoratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/AbstractErrorCodeBackoffStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/AbstractEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Event/AbstractEventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/AbstractHasDispatcher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Common/AbstractHasDispatcherTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Log/AbstractLogAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/AbstractMessage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Message/AbstractMessage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Parser/Message/AbstractMessageParser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/AbstractMessageTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Message/AbstractMessageTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/One/AbstractProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/Two/AbstractProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/AbstractRequestEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Event/AbstractRequestEventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/AbstractRequestVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/AbstractResourceIteratorFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/AbstractResponseVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/AbstractResponseVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/AbstractTransferEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Event/AbstractTransferEventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/UriTemplate/AbstractUriTemplateTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/AbstractUser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/AbstractVisitorTestCase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/AdapterException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/AdapterInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/AliasFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/Factory/AliasFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Iterator/AppendIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Iterator/AppendIteratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/AppendStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/tests/AppendStreamTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/CookieJar/ArrayCookieJar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cookie/CookieJar/ArrayCookieJarTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Log/ArrayLogAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Log/ArrayLogAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Async/AsyncPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Async/AsyncPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/BackoffLogger.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/BackoffLoggerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/BackoffPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/BackoffPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/BackoffStrategyInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/BadMethodCallException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/BadResponseException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/BadResponseException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/Batch.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchBuilder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchBuilderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchClosureDivisor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchClosureDivisorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchClosureTransfer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchClosureTransferTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchCommandTransfer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchCommandTransferTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/Curl/BatchContext.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Adapter/Curl/BatchContextTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchDivisorInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchRequestTransfer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchRequestTransferTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchSizeDivisor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchSizeDivisorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/Exception/BatchTransferException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Common/Exception/BatchTransferExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchTransferInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/BeforeEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Server/Bitbucket.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/One/BitbucketProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/BodyVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/BodyVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/BodyVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/BodyVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/CHANGELOG.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/CONDUCT.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Cache/CacheAdapterFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Cache/CacheAdapterFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Cache/CacheAdapterInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Cache/CacheAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/CacheControl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CacheKeyProviderInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CachePlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/CachePluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CacheStorageInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/CachingConfigLoader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/CachingConfigLoaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/CachingEntityBody.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/CachingEntityBodyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/CachingStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/tests/CachingStreamTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/CallbackBackoffStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/CallbackBackoffStrategyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CallbackCanCacheStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/CallbackCanCacheStrategyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CanCacheStrategyInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Iterator/ChunkedIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Iterator/ChunkedIteratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Client.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Client.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Client.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Credentials/ClientCredentials.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Credentials/ClientCredentialsInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/tests/ClientCredentialsTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/ClientErrorResponseException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/ClientException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/ClientInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/ClientInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/ClientInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/ClientTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/ClientTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/ClientTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Cache/ClosureCacheAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Cache/ClosureCacheAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/ClosureCommand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/ClosureCommandTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Log/ClosureLogAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Log/ClosureLogAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/Collection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Collection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Common/CollectionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/CollectionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/QueryAggregator/CommaAggregator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/QueryAggregator/CommaAggregatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Md5/CommandContentMd5Plugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Md5/CommandContentMd5PluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/CommandException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/CommandInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/CommandTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/CommandTransferException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Exception/CommandTransferExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/CompleteEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/phing/tasks/ComposerLintTask.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/CompositeFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/Factory/CompositeFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/CompositeResourceIteratorFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Resource/CompositeResourceIteratorFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/ConcreteClassFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/Factory/ConcreteClassFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/ConfigLoaderInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/ConstantBackoffStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/ConstantBackoffStrategyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/Cookie.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Subscriber/Cookie.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Cookie/CookieJar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/CookieJar/CookieJarInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Cookie/CookieJarInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Cookie/CookieJarTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Parser/Cookie/CookieParser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Parser/Cookie/CookieParserInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/Cookie/CookieParserProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/Cookie/CookieParserTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/CookiePlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cookie/CookiePluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cookie/CookieTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Subscriber/CookieTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/CouldNotRewindStreamException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/CouldNotRewindStreamException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/CreateResponseClassEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Credentials/Credentials.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Credentials/CredentialsException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Credentials/CredentialsInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/Curl/CurlAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Adapter/Curl/CurlAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/CurlAuth/CurlAuthPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/CurlAuth/CurlAuthPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/CurlBackoffStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/CurlBackoffStrategyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/CurlException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Exception/CurlExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/Curl/CurlFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Adapter/Curl/CurlFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlHandle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Curl/CurlHandleTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlMulti.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlMultiInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlMultiProxy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Curl/CurlMultiProxyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Curl/CurlMultiTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlVersion.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Curl/CurlVersionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Mock/CustomResponseModel.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DefaultCacheKeyProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DefaultCacheStorage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/DefaultCacheStorageTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DefaultCanCacheStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/DefaultCanCacheStrategyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/DefaultRequestSerializer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/DefaultRequestSerializerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/DefaultResponseParser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/DefaultResponseParserTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DefaultRevalidation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/DefaultRevalidationTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DenyRevalidation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/DenyRevalidationTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/DescriptionBuilderException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Cache/DoctrineCacheAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/QueryAggregator/DuplicateAggregator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/QueryAggregator/DuplicateAggregatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/Emitter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/EmitterInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Event/EmitterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/EntityBody.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/EntityBodyInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/EntityBodyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/EntityEnclosingRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/EntityEnclosingRequestInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/EntityEnclosingRequestTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/ErrorEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Event/ErrorEventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/ErrorResponse/Exception/ErrorResponseException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/ErrorResponse/ErrorResponseExceptionInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Mock/ErrorResponseMock.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/ErrorResponse/ErrorResponsePlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/ErrorResponse/ErrorResponsePluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/Event.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/EventInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Common/EventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/ExceptionBufferingBatch.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/ExceptionBufferingBatchTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/ExceptionCollection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Common/Exception/ExceptionCollectionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Mock/ExceptionMock.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Exception/ExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/ExponentialBackoffStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/ExponentialBackoffStrategyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/Two/FacebookProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/Contracts/Factory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/FactoryInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/FakeParallelAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Adapter/FakeParallelAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/FileBody.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/CookieJar/FileCookieJar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Cookie/FileCookieJar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cookie/CookieJar/FileCookieJarTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Cookie/FileCookieJarTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Iterator/FilterIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Iterator/FilterIteratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/FlushingBatch.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/FlushingBatchTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/FnStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/tests/FnStreamTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/FromConfigInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/FunctionsTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/Two/GithubProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/Two/GoogleProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/GuzzleException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/phing/tasks/GuzzlePearPharPackageTask.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/GuzzleStreamWrapper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/tests/GuzzleStreamWrapperTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/phing/tasks/GuzzleSubSplitTask.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/GuzzleTestCase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/HasDataTrait.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/HasDispatcherInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/HasEmitterInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/HasEmitterTrait.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Event/HasEmitterTraitTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderCollection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/HeaderComparison.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/HeaderComparisonTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderFactoryInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/Header/HeaderFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/HeaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/HeaderVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/HeaderVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/HeaderVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/HeaderVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/HeadersEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Event/HeadersEventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Subscriber/History.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/HistoryBatch.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/HistoryBatchTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/History/HistoryPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/History/HistoryPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Subscriber/HistoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Signature/HmacSha1Signature.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/tests/HmacSha1SignatureTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/HttpBackoffStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/HttpBackoffStrategyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Subscriber/HttpError.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Subscriber/HttpErrorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/HttpException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/InconsistentClientTransferException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Exception/InconsistentClientTransferExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/InflateStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/tests/InflateStreamTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Inflection/Inflector.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Inflection/InflectorInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Inflection/InflectorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/InvalidArgumentException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/Exception/InvalidCookieException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/Two/InvalidStateException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/IoEmittingEntityBody.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/IoEmittingEntityBodyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Mock/Command/IterableCommand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/JsonVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/JsonVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/JsonVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/JsonVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/LazyOpenStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/tests/LazyOpenStreamTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/LimitStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/tests/LimitStreamTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/LinearBackoffStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/LinearBackoffStrategyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/Link.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/Header/LinkTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/ListenerAttacherTrait.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Event/ListenerAttacherTraitTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Log/LogAdapterInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Log/LogPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Log/LogPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Server/Magento.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/MapFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/Factory/MapFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Iterator/MapIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Iterator/MapIteratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/MapResourceIteratorFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Resource/MapResourceIteratorFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Md5/Md5ValidatorPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Md5/Md5ValidatorPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Inflection/MemoizingInflector.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Inflection/MemoizingInflectorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Message/MessageFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Message/MessageFactoryInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Message/MessageFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Log/MessageFormatter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Log/MessageFormatterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/MessageInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Message/MessageInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Parser/Message/MessageParser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Message/MessageParser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Parser/Message/MessageParserInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/Message/MessageParserProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/Message/MessageParserTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Message/MessageParserTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/MetadataStreamInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Iterator/MethodProxyIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Iterator/MethodProxyIteratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Mimetypes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Mimetypes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/MimetypesTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/MimetypesTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Subscriber/Mock.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/MockAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Adapter/MockAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Mock/MockClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Mock/Command/MockCommand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Mock/Model/MockCommandIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Mock/MockMulti.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Mock/MockObserver.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Mock/MockPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Mock/MockPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Mock/MockSubject.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Subscriber/MockTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/Model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Resource/ModelTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Log/MonologLogAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/Curl/MultiAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Adapter/Curl/MultiAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/MultiTransferException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Exception/MultiTransferExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Post/MultipartBody.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Post/MultipartBodyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/NoSeekStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/tests/NoSeekStreamTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/NotifyingBatch.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/NotifyingBatchTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Cache/NullCacheAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Cache/NullCacheAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/tests/OAuthOneTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/tests/OAuthTwoTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Oauth/OauthPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Oauth/OauthPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Description/Operation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/OperationCommand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/OperationCommandTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Description/OperationInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/OperationResponseParser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/OperationResponseParserTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Description/OperationTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Mock/Command/OtherCommand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/ParallelAdapterInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Description/Parameter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Description/ParameterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/ParseException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Exception/ParseExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Parser/ParserRegistry.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/ParserRegistryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Parser/Message/PeclHttpMessageParser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/Message/PeclHttpMessageParserTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Parser/UriTemplate/PeclUriTemplate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/UriTemplate/PeclUriTemplateTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/QueryAggregator/PhpAggregator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/QueryAggregator/PhpAggregatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Stream/PhpStreamRequestFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Stream/PhpStreamRequestFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Signature/PlainTextSignature.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/tests/PlainTextSignatureTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Post/PostBody.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Post/PostBodyInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Post/PostBodyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/PostFieldVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/PostFieldVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/PostFile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Post/PostFile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/PostFileInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Post/PostFileInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/PostFileTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Post/PostFileTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/PostFileVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/PostFileVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Inflection/PreComputedInflector.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Inflection/PreComputedInflectorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Subscriber/Prepare.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Subscriber/PrepareTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/Contracts/Provider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/Two/ProviderInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Log/PsrLogAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Log/PsrLogAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Query.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/QueryAggregator/QueryAggregatorInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/QueryParser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/QueryParserTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/QueryString.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/QueryStringTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/QueryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/QueryVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/QueryVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Iterator/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/README.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/ReadLimitEntityBody.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/ReadLimitEntityBodyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/ReasonPhraseBackoffStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/ReasonPhraseBackoffStrategyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/ReasonPhraseVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/ReasonPhraseVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Subscriber/Redirect.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/RedirectPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/RedirectPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Subscriber/RedirectTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Request.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Message/Request.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Event/RequestAfterSendEventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Event/RequestBeforeSendEventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/RequestEvents.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Event/RequestEventsTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/RequestException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Exception/RequestExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/RequestFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/RequestFactoryInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/RequestFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/RequestInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Message/RequestInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/RequestMediator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/Curl/RequestMediator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Curl/RequestMediatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Adapter/Curl/RequestMediatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/RequestSerializerInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/RequestTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Message/RequestTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/RequestVisitorInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIteratorApplyBatched.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIteratorClassFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Resource/ResourceIteratorClassFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIteratorFactoryInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIteratorInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Resource/ResourceIteratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Response.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Message/Response.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/ResponseBodyVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/ResponseBodyVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/ResponseClassException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/ResponseClassInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Message/ResponseInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/ResponseParserInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/ResponseTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Message/ResponseTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/ResponseVisitorInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/RevalidationInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/RuntimeException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Description/SchemaFormatter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Description/SchemaFormatterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Description/SchemaValidator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Description/SchemaValidatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/Exception/SeekException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/tests/Exception/SeekExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Server.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Server.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Server/Server.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/ServerErrorResponseException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/ServerException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/ServerRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/tests/ServerRequestTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/tests/stubs/ServerStub.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/tests/ServerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Builder/ServiceBuilder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/ServiceBuilderException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Builder/ServiceBuilderInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Builder/ServiceBuilderLoader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Builder/ServiceBuilderLoaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Builder/ServiceBuilderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Description/ServiceDescription.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/ServiceDescriptionFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/Factory/ServiceDescriptionFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Description/ServiceDescriptionInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Description/ServiceDescriptionLoader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Description/ServiceDescriptionLoaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Description/ServiceDescriptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/ServiceNotFoundException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Cookie/SessionCookieJar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Cookie/SessionCookieJarTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Cookie/SetCookie.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Cookie/SetCookieTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Signature/Signature.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Signature/SignatureInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/SkipRevalidation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/SkipRevalidationTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/Facades/Socialite.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/SocialiteManager.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/SocialiteServiceProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/StaticClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/StaticClientTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/StatusCodeVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/StatusCodeVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Stream/Stream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/Stream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/StreamAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Adapter/StreamAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/StreamDecoratorTrait.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/tests/StreamDecoratorTraitTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Stream/StreamInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/StreamInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Stream/StreamRequestFactoryInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Stream/StreamTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/tests/StreamTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/StreamingProxyAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Adapter/StreamingProxyAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Mock/Command/Sub/Sub.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Event/SubscriberInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Credentials/TemporaryCredentials.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/ToArrayInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/ToArrayInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Credentials/TokenCredentials.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/TooManyRedirectsException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/TooManyRedirectsException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/Transaction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/TransactionInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Adapter/TransactionIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Adapter/TransactionIteratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Adapter/TransactionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/TransferException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Server/Trello.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/tests/TrelloServerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/TruncatedBackoffStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/TruncatedBackoffStrategyTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Server/Tumblr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Server/Twitter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/One/TwitterProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/UPGRADING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/UPGRADING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/UnexpectedValueException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/UploadedFile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/tests/UploadedFileTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Parser/UriTemplate/UriTemplate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/UriTemplate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Parser/UriTemplate/UriTemplateInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/UriTemplate/UriTemplateTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/UriTemplateTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Url.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Url.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Parser/Url/UrlParser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Parser/Url/UrlParserInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/UrlTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/UrlTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/Contracts/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/One/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/src/Two/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Server/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Server/Uservoice.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/Utils.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/tests/UtilsTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/ValidationException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Exception/ValidationExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Description/ValidatorInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/Version.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Common/VersionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/VisitorFlyweight.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/VisitorFlyweightTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/src/Client/Server/Xing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/tests/XingServerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/XmlParseException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/Exception/XmlParseExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/XmlVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/XmlVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/XmlVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/XmlVisitorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Cache/Zf1CacheAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Log/Zf1LogAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Cache/Zf2CacheAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Cache/Zf2CacheAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Log/Zf2LogAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Log/Zf2LogAdapterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/adapters.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/plugins/async-plugin.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/plugins/backoff-plugin.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/description/bar.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/batching/batching.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/description/baz.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/phing/build.properties.dist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/build.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Resources/cacert.pem" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/cacert.pem" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/plugins/cache-plugin.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/http-client/client.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/clients.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Batch/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Cache/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Common/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Inflection/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Iterator/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Log/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Parser/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Async/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/CurlAuth/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/ErrorResponse/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/History/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Log/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Md5/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Mock/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Oauth/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Service/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Stream/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/conf.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/conf.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/plugins/cookie-plugin.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/plugins/creating-plugins.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/plugins/curl-auth-plugin.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/phing/imports/dependencies.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/phing/imports/deploy.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/docs.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/http-client/entity-bodies.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/events.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/getting-started/faq.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/faq.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/description/foo.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/functions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/src/functions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/iterators/guzzle-iterators.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/_downloads/guzzle-schema-1.0.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/webservice-client/guzzle-service-descriptions.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/plugins/history-plugin.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/_static/homepage.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/http-messages.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/http-client/http-redirects.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/_templates/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/index.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/index.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/getting-started/installation.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/services/json1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/services/json2.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/_templates/leftbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/plugins/log-plugin.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/plugins/md5-validator-plugin.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/plugins/mock-plugin.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/mock_response" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/_templates/nav_links.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/_templates/nav_links.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/plugins/oauth-plugin.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/getting-started/overview.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/overview.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/build/packager.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/perf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/phar-stub.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/phpunit.xml.dist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/phpunit.xml.dist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/streams/phpunit.xml.dist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/phpunit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/phpunit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/plugins/plugins-list.rst.inc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/plugins/plugins-overview.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/_static/prettify.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/_static/prettify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/quickstart.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/laravel/socialite/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/description/recursive.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/http-client/request.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/requirements.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/requirements.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/iterators/resource-iterators.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/http-client/response.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/rfc5849.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/tests/server.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/services.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/services/services.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/streams.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/test_service.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/test_service2.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/test_service_3.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/docs/testing.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/resources/examples/tumblr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/resources/examples/twitter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/testing/unit-testing.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/http-client/uri-templates.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/webservice-client/using-the-service-builder.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/lang/es/validation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzle/guzzle/docs/webservice-client/webservice-client.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/league/oauth1-client/resources/examples/xing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/cviebrock/image-validator/.semver" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/.semver" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/AmalayaReach.iml" afterPath="$PROJECT_DIR$/.idea/AmalayaReach.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/cviebrock/image-validator/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/intervention/image/src/Intervention/Image/Gd/Decoder.php" afterPath="$PROJECT_DIR$/vendor/intervention/image/src/Intervention/Image/Gd/Decoder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/tests/FunctionsTest.php" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/tests/FunctionsTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/tests/MultipartStreamTest.php" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/tests/MultipartStreamTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/README.md" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Stream.php" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Stream.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Uri.php" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Uri.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/tests/UriTest.php" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/tests/UriTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/functions.php" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/cviebrock/image-validator/lang/fr/validation.php" afterPath="$PROJECT_DIR$/vendor/cviebrock/image-validator/lang/fr/validation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin_master_page.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin_master_page.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/clientMasterPage.blade.php" afterPath="$PROJECT_DIR$/resources/views/clientMasterPage.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/dinningController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/dinningController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="128d3e35-94b3-4ddc-9389-0131def2e1ff" name="image added" comment="" />
@@ -825,12 +45,44 @@
       <file leaf-file-name="clientMasterPage.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/clientMasterPage.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-240.61539">
-              <caret line="368" column="7" selection-start-line="368" selection-start-column="7" selection-end-line="368" selection-end-column="7" />
+            <state vertical-scroll-proportion="-3.1090908">
+              <caret line="195" column="76" selection-start-line="195" selection-start-column="59" selection-end-line="195" selection-end-column="76" />
               <folding>
-                <marker date="1462361911923" expanded="true" signature="2683:2809" placeholder="..." />
-                <marker date="1462361911923" expanded="true" signature="2776:2804" placeholder="..." />
+                <marker date="1462367279265" expanded="true" signature="2683:2809" placeholder="..." />
+                <marker date="1462367279265" expanded="true" signature="2776:2804" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.1272726">
+              <caret line="377" column="82" selection-start-line="377" selection-start-column="82" selection-end-line="377" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dinningController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/dinningController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="16.690908">
+              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+              <folding>
+                <element signature="e#39#61#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminDashboardController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8846154">
+              <caret line="185" column="7" selection-start-line="185" selection-start-column="7" selection-end-line="185" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -838,7 +90,7 @@
       <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
@@ -848,7 +100,7 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-145.57692">
+            <state vertical-scroll-proportion="0.0">
               <caret line="839" column="1" selection-start-line="839" selection-start-column="1" selection-end-line="839" selection-end-column="1" />
               <folding>
                 <element signature="e#34#72#0#PHP" expanded="true" />
@@ -860,7 +112,7 @@
       <file leaf-file-name="admin_index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/admin/admin_index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384">
+            <state vertical-scroll-proportion="0.0">
               <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
@@ -870,9 +122,13 @@
       <file leaf-file-name="admin_master_page.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin_master_page.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="21.042683">
-              <caret line="406" column="45" selection-start-line="406" selection-start-column="45" selection-end-line="406" selection-end-column="113" />
-              <folding />
+            <state vertical-scroll-proportion="0.6964657">
+              <caret line="221" column="66" selection-start-line="221" selection-start-column="66" selection-end-line="221" selection-end-column="66" />
+              <folding>
+                <element signature="n#a#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ul#0;n#li#0;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#a#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -887,41 +143,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="122.92308">
-              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angularScripts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/admin/scripts/angularScripts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-4.5384617">
               <caret line="198" column="58" selection-start-line="198" selection-start-column="58" selection-end-line="198" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autoload_real.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="22" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -974,13 +200,9 @@
       </map>
     </option>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/pages/admin/adminListAllSubscribers.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/client/clientAboutUs.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" />
         <option value="$PROJECT_DIR$/app/SliderImage.php" />
@@ -1000,11 +222,9 @@
         <option value="$PROJECT_DIR$/resources/views/pages/client/clientUserProfile.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/client/clientIndex.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/admin/manageQuestioners.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin_master_page.blade.php" />
         <option value="$PROJECT_DIR$/namila_2_ie_users_stories" />
         <option value="$PROJECT_DIR$/resources/views/pages/admin/adminEditQuestioner.blade.php" />
         <option value="$PROJECT_DIR$/public/admin/scripts/angularScripts.js" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_21_092805_create_questioners_table.php" />
         <option value="$PROJECT_DIR$/app/Question.php" />
         <option value="$PROJECT_DIR$/app/Rate.php" />
@@ -1020,17 +240,20 @@
         <option value="$PROJECT_DIR$/public/admin/scripts/manageQuestionerScripts.js" />
         <option value="$PROJECT_DIR$/app/Facades/QuestionerFacade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/debugController.php" />
         <option value="$PROJECT_DIR$/app/Questioner.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/app/Answer.php" />
-        <option value="$PROJECT_DIR$/resources/views/clientMasterPage.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/admin/admin_index.blade.php" />
         <option value="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/functions.php" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/dinningController.php" />
+        <option value="$PROJECT_DIR$/resources/views/clientMasterPage.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin_master_page.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
       </list>
     </option>
   </component>
@@ -1157,6 +380,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1261,9 +485,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AmalayaReach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AmalayaReach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Problems" />
         <subPane subId="Project Files">
@@ -1584,24 +829,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14498934" sideWeight="0.32901135" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2730711" sideWeight="0.62052506" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28214827" sideWeight="0.60469013" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283082" sideWeight="0.505295" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13006397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29697987" sideWeight="0.494705" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.045302015" sideWeight="0.4946695" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10234899" sideWeight="0.4946695" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32550335" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2730711" sideWeight="0.37947494" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28214827" sideWeight="0.3953099" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2964824" sideWeight="0.494705" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32869378" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1681,13 +926,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.26923">
@@ -1930,7 +1168,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1945,7 +1182,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1953,7 +1189,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1961,15 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="397" column="69" selection-start-line="397" selection-start-column="69" selection-end-line="397" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1977,14 +1203,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="198" column="58" selection-start-line="198" selection-start-column="58" selection-end-line="198" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1999,7 +1217,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding />
         </state>
@@ -2007,21 +1225,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-145.57692">
+        <state vertical-scroll-proportion="0.0">
           <caret line="839" column="1" selection-start-line="839" selection-start-column="1" selection-end-line="839" selection-end-column="1" />
           <folding>
             <element signature="e#34#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/clientMasterPage.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-240.61539">
-          <caret line="368" column="7" selection-start-line="368" selection-start-column="7" selection-end-line="368" selection-end-column="7" />
-          <folding>
-            <marker date="1462361911923" expanded="true" signature="2683:2809" placeholder="..." />
-            <marker date="1462361911923" expanded="true" signature="2776:2804" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -2034,27 +1241,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/admin/admin_index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="122.92308">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/admin/admin_index.blade.php">
+    <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.5384617">
+          <caret line="198" column="58" selection-start-line="198" selection-start-column="58" selection-end-line="198" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/clientMasterPage.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1090908">
+          <caret line="195" column="76" selection-start-line="195" selection-start-column="59" selection-end-line="195" selection-end-column="76" />
+          <folding>
+            <marker date="1462367279265" expanded="true" signature="2683:2809" placeholder="..." />
+            <marker date="1462367279265" expanded="true" signature="2776:2804" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/dinningController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="16.690908">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="e#39#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="185" column="7" selection-start-line="185" selection-start-column="7" selection-end-line="185" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.1272726">
+          <caret line="377" column="82" selection-start-line="377" selection-start-column="82" selection-end-line="377" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin_master_page.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="21.042683">
-          <caret line="406" column="45" selection-start-line="406" selection-start-column="45" selection-end-line="406" selection-end-column="113" />
-          <folding />
+        <state vertical-scroll-proportion="0.6964657">
+          <caret line="221" column="66" selection-start-line="221" selection-start-column="66" selection-end-line="221" selection-end-column="66" />
+          <folding>
+            <element signature="n#a#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#li#0;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

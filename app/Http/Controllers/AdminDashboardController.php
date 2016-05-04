@@ -24,8 +24,7 @@ use Input;
 
 class AdminDashboardController extends Controller {
 
-class AdminDashboardController extends Controller
-{
+
 
     public function __construct()
     {
