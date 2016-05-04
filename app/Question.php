@@ -15,6 +15,16 @@ class Question extends Model {
         return $this->belongsTo('App\Questioner');
     }
 
+    public function rates()
+    {
+        return $this->belongsToMany('App\Rate');
+    }
+
+    public function answers()
+    {
+        return $this->belongsToMany('App\Answer');
+    }
+
     /**
      * add questions to database
      * @param $data

@@ -1,10 +1,12 @@
 <?php namespace App\Http\Controllers;
 
 use Andheiberg\Notify\Facades\Notify;
+use App\Answer;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 
+use App\Questioner;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -50,5 +52,17 @@ class UserController extends Controller {
 
 		}
 
+	}
+
+	public function sendFeedback(){
+
+		if(\Request::ajax()){
+
+		$data = \Input::all();
+		//Answer::addUserFeedback($data);
+		return $data;
+
+
+		}
 	}
 }

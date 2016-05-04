@@ -14,7 +14,7 @@ class CreateQuestionsTable extends Migration {
 	{
 		Schema::create('questions', function(Blueprint $table)
 		{
-			$table->increments('id');
+			$table->increments('id')->unsigned();
 			$table->string('question',2000);
 			$table->integer('questioner_id')->unsigned();
 			$table->string('question_type');
@@ -36,5 +36,7 @@ class CreateQuestionsTable extends Migration {
 	{
 		Schema::drop('questions');
 	}
+
+
 
 }

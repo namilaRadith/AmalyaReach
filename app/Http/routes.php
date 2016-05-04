@@ -169,6 +169,9 @@ Route::get('customer/questioners/manage/edit-questioner/{id}', 'AdminDashboardCo
 //registed route for  publish questioner
 Route::get('customer/questioners/manage/publish-questioner/{id}', 'AdminDashboardController@publishQuestioner');
 
+//registed route for  publish questioner
+Route::post('send-feedback', 'UserController@sendFeedback');
+
 
 
 

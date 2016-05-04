@@ -8,6 +8,18 @@
 @section('content')
 
 
+
+	@foreach( Q::presentQuestioner() as $ds)
+
+		{{--@for($i = 0;$i <= sizeof(Q::presentQuestioner());$i++)--}}
+
+		{{--{{ $ds[$i]->creator_id}}--}}
+
+		{{--@endfor--}}
+
+		{{$ds['creator_id']}}
+	@endforeach
+
 @stop
 
 

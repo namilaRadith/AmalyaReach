@@ -8,7 +8,9 @@ $baseDir = dirname($vendorDir);
 return array(
     'APCUIterator' => $vendorDir . '/symfony/polyfill-apcu/Resources/stubs/APCUIterator.php',
     'AddMoreColumns' => $baseDir . '/database/migrations/2016_01_23_165725_add_more_columns.php',
+    'App\\Facades\\QuestionerFacade' => $baseDir . '/app/Facades/QuestionerFacade.php',
     'CreateAboutUsPagesTable' => $baseDir . '/database/migrations/2016_01_30_201855_create_about_us_pages_table.php',
+    'CreateAnswersTable' => $baseDir . '/database/migrations/2016_03_27_042657_create_answers_table.php',
     'CreateArticlesTable' => $baseDir . '/database/migrations/2016_01_23_164542_create_articles_table.php',
     'CreateContactsTable' => $baseDir . '/database/migrations/2016_01_31_003701_create_contacts_table.php',
     'CreateDinningDetailsTable' => $baseDir . '/database/migrations/2016_01_26_162931_create_dinning_details_table.php',

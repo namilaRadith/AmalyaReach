@@ -17,6 +17,7 @@ class CreateQuestionersTable extends Migration {
 			$table->increments('id');
 			$table->string('questioner_title',2000);
 			$table->string('publish');
+			$table->integer('active');
 			$table->integer('user_id')->unsigned();
 			$table->timestamps();
 

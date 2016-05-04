@@ -21,23 +21,25 @@ $(function () {
                 {"data": "questioner_title"},
                 {"data": "publish"},
                 {"data": "created_at"},
-                {"defaultContent": '<button id="btnView" class="btn btn-sm btn-info center-block ">view</button>'},
+                {"defaultContent": '<button id="btnView" class="btn btn-sm btn-info center-block "><i class="fa fa-eye"></i></button>'},
                 {
                     "data": "publish",
                     "render": function (data) {
-                        return (data === 'NO' ? '<button id="btnPublish" class="btn btn-sm btn-success center-block">publish</button>' :
-                            '<button class="btn btn-sm btn-success center-block disabled">publish</button>');
+                        return (data === 'NO' ? '<button id="btnPublish" class="btn btn-sm btn-success center-block"><i class="fa fa-globe"></i></button>' :
+                            '<button class="btn btn-sm btn-success center-block disabled"><i class="fa fa-globe"></i></button>');
                     }
                 },
 
                 {
                     "data": "publish",
                     "render": function (data) {
-                        return (data === 'NO' ? '<button id="btnEdit" class="btn btn-sm btn-warning center-block">edit</button>' :
-                            '<button class="btn btn-sm btn-warning center-block disabled">edit</button>');
+                        return (data === 'NO' ? '<button id="btnEdit" class="btn btn-sm btn-warning center-block"><i class="fa fa-pencil"></i></button>' :
+                            '<button class="btn btn-sm btn-warning center-block disabled"><i class="fa fa-pencil"></i></button>');
                     }
                 },
-                {"defaultContent": '<button class="btn btn-sm btn-danger center-block ">delete</button>'}
+                {"defaultContent": '<button class="btn btn-sm btn-danger center-block "><i class="fa fa-trash-o"></i></button>'} ,
+
+                {"defaultContent": '<button class="btn btn-sm btn-info center-block ">Analyze</button>'}
 
             ],
 
