@@ -2,48 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8268943b-16b2-4283-b60d-3566e07dfb70" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/client/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/client/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/client/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/client/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/img/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_03_27_042657_create_answers_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Answer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/CHANGE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Facades/QuestionerFacade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Providers/QuestionerServiceProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/admin/pool/adminPoolViewMore.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/client/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/admin/pool/poolAdminViewRes.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/css/star-rating.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/js/star-rating.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/css/star-rating.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/js/star-rating.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/js/star-rating_locale_LANG.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/js/star-rating_locale_de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/js/star-rating_locale_pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/js/star-rating_locale_ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/js/star-rating_locale_ua.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/css/theme-krajee-fa.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/css/theme-krajee-fa.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/css/theme-krajee-svg.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/css/theme-krajee-svg.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/css/theme-krajee-uni.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/admin/plugins/bootstrap-star-rating/css/theme-krajee-uni.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/notifications/viewNotifications.blade.php" />
       <change type="DELETED" beforePath="C:\xampp\htdocs\AmalyaReach\vendor\symfony\polyfill-apcu\Resources\stubs\APCUIterator.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/.gitattributes" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/.gitattributes" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/.gitignore" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/.scrutinizer.yml" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/.scrutinizer.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/.travis.yml" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_21_092805_create_questioners_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_21_092805_create_questioners_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_21_092815_create_questions_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_21_092815_create_questions_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/Exception/AbstractPhpSpecExceptionPresenter.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/Exception/AbstractPhpSpecExceptionPresenter.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeAnalysis/AccessInspectorInterface.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeAnalysis/AccessInspectorInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php" />
@@ -145,7 +109,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/Differ/EngineInterface.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/Differ/EngineInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Exception/Example/ErrorException.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Exception/Example/ErrorException.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Runner/Maintainer/ErrorMaintainer.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Runner/Maintainer/ErrorMaintainer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Events/Event.php" afterPath="$PROJECT_DIR$/app/Events/Event.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Event/EventInterface.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Event/EventInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Event/ExampleEvent.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Event/ExampleEvent.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/spec/PhpSpec/Event/ExampleEventSpec.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/spec/PhpSpec/Event/ExampleEventSpec.php" />
@@ -319,10 +282,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/PromptingGenerator.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/PromptingGenerator.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Exception/Fracture/PropertyNotFoundException.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Exception/Fracture/PropertyNotFoundException.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/spec/PhpSpec/Exception/Fracture/PropertyNotFoundExceptionSpec.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/spec/PhpSpec/Exception/Fracture/PropertyNotFoundExceptionSpec.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Question.php" afterPath="$PROJECT_DIR$/app/Question.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Console/Prompter/Question.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Console/Prompter/Question.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/integration/PhpSpec/Console/Prompter/QuestionTest.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/integration/PhpSpec/Console/Prompter/QuestionTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Questioner.php" afterPath="$PROJECT_DIR$/app/Questioner.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/Value/QuotingStringTypePresenter.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/Value/QuotingStringTypePresenter.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/Presenter/Value/QuotingStringTypePresenterSpec.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/Presenter/Value/QuotingStringTypePresenterSpec.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/README.md" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/README.md" />
@@ -475,7 +436,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Wrapper/Unwrapper.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Wrapper/Unwrapper.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Process/Shutdown/UpdateConsoleAction.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Process/Shutdown/UpdateConsoleAction.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/spec/PhpSpec/Process/Shutdown/UpdateConsoleActionSpec.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/spec/PhpSpec/Process/Shutdown/UpdateConsoleActionSpec.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Util.php" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Util.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/features/bootstrap/Matcher/ValidJUnitXmlMatcher.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/features/bootstrap/Matcher/ValidJUnitXmlMatcher.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/Value/ValuePresenter.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/Value/ValuePresenter.php" />
@@ -491,11 +451,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Yaml.php" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/Yaml.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/YamlTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/YamlTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/admin/adminAddDinningMenu.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/admin/adminAddDinningMenu.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/admin/adminCreateQuestioner.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/admin/adminCreateQuestioner.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/admin/adminManageQuestioners.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/admin/adminManageQuestioners.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/admin/pool/adminPoolViewMore.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/admin/pool/adminPoolViewMore.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/admin/admin_index.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/admin/admin_index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin_master_page.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin_master_page.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/appveyor.yml" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/appveyor.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/features/bootstrap/autoloader/autoload.php" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/features/bootstrap/autoloader/autoload.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
@@ -508,7 +466,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/class.template" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/class.template" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/.phpspec/class.tpl" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/.phpspec/class.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/clientMasterPage.blade.php" afterPath="$PROJECT_DIR$/resources/views/clientMasterPage.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/composer.json" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-apcu/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-apcu/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php56/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php56/composer.json" />
@@ -568,14 +525,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/.phpspec/interface.tpl" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/.phpspec/interface.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/interface_method_signature.template" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/interface_method_signature.template" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Resources/schema/junit.xsd" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/Resources/schema/junit.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/admin/scripts/manageQuestionerScripts.js" afterPath="$PROJECT_DIR$/public/admin/scripts/manageQuestionerScripts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/admin/meetings/meetingResDetails.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/admin/meetings/meetingResDetails.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/admin/meetings/meetingReservations.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/admin/meetings/meetingReservations.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/client/specials/meetingReservatonForm.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/client/specials/meetingReservatonForm.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/meetingsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/meetingsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/meetingsReservation.php" afterPath="$PROJECT_DIR$/app/meetingsReservation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/method.template" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/method.template" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/named_constructor_create_object.template" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/named_constructor_create_object.template" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/named_constructor_exception.template" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/named_constructor_exception.template" />
@@ -584,6 +539,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/bin/phpunit.bat" afterPath="$PROJECT_DIR$/vendor/bin/phpunit.bat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/phpunit.xml" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/phpunit.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/bin/phpunit" afterPath="$PROJECT_DIR$/vendor/bin/phpunit" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/admin/pool/poolAdminViewRes.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/admin/pool/poolAdminViewRes.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/client/specials/poolCheckAvailability.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/client/specials/poolCheckAvailability.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/poolController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/poolController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/poolReservation.php" afterPath="$PROJECT_DIR$/app/poolReservation.php" />
@@ -595,6 +551,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/specification.template" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/specification.template" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/features/formatter/use_the_junit_formatter.feature" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/features/formatter/use_the_junit_formatter.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpspec/phpspec/features/formatter/use_the_tap_formatter.feature" afterPath="$PROJECT_DIR$/vendor/phpspec/phpspec/features/formatter/use_the_tap_formatter.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/notifications/viewNotifications.blade.php" afterPath="$PROJECT_DIR$/resources/views/notifications/viewNotifications.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AmalyaReach.iws" />
@@ -620,7 +577,7 @@
       <file leaf-file-name="dinningController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/dinningController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="20" selection-end-column="5" />
               <folding>
                 <element signature="e#39#61#0#PHP" expanded="true" />
@@ -682,14 +639,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="meetingsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="meetingsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/meetingsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.879928">
+            <state vertical-scroll-proportion="-124.23077">
               <caret line="193" column="39" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="39" />
               <folding>
                 <element signature="e#39#61#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_master_page.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin_master_page.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7670251">
+              <caret line="669" column="0" selection-start-line="645" selection-start-column="8" selection-end-line="669" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -699,6 +666,9 @@
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <push-targets>
+      <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="origin" target-branch="dewmi" />
+    </push-targets>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -839,7 +809,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="redire&#9;FILE&#9;file://C:/xampp/htdocs/AmalyaReach/app/Http/Middleware/RedirectIfAuthenticated.php&#10;li&#9;FILE&#9;file://C:/xampp/htdocs/AmalyaReach/resources/views/clientMasterPage.blade.php&#10;cli&#9;FILE&#9;file://C:/xampp/htdocs/AmalyaReach/resources/views/clientMasterPage.blade.php&#10;maste&#9;FILE&#9;file://C:/xampp/htdocs/AmalyaReach/resources/views/clientMasterPage.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value="admin&#9;FILE&#9;file://C:/xampp/htdocs/AmalyaReach/resources/views/admin_master_page.blade.php&#10;specia&#9;FILE&#9;file://C:/xampp/htdocs/AmalyaReach/resources/views/pages/client/specials/specialsHome.blade.php&#10;redire&#9;FILE&#9;file://C:/xampp/htdocs/AmalyaReach/app/Http/Middleware/RedirectIfAuthenticated.php&#10;li&#9;FILE&#9;file://C:/xampp/htdocs/AmalyaReach/resources/views/clientMasterPage.blade.php&#10;cli&#9;FILE&#9;file://C:/xampp/htdocs/AmalyaReach/resources/views/clientMasterPage.blade.php&#10;maste&#9;FILE&#9;file://C:/xampp/htdocs/AmalyaReach/resources/views/clientMasterPage.blade.php" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -880,6 +850,13 @@
       <option name="number" value="Default" />
       <updated>1462297480338</updated>
     </task>
+    <task id="LOCAL-00001" summary="final project commit dev&#10;">
+      <created>1462358634829</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1462358634829</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -889,6 +866,7 @@
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2685325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -917,6 +895,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="final project commit dev&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="final project commit dev&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1094,7 +1076,7 @@
         <state vertical-scroll-proportion="0.71326166">
           <caret line="391" column="13" selection-start-line="391" selection-start-column="13" selection-end-line="391" selection-end-column="13" />
           <folding>
-            <element signature="e#7#34#0#PHP" expanded="true" />
+            <element signature="e#7#34#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1126,6 +1108,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1218638">
           <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,13 +1172,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/client/specials/specialsHome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0609319">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/meetingsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.879928">
+        <state vertical-scroll-proportion="-124.23077">
           <caret line="193" column="39" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="39" />
           <folding>
             <element signature="e#39#61#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin_master_page.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7670251">
+          <caret line="669" column="0" selection-start-line="645" selection-start-column="8" selection-end-line="669" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

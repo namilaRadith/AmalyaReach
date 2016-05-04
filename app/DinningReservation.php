@@ -38,7 +38,7 @@ class DinningReservation extends Model {
     public  static function  getReservationDetails()
     {
         $records= DB::table('dinning_reservations')
-                    ->orderBy('createdAt','asc')
+                    ->orderBy('createdAt','desc')
                     ->get();
         return $records;
     }
@@ -51,6 +51,7 @@ class DinningReservation extends Model {
             ->update(['acceptedStatus' => "Pending"]);
 
     }
+
 
     public static function getNotifications()
     {
@@ -75,4 +76,80 @@ class DinningReservation extends Model {
 
     }
 
+    public static function updateStatusToAccepted ($id)
+    {
+        DB::table('dinning_reservations')
+            ->where('id', '=', $id)
+            ->update(['acceptedStatus' => "Accepted"]);
+
     }
+
+    public static function updateStatusToRejected ($id)
+    {
+        DB::table('dinning_reservations')
+            ->where('id', '=', $id)
+            ->update(['acceptedStatus' => "Rejected"]);
+
+    }
+
+
+    function reejectDinningRes($id)
+    {
+        $reservationInfo = DinningReservation::findOrFail($id);
+        DinningReservation::updateStatusToRejected($id);
+
+        $subject = "Dinning Reservation - Amalya Reach";
+        $sendTo = Auth::user()->email;
+
+        $body = "Your dinning reservation at Amalya Reach is rejected due to unavoidable situations!!.";
+        $body .= "<br>";
+        $body .= "<br>";
+
+        $body .= "Please contact Amalya Resorts for further details ";
+        $body .= "<br>";
+        $body .= "<br>";
+
+        $body .= "Email : mailto:amalyareach@yahoo.com";
+        $body .= ">Tele/Fax :+94 112748913";
+        $body .= "556, Moragahahena Road,Pitipana North,Homagama,Sr Lanka";
+
+
+        $body .= "<br>";
+        $body .= "<br>";
+        $body .= "Hope to give you Good Service,";
+        $body .= "<br>";
+        $body .= "Thank you!";
+        $body .= "<br>";
+        $body .= "Amalya Reach";
+
+
+
+        try{
+            $transport = \Swift_SmtpTransport:: newInstance('smtp.gmail.com', 465, 'ssl')
+                ->setUserName('namila.mail.tester@gmail.com')
+                ->setPassword('0771950394');
+
+            $mailler = \Swift_Mailer::newInstance($transport);
+
+
+            $message = \Swift_Message::newInstance()
+                ->setSubject($subject)
+                ->setFrom('dewmirandika@gmail.com', 'Amalya Reach')
+                ->setTo($sendTo)
+                ->setBody($body, 'text/html');
+
+            $mailler->send($message);
+
+
+
+        }catch(Exception $e){
+            return "Can't send Email.. Error!!!";
+        }
+
+        return view('pages.admin.dinning.diningResList',compact('reservationInfo'));
+
+    }
+
+
+
+}

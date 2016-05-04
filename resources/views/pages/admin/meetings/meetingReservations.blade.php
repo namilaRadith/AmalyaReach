@@ -93,7 +93,7 @@
                             @endif
 
 
-                            <td>{{ $meetingsRes->custId }}</td>
+                            <td>{{ $meetingsRes->name }}</td>
                             <td>{{ $meetingsRes->company }}</td>
                             <td>{{ $meetingsRes->dateFrom }}</td>
                             <td>{{ $meetingsRes->dateTo }}</td>

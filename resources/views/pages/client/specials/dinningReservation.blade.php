@@ -3,7 +3,7 @@
     @parent
     <link href="{{asset('/client/css/date_time_picker.css')}}" rel="stylesheet">
     <link href="{{asset('/client/css/bootstrap-clockpicker.css ')}}" rel="stylesheet">
-    <link href="{{asset('/client/css/bootstrap-clockpicker.min')}}" rel="stylesheet">
+    <link href="{{asset('/client/css/bootstrap-clockpicker.min.css')}}" rel="stylesheet">
 
 
     <style>
@@ -204,8 +204,10 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label>Booking Time</label>
+
                                             <div class="input-group clockpicker">
-                                                    <input type="text" class="form-control" value="09:30 PM" id="bookingTime" name="bookingTime">
+                                                <input type="text" class="form-control" value="09:30 PM"
+                                                       id="bookingTime" name="bookingTime">
                                                            <span class="input-group-addon">
                                                            <span class="glyphicon glyphicon-time"></span>
                                                           </span>

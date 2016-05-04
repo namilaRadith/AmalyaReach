@@ -6,7 +6,46 @@
 <style>
 
 
-    .ui-widget-overlay {
+
+   .ui-datepicker {
+
+        display: block;
+        top: 1015px;
+        color: #0e0e0e;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        box-shadow: 0 2px 1px rgba(0,0,0,0.2);
+        padding: 7px 10px;
+        background-clip: padding-box;
+        background-color: white;
+        padding: 10px;
+    }
+
+
+    .ui-corner-all{
+
+        color: black;
+    }
+
+    .ui-state-default{
+
+        color: black;
+    }
+
+   .datepicker-dropdown:after {
+       content: '';
+       display: inline-block;
+       border-left: 6px solid transparent;
+       border-right: 6px solid transparent;
+       border-bottom: 6px solid #fff;
+       border-top: 0;
+       position: absolute;
+   }
+
+
+
+
+
+   .ui-widget-overlay {
         display:none;
         position:fixed;
         top:125px;
@@ -81,11 +120,11 @@
                                   </tr>
                                   <tr>
                                       <td>
-                                          <input type="text" id="dateFrom" name="dateFrom" class="date-pick " size="40">
+                                          <input type="text" id="dateFrom" name="dateFrom" class="date-pick " size="40" >
                                           <div class="error alert-danger" id="errorDateFrom" >{{ $errors->first('dateFrom')}}</div>
                                       </td>
                                       <td>
-                                          <input type="text" id="dateTo" name="dateTo" class="date-pick" size="35">
+                                          <input type="text" id="dateTo" name="dateTo" class="date-pick" size="35" >
                                           <div class="error alert-danger" id="errorDateTo">{{ $errors->first('dateTo')}}</div>
                                       </td>
                                   </tr>
@@ -416,7 +455,7 @@
 
                        });
                        $("body").css({
-                           backgroundColor: 'dimgray'
+                           backgroundColor: 'Black'
 
                        });
                    });
@@ -461,7 +500,7 @@
            //validate numbers
            function validateNumbers(errorCls, val, field) {
                if (!isEmpty(errorCls, val, field)) {
-                   var isNum = /^[1-9]\d*$/;
+                   var isNum = /^[0-9]\d*$/;
                    if (!(isNum.test(val))) {
                        $("#" + errorCls).text(field + " field should be a positive number. ");
                        return false;

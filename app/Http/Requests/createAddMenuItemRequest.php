@@ -24,7 +24,7 @@ class createAddMenuItemRequest extends Request {
 		return [
 			'itemName' => 'required|alpha',
 			'foodCatagory' => 'required',
-			'quantity' => 'required',
+			'quantitiy' => 'required',
 			'price' => 'required|numeric|min:0'
 
 		];

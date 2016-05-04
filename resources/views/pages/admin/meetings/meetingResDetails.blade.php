@@ -17,7 +17,7 @@
 @section('content_header')
 
     <h1>
-        Dinning Reservations
+         Meeting Reservations
         <small>Dash Board</small>
     </h1>
     <ol class="breadcrumb">
@@ -97,17 +97,17 @@
 
 
                     </div>
-                    @if(($reservationInfo->resStatus) != "Accepted")
+                    @if(($reservationInfo->resStatus) == "Not Viewed" || ($reservationInfo->resStatus) == "Pending")
                     <div class="col-md-2">
                         <br>
-                        <a href="">
+                        <a href="{{URL::to('meetingResAccept/'.$reservationInfo->id)}}">
                             <button class="label label-success" style="color:white;height:30px ; ">Accept And Send
                                 Confirmation Email
                             </button>
                         </a>
                         <br>
                         <br>
-                        <a href="">
+                        <a href="{{URL::to('meetingResReject/'.$reservationInfo->id)}}">
                             <button class="label label-danger" style="color:white;height:30px ; ">Reject And Send
                                 Rejection Email
                             </button>

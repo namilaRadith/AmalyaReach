@@ -24,7 +24,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           page. However, you can choose any other skin. Make sure you
           apply the skin class to the body tag so the changes take effect.
     -->
-    <link rel="stylesheet" href="{{ asset('/admin/dist/css/skins/skin-blue.min.css')}}">
+    <link rel="stylesheet" hreft="{{ asset('/admin/dist/css/AdminLTE.min.css')}}">
 
     <!-- DataTables -->
     <link rel="stylesheet" href="{{ asset('/admin/plugins/datatables/dataTables.bootstrap.css') }}">
@@ -65,15 +65,17 @@ desired effect
 -->
 <style>
     label.error {
-        color:red;
+        color: red;
     }
+
     input.error {
-        border:1px solid red;
+        border: 1px solid red;
     }
 
 </style>
 
 <body class="hold-transition skin-blue sidebar-mini">
+
 <div class="wrapper">
 
     <!-- Main Header -->
@@ -112,7 +114,8 @@ desired effect
                                         <a href="#">
                                             <div class="pull-left">
                                                 <!-- User Image -->
-                                                <img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+                                                <img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}"
+                                                     class="img-circle" alt="User Image">
                                             </div>
                                             <!-- Message title and timestamp -->
                                             <h4>
@@ -133,41 +136,9 @@ desired effect
                     <!-- /.messages-menu -->
 
                     <!-- Notifications Menu -->
-                    <li class="dropdown notifications-menu">
+                    <li class="dropdown notifications-menu" id="notifications">
                         <!-- Menu toggle button -->
 
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown"  id="dropDownNotify">
-                            <i class="fa fa-bell-o"></i>
-                            @if($count >0)
-                            <span class="label label-warning" id="lblNotify">{{$count}}</span>
-                            @endif
-                        </a>
-                        @if($count >0)
-                        <ul class="dropdown-menu">
-                            <li class="header">You have {{$count}} notifications</li>
-                            <li>
-                                <!-- Inner Menu: contains the notifications -->
-                                <ul class="menu">
-                                    @if($diningNewResCount>0)
-                                    <li><!-- start notification -->
-                                        <a href="{{URL::to('viewDinningReservations')}}" id="viewNewRes" class="viewNewRes">
-                                            <i class="fa fa-users text-aqua"></i>{{$diningNewResCount}} new dinning reservations are placed.
-                                        </a>
-                                    </li>
-                                    @endif
-                                     @if($newMeetingResCount>0)
-                                     <li><!-- start notification -->
-                                         <a href="{{URL::to('meetingResAdminPg')}}" id="viewNewRes" class="viewNewRes">
-                                            <i class="fa fa-users text-aqua"></i>{{$newMeetingResCount}} new meetings reservations are placed.
-                                         </a>
-                                     </li>
-                                            @endif
-                                    <!-- end notification -->
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">View all</a></li>
-                        </ul>
-                        @endif
                     </li>
                     <!-- Tasks Menu -->
                     <li class="dropdown tasks-menu">
@@ -191,7 +162,9 @@ desired effect
                                             <!-- The progress bar -->
                                             <div class="progress xs">
                                                 <!-- Change the css width attribute to simulate progress -->
-                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%"
+                                                     role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                     aria-valuemax="100">
                                                     <span class="sr-only">20% Complete</span>
                                                 </div>
                                             </div>
@@ -210,14 +183,16 @@ desired effect
                         <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!-- The user image in the navbar-->
-                            <img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
+                            <img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}" class="user-image"
+                                 alt="User Image">
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
                             <span class="hidden-xs">Alexander Pierce</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
                             <li class="user-header">
-                                <img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+                                <img src="{{asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle"
+                                     alt="User Image">
 
                                 <p>
                                     Alexander Pierce - Web Developer
@@ -288,11 +263,13 @@ desired effect
                 <li class="header">Amalya Reach Admin Panel</li>
                 <!-- Tree View Dashboard -->
                 <li class=" {{Request::segment(1) === 'dashboard' ? 'active' : '' }} treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Dashboard</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="#">Home Page</a>
                             <ul class="treeview-menu">
-                                <li class="#"><a href="{{action('AdminDashboardController@showImageSlider')}}"><i class="fa fa-circle-o"></i>Slider Images</a></li>
+                                <li class="#"><a href="{{action('AdminDashboardController@showImageSlider')}}"><i
+                                                class="fa fa-circle-o"></i>Slider Images</a></li>
 
                             </ul>
                         </li>
@@ -300,10 +277,15 @@ desired effect
                         <li><a href="#">Facilities Page</a></li>
                         <li><a href="#">Functions Page</a></li>
                         <li><a href="{{action('AdminDashboardController@showContactUs')}}">Contact-Us Page</a></li>
-                        <li class="{{Request::segment(2) === 'gallery' ? 'active' : '' }}"><a href="#">Gallery Page<i class="fa fa-angle-left pull-right"></i></a>
+                        <li class="{{Request::segment(2) === 'gallery' ? 'active' : '' }}"><a href="#">Gallery Page<i
+                                        class="fa fa-angle-left pull-right"></i></a>
                             <ul class="treeview-menu">
-                                <li class="{{Request::segment(3) ==='img-gallery' ? 'active' : '' }}"><a  href="{{action('AdminDashboardController@showImageGallery')}}" ><i class="fa fa-circle-o"></i> Photo Gallery </a></li>
-                                <li class="{{Request::segment(3) ==='vd-gallery' ? 'active' : '' }}"><a href="{{action('AdminDashboardController@showVideoGallery')}}"><i class="fa fa-circle-o"></i> Video Gallery</a></li>
+                                <li class="{{Request::segment(3) ==='img-gallery' ? 'active' : '' }}"><a
+                                            href="{{action('AdminDashboardController@showImageGallery')}}"><i
+                                                class="fa fa-circle-o"></i> Photo Gallery </a></li>
+                                <li class="{{Request::segment(3) ==='vd-gallery' ? 'active' : '' }}"><a
+                                            href="{{action('AdminDashboardController@showVideoGallery')}}"><i
+                                                class="fa fa-circle-o"></i> Video Gallery</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -312,28 +294,32 @@ desired effect
 
                 <!-- Promotions area  -->
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Promotions</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Promotions</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="">Add Promotion</a></li>
                     </ul>
                 </li>
 
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Loyalty</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Loyalty</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                     </ul>
                 </li>
 
                 <!-- Rooms -->
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Rooms</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Rooms</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="adminRoomsHome">Rooms Home</a></li>
                         <li><a href="adminAddNewRooms">Add New Room</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Accommodations</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Accommodations</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="#">Add New Accommodation</a></li>
                         <li><a href="#">Add New Accommodation</a></li>
@@ -342,34 +328,50 @@ desired effect
 
                 <!--Dinning Area -->
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Dinning</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Dinning</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="{{action('dinningController@diningMenu')}}">Dinning Menu</a></li>
                         <li><a href="{{action('dinningController@diningAddMenuForm')}}">Add Dinning Menu</a></li>
-                        <li><a href="{{action('dinningController@viewDinningReservations')}}">Dinning Reservations</a></li>
+                        <li><a href="{{action('dinningController@viewDinningReservations')}}">Dinning Reservations</a>
+                        </li>
                     </ul>
                 </li>
 
                 <!--Meetings Area -->
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Meetings</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Meetings</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="{{action('meetingsController@meetingResAdminPg')}}">Meetings Reservations</a></li>
                     </ul>
                 </li>
 
+
+                <!--Pool Area -->
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Swimming pool</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{action('poolController@adminPoolRes')}}">Swimming Pool Reservations</a></li>
+                    </ul>
+                </li>
+
                 <li class="{{Request::segment(1) === 'newsletter' ? 'active' : '' }} treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>News Letter</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>News Letter</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li class="{{Request::segment(2) === 'create' ? 'active' : '' }}">
-                            <a href="{{action('AdminDashboardController@showCreateNewsLetter')}}">Create News Letter </a>
+                            <a href="{{action('AdminDashboardController@showCreateNewsLetter')}}">Create News
+                                Letter </a>
                         </li>
                         <li><a href="#">View News Letters</a></li>
                     </ul>
                 </li>
 
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Users</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Users</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="{{action('AdminDashboardController@listAllUsers')}}">View all users</a></li>
                         <li><a href="{{action('AdminDashboardController@showAddPowerUser')}}">Add Power users</a></li>
@@ -377,21 +379,24 @@ desired effect
                 </li>
 
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Subscribers</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Subscribers</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="#">List All Subscribers</a></li>
                     </ul>
                 </li>
 
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Customers</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-link"></i> <span>Customers</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="#">List All customers</a></li>
                         <li>
                             <a href="#">Customer reviews</a>
                             <ul class="treeview-menu">
                                 <li><a href="#">Questioner Results</a></li>
-                                <li><a href="{{action('AdminDashboardController@showManageQuestioners')}}">Manage Questioner</a></li>
+                                <li><a href="{{action('AdminDashboardController@showManageQuestioners')}}">Manage
+                                        Questioner</a></li>
 
                             </ul>
                         </li>
@@ -521,7 +526,7 @@ desired effect
 
 
 <div class="example-modal">
-    <div class="modal "  id="myModal">
+    <div class="modal " id="myModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -546,9 +551,6 @@ desired effect
 <!-- /.example-modal -->
 
 
-
-
-
 @section('js_ref')
 
         <!-- REQUIRED JS SCRIPTS -->
@@ -568,29 +570,27 @@ desired effect
             'X-CSRF-Token': $('meta[name="csrf_token"]').attr('content')
         }
     });
-
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').focus()
-    })
-
-    function modalCall(messageType,Title,Message){
-
-        $('#myModal').removeClass();
-        $('#myModal').addClass("modal");
-        $('#myModal').addClass("modal-"+messageType);
-        $('#modelTitle').html(Title);
-        $('#modalMessage').html(Message);
-
-        $('#myModal').modal('show');
-
-        setTimeout(function(){
-            $('#myModal').modal('hide');
-        },2000);
-
-    }
+    //
+    //    $('#myModal').on('shown.bs.modal', function () {
+    //        $('#myInput').focus()
+    //    })
+    //
+    //    function modalCall(messageType,Title,Message){
+    //
+    //        $('#myModal').removeClass();
+    //        $('#myModal').addClass("modal");
+    //        $('#myModal').addClass("modal-"+messageType);
+    //        $('#modelTitle').html(Title);
+    //        $('#modalMessage').html(Message);
+    //
+    //        $('#myModal').modal('show');
+    //
+    //        setTimeout(function(){
+    //            $('#myModal').modal('hide');
+    //        },2000);
+    //
+    //    }
 </script>
-
-
 
 
 <!-- DataTables -->
@@ -628,12 +628,14 @@ desired effect
 </script>
 
 <script>
-    $("#dropDownNotify").on('click', function(){
+    $("#dropDownNotify").on('click', function () {
         $("#lblNotify").hide();
 
     });
 
 </script>
+
+
 
 <script>
     $(function () {
@@ -641,7 +643,31 @@ desired effect
     });
 </script>
 
+<script>
 
+
+
+    function showNotifications()
+    {
+        $.ajax({
+            url  : '/adminNotify',
+            type : 'get',
+
+            success : function(data){
+                document.getElementById("notifications").innerHTML = data;
+//               alert("blah");
+            },
+            error :function(err,req){
+                alert(JSON.stringify(data));
+            },
+        });
+
+      setTimeout("showNotifications()",300)
+    }
+
+    onLoad=showNotifications();
+
+</script>
 
 
 @show
@@ -649,8 +675,6 @@ desired effect
 Both of these plugins are recommended to enhance the
 user experience. Slimscroll is required when using the
 fixed layout. -->
-
-
 
 
 </body>

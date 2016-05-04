@@ -1,7 +1,7 @@
 @extends('clientMasterPage')
 
 @section('css_ref')
-
+@parent
 
 
         <!-- SPECIFIC CSS -->
@@ -39,6 +39,7 @@ color:#fff;
 display:none;
 }
 </style>
+@stop
 
 @section('content')
 
@@ -208,7 +209,7 @@ display:none;
                             </div>
                         </div>
                         <hr/>
-                        <input type="submit" class="btn btn_full" id="btnPoolRes" name="btnPoolRes" style="background-color: #005599;color: white" value="Send Request"  >
+                        <input type="button" class="btn btn_full" id="btnPoolRes" name="btnPoolRes" style="background-color: #005599;color: white" value="Send Request" onclick="submitForm()" >
                         <br>
                         <br>
                         <div class="row add_bottom_10">
@@ -294,6 +295,7 @@ display:none;
 <script src="{{asset('/client/js/jquery-ui.min.js')}}"></script>
 <script>
 
+    function submitForm(){
 
     $(function () {
         var dialog,
@@ -317,23 +319,16 @@ display:none;
             });
         });
 
-
         $("#btnSucessMsgClose").button().on("click", function () {
-            dialog.dialog("close");
-            $(".wrap").css({
-                opacity: 1
-            });
-            $("body").css({
-                backgroundColor: ''
-
-            });
             $('#poolReservationForm').submit();
+            dialog.dialog("close");
 
         });
 
       });
 
-
+    }
 </script>
+
 
 @stop

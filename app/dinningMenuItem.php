@@ -11,11 +11,27 @@ class dinningMenuItem extends Model {
         DB::table('dinning_menu_items')->insert([
             [
                 'itemName' => $itemName,
-                'quantitiy' => $foodCat,
-                'foodCatagory' => $qty,
+                'quantitiy' => $qty,
+                'foodCatagory' => $foodCat,
                 'price' => $price,
             ]
         ]);
+    }
+
+
+
+    public static function updateMenu($id,$itemName,$foodCat,$qty,$price)
+    {
+        DB::table('dinning_menu_items')
+            ->where('id', $id)
+            ->update([
+                'itemName' => $itemName,
+                'quantitiy' => $qty,
+                'foodCatagory' => $foodCat,
+                'price' => $price,
+
+            ]);
+
     }
 
 

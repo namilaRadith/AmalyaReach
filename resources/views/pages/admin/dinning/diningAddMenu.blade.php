@@ -23,7 +23,6 @@
         <div class="alert col-md-7" style="top: 30px">
             @if(Session::has('flash_messageError'))
                 <div class="alert alert-danger">{{Session::get('flash_messageError')}}</div>
-
             @endif
         </div>
     <div class="col-md-10">
@@ -54,8 +53,8 @@
     </div>
         <div class="form-group">
             <label for="qty">Quantity</label>
-            <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Portion size" value="{{ old('quantity') }}">
-            <div class="error alert-danger">{{ $errors->first('quantity') }}</div>
+            <input type="text" class="form-control" id="quantitiy" name="quantitiy" placeholder="Portion size" value="{{ old('quantity') }}">
+            <div class="error alert-danger">{{ $errors->first('quantitiy') }}</div>
         </div>
     <div class="form-group">
         <label for="price">Price(Rs.)</label>
@@ -72,6 +71,7 @@
 
             @endif
         </div>
+
 </div>
 </form>
 </div>

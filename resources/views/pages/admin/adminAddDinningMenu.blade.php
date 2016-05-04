@@ -18,7 +18,7 @@
                 <form role="form">
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Menu Name</label>
+                            <label for="">Menu Name</label>
                             <input type="text" class="form-control" id="menu_name" placeholder="Enter menu name">
                         </div>
 

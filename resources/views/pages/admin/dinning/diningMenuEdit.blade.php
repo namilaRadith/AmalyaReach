@@ -7,10 +7,8 @@
 
     <hr>
     <div class="container">
-        {{----}}
-        {{--<form id="EditDiningMenu" method="post" action="{{URL::to('diningMenu/'.$foodItem->id.'/edit')}}">--}}
 
-            <form id="EditDiningMenu" method="post" action="/diningMenu/12/edit">
+            <form id="EditDiningMenu" method="post" action="{{URL::to('diningMenu/'.$foodItem->id.'/edit')}}">
 
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -36,6 +34,14 @@
 
                     <div class="error alert-danger">{{ $errors->first('foodCatagory') }}</div>
                 </div>
+
+                <div class="form-group">
+                    <label for="price">Quantity</label>
+                    <input type="text" class="form-control" id="quantitiy" name="quantitiy" placeholder="Price(Rs.)"
+                           value="{{$foodItem->quantitiy }}">
+                    <div class="error alert-danger">{{ $errors->first('quantitiy') }}</div>
+                </div>
+
                 <div class="form-group">
                     <label for="price">Price(Rs.)</label>
                     <input type="text" class="form-control" id="price" name="price" placeholder="Price(Rs.)"

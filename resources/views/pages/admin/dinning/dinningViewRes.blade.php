@@ -83,17 +83,17 @@
                         <!-- /.box-body -->
                     </div>
 
-                    @if(($reservationInfo->acceptedStatus) != "Accepted")
+                    @if(($reservationInfo->acceptedStatus) == "Pending" || ($reservationInfo->acceptedStatus) == "Not Viewed")
                     <div class="col-md-2">
                         <br>
-                        <a href="">
+                        <a href="{{URL::to('confirmDining/'.$reservationInfo->id)}}" class="btn_1">
                             <button class="label label-success" style="color:white;height:30px ; ">Accept And Send
                                 Confirmation Email
                             </button>
                         </a>
                         <br>
                         <br>
-                        <a href="">
+                        <a href="{{URL::to('rejectDining/'.$reservationInfo->id)}}" class="btn_1">
                             <button class="label label-danger" style="color:white;height:30px ; ">Reject And Send
                                 Rejection Email
                             </button>

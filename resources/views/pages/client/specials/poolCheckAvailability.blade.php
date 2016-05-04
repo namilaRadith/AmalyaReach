@@ -1,14 +1,14 @@
 @extends('clientMasterPage')
 
 @section('css_ref')
-
-        <!-- SPECIFIC CSS -->
+    @parent
+        <!-- SPECIFIC CSS FOR thisPage  -->
 <link href="{{asset('/client/css/jquery.mobile-1.4.5.min.css')}}" rel="stylesheet">
 
-@parent
+
 <link href="{{asset('/client/css/date_time_picker.css')}}" rel="stylesheet">
-<link href="{{asset('/client/css/bootstrap-clockpicker.css ')}}" rel="stylesheet">
-<link href="{{asset('/client/css/bootstrap-clockpicker.min')}}" rel="stylesheet">
+<link href="{{asset('/client/css/bootstrap-clockpicker.css')}}" rel="stylesheet">
+<link href="{{asset('/client/css/bootstrap-clockpicker.min.css')}}" rel="stylesheet">
 
 
 
@@ -268,6 +268,7 @@
 
     @section('js_ref')
     @parent
+            <!-- SPECIFIC JS FOR thisPage  -->
             <!-- Specific scripts -->
     <script src="{{asset('/client/js/quantity-bt.js')}}"></script>
     <script src="{{asset('/client/js/bootstrap-datepicker.js')}}"></script>
@@ -303,7 +304,7 @@
 
     <!--Script for time Picker-->
     <script src="{{asset('/client/js/jquery-ui.min.js')}}"></script>
-    <script src="{{asset('/client/js/jquery-clockpicker.min.css')}}"></script>
+    {{--<script src="{{asset('/client/js/jquery-clockpicker.min.js')}}"></script>--}}
     <script src="{{asset('/admin/plugins/clockpicker/bootstrap-clockpicker.min.js')}}"></script>
 
     <script type="text/javascript">
@@ -315,7 +316,7 @@
     </script>
 
 
-    <script src="js/common_scripts_min.js"></script>
+    {{--<script src="js/common_scripts_min.js"></script>--}}
 
 
     <!-- Specific scripts -->

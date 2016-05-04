@@ -42,6 +42,7 @@
         <small>Dash Board</small>
     </h1>
     <ol class="breadcrumb">
+    </ol>
 
 
 @stop

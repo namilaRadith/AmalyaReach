@@ -17,12 +17,12 @@ use App\Subscriber;
 use Illuminate\Http\Request;
 use App\DinningReservation;
 use App\meetingsReservation;
-
-
-use Input;
-
+use App\poolReservation;
 
 use Input;
+
+class AdminDashboardController extends Controller {
+
 
     public function __construct()
     {
@@ -39,15 +39,7 @@ use Input;
 
     }
 
-    /**
-     * Display  admin panel index page
-     *
-     * @return Response
-     */
-    public function index()
-    {
-        return view('pages.admin.admin_index');
-    }
+
 
 
     /**
@@ -71,12 +63,9 @@ use Input;
 	public function index()
 	{
 
-        $newMeetingResCount=meetingsReservation::getNewResCount();
-        $diningNewResCount=DinningReservation::getResCount();
 
-        $count=$newMeetingResCount+$diningNewResCount;
 
-        return view('pages.admin.admin_index',compact('newMeetingResCount','diningNewResCount','count'));
+        return view('pages.admin.admin_index');
 	}
     /**
      * upload new slider image to the database
@@ -432,4 +421,22 @@ use Input;
     public function publishQuestioner($id){
         Questioner::makePublic($id);
     }
+
+
+    public  function showNotifications()
+    {
+        $newMeetingResCount=meetingsReservation::getNewResCount();
+        $diningNewResCount=DinningReservation::getResCount();
+        $poolNewReservation=poolReservation::getNotificationsCount();
+
+        $count=$newMeetingResCount+$diningNewResCount+$poolNewReservation;
+
+        return view('notifications.viewNotifications',compact('count','newMeetingResCount','diningNewResCount','poolNewReservation'));
+
+    }
+
 }
+
+
+
+

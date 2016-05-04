@@ -258,6 +258,13 @@ Route::get('specials','specialsController@specialsHome');
 Route::get('pool','poolController@checkAvailability');
 Route::post('poolReservation','poolController@poolReservation');
 Route::post('poolFormSubmit','poolController@poolFormSubmit');
+Route::get('adminPoolRes','poolController@adminPoolRes');
+Route::get('adminPoolViewMore/{id}','poolController@adminPoolViewMore');
+Route::get('confirmPool/{id}','poolController@confirmPoolReservation');
+Route::get('rejectPoolRes/{id}','poolController@rejectPoolRes');
+
+
+
 
 //dinning Client route collection
 //registed route for Client diining reservaton page
@@ -294,7 +301,13 @@ Route::get('diningMenuUpdate/{id}/delete','dinningController@deleteFoodItem');
 
 //registed route for admin to view dinning reservations
 Route::get('viewDinningReservations','dinningController@viewDinningReservations');
-Route::post('resNotifications','dinningController@getNewNotifyCount');
+
+//registed route for admin to send acceptence email
+Route::get('confirmDining/{id}','dinningController@confirmDinningRes');
+
+
+//registed route for admin to send rejection email
+Route::get('rejectDining/{id}','dinningController@rejectDinningRes');
 
 
 
@@ -315,5 +328,18 @@ Route::post('meetingResFormSubmit','meetingsController@meetingsResFormSubmit');
 //meeting admin
 Route::get('meetingResAdminPg','meetingsController@meetingResAdminPg');
 
+//registed route for send meeting accept email
+Route::get('meetingResAccept/{id}','meetingsController@confirmMeeting');
+
+//registed route for send meeting rejection email
+Route::get('meetingResReject/{id}','meetingsController@rejectMeeting');
+
+
+
 //meeting admin
 Route::get('meetingRes/viewRes/{id}','meetingsController@viewMeetingRes');
+
+
+
+//Show Admin notifications
+Route::get('adminNotify','AdminDashboardController@showNotifications');

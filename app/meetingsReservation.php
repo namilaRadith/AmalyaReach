@@ -33,7 +33,12 @@ class meetingsReservation extends Model {
     }
         public static function getResDetails()
         {
-            $res = DB::table('meetings_reservations')->get();
+            $res = DB::table('meetings_reservations')
+                ->join('users', 'users.id', '=', 'meetings_reservations.custId')
+                ->select('users.name', 'meetings_reservations.company', 'meetings_reservations.dateFrom' ,
+                    'meetings_reservations.dateTo' ,'meetings_reservations.noOfGuests' ,
+                    'meetings_reservations.resStatus', 'meetings_reservations.id')
+                ->get();
             return $res;
         }
 
@@ -89,6 +94,19 @@ class meetingsReservation extends Model {
 
     }
 
+    public  static function updateStatusToAccepted($id)
+    {
+        DB::table('meetings_reservations')
+            ->where('id', '=', $id)
+            ->update(['resStatus' => "Accepted"]);
+    }
 
+
+    public  static function updateStatusToRejected($id)
+    {
+        DB::table('meetings_reservations')
+            ->where('id', '=', $id)
+            ->update(['resStatus' => "Rejected"]);
+    }
 
 }
