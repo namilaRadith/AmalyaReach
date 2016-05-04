@@ -1,15 +1,32 @@
 @extends('clientMasterPage')
 @section('css_ref')
 	@parent
+		<!-- SPECIFIC CSS -->
+
+<!--
+
+
+
+-->
+
 
 
 @stop
 
 @section('content')
+
+
+
+
+
+
 		<!-- Slider -->
 <div class="tp-banner-container">
 	<div class="tp-banner">
 		<ul>
+			<?php
+			if(isset($imageList)){
+			?>
 			@foreach($imageList as $data)
 			<!-- SLIDE  -->
 			<li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
@@ -29,7 +46,9 @@
 				</div>
 			</li>
 			@endforeach
-
+			<?php
+			}
+			?>
 		</ul>
 
 	</div>
@@ -44,46 +63,56 @@
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<div class="row">
 							<div class="col-md-6 col-sm-6 col-xs-6">
-								<div class="form-group">
-									<label>Check in</label>
-									<input class="date-pick form-control" data-date-format="M d, D" type="text" id="checkIn" name="checkIn" placeholder="Check in">
+								<div class="form-group">                                                                               
+									<label style="color:white;">Check in</label>
+									<input class="date-pick form-control" data-date-format="dd-mm-yyyy" type="text" id="checkIn" name="checkIn" placeholder="Check in" readonly>
 									<span class="input-icon"><i class=" icon-calendar"></i></span>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 col-xs-6">
 								<div class="form-group">
-									<label>Check out</label>
-									<input class="date-pick form-control" data-date-format="M d, D" type="text" id="checkOut" name="checkOut" placeholder="Check out">
+									<label style="color:white;">Check out</label>
+									<input class="date-pick form-control" data-date-format="dd-mm-yyyy" type="text" id="checkOut" name="checkOut" placeholder="Check out" readonly>
 									<span class="input-icon"><i class=" icon-calendar"></i></span>
 								</div>
 							</div>
 						</div><!-- End row -->
+
+						<div class="col-md-12 col-sm-12" style="color: red">
+							<div class="form-group" id="error_div_dateValidation" name="error_div_dateValidation">
+							</div>
+						</div>
+
 						<div class="row">
 							<div class="col-md-6 col-sm-6 col-xs-6">
 								<div class="form-group">
-									<label>Adults</label>
+									<label style="color:white;">Adults</label>
 									<div class="qty-buttons">
 										<input type="button" value="-" class="qtyminus" name="adults">
-										<input type="text" name="adults" id="adults" value="" class="qty form-control" placeholder="0">
+										<input type="text" name="adults" id="adults" value="" class="qty form-control" placeholder="0" readonly>
 										<input type="button" value="+" class="qtyplus" name="adults">
 									</div>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 col-xs-6">
 								<div class="form-group">
-									<label>Children</label>
+									<label style="color:white;">Children</label>
 									<div class="qty-buttons">
 										<input type="button" value="-" class="qtyminus" name="children">
-										<input type="text" name="children" id="children"  value="" class="qty form-control" placeholder="0">
+										<input type="text" name="children" id="children"  value="" class="qty form-control" placeholder="0" readonly>
 										<input type="button" value="+" class="qtyplus" name="children">
 									</div>
 								</div>
 							</div>
 						</div><!-- End row -->
+						<div class="col-md-12 col-sm-12" style="color: red">
+							<div class="form-group" id="error_div_count" name="error_div_count">
+							</div>
+						</div>
 						<div class="row">
 							<div class="col-md-12">
 								<div class="form-group">
-									<label>Room type</label>
+									<label style="color:white;">Room type</label>
 									<select class="form-control" name="roomType" id="roomType">
 										<option value="">Select room type</option>
 										<option value="1">Single Room</option>
@@ -93,18 +122,35 @@
 									</select>
 								</div>
 							</div>
+						</div>
+
+						<div class="row">
 							<div class="col-md-12">
 								<div class="form-group">
-									<label>Have a Code?</label>
-									<input type="text" class="form-control" name="coding" id="coding" placeholder="Enter Code here">
+									<label style="color:white;">Currency Type</label>
+									<select class="form-control" name="currencyType" id="currencyType">
+										<option value="USD">USD</option>
+										<option value="LKR">LKR</option>
+										<option value="AUD">AUD</option>
+									</select>
 								</div>
 							</div>
+						</div>
 
+
+						<div class="col-md-12 col-sm-12" style="color: red">
+							<div class="form-group" id="error_div_room_type" name="error_div_room_type">
+							</div>
+						</div>
+
+						<div class="row">
 							<div class="col-md-12 col-sm-12">
 								<div class="form-group">
 									<input type="submit" value="Check Availability" class="btn_full" id="checkAvailability">
 								</div>
 							</div>
+
+
 						</div>
 
 					</form>
@@ -113,82 +159,91 @@
 
 
 
-			<!-- Promotions Message-->
-			<div class="col-md-4 pull-left">
-				<div id="book">
-					<div id="message-booking"></div>
-					<form role="form" method="post" action="assets/check_avail.php" id="check_avail" autocomplete="off">
-						<div class="row">
-							<div class="col-md-12 col-sm-12 col-xs-12">
-								<div class="form-group">
-									<label style="color: #3DA0DB"><i style="color: #7a43b6" class="fa fa-bookmark fa-3x"></i>
-										Up to 30% off with Amayla Insider Deals!
-										<a>Sign in to unlock</a></label><label style="margin-left: 46%;color: #932ab6" class="down"><i class="fa fa-angle-double-down fa-3x"></i></label>
-								</div>
-							</div>
-						</div><!-- End row -->
-						<div class="row" id="PromoShow">
-							<div class="col-md-12 col-sm-12">
-								<div class="form-group"><div class="my-slider" style="width:315px;height: 200px;">
-										<ul style="margin-left: 25px;">
-											<li><img src="{{ asset('client/img/images.jpg') }}"></li>
-											<li><img src="{{ asset('client/img/images1.jpg') }}"></li>
-											<li><img src="{{ asset('client/img/images2.jpg') }}"></li>
-											<li><img src="{{ asset('client/img/images1.jpg') }}"></li>
-											<li><img src="{{ asset('client/img/images.jpg') }}"></li>
-										</ul>
-									</div>
 
-									<!-- There'll be a load of other stuff here -->
-									<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-									<script src="{{asset('/client/js/unslider.js')}}"></script> <!-- but with the right path! -->
-									<link rel="stylesheet" href="{{asset('/client/css/unslider.css')}}">
-									<script>
-										jQuery(document).ready(function($) {
-											$('.my-slider').unslider({autoplay: true});
 
-										});
-									</script>
-									<div style="height: 15px">
 
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12 col-sm-12">
-								<div class="form-group">
-									<input type="submit" value="View Promotion" class="btn_full" id="submit-booking">
-								</div>
-							</div>
-							<div class="col-md-12 col-sm-12">
-								<div align="center" class="form-group">
-									<label class="up" style="color: #932ab6"><i class="fa fa-angle-double-up fa-3x"></i></label>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-			<!-- END Promotions Message-->
 
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+			{{--<!-- Promotions Message-->--}}
+			{{--<div class="col-md-4 pull-left">--}}
+				{{--<div id="book">--}}
+					{{--<div id="message-booking"></div>--}}
+					{{--<form role="form" method="post" action="assets/check_avail.php" id="check_avail" autocomplete="off">--}}
+						{{--<div class="row">--}}
+							{{--<div class="col-md-12 col-sm-12 col-xs-12">--}}
+								{{--<div class="form-group">--}}
+									{{--<label style="color: #3DA0DB"><i style="color: #7a43b6" class="fa fa-bookmark fa-3x"></i>--}}
+										{{--Up to 30% off with Amayla Insider Deals!--}}
+										{{--<a>Sign in to unlock</a></label><label style="margin-left: 46%;color: #932ab6" class="down"><i class="fa fa-angle-double-down fa-3x"></i></label>--}}
+								{{--</div>--}}
+							{{--</div>--}}
+						{{--</div><!-- End row -->--}}
+						{{--<div class="row" id="PromoShow">--}}
+							{{--<div class="col-md-12 col-sm-12">--}}
+								{{--<div class="form-group"><div class="my-slider" style="width:315px;height: 200px;">--}}
+										{{--<ul style="margin-left: 25px;">--}}
+											{{--<li><img src="{{ asset('client/img/images.jpg') }}"></li>--}}
+											{{--<li><img src="{{ asset('client/img/images1.jpg') }}"></li>--}}
+											{{--<li><img src="{{ asset('client/img/images2.jpg') }}"></li>--}}
+											{{--<li><img src="{{ asset('client/img/images1.jpg') }}"></li>--}}
+											{{--<li><img src="{{ asset('client/img/images.jpg') }}"></li>--}}
+										{{--</ul>--}}
+									{{--</div>--}}
 
-			<script type="text/javascript">
+									{{--<!-- There'll be a load of other stuff here -->--}}
+									{{--<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>--}}
+									{{--<script src="{{asset('/client/js/unslider.js')}}"></script> <!-- but with the right path! -->--}}
+									{{--<link rel="stylesheet" href="{{asset('/client/css/unslider.css')}}">--}}
+									{{--<script>--}}
+										{{--jQuery(document).ready(function($) {--}}
+											{{--$('.my-slider').unslider({autoplay: true});--}}
 
-				$( document ).ready(function(){
-					$("#PromoShow").hide();
-				});
+										{{--});--}}
+									{{--</script>--}}
+									{{--<div style="height: 15px">--}}
 
-					$(".up").click(function () {
-						$(".down").slideDown();
-						$("#PromoShow").slideUp();
-					});
+									{{--</div>--}}
+								{{--</div>--}}
+							{{--</div>--}}
+							{{--<div class="col-md-12 col-sm-12">--}}
+								{{--<div class="form-group">--}}
+									{{--<input type="submit" value="View Promotion" class="btn_full" id="submit-booking">--}}
+								{{--</div>--}}
+							{{--</div>--}}
+							{{--<div class="col-md-12 col-sm-12">--}}
+								{{--<div align="center" class="form-group">--}}
+									{{--<label class="up" style="color: #932ab6"><i class="fa fa-angle-double-up fa-3x"></i></label>--}}
+								{{--</div>--}}
+							{{--</div>--}}
+						{{--</div>--}}
+					{{--</form>--}}
+				{{--</div>--}}
+			{{--</div>--}}
+			{{--<!-- END Promotions Message-->--}}
 
-					$(".down").click(function () {
-						$(".down").slideUp();
-						$("#PromoShow").slideDown();
-					});
-			</script>
+			{{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">--}}
+			{{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>--}}
+
+			{{--<script type="text/javascript">--}}
+
+				{{--$( document ).ready(function(){--}}
+					{{--$("#PromoShow").hide();--}}
+				{{--});--}}
+
+					{{--$(".up").click(function () {--}}
+						{{--$(".down").slideDown();--}}
+						{{--$("#PromoShow").slideUp();--}}
+					{{--});--}}
+
+					{{--$(".down").click(function () {--}}
+						{{--$(".down").slideUp();--}}
+						{{--$("#PromoShow").slideDown();--}}
+					{{--});--}}
+			{{--</script>--}}
+
+
+
+
+
 		</div>
 		<!--<a href="room_details.html" ><img height="250px" width="100%" src="{{ asset('client/sampleImages/room2.jpg') }}" alt=""></a>-->
 	</div>
@@ -289,6 +344,8 @@
 
 
 	</style>
+
+
 	<div class="container" >
 		<div class="row" >
 			<div class="col-md-4 col-sm-4" >
@@ -421,8 +478,165 @@
 
 @section('js_ref')
 	@parent
+
+
+		<script>
+		$('#mainReservationForm').submit(function() {
+
+			var checkIn =  document.getElementById("checkIn").value;
+			var checkOut = document.getElementById("checkOut").value;
+			var adults = document.getElementById("adults").value;
+			var children = document.getElementById("children").value;
+
+//			if(adults == null){
+//				adults=0;
+//			}
+//
+//			if(children == null){
+//				children=0;
+//			}
+
+
+
+
+
+			var roomType = document.getElementById("roomType").value;
+			var result = true;
+			document.getElementById('error_div_dateValidation').innerHTML = "";
+			document.getElementById('error_div_room_type').innerHTML = "";
+			document.getElementById('error_div_count').innerHTML = "";
+
+			var d = new Date();
+			var today = [
+				('0' + d.getDate()).slice(-2),
+				('0' + (d.getMonth() + 1)).slice(-2),
+				d.getFullYear()
+			].join('-');
+
+			//alert(today);
+
+
+
+			var date_result = dateCompare(checkIn,checkOut);
+			var today_compare_result_with_checkin = dateCompare(today,checkIn);
+			var today_compare_result_with_checkout = dateCompare(today,checkOut);
+
+			//alert(today_compare_result);
+
+
+			//Date validations
+			if(isEmpty(checkIn) || isEmpty(checkOut)){
+				document.getElementById('error_div_dateValidation').innerHTML += "* Date fields can't be Empty...<br>";
+				result = false;
+			}else{
+
+				if(today_compare_result_with_checkin && today_compare_result_with_checkout){
+					if(!date_result){
+						document.getElementById('error_div_dateValidation').innerHTML += "* Check In date can't be Grater than Check Out Date...<br>";
+						result = false;
+					}
+				}
+				else{
+					document.getElementById('error_div_dateValidation').innerHTML += "* Dates should be today or feature Date...<br>";
+					result = false;
+				}
+
+			}
+
+
+			//Validate room type
+			if(roomType == 0){
+				document.getElementById('error_div_room_type').innerHTML += "* Please select Room Type...";
+				result = false;
+			}
+
+
+			var people_count = parseInt(adults) + parseInt(children);
+
+			if(adults==0 && children==0){
+				document.getElementById('error_div_count').innerHTML += "* No of persons can't be zero...";
+				result = false;
+			}
+
+			if(adults==0 && children>0){
+				document.getElementById('error_div_count').innerHTML += "* Children can't order rooms without elder...";
+				result = false;
+			}
+
+			if(roomType == 1){
+				if(people_count != 1){
+					document.getElementById('error_div_room_type').innerHTML += "* Single Room is Enough for only one person...";
+					result = false;
+				}
+			}
+
+
+			if(roomType == 2) {
+				if(people_count > 4) {
+					document.getElementById('error_div_room_type').innerHTML += "* Double Room is not Enough for ";
+					document.getElementById('error_div_room_type').innerHTML += people_count;
+					document.getElementById('error_div_room_type').innerHTML += " Persons.";
+					result = false;
+				}
+			}
+
+			return result;
+		});
+
+		function dateCompare(checkIn,checkOut){
+
+			var checkin_parts = checkIn.split("-");
+			var checkout_parts = checkOut.split("-");
+
+			checkin_d = checkin_parts[0];
+			checkin_m = checkin_parts[1];
+			checkin_y = checkin_parts[2];
+
+			checkout_d = checkout_parts[0];
+			checkout_m = checkout_parts[1];
+			checkout_y = checkout_parts[2];
+
+			if(checkin_y <= checkout_y)
+			{
+				if(checkin_m <= checkout_m)
+				{
+					if(checkin_d <= checkout_d)
+					{
+						return true;
+					}
+					else
+					{
+						return false;
+					}
+				}
+				else
+				{
+					return false;
+				}
+			}
+			else
+			{
+				return false;
+			}
+
+		}
+
+		function isEmpty(elemValue) {
+			if(elemValue =="" || elemValue == null) {
+				return true;
+			} else
+				return false;
+		}
+
+	</script>
+
+
+
+
 <!-- Specific scripts -->
 <script src="{{asset('/client/js/quantity-bt.js')}}"></script>
+
 <script src="{{asset('/client/js/bootstrap-datepicker.js')}}"></script>
-<script>$('input.date-pick').datepicker();</script>
+
+	<script>$('input.date-pick').datepicker();</script>
 @stop

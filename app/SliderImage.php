@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use Intervention\Image\ImageManagerStatic as Image;
 use Input;
 use File;
-
+use DB;
 
 class SliderImage extends Model {
 
@@ -51,6 +51,10 @@ class SliderImage extends Model {
         $path = 'client/img/slides_bg/'.$sliderImage->fileName;
         File::delete($path);
         $sliderImage->delete();
+    }
+
+    public static function getAll(){
+        return DB::table('slider_images')->get();
     }
 
 }

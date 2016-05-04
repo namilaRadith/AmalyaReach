@@ -19,19 +19,10 @@ class PaypalPaymentController extends Controller {
         $this->_apiContext = Paypalpayment::apiContext(config('paypal_payment.Account.ClientId'),config('paypal_payment.Account.ClientSecret'));
     }
 
-	public function makePayPalPayment(Requests\PaymentFormRequest $request){
+	public function makePayPalPayment(){
 
 
 
-        $title      = \Input::get('title');
-        $first_name = \Input::get('first_name');
-        $last_name  = \Input::get('last_name');
-        $address    = \Input::get('address');
-        $country    = \Input::get('country');
-        $email      = \Input::get('email');
-        $phone      = \Input::get('phone');
-        $postalCode = \Input::get('pcode');
-        $created_at = Carbon::now();
         $selected_room_price = session()->get('selected_room_price');
 
 
@@ -46,52 +37,12 @@ class PaypalPaymentController extends Controller {
 
 
 
-
-
-/*
-        //Insert into users table
-        $customerID = DB::table('users')->insertGetId(
-            [
-                'name' => $first_name,
-                'email' => $email,
-                'password' => "xxx",
-                'remember_token' => "xxx",
-                'created_at' => $created_at,
-                'updated_at' => $created_at,
-                'title' => $title,
-                'last_name' => $last_name,
-                'address' => $address,
-                'country' => $country,
-                'phone' => $phone
-            ]
-        );
-
-        //Insert data to reservation table
-        DB::table('reservation')->insert(
-            [
-                'customer_id' => $customerID,
-                'check_in' => session()->get('checkIn'),
-                'check_out' => session()->get('checkOut'),
-                'adults' => session()->get('adults'),
-                'children' => session()->get('children'),
-                'room_type' => session()->get('roomType'),
-                'selected_room_id' => session()->get('selected_room_id'),
-                'created_at' => $created_at,
-                'updated_at' => $created_at
-            ]
-        );
-
-
-*/
-
-
-
         //Address
         $addr= Paypalpayment::address();
-            $addr->setLine1($address);
-            $addr->setPostalCode($postalCode);
-            $addr->setCountryCode($country);
-            $addr->setPhone($phone);
+            $addr->setLine1("Colombo Srilanka");
+            $addr->setPostalCode("123");
+            $addr->setCountryCode("Sri Lanka");
+            $addr->setPhone("0710589523");
 
 
         //CreditCard
@@ -101,10 +52,11 @@ class PaypalPaymentController extends Controller {
             ->setExpireMonth($expiration_month)
             ->setExpireYear($expiration_year)
             ->setCvv2("456")
-            ->setFirstName($first_name)
-            ->setLastName($last_name);
+            ->setFirstName("Sameera")
+            ->setLastName("Chandrasena");
 
         //FundingInstrument(Payer's funding instrument)
+
         $fi = Paypalpayment::fundingInstrument();
         $fi->setCreditCard($card);
 
@@ -186,17 +138,13 @@ class PaypalPaymentController extends Controller {
             ->setTransactions(array($transaction));
 
         try {
-            // ### Create Payment
-            // Create a payment by posting to the APIService
-            // using a valid ApiContext
-            // The return object contains the status;
             $x = $payment->create($this->_apiContext);
+
         } catch (\PPConnectionException $ex) {
+
             return  "Exception: " . $ex->getMessage() . PHP_EOL;
             exit(1);
         }
-
-        // dd($payment);
 
 
         //Get Payment ID
