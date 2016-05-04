@@ -2466,109 +2466,6 @@
         "description": "laravel-paypalpayment is simple package help you process direct credit card payments, stored credit card payments and PayPal account payments with your L4 projects using paypal REST API SDK."
     },
     {
-        "name": "psr/http-message",
-        "version": "1.0",
-        "version_normalized": "1.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/php-fig/http-message.git",
-            "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/php-fig/http-message/zipball/85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
-            "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0"
-        },
-        "time": "2015-05-04 20:22:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Psr\\Http\\Message\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "PHP-FIG",
-                "homepage": "http://www.php-fig.org/"
-            }
-        ],
-        "description": "Common interface for HTTP messages",
-        "keywords": [
-            "http",
-            "http-message",
-            "psr",
-            "psr-7",
-            "request",
-            "response"
-        ]
-    },
-    {
-        "name": "sebastian/environment",
-        "version": "1.3.5",
-        "version_normalized": "1.3.5.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/sebastianbergmann/environment.git",
-            "reference": "dc7a29032cf72b54f36dac15a1ca5b3a1b6029bf"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/dc7a29032cf72b54f36dac15a1ca5b3a1b6029bf",
-            "reference": "dc7a29032cf72b54f36dac15a1ca5b3a1b6029bf",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~4.4"
-        },
-        "time": "2016-02-26 18:40:46",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.3.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "src/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Sebastian Bergmann",
-                "email": "sebastian@phpunit.de"
-            }
-        ],
-        "description": "Provides functionality to handle HHVM/PHP environments",
-        "homepage": "http://www.github.com/sebastianbergmann/environment",
-        "keywords": [
-            "Xdebug",
-            "environment",
-            "hhvm"
-        ]
-    },
-    {
         "name": "phpspec/prophecy",
         "version": "v1.6.0",
         "version_normalized": "1.6.0.0",
@@ -2631,48 +2528,6 @@
             "spy",
             "stub"
         ]
-    },
-    {
-        "name": "andheiberg/notify",
-        "version": "2.0.0",
-        "version_normalized": "2.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/AndreasHeiberg/laravel-notify.git",
-            "reference": "c25c8f8b2e98ee39068feffd388626f08059be1c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/AndreasHeiberg/laravel-notify/zipball/c25c8f8b2e98ee39068feffd388626f08059be1c",
-            "reference": "c25c8f8b2e98ee39068feffd388626f08059be1c",
-            "shasum": ""
-        },
-        "require": {
-            "illuminate/config": ">=4.0.0, <6.0.0",
-            "illuminate/session": ">=4.0.0, <6.0.0",
-            "illuminate/support": ">=4.0.0, <6.0.0",
-            "illuminate/translation": ">=4.0.0, <6.0.0",
-            "php": ">=5.3.0"
-        },
-        "require-dev": {
-            "phpspec/phpspec": "2.0.*@dev"
-        },
-        "time": "2015-08-27 10:03:18",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Andheiberg\\Notify": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "authors": [
-            {
-                "name": "Andreas Peter Heiberg",
-                "email": "heibergandreas@gmail.com"
-            }
-        ],
-        "description": "A site notification package for laravel."
     },
     {
         "name": "phpunit/phpunit",
@@ -2858,117 +2713,6 @@
             "polyfill",
             "portable",
             "shim"
-        ]
-    },
-    {
-        "name": "symfony/polyfill-apcu",
-        "version": "v1.1.1",
-        "version_normalized": "1.1.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/polyfill-apcu.git",
-            "reference": "0c901e4e65a2f7ece68f0fd249b56d6ad3adc214"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/0c901e4e65a2f7ece68f0fd249b56d6ad3adc214",
-            "reference": "0c901e4e65a2f7ece68f0fd249b56d6ad3adc214",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3"
-        },
-        "time": "2016-03-03 16:49:40",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.1-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "files": [
-                "bootstrap.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Nicolas Grekas",
-                "email": "p@tchwork.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony polyfill backporting apcu_* functions to lower PHP versions",
-        "homepage": "https://symfony.com",
-        "keywords": [
-            "apcu",
-            "compatibility",
-            "polyfill",
-            "portable",
-            "shim"
-        ]
-    },
-    {
-        "name": "cmgmyr/messenger",
-        "version": "2.10",
-        "version_normalized": "2.10.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/cmgmyr/laravel-messenger.git",
-            "reference": "f6048ee4bbc958e95a380545711f174ba9717d0a"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/cmgmyr/laravel-messenger/zipball/f6048ee4bbc958e95a380545711f174ba9717d0a",
-            "reference": "f6048ee4bbc958e95a380545711f174ba9717d0a",
-            "shasum": ""
-        },
-        "require": {
-            "illuminate/config": "~5.0",
-            "illuminate/database": "~5.0",
-            "illuminate/support": "~5.0",
-            "nesbot/carbon": "~1.0",
-            "php": ">=5.4.0"
-        },
-        "require-dev": {
-            "adamwathan/faktory": "0.3.*",
-            "fabpot/php-cs-fixer": "^1.11",
-            "orchestra/testbench": "~3.0",
-            "phpunit/phpunit": "4.*"
-        },
-        "time": "2016-02-25 00:24:44",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Cmgmyr\\Messenger\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Chris Gmyr",
-                "email": "cmgmyr@gmail.com",
-                "homepage": "https://github.com/cmgmyr",
-                "role": "Developer"
-            }
-        ],
-        "description": "Simple user messaging tool for Laravel",
-        "keywords": [
-            "Messenger",
-            "laravel",
-            "messaging",
-            "user messaging"
         ]
     },
     {
@@ -3486,6 +3230,201 @@
         "homepage": "https://symfony.com"
     },
     {
+        "name": "symfony/class-loader",
+        "version": "v2.8.5",
+        "version_normalized": "2.8.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/class-loader.git",
+            "reference": "f1cf312c81c7b4f0f11431e6fd37b66890f5e27b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/class-loader/zipball/f1cf312c81c7b4f0f11431e6fd37b66890f5e27b",
+            "reference": "f1cf312c81c7b4f0f11431e6fd37b66890f5e27b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9",
+            "symfony/polyfill-apcu": "~1.1"
+        },
+        "require-dev": {
+            "symfony/finder": "~2.0,>=2.0.5|~3.0.0"
+        },
+        "time": "2016-03-30 10:37:34",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.8-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\ClassLoader\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony ClassLoader Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "yozaz/laravel-swiftmailer",
+        "version": "v3.2.3",
+        "version_normalized": "3.2.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/YOzaz/Laravel-SwiftMailer.git",
+            "reference": "b6811961447b07151b591a9714ae5e3384483e29"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/YOzaz/Laravel-SwiftMailer/zipball/b6811961447b07151b591a9714ae5e3384483e29",
+            "reference": "b6811961447b07151b591a9714ae5e3384483e29",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": ">=4.2",
+            "php": ">=5.4.0"
+        },
+        "time": "2016-05-04 09:29:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "YOzaz\\LaravelSwiftmailer\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Marijus Planciunas",
+                "email": "yozaz.mandac@gmail.com"
+            }
+        ],
+        "description": "Laravel and SwiftMailer integration fix for Queued deamon workers",
+        "keywords": [
+            "beanstalkd",
+            "laravel",
+            "mail",
+            "queue",
+            "swiftmailer"
+        ]
+    },
+    {
+        "name": "sebastian/environment",
+        "version": "1.3.6",
+        "version_normalized": "1.3.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sebastianbergmann/environment.git",
+            "reference": "2292b116f43c272ff4328083096114f84ea46a56"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/2292b116f43c272ff4328083096114f84ea46a56",
+            "reference": "2292b116f43c272ff4328083096114f84ea46a56",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.4"
+        },
+        "time": "2016-05-04 07:59:13",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.3.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Sebastian Bergmann",
+                "email": "sebastian@phpunit.de"
+            }
+        ],
+        "description": "Provides functionality to handle HHVM/PHP environments",
+        "homepage": "http://www.github.com/sebastianbergmann/environment",
+        "keywords": [
+            "Xdebug",
+            "environment",
+            "hhvm"
+        ]
+    },
+    {
+        "name": "andheiberg/notify",
+        "version": "2.0.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/AndreasHeiberg/laravel-notify.git",
+            "reference": "c25c8f8b2e98ee39068feffd388626f08059be1c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/AndreasHeiberg/laravel-notify/zipball/c25c8f8b2e98ee39068feffd388626f08059be1c",
+            "reference": "c25c8f8b2e98ee39068feffd388626f08059be1c",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/config": ">=4.0.0, <6.0.0",
+            "illuminate/session": ">=4.0.0, <6.0.0",
+            "illuminate/support": ">=4.0.0, <6.0.0",
+            "illuminate/translation": ">=4.0.0, <6.0.0",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpspec/phpspec": "2.0.*@dev"
+        },
+        "time": "2015-08-27 10:03:18",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Andheiberg\\Notify": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Andreas Peter Heiberg",
+                "email": "heibergandreas@gmail.com"
+            }
+        ],
+        "description": "A site notification package for laravel."
+    },
+    {
         "name": "cviebrock/image-validator",
         "version": "2.0.1",
         "version_normalized": "2.0.1.0",
@@ -3539,30 +3478,34 @@
         ]
     },
     {
-        "name": "yozaz/laravel-swiftmailer",
-        "version": "v3.2.1",
-        "version_normalized": "3.2.1.0",
+        "name": "psr/http-message",
+        "version": "1.0",
+        "version_normalized": "1.0.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/YOzaz/Laravel-SwiftMailer.git",
-            "reference": "d1ff44da3a868e376ee4c1c080214f8e2a163754"
+            "url": "https://github.com/php-fig/http-message.git",
+            "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/YOzaz/Laravel-SwiftMailer/zipball/d1ff44da3a868e376ee4c1c080214f8e2a163754",
-            "reference": "d1ff44da3a868e376ee4c1c080214f8e2a163754",
+            "url": "https://api.github.com/repos/php-fig/http-message/zipball/85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
+            "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
             "shasum": ""
         },
         "require": {
-            "illuminate/support": ">=4.2",
-            "php": ">=5.4.0"
+            "php": ">=5.3.0"
         },
-        "time": "2016-04-20 14:10:36",
+        "time": "2015-05-04 20:22:00",
         "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
         "installation-source": "dist",
         "autoload": {
-            "psr-0": {
-                "YOzaz\\LaravelSwiftmailer\\": "src/"
+            "psr-4": {
+                "Psr\\Http\\Message\\": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -3571,17 +3514,18 @@
         ],
         "authors": [
             {
-                "name": "Marijus Planciunas",
-                "email": "yozaz.mandac@gmail.com"
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
             }
         ],
-        "description": "Laravel and SwiftMailer integration fix for Queued deamon workers",
+        "description": "Common interface for HTTP messages",
         "keywords": [
-            "beanstalkd",
-            "laravel",
-            "mail",
-            "queue",
-            "swiftmailer"
+            "http",
+            "http-message",
+            "psr",
+            "psr-7",
+            "request",
+            "response"
         ]
     },
     {
@@ -3709,42 +3653,40 @@
         ]
     },
     {
-        "name": "symfony/class-loader",
-        "version": "v2.8.5",
-        "version_normalized": "2.8.5.0",
+        "name": "cmgmyr/messenger",
+        "version": "2.10",
+        "version_normalized": "2.10.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/symfony/class-loader.git",
-            "reference": "f1cf312c81c7b4f0f11431e6fd37b66890f5e27b"
+            "url": "https://github.com/cmgmyr/laravel-messenger.git",
+            "reference": "f6048ee4bbc958e95a380545711f174ba9717d0a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/class-loader/zipball/f1cf312c81c7b4f0f11431e6fd37b66890f5e27b",
-            "reference": "f1cf312c81c7b4f0f11431e6fd37b66890f5e27b",
+            "url": "https://api.github.com/repos/cmgmyr/laravel-messenger/zipball/f6048ee4bbc958e95a380545711f174ba9717d0a",
+            "reference": "f6048ee4bbc958e95a380545711f174ba9717d0a",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.3.9",
-            "symfony/polyfill-apcu": "~1.1"
+            "illuminate/config": "~5.0",
+            "illuminate/database": "~5.0",
+            "illuminate/support": "~5.0",
+            "nesbot/carbon": "~1.0",
+            "php": ">=5.4.0"
         },
         "require-dev": {
-            "symfony/finder": "~2.0,>=2.0.5|~3.0.0"
+            "adamwathan/faktory": "0.3.*",
+            "fabpot/php-cs-fixer": "^1.11",
+            "orchestra/testbench": "~3.0",
+            "phpunit/phpunit": "4.*"
         },
-        "time": "2016-03-30 10:37:34",
+        "time": "2016-02-25 00:24:44",
         "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.8-dev"
-            }
-        },
         "installation-source": "dist",
         "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\ClassLoader\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
+            "psr-0": {
+                "Cmgmyr\\Messenger\\": "src/"
+            }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -3752,16 +3694,19 @@
         ],
         "authors": [
             {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
+                "name": "Chris Gmyr",
+                "email": "cmgmyr@gmail.com",
+                "homepage": "https://github.com/cmgmyr",
+                "role": "Developer"
             }
         ],
-        "description": "Symfony ClassLoader Component",
-        "homepage": "https://symfony.com"
+        "description": "Simple user messaging tool for Laravel",
+        "keywords": [
+            "Messenger",
+            "laravel",
+            "messaging",
+            "user messaging"
+        ]
     },
     {
         "name": "guzzle/guzzle",
@@ -3926,40 +3871,95 @@
         ]
     },
     {
-        "name": "guzzlehttp/promises",
-        "version": "1.1.0",
-        "version_normalized": "1.1.0.0",
+        "name": "symfony/polyfill-apcu",
+        "version": "v1.1.1",
+        "version_normalized": "1.1.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/guzzle/promises.git",
-            "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8"
+            "url": "https://github.com/symfony/polyfill-apcu.git",
+            "reference": "0c901e4e65a2f7ece68f0fd249b56d6ad3adc214"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/promises/zipball/bb9024c526b22f3fe6ae55a561fd70653d470aa8",
-            "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8",
+            "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/0c901e4e65a2f7ece68f0fd249b56d6ad3adc214",
+            "reference": "0c901e4e65a2f7ece68f0fd249b56d6ad3adc214",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.5.0"
+            "php": ">=5.3.3"
+        },
+        "time": "2016-03-03 16:49:40",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill backporting apcu_* functions to lower PHP versions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "apcu",
+            "compatibility",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
+        "name": "guzzlehttp/streams",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/streams.git",
+            "reference": "f91b721d73f0e561410903b3b3c90a5d0e40b534"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/streams/zipball/f91b721d73f0e561410903b3b3c90a5d0e40b534",
+            "reference": "f91b721d73f0e561410903b3b3c90a5d0e40b534",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
         },
         "require-dev": {
             "phpunit/phpunit": "~4.0"
         },
-        "time": "2016-03-08 01:15:46",
+        "time": "2014-08-17 21:15:53",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.0-dev"
+                "dev-master": "2.0-dev"
             }
         },
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "GuzzleHttp\\Promise\\": "src/"
+                "GuzzleHttp\\Stream\\": "src/"
             },
             "files": [
-                "src/functions_include.php"
+                "src/functions.php"
             ]
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -3973,51 +3973,56 @@
                 "homepage": "https://github.com/mtdowling"
             }
         ],
-        "description": "Guzzle promises library",
+        "description": "Provides a simple abstraction over streams of data (Guzzle 4+)",
+        "homepage": "http://guzzlephp.org/",
         "keywords": [
-            "promise"
+            "Guzzle",
+            "stream"
         ]
     },
     {
         "name": "guzzlehttp/guzzle",
-        "version": "6.2.0",
-        "version_normalized": "6.2.0.0",
+        "version": "4.2.3",
+        "version_normalized": "4.2.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/guzzle/guzzle.git",
-            "reference": "d094e337976dff9d8e2424e8485872194e768662"
+            "reference": "66fd916e9f9130bc22c51450476823391cb2f67c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/d094e337976dff9d8e2424e8485872194e768662",
-            "reference": "d094e337976dff9d8e2424e8485872194e768662",
+            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/66fd916e9f9130bc22c51450476823391cb2f67c",
+            "reference": "66fd916e9f9130bc22c51450476823391cb2f67c",
             "shasum": ""
         },
         "require": {
-            "guzzlehttp/promises": "~1.0",
-            "guzzlehttp/psr7": "~1.1",
-            "php": ">=5.5.0"
+            "ext-json": "*",
+            "guzzlehttp/streams": "~2.1",
+            "php": ">=5.4.0"
         },
         "require-dev": {
             "ext-curl": "*",
             "phpunit/phpunit": "~4.0",
             "psr/log": "~1.0"
         },
-        "time": "2016-03-21 20:02:09",
+        "suggest": {
+            "ext-curl": "Guzzle will use specific adapters if cURL is present"
+        },
+        "time": "2014-10-05 19:29:14",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "6.2-dev"
+                "dev-master": "4.2-dev"
             }
         },
         "installation-source": "dist",
         "autoload": {
-            "files": [
-                "src/functions_include.php"
-            ],
             "psr-4": {
                 "GuzzleHttp\\": "src/"
-            }
+            },
+            "files": [
+                "src/functions.php"
+            ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -4030,7 +4035,7 @@
                 "homepage": "https://github.com/mtdowling"
             }
         ],
-        "description": "Guzzle is a PHP HTTP client library",
+        "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
         "homepage": "http://guzzlephp.org/",
         "keywords": [
             "client",
@@ -4044,21 +4049,21 @@
     },
     {
         "name": "laravel/socialite",
-        "version": "v2.0.15",
-        "version_normalized": "2.0.15.0",
+        "version": "v2.0.4",
+        "version_normalized": "2.0.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laravel/socialite.git",
-            "reference": "edd00ab96933e3ef053533cce81e958fb26921af"
+            "reference": "3d5f6560f8642c4973b5e54a67b1368ee81ff24d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laravel/socialite/zipball/edd00ab96933e3ef053533cce81e958fb26921af",
-            "reference": "edd00ab96933e3ef053533cce81e958fb26921af",
+            "url": "https://api.github.com/repos/laravel/socialite/zipball/3d5f6560f8642c4973b5e54a67b1368ee81ff24d",
+            "reference": "3d5f6560f8642c4973b5e54a67b1368ee81ff24d",
             "shasum": ""
         },
         "require": {
-            "guzzlehttp/guzzle": "~5.0|~6.0",
+            "guzzlehttp/guzzle": "~4.0|~5.0",
             "illuminate/contracts": "~5.0",
             "illuminate/http": "~5.0",
             "illuminate/support": "~5.0",
@@ -4069,11 +4074,11 @@
             "mockery/mockery": "~0.9",
             "phpunit/phpunit": "~4.0"
         },
-        "time": "2016-03-21 14:30:30",
+        "time": "2015-03-13 02:40:10",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "3.0-dev"
+                "dev-master": "2.0-dev"
             }
         },
         "installation-source": "dist",
